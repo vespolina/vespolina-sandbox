@@ -1,0 +1,33 @@
+[submodule "src/vendor/symfony"]
+	path = src/vendor/symfony
+	url = https://github.com/fabpot/symfony.git
+[submodule "src/vendor/doctrine"]
+	path = src/vendor/doctrine
+	url = https://github.com/doctrine/doctrine2.git
+[submodule "src/vendor/doctrine-common"]
+	path = src/vendor/doctrine-common
+	url = https://github.com/doctrine/common.git
+[submodule "src/vendor/doctrine-dbal"]
+	path = src/vendor/doctrine-dbal
+	url = https://github.com/doctrine/dbal.git
+[submodule "src/vendor/doctrine-mongodb"]
+	path = src/vendor/doctrine-mongodb
+	url = https://github.com/doctrine/mongodb.git
+[submodule "src/vendor/doctrine-migrations"]
+	path = src/vendor/doctrine-migrations
+	url = https://github.com/doctrine/migrations.git
+[submodule "src/vendor/doctrine-mongodb-odm"]
+	path = src/vendor/doctrine-mongodb-odm
+	url = https://github.com/doctrine/mongodb-odm.git
+[submodule "src/vendor/doctrine-data-fixtures"]
+	path = src/vendor/doctrine-data-fixtures
+	url = https://github.com/doctrine/data-fixtures.git
+[submodule "src/vendor/twig"]
+	path = src/vendor/twig
+	url = https://github.com/fabpot/Twig.git
+[submodule "src/vendor/swiftmailer"]
+	path = src/vendor/swiftmailer
+	url = https://github.com/swiftmailer/swiftmailer.git
+[submodule "src/Bundle/FOS/UserBundle"]
+	path = src/Bundle/FOS/UserBundle
+	url = https://github.com/FriendsOfSymfony/UserBundle.git

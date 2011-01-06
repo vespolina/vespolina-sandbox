@@ -1,0 +1,41 @@
+app.config:
+    charset:       UTF-8
+    error_handler: null
+    csrf_secret:   xxxxxxxxxx
+    router:        { resource: "%kernel.root_dir%/config/routing.yml" }
+    validation:    { enabled: true, annotations: true }
+    templating:    {} #assets_version: SomeVersionScheme
+    session:
+        default_locale: en
+        lifetime:       3600
+        auto_start:     true
+
+# Twig Configuration
+twig.config:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+## Doctrine Configuration
+#doctrine.dbal:
+#    dbname:   xxxxxxxx
+#    user:     xxxxxxxx
+#    password: ~
+
+doctrine_odm.mongodb:
+    auto_generate_proxy_classes: %kernel.debug%
+    default_database: vespolina
+    mappings:
+        AppUserBundle: ~
+        UserBundle: ~
+
+## Swiftmailer Configuration
+#swiftmailer.config:
+#    transport:  smtp
+#    encryption: ssl
+#    auth_mode:  login
+#    host:       smtp.gmail.com
+#    username:   xxxxxxxx
+#    password:   xxxxxxxx
+
+imports:
+  - { resource: security.yml }

@@ -1,0 +1,33 @@
+# app/config/security.yml
+security.config:
+    providers:
+        fos_user:
+            password_encoder: &password_encoder
+                sha1
+            id: fos_user.user_manager
+    firewalls:
+        public:
+            pattern: .*
+            form_login:
+                login_path:                     /login
+                use_forward:                    false
+                check_path:                     /login-check
+                failure_path:                   null
+                always_use_default_target_path: false
+                default_target_path:            /
+                target_path_parameter:          _target_path
+                use_referer:                    false
+            logout: true
+            anonymous: true
+
+fos_user.config:
+    db_driver: mongodb
+    encoder:
+        alorithm:
+          <<: *password_encoder
+    class:
+        model:
+            user: Application\AppUserBundle\Document\User
+
+#security.acl:
+#    connection: default
