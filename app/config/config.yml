@@ -1,35 +1,34 @@
-app.config:
+# Assetic Configuration
+assetic: ~
+
+framework:
     charset:       UTF-8
     error_handler: null
-    csrf_secret:   xxxxxxxxxx
+    csrf_protection:
+        enabled: true
+        secret: xxxxxxxxxx
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
     validation:    { enabled: true, annotations: true }
-    templating:    {} #assets_version: SomeVersionScheme
+    templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
     session:
         default_locale: en
         lifetime:       3600
-        auto_start:     true
+        auto_start:     false
+        name:           symfony
+
+doctrine_mongo_db:
+    default_database: app_%kernel.environment%
+    mappings:
+        FOSUserBundle: ~
+        UserBundle:   ~
 
 # Twig Configuration
-twig.config:
+twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
 
-## Doctrine Configuration
-#doctrine.dbal:
-#    dbname:   xxxxxxxx
-#    user:     xxxxxxxx
-#    password: ~
-
-doctrine_odm.mongodb:
-    auto_generate_proxy_classes: %kernel.debug%
-    default_database: vespolina
-    mappings:
-        AppUserBundle: ~
-        UserBundle: ~
-
 ## Swiftmailer Configuration
-#swiftmailer.config:
+#swiftmailer:
 #    transport:  smtp
 #    encryption: ssl
 #    auth_mode:  login
@@ -38,4 +37,4 @@ doctrine_odm.mongodb:
 #    password:   xxxxxxxx
 
 imports:
-  - { resource: security.yml }
+    - { resource: security.yml }

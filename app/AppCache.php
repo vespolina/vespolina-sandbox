@@ -2,8 +2,8 @@
 
 require_once __DIR__.'/AppKernel.php';
 
-use Symfony\Bundle\FrameworkBundle\Cache\Cache;
+use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
-class AppCache extends Cache
+class AppCache extends HttpCache
 {
 }
