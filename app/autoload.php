@@ -10,6 +10,7 @@ $loader->registerNamespaces(array(
     'Doctrine\\ODM\\MongoDB'    => __DIR__.'/../vendor/doctrine/mongodb-odm/lib',
     'FOS'                       => __DIR__.'/../src',
     'Application'               => __DIR__.'/../src',
+    'Vespolina'                 => __DIR__.'/../src',
     'Symfony'                   => __DIR__.'/../vendor/symfony/src',
     'vendor'                    => __DIR__.'/../src',
     'Zend\\Log'                 => __DIR__.'/../vendor/zend-log',

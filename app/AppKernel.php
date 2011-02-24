@@ -7,10 +7,11 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = array(
+	    $bundles = array(
             new FOS\UserBundle\FOSUserBundle(),
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
+            new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
