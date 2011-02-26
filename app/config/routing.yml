@@ -1,6 +1,9 @@
-homepage:
-    pattern:  /
-    defaults: { _controller: FrameworkBundle:Default:index }
+default:
+    resource: @DefaultBundle/Resources/config/routing.yml
 
 fos_user_security:
-    resource: FOS/UserBundle/Resources/config/routing/security.xml
+    resource: @FOSUserBundle/Resources/config/routing/security.xml
+
+fos_user_user:
+    resource: @FOSUserBundle/Resources/config/routing/user.xml
+    prefix: /user

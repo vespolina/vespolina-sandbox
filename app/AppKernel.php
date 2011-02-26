@@ -1,58 +1,41 @@
 <?php
 
-require_once __DIR__.'/../src/autoload.php';
-
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
-    public function registerRootDir()
-    {
-        return __DIR__;
-    }
-
     public function registerBundles()
     {
-        $bundles = array(
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-
-            // enable third-party bundles
-            new Bundle\FOS\UserBundle\FOSUserBundle(),
-            //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
-            //new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
+	    $bundles = array(
+            new FOS\UserBundle\FOSUserBundle(),
+            new Application\UserBundle\UserBundle(),
+            new Application\DefaultBundle\DefaultBundle(),
+            new Vespolina\CoreBundle\VespolinaCoreBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
+            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\ZendBundle\ZendBundle(),
-
-            // register application bundles
-            new Application\AppUserBundle\AppUserBundle(),
         );
 
-        if ($this->isDebug()) {
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
         }
 
         return $bundles;
     }
 
-    public function registerBundleDirs()
+    public function registerRootDir()
     {
-        return array(
-            'Application'     => __DIR__.'/../src/Application',
-            'Bundle'          => __DIR__.'/../src/Bundle',
-            'Bundle\\FOS'     => __DIR__.'/../src/Bundle/FOS',
-            'Symfony\\Bundle' => __DIR__.'/../src/vendor/symfony/src/Symfony/Bundle',
-        );
+        return __DIR__;
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
+        // use YAML for configuration
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
-
-        if (file_exists($file = __DIR__.'/config/local_config.yml')) {
-            $loader->load($file);
-        }
     }
 }

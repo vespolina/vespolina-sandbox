@@ -6,15 +6,15 @@ General Info
 
 The purpose of this project is to create an expandable Symfony2 based ecommerce platform, built on interchangeable bundles that can be used independently of Vespolina, all managed by a configurable workflow process and whenever possible, using established standards.
 
-State of The Project
+State of the Project
 --------------------
 
 Vespolina is in very early stages.  We are currently in the design phase and are gathering functional needs which you can find on the
-[wiki][vespolina_wiki] .  We love to hear your comments on our current understanding of different ecommerce scenarios.  You can find on the wiki under use cases and process flow diagrams ).
+[wiki][vespolina_wiki] .  We love to hear your comments on our current understanding of different ecommerce scenarios.  You can find more information on the wiki such as use cases and process flow diagrams.
 
 [vespolina_wiki]: https://github.com/vespolina/vespolina/wiki
 
-We have a chat meeting every Wednesday at 20h UTC
+We have a chat meeting every Thursday at 20h UTC
 
 Contact
 -------

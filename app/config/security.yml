@@ -1,33 +1,28 @@
-# app/config/security.yml
-security.config:
+security:
     providers:
-        fos_user:
-            password_encoder: &password_encoder
-                sha1
+        fos_user_provider:
             id: fos_user.user_manager
     firewalls:
-        public:
-            pattern: .*
+        main:
             form_login:
+                provider:                       fos_user_provider
                 login_path:                     /login
-                use_forward:                    false
                 check_path:                     /login-check
-                failure_path:                   null
-                always_use_default_target_path: false
-                default_target_path:            /
-                target_path_parameter:          _target_path
-                use_referer:                    false
             logout: true
             anonymous: true
+    access_control:
+        - { path: "/dashboard.*", role: IS_AUTHENTICATED_FULLY }
+        - { path: "/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
 
-fos_user.config:
+fos_user:
     db_driver: mongodb
+    provider_key: main
     encoder:
-        alorithm:
-          <<: *password_encoder
+        iterations: 1
+        encode_as_base64: false
+        algorithm: sha1
     class:
         model:
-            user: Application\AppUserBundle\Document\User
+            user: Application\UserBundle\Document\User
+            group: FOS\UserBundle\Document\DefaultGroup
 
-#security.acl:
-#    connection: default
