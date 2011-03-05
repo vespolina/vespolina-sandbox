@@ -1,17 +1,17 @@
 <?php
 
-namespace Bundle\ECommerce\MonetaryBundle\Model;
+namespace Vespolina\MonetaryBundle\Model;
 
 interface CurrencyInterface
 {
     /**
      * Create a currency instance
      *
-     * @param Bundle\ECommerce\MonetaryBundle\Model\CurrencyInterface $baseCurrency
+     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency
      * @param mixed $exchangeRate
      * @param \DateTime $datetime optional the date and time of the exchange rate, defaults to now
      */
-    public function __construct(Bundle\ECommerce\MonetaryBundle\Model\CurrencyInterface $baseCurrency, $exhangeRate, \DateTime $datetime=null);
+    public function __construct(CurrencyInterface $baseCurrency, $exhangeRate, \DateTime $datetime=null);
     
     /**
      * Get the ISO 4217 currency code of this currency.
@@ -62,14 +62,14 @@ interface CurrencyInterface
     /**
      * Return the base currency for the exchange rate
      *
-     * @return Bundle\ECommerce\MonetaryBundle\Model\CurrencyInterface
+     * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
      */
     public function getBaseCurrency();
 
     /**
      * Return the value after the currency conversion, this can be an instance of
-     * Bundle\ECommerce\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
-     * an new instance of Bundle\ECommerce\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
+     * Vespolina\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
+     * an new instance of Vespolina\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
      *
      * @param mixed $amount
      * @return mixed

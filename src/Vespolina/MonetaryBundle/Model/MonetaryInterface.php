@@ -1,8 +1,8 @@
 <?php
 
-namespace Bundle\ECommerce\MonetaryBundle\Model;
+namespace Vespolina\MonetaryBundle\Model;
 
-use Bundle\ECommerce\MonetaryBundle\Model\CurrencyInterface;
+use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 
 interface MonetaryInterface
 {
@@ -11,7 +11,7 @@ interface MonetaryInterface
     /**
      * Add monetary amount to this instance.
      *
-     * @param Bundle\ECommerce\MonetaryBundle\Model\MonetaryInterface $addend
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend
      */
     public function add(MonetaryInterface $addend);
 
@@ -25,7 +25,7 @@ interface MonetaryInterface
     /**
      * Get the currency of the monetary amount.
      *
-     * @return Bundle\ECommerce\MonetaryBundle\Model\MonetaryInterface
+     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
      */
     public function getCurrency();
 
@@ -46,21 +46,21 @@ interface MonetaryInterface
     /**
      * Subtract a monetary $subtrahend from this instance.
      *
-     * @param Bundle\ECommerce\MonetaryBundle\Model\MonetaryInterface $subtrahend
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
      */
     public function subtract(MonetaryInterface $subtrahend);
 
     /**
      * Get the value of the monetary amount.
      *
-     * @param Bundle\ECommerce\MonetaryBundle\CurrencyInterface
+     * @param Vespolina\MonetaryBundle\CurrencyInterface
      */
     public function getValue(CurrencyInterface $currency = null);
 
     /**
      * Set the currency for the monitary value
      *
-     * @param Bundle\ECommerce\MonetaryBundle\CurrencyInterface $currency
+     * @param Vespolina\MonetaryBundle\CurrencyInterface $currency
      */
     public function setCurrency(CurrencyInterface $currency);
 
