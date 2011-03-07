@@ -6,11 +6,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Vespolina\CatalogBundle;
+namespace Vespolina\TaxonomyBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class VespolinaCatalogBundle extends Bundle
+class VespolinaTaxonomyBundle extends Bundle
 {
 
 }
