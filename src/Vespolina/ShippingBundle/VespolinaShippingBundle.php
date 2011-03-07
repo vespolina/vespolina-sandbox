@@ -6,11 +6,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Vespolina\CoreBundle;
+namespace Vespolina\ShippingBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class VespolinaCoreBundle extends Bundle
+class VespolinaShippingBundle extends Bundle
 {
 
 }
