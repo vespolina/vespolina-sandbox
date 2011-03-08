@@ -8,6 +8,7 @@ $loader->registerNamespaces(array(
     'Doctrine\\Common'          => __DIR__.'/../vendor/doctrine/common/lib',
     'Doctrine\\MongoDB'         => __DIR__.'/../vendor/doctrine/mongodb/lib',
     'Doctrine\\ODM\\MongoDB'    => __DIR__.'/../vendor/doctrine/mongodb-odm/lib',
+    'Doctrine\\Common\\DataFixtures'    => __DIR__.'/../vendor/doctrine/data-fixtures/lib',
     'FOS'                       => __DIR__.'/../src',
     'Application'               => __DIR__.'/../src',
     'Vespolina'                 => __DIR__.'/../src',
