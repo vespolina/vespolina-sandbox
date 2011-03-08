@@ -1,5 +1,6 @@
 app/cache/*
-app/log/*
 app/config/local_config.yml
 .idea
 nbproject/
+app/logs/
+app/cache/
