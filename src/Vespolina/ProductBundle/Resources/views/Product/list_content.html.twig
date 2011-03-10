@@ -1,0 +1,7 @@
+<div class="vespolina_product_product_list">
+    <ul>
+    {% for product in products %}
+        <li><a href="{{ path('vespolina_product_product_show', {'sku': product.getSKU()} ) }}">{{ product.getSKU() }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
