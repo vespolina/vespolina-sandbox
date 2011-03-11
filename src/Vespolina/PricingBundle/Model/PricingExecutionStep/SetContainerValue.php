@@ -9,10 +9,10 @@
  
 namespace Vespolina\PricingBundle\Model\PricingExecutionStep;
 
-use Vespolina\PricingBundle\Model\BasePricingExecutionStep;
+use Vespolina\PricingBundle\Model\PricingExecutionStep;
 use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
-class SetContainerValue extends BasePricingExecutionStep{
+class SetContainerValue extends PricingExecutionStep{
 
     
     

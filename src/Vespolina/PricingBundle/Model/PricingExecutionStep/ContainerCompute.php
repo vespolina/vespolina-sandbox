@@ -10,9 +10,9 @@
 namespace Vespolina\PricingBundle\Model\PricingExecutionStep;
 
 use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
-use Vespolina\PricingBundle\Model\BasePricingExecutionStep;
+use Vespolina\PricingBundle\Model\PricingExecutionStep;
 
-class ContainerCompute extends BasePricingExecutionStep{
+class ContainerCompute extends PricingExecutionStep{
 
     public function execute(){
   

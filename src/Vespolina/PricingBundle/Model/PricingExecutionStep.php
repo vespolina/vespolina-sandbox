@@ -11,17 +11,28 @@ namespace Vespolina\PricingBundle\Model;
 
 use Vespolina\PricingBundle\Model\PricingElementInterface;
 
-abstract class BasePricingExecutionStep implements PricingExecutionStepInterface
+abstract class PricingExecutionStep implements PricingExecutionStepInterface
 {
   
     protected $options;
     protected $pricingContextContainer;
 
+    /**
+     * Constructor
+     *
+     * @param $options
+     */
     function __construct($options = array())
     {
         $this->options = $options;
     }
 
+    /**
+     * Initialize this pricing execution step (eg. init cache )
+     *
+     * @param PricingContextContainerInterface $pricingContextContainer
+     * @return void
+     */
     function init(PricingContextContainerInterface $pricingContextContainer)
     {
 
@@ -29,6 +40,13 @@ abstract class BasePricingExecutionStep implements PricingExecutionStepInterface
 
     }
 
+    /**
+     * Get option value
+     *
+     * @param  $name
+     * @param string $default
+     * @return array|string
+     */
     protected function getOption($name, $default = ''){
 
         if (array_key_exists($name, $this->options)) {

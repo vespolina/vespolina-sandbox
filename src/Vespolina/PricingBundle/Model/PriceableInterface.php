@@ -11,11 +11,25 @@ namespace Vespolina\PricingBundle\Model;
 
 use Vespolina\PricingBundle\Model\PricingSetInterface;
 
-interface PriceableEntityInterface
+interface PriceableInterface
 {
 
+    /**
+     * Attach the supplied pricing set to an priceable document
+     *
+     * @abstract
+     * @param PricingSetInterface $pricingSet
+     * @return void
+     */
     public function addPricingSet(PricingSetInterface $pricingSet);
-    
+
+
+    /**
+     * Retrieve all pricing sets
+     *
+     * @abstract
+     * @return void
+     */
     public function getPricingSets();
    
    

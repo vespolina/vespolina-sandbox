@@ -13,8 +13,21 @@ use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
 interface PricingExecutionStepInterface
 {
+
+    /**
+     * Initialize this pricing execution step (eg. init cache )
+     *
+     * @abstract
+     * @param PricingContextContainerInterface $pricingContextContainer
+     * @return void
+     */
+    function init(PricingContextContainerInterface $pricingContextContainer);
    
-   function init(PricingContextContainerInterface $pricingContextContainer);
-   
-   function execute();
+    /**
+     * Execute this step
+     *
+     * @abstract
+     * @return void
+     */
+    function execute();
 }

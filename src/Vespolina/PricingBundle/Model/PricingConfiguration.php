@@ -28,17 +28,27 @@ use Vespolina\PricingBundle\Service\PricingServiceInterface;
 
 class PricingConfiguration implements PricingConfigurationInterface
 {
-  protected $determinationSequence;  
-  protected $name;
-  protected $pricingSetConfiguration;
-  protected $pricingService;
-  
+    protected $determinationSequence;
+    protected $name;
+    protected $pricingSetConfiguration;
+    protected $pricingService;
+
+    /**
+     * Constructor
+     *
+     * @param \Vespolina\PricingBundle\Service\PricingServiceInterface $pricingService
+     */
     public function __construct(PricingServiceInterface $pricingService)
     {
   
         $this->pricingService = $pricingService;
     }
 
+    /**
+     * Create a new pricing set for this pricing configuration
+     *
+     * @return PricingSet
+     */
     public function createPricingSet()
     {
         $pricingSet = new PricingSet();
@@ -52,13 +62,20 @@ class PricingConfiguration implements PricingConfigurationInterface
         return $pricingSet;
     }
     
-  
+
     public function createPricingContextContainer()
     {
     
         return new PricingContextContainer();
     }
-  
+
+    /**
+     * Create a new pricing set container from an existing pricing set,
+     * copying necessary pricing element values to the pricing set container
+     *
+     * @param PricingSetInterface $pricingSet
+     * @return PricingContextContainer
+     */
     public function createPricingContextContainerFromPricingSet(PricingSetInterface $pricingSet)
     {
   
@@ -73,6 +90,17 @@ class PricingConfiguration implements PricingConfigurationInterface
         return $pricingContextContainer;
     }
 
+    /**
+     * Build / calculate the necessary pricing values based on the pricing set,
+     *  a given runtime pricing context container and possible some options.
+     *
+     * @param PricingSetInterface $pricingSet
+     * @param PricingContextContainerInterface $container
+     * @param array $options Possible
+     *    Possible options:
+     *      - execution_event ( all | context_independent | context_dependent )
+     * @return PricingSetInterface
+     */
     public function buildPricingSet(PricingSetInterface $pricingSet,
                                     PricingContextContainerInterface $container,
                                     $options = array())
@@ -112,12 +140,20 @@ class PricingConfiguration implements PricingConfigurationInterface
         
         return $pricingSet;
     }  
-    
+
+    /**
+     * Retrieve the pricing dimensions associated to this pricing set
+     *
+     * @return
+     */
     protected function getPricingDimensions()
     {
         return $this->pricingDimensions;
     }
-    
+
+    /**
+     * Temporary, should be moved into a PricingLoader class
+     */
     protected function loadPricingSetConfiguration()
     {
   
@@ -190,6 +226,12 @@ class PricingConfiguration implements PricingConfigurationInterface
         
         return $pricingSetConfiguration;
     }
+
+    /**
+     * Return the pricing set configuration associated to this pricing configuration
+     *
+     * @return
+     */
   
     protected function getPricingSetConfiguration(){
 

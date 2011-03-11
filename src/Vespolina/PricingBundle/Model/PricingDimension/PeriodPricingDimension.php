@@ -9,9 +9,9 @@
  
 namespace Vespolina\PricingBundle\Model\PricingDimension;
 
-use Vespolina\PricingBundle\Model\BasePricingDimension;
+use Vespolina\PricingBundle\Model\PricingDimension;
 
-class PeriodPricingDimension extends BasePricingDimension
+class PeriodPricingDimension extends PricingDimension
 {
 
     protected $from;

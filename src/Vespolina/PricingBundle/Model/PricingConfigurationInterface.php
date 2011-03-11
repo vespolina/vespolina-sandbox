@@ -14,11 +14,35 @@ use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
 interface PricingConfigurationInterface
 {
-  
+
+    /**
+     * Create a pricing set for this pricing configuration
+     *
+     * @abstract
+     * @return void
+     */
     function createPricingSet();
 
+    /**
+     * Create a pricing context container and set pricing element values to the ones in
+     * the pricing context container values
+     *
+     * @abstract
+     * @param PricingSetInterface $pricingSet
+     * @return void
+     */
     function createPricingContextContainerFromPricingSet(PricingSetInterface $pricingSet);
 
+    /**
+     * Determine / calculate pricing set values for the given execution event
+     *
+     * @abstract
+     * @param PricingSetInterface $pricingSet
+     * @param PricingContextContainerInterface $container
+     * @param array $options
+     *  - execution_event :  all | context_independent | context_dependent
+     * @return void
+     */
     function buildPricingSet(PricingSetInterface $pricingSet, 
                            PricingContextContainerInterface $container, 
                            $options = array());

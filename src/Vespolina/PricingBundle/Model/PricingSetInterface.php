@@ -13,12 +13,40 @@ use Vespolina\PricingBundle\Model\PricingElementInterface;
 
 interface PricingSetInterface
 {
-  
-  function getPricingElement($name);
-  
-  function addPricingElement(PricingElementInterface $pricingElement);
-  
-  function getPricingConfigurationName();
 
-  function setPricingDimensionParameters($name, $parameters);
+    /**
+     * Add pricing element to this pricing set
+     *
+     * @abstract
+     * @param PricingElementInterface $pricingElement
+     * @return void
+     */
+    function addPricingElement(PricingElementInterface $pricingElement);
+
+    /**
+     * Retrieve the pricing configuration name
+     *
+     * @abstract
+     * @return void
+     */
+    function getPricingConfigurationName();
+
+    /**
+     * Get a specific pricing element with a given name
+     *
+     * @abstract
+     * @param  $name
+     * @return void
+     */
+    function getPricingElement($name);
+
+    /**
+     * Set the pricing dimension parameters for this pricing set
+     *
+     * @abstract
+     * @param  $name
+     * @param  $parameters
+     * @return void
+     */
+    function setPricingDimensionParameters($name, $parameters);
 }

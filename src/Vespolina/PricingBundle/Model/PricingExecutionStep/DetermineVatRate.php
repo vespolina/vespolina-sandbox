@@ -9,10 +9,10 @@
  
 namespace Vespolina\PricingBundle\Model\PricingExecutionStep;
 
-use Vespolina\PricingBundle\Model\BasePricingExecutionStep;
+use Vespolina\PricingBundle\Model\PricingExecutionStep;
 use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
-class DetermineVatRate extends BasePricingExecutionStep{
+class DetermineVatRate extends PricingExecutionStep{
 
     public function execute(){
         

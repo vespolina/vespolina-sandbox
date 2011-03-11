@@ -13,12 +13,38 @@ use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
 interface PricingElementInterface
 {
-   function getName();
-    
-   function getValue();
-   
-   function setValue($value);
-   
-   function setIsDetermined($isDetermined);
+    /**
+     * Get name of the pricing element
+     *
+     * @abstract
+     * @return void
+     */
+    function getName();
+
+    /**
+     * Get name of the pricing element
+     *
+     * @abstract
+     * @return void
+     */
+    function getValue();
+
+    /**
+     * Get value of the pricing element
+     *
+     * @abstract
+     * @param  $value
+     * @return void
+     */
+    function setValue($value);
+
+    /**
+     * Toggle whether or not the pricing element has been determined
+     *
+     * @abstract
+     * @param  $isDetermined
+     * @return void
+     */
+    function setIsDetermined($isDetermined);
    
 }

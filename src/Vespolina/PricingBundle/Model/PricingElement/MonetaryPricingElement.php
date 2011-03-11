@@ -9,9 +9,9 @@
  
 namespace Vespolina\PricingBundle\Model\PricingElement;
 
-use Vespolina\PricingBundle\Model\BasePricingElement;
+use Vespolina\PricingBundle\Model\PricingElement;
 
-class MonetaryPricingElement extends BasePricingElement
+class MonetaryPricingElement extends PricingElement
 {
     
 }

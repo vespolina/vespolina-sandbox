@@ -13,17 +13,50 @@ namespace Vespolina\PricingBundle\Model;
 
 interface PricingDimensionInterface
 {
-  
-  function getName();
-  
-  function addParameter($name, $value);
-  
-  function getParameterNames();
-  
-  function getParameters();
-  
-  function getParameter($name);
-  
-  function setDefaultParametersForPricingSet(PricingSetInterface $pricingSet);
+    /**
+     * Return the name of this pricing dimension
+     * @return
+     */
+    function getName();
+
+    /**
+     * Add dimension parameter
+     *
+     * @param  $name Dimension name
+     * @param  $value Dimension value
+     * @return void
+     */
+    function addParameter($name, $value);
+
+    /**
+     * Get all the parameter names for this dimension
+     *
+     * @return array
+     */
+    function getParameterNames();
+
+    /**
+     * Return all parameters names and associated values
+     *
+     * @return array
+     */
+    function getParameters();
+
+    /**
+     * Get parameter value
+     *
+     * @param  $name
+     * @return array
+     */
+    function getParameter($name);
+
+    /**
+     * Set default values
+     *
+     * @abstract
+     * @param PricingSetInterface $pricingSet
+     * @return void
+     */
+    function setDefaultParametersForPricingSet(PricingSetInterface $pricingSet);
   
 }

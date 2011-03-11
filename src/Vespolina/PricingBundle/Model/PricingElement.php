@@ -11,7 +11,7 @@ namespace Vespolina\PricingBundle\Model;
 
 use Vespolina\PricingBundle\Model\PricingElementInterface;
 
-class BasePricingElement implements PricingElementInterface
+class PricingElement implements PricingElementInterface
 {
   
     protected $isDetermined;
