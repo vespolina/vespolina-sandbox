@@ -1,0 +1,21 @@
+<?php
+/**
+ * (c) Vespolina Project http://www.vespolina-project.org
+ *
+ * (c) Daniel Kucharski <daniel@xerias.be>
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+ 
+namespace Vespolina\DocumentBundle\Service;
+
+use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
+
+interface DocumentServiceInterface
+{
+   function createInstance(DocumentConfigurationInterface $DocumentConfiguration);
+   
+   function save(DocumentInterface $Document);
+   
+   
+}

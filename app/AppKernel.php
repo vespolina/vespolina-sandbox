@@ -11,8 +11,14 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
+            
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
+            new Vespolina\DocumentBundle\VespolinaDocumentBundle(),
             new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
+            new Vespolina\OrderBundle\VespolinaOrderBundle(),
+            new Vespolina\PartnerBundle\VespolinaPartnerBundle(),
+            new Vespolina\PricingBundle\VespolinaPricingBundle(),
+
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
