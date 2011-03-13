@@ -18,9 +18,12 @@ framework:
 
 doctrine_mongo_db:
     default_database: app_%kernel.environment%
-    mappings:
-        FOSUserBundle: ~
-        UserBundle:   ~
+    default_document_manager: default
+    document_managers:
+        default:
+            mappings:
+                FOSUserBundle: ~
+                UserBundle:   ~
 
 # Twig Configuration
 twig:
