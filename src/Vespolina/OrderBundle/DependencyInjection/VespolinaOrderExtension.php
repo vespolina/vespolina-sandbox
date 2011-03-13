@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
  
-namespace Vespolina\FlowBundle\DependencyInjection;
+namespace Vespolina\OrderBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
