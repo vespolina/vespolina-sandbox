@@ -16,15 +16,21 @@ use Vespolina\PartnerBundle\Model\PartnerInterface;
 class Document implements DocumentInterface
 {
 
+    protected $documentConfigurationName;
+    protected $identifications;
     protected $partners;
     
-    public function __construct()
+    public function __construct($documentConfigurationName)
     {
+        $this->documentConfigurationName = $documentConfigurationName;
+        $this->identifications = array();
         $this->partners = array();
     
     }
     
-    
+    /**
+     * @inheritdoc
+     */
     public function addPartner(PartnerInterface $partner, DocumentPartnerFunctionInterface $partnerFunction)
     {
         $partnerFunctionName = $partnerFunction->getName();
@@ -36,8 +42,28 @@ class Document implements DocumentInterface
         
         $this->partners[$partnerFunctionName][] = $partner;
     }
-    
-    function getPartners(DocumentPartnerFunctionInterface $partnerFunction = null)
+
+    /**
+     * @inheritdoc
+     */
+    public function getDocumentIdentification($name)
+    {
+        return $this->identifications[$name];
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function getDocumentConfigurationName()
+    {
+        return $this->documentConfigurationName;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getPartners(DocumentPartnerFunctionInterface $partnerFunction = null)
     {
         if ($partnerFunction) {
 
@@ -49,7 +75,13 @@ class Document implements DocumentInterface
         }
     
     }
-    
-  
+
+    /**
+     * @inheritdoc
+     */
+    public function setDocumentIdentification($name, DocumentIdentificationInterface $documentIdentification)
+    {
+        $this->identifications[$name] = $documentIdentification;
+    }
 	
 }

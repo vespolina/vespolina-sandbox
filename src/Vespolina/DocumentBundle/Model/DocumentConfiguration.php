@@ -15,24 +15,36 @@ class DocumentConfiguration implements DocumentConfigurationInterface
 {
     protected $baseClass;
     protected $name;
-    
+
+    /**
+     * @inheritdoc
+     */
     public function getName(){
     
         return $this->name;
     }
     
+    /**
+     * @inheritdoc
+     */
     public function getBaseClass(){
         
         return $this->baseClass;
     
     }
     
+    /**
+     * @inheritdoc
+     */
     public function setBaseClass($baseClass){
     
         $this->baseClass = $baseClass;
         
     }
     
+    /**
+     * @inheritdoc
+     */
     public function setName($name){
     
         $this->name = $name;

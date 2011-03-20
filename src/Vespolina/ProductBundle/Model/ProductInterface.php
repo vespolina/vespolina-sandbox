@@ -9,9 +9,9 @@
  
 namespace Vespolina\ProductBundle\Model;
 
-use Vespolina\PricingBundle\Model\PriceableEntityInterface;
+use Vespolina\PricingBundle\Model\PriceableInterface;
 
-interface ProductInterface extends PriceableEntityInterface
+interface ProductInterface extends PriceableInterface
 {
    public function getId();
    

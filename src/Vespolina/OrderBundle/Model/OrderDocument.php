@@ -18,12 +18,13 @@ use Vespolina\PartnerBundle\Model\PartnerFunction;
 
 class OrderDocument extends Document implements OrderDocumentInterface
 {
-	protected $documentIdentifcation = null;
+	protected $documentIdentifcations = null;
     protected $pricingSet = null;
     
     public function OrderDocument()
     {
-    
+
+        $this->documentIdentifications = array();
 
     }
     
@@ -37,7 +38,10 @@ class OrderDocument extends Document implements OrderDocumentInterface
         
     }
     
-    public function getDocumentId(){}
+    public function getDocumentId()
+    {
+
+    }
 	
 	public function getPricingSet(){
 		

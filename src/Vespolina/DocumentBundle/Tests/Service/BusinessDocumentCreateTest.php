@@ -36,17 +36,22 @@ class DocumentCreateTest extends WebTestCase
     public function testDocumentCreate()
     {
         
-        $DocumentService = $this->getKernel()->getContainer()->get('vespolina.document');
+        $documentService = $this->getKernel()->getContainer()->get('vespolina.document');
         $partnerService = $this->getKernel()->getContainer()->get('vespolina.partner');
         
-        //Create a generic business object involving an customer and an employee acting as contact person
+        //Use case 1: Create a generic business object involving an customer and an employee acting as contact person
     
-        $DocumentConfiguration = new DocumentConfiguration();
-        $DocumentConfiguration->setName('generic_document');
-        $DocumentConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\Document');
+        $documentConfiguration = $documentService->getDocumentConfiguration('generic_document');
+        $documentConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\Document');
                 
-        $Document = $DocumentService->createInstance($DocumentConfiguration);
-        
+        $document = $documentService->createInstance($documentConfiguration);
+
+        //Generate the document id identified in the document configuration by the name 'id'
+        $documentService->generateDocumentIdentification($document, 'id');
+
+        $documentIdentification = $document->getDocumentIdentification('id');
+
+
         $partnerCustomerB2CConfiguration = new PartnerConfiguration();
         $partnerCustomerB2CConfiguration->setName('customer_b2c'); //Business to Consumer
         $partnerCustomerB2CConfiguration->setBaseClass('Vespolina\PartnerBundle\Model\Customer');
@@ -59,12 +64,12 @@ class DocumentCreateTest extends WebTestCase
         $employee = $partnerService->createInstance($partnerEmployeeConfiguration);
 
         //Attach the partner to the business object and let it have the role of a customer for this document
-        $Document->addPartner($customer, new DocumentPartnerFunction('customer'));
+        $document->addPartner($customer, new DocumentPartnerFunction('customer'));
         
         //Attach the partner to the business object and let it have the role of a sales manager for this document
-        $Document->addPartner($employee, new DocumentPartnerFunction('contact_person'));
+        $document->addPartner($employee, new DocumentPartnerFunction('contact_person'));
         
-        if ($customers = $Document->getPartners(new DocumentPartnerFunction('customer'))){
+        if ($customers = $document->getPartners(new DocumentPartnerFunction('customer'))){
         
             $customer = $customers[0];
             
