@@ -2,66 +2,76 @@
 
 namespace Vespolina\MonetaryBundle\Model;
 
-interface CurrencyInterface
+use Vespolina\MonetaryBundle\Model\CurrencyInterface;
+
+abstract class Currency implements CurrencyInterface
 {
-    /**
-     * Get the ISO 4217 currency code of this currency.
-     *
-     * @return string
-     */
-    public function getCurrencyCode();
+    public function __construct()
+    {
+
+    }
 
     /**
-     * Get the symbol for the currency
-     *
-     * @return string
+     * @inheritdoc
      */
-    public function getSymbol();
+    public function getCurrencyCode()
+    {
+
+    }
 
     /**
-     * Get the default number of fraction digits for the currency
-     *
-     * @return integer
+     * @inheritdoc
      */
-    public function getFractionalDigits();
+    public function getSymbol()
+    {
+
+    }
 
     /**
-     * Return the amount, formatted for the currency
-     *
-     * @param mixed $amount
-     *
-     * @return string
+     * @inheritdoc
      */
-    public function formatAmount($amount);
+    public function getPrecision()
+    {
+
+    }
 
     /**
-     * Return the exchange rate, based on base currency
-     *
-     * @return mixed $rate
+     * @inheritdoc
      */
-    public function getExchangeRate();
+    public function formatAmount($amount)
+    {
+
+    }
 
     /**
-     * Return the date and time of the exchange rate
-     *
-     * @return \DateTime
+     * @inheritdoc
      */
-    public function getExchangeDateTime();
+    public function getExchangeRate()
+    {
+
+    }
 
     /**
-     * Return the base currency for the exchange rate
-     *
-     * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @inheritdoc
      */
-    public function getBaseCurrency();
+    public function getExchangeDateTime()
+    {
+
+    }
 
     /**
-     * Return the value after the currency conversion, this can be an instance of
-     * Vespolina\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
-     * an new instance of Vespolina\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
-     *
-     * @param mixed $amount
-     * @return mixed
+     * @inheritdoc
      */
-    public function exchange($amount);
+    public function getBaseCurrency()
+    {
+
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function exchange($amount)
+    {
+
+    }
 }

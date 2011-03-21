@@ -5,6 +5,11 @@ namespace Vespolina\MonetaryBundle\Model;
 interface CurrencyInterface
 {
     /**
+     * The date and time of now should be set by default
+     */
+    public function __construct();
+
+    /**
      * Get the ISO 4217 currency code of this currency.
      *
      * @return string
@@ -19,11 +24,11 @@ interface CurrencyInterface
     public function getSymbol();
 
     /**
-     * Get the default number of fraction digits for the currency
+     * Get the default number of precision digits for the currency
      *
      * @return integer
      */
-    public function getFractionalDigits();
+    public function getPrecision();
 
     /**
      * Return the amount, formatted for the currency
@@ -59,6 +64,8 @@ interface CurrencyInterface
      * Return the value after the currency conversion, this can be an instance of
      * Vespolina\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
      * an new instance of Vespolina\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
+     *
+     * Is returning Vespolina\MonetaryBundle\Model\MonetaryInterface the right behavior? should the manager handle this?
      *
      * @param mixed $amount
      * @return mixed
