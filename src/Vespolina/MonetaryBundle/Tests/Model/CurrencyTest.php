@@ -44,8 +44,8 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
 
     public function testGetExchangeDateTime()
     {
-        $this->assertSame(new \DateTime('2010-07-05 08:00:00+0000'), $this->currency->getExchangeDateTime(),' the date and time of the exchange rate');
-        $this->assertGreaterThanOrEqual($this->startTime, $this->largerCurrency->getExchangeDateTime(),' the default date and time should be now');
+        $this->assertEquals(new \DateTime('2010-07-05T06:00:00'), $this->currency->getExchangeDateTime(), 'the date and time of the exchange rate');
+        $this->assertInstanceOf('DateTime', $this->largerCurrency->getExchangeDateTime(), 'the default date and time should be now');
     }
 
     public function testGetBaseCurrency()
@@ -65,7 +65,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->startTime = new \DateTime('now');
-        $this->currency = $this->getCurrency(null, 'VES', 'V', 1, new \DateTime('2010-07-05T06:00:00Z'));
+        $this->currency = $this->getCurrency(null, 'VES', 'V', 1, new \DateTime('2010-07-05T06:00:00'));
         $this->largerCurrency = $this->getCurrency($this->currency, 'LGR', 'L', 2);
         $this->smallerCurrency = $this->getCurrency($this->currency, 'SML', 'S', .5);
     }
@@ -94,9 +94,11 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
         $property->setAccessible(true);
         $property->setValue($currency, $exchangeRate);
 
-        $property = $rc->getProperty('exchangeDateTime');
-        $property->setAccessible(true);
-        $property->setValue($currency, $time);
+        if ($time) {
+            $property = $rc->getProperty('exchangeDateTime');
+            $property->setAccessible(true);
+            $property->setValue($currency, $time);
+        }
 
         $property = $rc->getProperty('precision');
         $property->setAccessible(true);
