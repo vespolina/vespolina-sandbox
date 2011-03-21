@@ -22,7 +22,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
 
     public function testGetSymbol()
     {
-        $this->assertSame('V', $this->currency->getCurrencyCode(), 'the symbol for the currency');
+        $this->assertSame('V', $this->currency->getSymbol(), 'the symbol for the currency');
     }
 
     public function testGetPrecision()
@@ -44,7 +44,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
 
     public function testGetExchangeDateTime()
     {
-        $this->assertSame('2010-07-05 08:00:00+0000', $this->currency->getExchangeDateTime(),' the date and time of the exchange rate');
+        $this->assertSame(new \DateTime('2010-07-05 08:00:00+0000'), $this->currency->getExchangeDateTime(),' the date and time of the exchange rate');
         $this->assertGreaterThanOrEqual($this->startTime, $this->largerCurrency->getExchangeDateTime(),' the default date and time should be now');
     }
 
@@ -57,11 +57,9 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
 
     public function testExchange()
     {
-        $this->assertEquals(1.5, $this->currency->exchange(1.5),'exchange rate of 1 with base');
+        $this->assertSame(1.5, $this->currency->exchange(1.5),'exchange rate of 1 with base');
         $this->assertEquals(100, $this->largerCurrency->exchange(50),'exchange rate of 1 with base');
-        $this->assertEquals(1.5, $this->currency->exchange(1.5),'exchange rate of 1 with base');
-
-        $this->skipTest('is returning Monetary the right thing to do?');
+        $this->assertSame(.38, $this->smallerCurrency->exchange(.75),'exchange rate of 1 with base');
     }
 
     public function setUp()

@@ -55,7 +55,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function formatAmount($amount)
     {
-
+        return sprintf('%s%s', $this->symbol, $this->rounding($amount));
     }
 
     /**
@@ -87,6 +87,12 @@ abstract class Currency implements CurrencyInterface
      */
     public function exchange($amount)
     {
+        return (float)$this->rounding(bcmul((string)$amount,(string)$this->exchangeRate, 16));
+    }
 
+    protected function rounding($amount)
+    {
+        $roundUp = '.'.substr('0000000000000005', -($this->precision+1));
+        return bcadd((string)$amount, $roundUp, $this->precision);
     }
 }
