@@ -11,9 +11,6 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
     protected $largerCurrency;
     protected $smallerCurrency;
     protected $startTime;
-    protected $exchangeRates = array(
-        ''
-    );
 
     public function testGetCurrencyCode()
     {
