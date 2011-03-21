@@ -84,7 +84,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
         $property->setAccessible(true);
         $property->setValue($currency, $baseCurrency);
 
-        $property = $rc->getProperty('code');
+        $property = $rc->getProperty('currencyCode');
         $property->setAccessible(true);
         $property->setValue($currency, $code);
 
@@ -96,12 +96,14 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
         $property->setAccessible(true);
         $property->setValue($currency, $exchangeRate);
 
-        $property = $rc->getProperty('time');
+        $property = $rc->getProperty('exchangeDateTime');
         $property->setAccessible(true);
         $property->setValue($currency, $time);
 
         $property = $rc->getProperty('precision');
         $property->setAccessible(true);
         $property->setValue($currency, 2);
+
+        return $currency;
     }
 }
