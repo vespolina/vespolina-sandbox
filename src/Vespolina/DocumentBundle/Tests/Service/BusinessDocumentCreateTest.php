@@ -3,9 +3,12 @@
 namespace Vespolina\DocumentBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Vespolina\DocumentBundle\Model\DocumentIdentificationConfiguration;
+use Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification;
+
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
 use Vespolina\DocumentBundle\Model\DocumentPartnerFunction;
-use Vespolina\CoreBundle\Model\Product;
+
 use Vespolina\OrderBundle\Model\OrderDocument;
 use Vespolina\PartnerBundle\Service\PartnerServiceInterface;
 use Vespolina\PartnerBundle\Model\PartnerConfiguration;
@@ -41,13 +44,22 @@ class DocumentCreateTest extends WebTestCase
         
         //Use case 1: Create a generic business object involving an customer and an employee acting as contact person
     
+        //Let us start with creating a document configuration and set the base class
         $documentConfiguration = $documentService->getDocumentConfiguration('generic_document');
         $documentConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\Document');
-                
+
+        //Create a document identification configuration (how the document should be identified/numbered)
+        $documentIdentificationConfiguration = new DocumentIdentificationConfiguration();
+        $documentIdentificationConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+
+        $documentConfiguration->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration);
+
         $document = $documentService->createInstance($documentConfiguration);
 
+
+
         //Generate the document id identified in the document configuration by the name 'id'
-        $documentService->generateDocumentIdentification($document, 'id');
+        $documentService->generateDocumentIdentification($document, 'id', array());
 
         $documentIdentification = $document->getDocumentIdentification('id');
 

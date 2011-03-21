@@ -10,12 +10,42 @@
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
+use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
+
 
 class DocumentConfiguration implements DocumentConfigurationInterface
 {
     protected $baseClass;
+    protected $documentIdentificationConfigurations;
     protected $name;
 
+    /**
+     * Constructor
+     */
+    public function __construct($name)
+    {
+        $this->documentIdentificationConfigurations = array();
+        $this->name = $name;
+    }
+
+
+    /**
+     * Add a document identification configuration
+     *
+     */
+    public function addDocumentIdentificationConfiguration($name, DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration)
+    {
+        $this->documentIdentificationConfigurations[$name] = $documentIdentificationConfiguration;
+    }
+
+
+    public function getDocumentIdentificationConfiguration($name)
+    {
+
+
+        return $this->documentIdentificationConfigurations[$name];
+
+    }
     /**
      * @inheritdoc
      */
@@ -32,7 +62,15 @@ class DocumentConfiguration implements DocumentConfigurationInterface
         return $this->baseClass;
     
     }
-    
+
+    /**
+     * @inheritdoc
+     */
+    public function getDocumentIdentificationConfigurations()
+    {
+        return $this->documentIdentificationConfigurations;
+    }
+
     /**
      * @inheritdoc
      */
@@ -49,6 +87,6 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     
         $this->name = $name;
         
-    }  
-	
+    }
+
 }

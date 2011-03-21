@@ -9,11 +9,17 @@
 
 namespace Vespolina\DocumentBundle\Model\DocumentIdentification;
 
-use Vespolina\DocumentBundle\Model\DocumentIdentificationInterface;
+use Vespolina\DocumentBundle\Model\DocumentIdentification;
+use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
 
-class DbDocumentIdentification implements DocumentIdentificationInterface {
 
-    public function getId()
+class DbDocumentIdentification extends DocumentIdentification {
+
+    public function generate(DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration, $context = array())
     {
+
+        return $this->getId();
     }
+
+
 }

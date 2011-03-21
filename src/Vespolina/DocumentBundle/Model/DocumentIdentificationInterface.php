@@ -9,9 +9,44 @@
  
 namespace Vespolina\DocumentBundle\Model;
 
+use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
+
+
 interface DocumentIdentificationInterface
 {
 
-    public function getId();
+    /**
+     * Get identification value
+     *
+     * @abstract
+     * @return string
+     */
+    function getId();
+
+    /**
+     * Generate the identification value
+     *
+     * @abstract
+     * @param array $context
+     * @return string   the newly generated id
+     */
+    function generate(DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration, $context = array());
+
+
+    /**
+     * Set the id value
+     *
+     * @abstract
+     * @param string $id
+     */
+    function setId($id);
+
+    /**
+     * Is the document identification valid?
+     *
+     * @abstract
+     * @return bool
+     */
+    function valid();
    
 }

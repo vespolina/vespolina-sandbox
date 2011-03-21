@@ -39,18 +39,27 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
         
         $document = new $baseClass($documentConfiguration->getName());
 
-        //Init default id document identification
-        $document->setDocumentIdentification('id', new DbDocumentIdentification());
-        
+        //Init document identification instances
+        foreach ($documentConfiguration->getDocumentIdentificationConfigurations() as $name => $documentIdentificationConfiguration)
+        {
+            $baseClass = $documentIdentificationConfiguration->getBaseClass();
+            $documentIdentification = new $baseClass();
+            $document->setDocumentIdentification($name, $documentIdentification);
+        }
+
+
         return $document;
     }
 
     /**
      * @inheritdoc
      */
-    public function generateDocumentIdentification(DocumentInterface $document, $identificationName = 'id')
+    public function generateDocumentIdentification(DocumentInterface $document, $identificationName = 'id', $context)
     {
+        $documentConfiguration = $this->documentConfigurations[$document->getDocumentConfigurationName()];
+        $documentIdentificationConfiguration = $documentConfiguration->getDocumentIdentificationConfiguration($identificationName);
 
+        return $document->getDocumentIdentification($identificationName)->generate($documentIdentificationConfiguration, $context);
     }
 
     /**
@@ -60,7 +69,7 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     {
         if (!array_key_exists($name, $this->documentConfigurations)) {
 
-            $this->documentConfigurations[$name] = new DocumentConfiguration($this);
+            $this->documentConfigurations[$name] = new DocumentConfiguration($name);
 
         }
 
