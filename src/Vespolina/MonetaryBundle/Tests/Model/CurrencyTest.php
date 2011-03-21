@@ -54,7 +54,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
      *
      * @return string
      */
-    public function testFormatAmount($amount)
+    public function testFormatAmount()
     {
 
     }
@@ -97,7 +97,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
      * @param mixed $amount
      * @return mixed
      */
-    public function testExchange($amount)
+    public function testExchange()
     {
 
     }
