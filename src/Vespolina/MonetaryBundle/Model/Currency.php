@@ -79,7 +79,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getBaseCurrency()
     {
-        return $this->baseCurrency;
+        return $this->baseCurrency->getCurrencyCode() == 'VESPOLINA_BASE_CURRENCY' ? null : $this->baseCurrency;
     }
 
     /**
