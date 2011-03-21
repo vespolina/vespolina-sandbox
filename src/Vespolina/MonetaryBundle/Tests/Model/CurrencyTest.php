@@ -7,99 +7,69 @@ use Vespolina\MonetaryBundle\Model\BaseCurrency;
 
 class CurrencyTest extends \PHPUnit_Framework_TestCase
 {
+    protected $currency;
+    protected $largerCurrency;
+    protected $smallerCurrency;
+    protected $startTime;
     protected $exchangeRates = array(
         ''
     );
 
-    public function setUp()
-    {
-    }
-
-    /**
-     * Get the ISO 4217 currency code of this currency.
-     *
-     * @return string
-     */
     public function testGetCurrencyCode()
     {
-
+        $this->assertSame('VES', $this->currency->getCurrencyCode(), 'the currency code of the currency');
     }
 
-    /**
-     * Get the symbol for the currency
-     *
-     * @param string optional locale
-     *
-     * @return string
-     */
     public function testGetSymbol()
     {
-
+        $this->assertSame('V', $this->currency->getCurrencyCode(), 'the symbol for the currency');
     }
 
-    /**
-     * Get the default number of fraction digits for the currency
-     *
-     * @return integer
-     */
-    public function testGetFractionalDigits()
+    public function testGetPrecision()
     {
-
+        $this->assertSame(2, $this->currency->getPrecision(), 'default number of precision digits');
     }
 
-    /**
-     * Return the amount, formatted for the currency
-     *
-     * @param mixed $amount
-     *
-     * @return string
-     */
     public function testFormatAmount()
     {
-
+        $this->assertSame('V3.21', $this->currency->formatAmount(3.205), 'amount, formatted for the currency');
     }
 
-    /**
-     * Return the exchange rate, based on base currency
-     *
-     * @return mixed $rate
-     */
     public function testGetExchangeRate()
     {
-
+        $this->assertSame(1, $this->currency->getExchangeRate(),' exchange rate, based on base currency');
+        $this->assertSame(2, $this->largerCurrency->getExchangeRate(),' exchange rate, based on base currency');
+        $this->assertSame(.5, $this->smallerCurrency->getExchangeRate(),' exchange rate, based on base currency');
     }
 
-    /**
-     * Return the date and time of the exchange rate
-     *
-     * @return \DateTime
-     */
     public function testGetExchangeDateTime()
     {
-
+        $this->assertSame('2010-07-05 08:00:00+0000', $this->currency->getExchangeDateTime(),' the date and time of the exchange rate');
+        $this->assertGreaterThanOrEqual($this->startTime, $this->largerCurrency->getExchangeDateTime(),' the default date and time should be now');
     }
 
-    /**
-     * Return the base currency for the exchange rate
-     *
-     * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
-     */
     public function testGetBaseCurrency()
     {
+        $this->assertNull($this->currency->getBaseCurrency(), 'if this is the base currency, it should return null');
+        $this->assertEquals($this->currency, $this->largerCurrency->getBaseCurrency(), 'base currency for the exchange rate');
 
     }
 
-    /**
-     * Return the value after the currency conversion, this can be an instance of
-     * Vespolina\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
-     * an new instance of Vespolina\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
-     *
-     * @param mixed $amount
-     * @return mixed
-     */
     public function testExchange()
     {
+        $this->assertEquals(1.5, $this->currency->exchange(1.5),'exchange rate of 1 with base');
+        $this->assertEquals(100, $this->largerCurrency->exchange(50),'exchange rate of 1 with base');
+        $this->assertEquals(1.5, $this->currency->exchange(1.5),'exchange rate of 1 with base');
 
+        $this->skipTest('is returning Monetary the right thing to do?');
+    }
+
+    public function setUp()
+    {
+        $this->startTime = new \DateTime('now');
+        $this->currency = $this->getCurrency(null, 'VES', 'V', 1, new \DateTime('2010-07-05T06:00:00Z'));
+        $this->largerCurrency = $this->getCurrency($this->currency, 'LGR', 'L', 2);
+        $this->smallerCurrency = $this->getCurrency($this->currency, 'SML', 'S', .5);
     }
 
     protected function getCurrency($baseCurrency=null, $code, $symbol, $exchangeRate, $time=null)
@@ -108,7 +78,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
         $rc = new \ReflectionClass($currency);
 
         if (!$baseCurrency) {
-            $baseCurrency = new \BaseCurrency();
+            $baseCurrency = new BaseCurrency();
         }
         $property = $rc->getProperty('baseCurrency');
         $property->setAccessible(true);
@@ -126,9 +96,12 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
         $property->setAccessible(true);
         $property->setValue($currency, $exchangeRate);
 
-        $time = $time ? new \DateTime('now') : $time;
         $property = $rc->getProperty('time');
         $property->setAccessible(true);
         $property->setValue($currency, $time);
+
+        $property = $rc->getProperty('precision');
+        $property->setAccessible(true);
+        $property->setValue($currency, 2);
     }
 }
