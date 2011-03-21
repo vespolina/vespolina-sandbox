@@ -6,9 +6,16 @@ use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 
 abstract class Currency implements CurrencyInterface
 {
+    protected $baseCurrency;
+    protected $currencyCode;
+    protected $exchangeRate;
+    protected $exchangeDateTime;
+    protected $precision;
+    protected $symbol;
+
     public function __construct()
     {
-
+        $this->exchangeDateTime = new \DateTime('now');
     }
 
     /**
