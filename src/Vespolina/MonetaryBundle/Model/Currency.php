@@ -31,7 +31,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getCurrencyCode()
     {
-
+        return $this->currencyCode;
     }
 
     /**
@@ -39,7 +39,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getSymbol()
     {
-
+        return $this->symbol;
     }
 
     /**
@@ -47,7 +47,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getPrecision()
     {
-
+        return $this->precision;
     }
 
     /**
@@ -63,7 +63,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getExchangeRate()
     {
-
+        return $this->exchangeRate;
     }
 
     /**
@@ -71,7 +71,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getExchangeDateTime()
     {
-
+        return $this->exchangeDateTime;
     }
 
     /**
@@ -79,7 +79,7 @@ abstract class Currency implements CurrencyInterface
      */
     public function getBaseCurrency()
     {
-
+        return $this->baseCurrency;
     }
 
     /**
