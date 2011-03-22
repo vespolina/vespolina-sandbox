@@ -32,7 +32,7 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     /**
      * @inheritdoc
      */
-    public function createInstance(DocumentConfigurationInterface $documentConfiguration)
+    public function create(DocumentConfigurationInterface $documentConfiguration)
     {
         
         $baseClass = $documentConfiguration->getBaseClass();
@@ -49,6 +49,25 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
 
 
         return $document;
+    }
+
+    public function createItem(DocumentInterface $document, DocumentConfigurationInterface $documentConfiguration = null)
+    {
+        if (!$documentConfiguration) {
+
+            if (!$documentConfiguration = $this->getDocumentConfiguration($document->getDocumentConfigurationName())) {
+
+                //Throw exception
+            }
+        }
+
+        $itemBaseClass = $documentConfiguration->getItemBaseClass();
+        $documentItem = new $itemBaseClass($document);
+
+        $document->addItem($documentItem);
+
+        return $documentItem;
+
     }
 
     /**

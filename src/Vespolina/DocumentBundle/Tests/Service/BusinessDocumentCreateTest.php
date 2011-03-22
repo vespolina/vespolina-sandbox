@@ -17,6 +17,12 @@ use Vespolina\PartnerBundle\Model\PartnerConfiguration;
 class DocumentCreateTest extends WebTestCase
 {
     protected $client;
+    protected $documentService;
+    protected $partnerService;
+
+    protected $documentConfigurationGenericDoc;
+
+    protected $documentB1;
 
     public function setUp()
     {
@@ -33,36 +39,85 @@ class DocumentCreateTest extends WebTestCase
         return $this->kernel;
     }
 
-    /**
-     * @covers Vespolina\DocumentBundle\Service\DocumentService::create
-     */
-    public function testDocumentCreate()
+
+    public function testA1DocumentConfigurationCreate()
     {
-        
-        $documentService = $this->getKernel()->getContainer()->get('vespolina.document');
-        $partnerService = $this->getKernel()->getContainer()->get('vespolina.partner');
-        
-        //Use case 1: Create a generic business object involving an customer and an employee acting as contact person
-    
-        //Let us start with creating a document configuration and set the base class
-        $documentConfiguration = $documentService->getDocumentConfiguration('generic_document');
-        $documentConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\Document');
 
-        //Create a document identification configuration (how the document should be identified/numbered)
-        $documentIdentificationConfiguration = new DocumentIdentificationConfiguration();
-        $documentIdentificationConfiguration->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+        $c['documentService'] = $this->getKernel()->getContainer()->get('vespolina.document');
 
-        $documentConfiguration->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration);
+        //Test 1: create document configuration
 
-        $document = $documentService->createInstance($documentConfiguration);
+        $c['documentConfigurationGenericDoc1'] = $c['documentService']->getDocumentConfiguration('generic_document_1');
+        $c['documentConfigurationGenericDoc1']->setBaseClass('Vespolina\DocumentBundle\Model\Document');
+        $c['documentConfigurationGenericDoc1']->setItemBaseClass('Vespolina\DocumentBundle\Model\DocumentItem');
+
+        $c['documentConfigurationGenericDoc2'] = $c['documentService']->getDocumentConfiguration('generic_document_2');
+        $c['documentConfigurationGenericDoc2']->setBaseClass('Vespolina\DocumentBundle\Model\Document');
+        $c['documentConfigurationGenericDoc2']->setItemBaseClass('Vespolina\DocumentBundle\Model\DocumentItem');
+
+        //Create document identification configurations (how documents should be identified/numbered)
+        $documentIdentificationConfiguration1 = new DocumentIdentificationConfiguration();
+        $documentIdentificationConfiguration1->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+
+        $documentIdentificationConfiguration2a = new DocumentIdentificationConfiguration();
+        $documentIdentificationConfiguration2a->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+
+        $documentIdentificationConfiguration2b = new DocumentIdentificationConfiguration();
+        $documentIdentificationConfiguration2b->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+
+        $c['documentConfigurationGenericDoc1']->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration1);
+
+        $c['documentConfigurationGenericDoc2']->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration2a);
+        $c['documentConfigurationGenericDoc2']->addDocumentIdentificationConfiguration('barcode', $documentIdentificationConfiguration2b);
 
 
+        return $c;
+    }
 
-        //Generate the document id identified in the document configuration by the name 'id'
-        $documentService->generateDocumentIdentification($document, 'id', array());
+    /**
+     * @depends testA1DocumentConfigurationCreate
+     */
+    public function testB1DocumentCreate($c)
+    {
 
-        $documentIdentification = $document->getDocumentIdentification('id');
+        $c['document1'] = $c['documentService']->create($c['documentConfigurationGenericDoc1']);
+        $c['document2'] = $c['documentService']->create($c['documentConfigurationGenericDoc2']);
 
+        $this->assertEquals('generic_document_1', $c['document1']->getDocumentConfigurationName());
+        $this->assertEquals('generic_document_2', $c['document2']->getDocumentConfigurationName());
+
+       //Generate the document id identified in the document configuration by the name 'id'
+        $identificationContext = array();
+
+        $c['documentService']->generateDocumentIdentification( $c['document1'], 'id', $identificationContext);
+        $c['documentService']->generateDocumentIdentification( $c['document2'], 'id', $identificationContext);
+        $c['documentService']->generateDocumentIdentification( $c['document2'], 'barcode', $identificationContext);
+
+        return $c;
+    }
+
+    /**
+     * @depends testB1DocumentCreate
+     */
+    public function testB2DocumentItemCreate($c)
+    {
+
+        $documentItem1a = $c['documentService']->createItem($c['document1']);
+
+        //$this->assertNotEquals($documentItem1a, null);
+        $documentItems = $c['document1']->getItems();
+
+        return $c;
+
+    }
+
+    /**
+     * @depends testB2DocumentItemCreate
+     */
+    public function testB3DocumentPartnerCreate($c)
+    {
+
+        $c['partnerService'] = $this->getKernel()->getContainer()->get('vespolina.partner');
 
         $partnerCustomerB2CConfiguration = new PartnerConfiguration();
         $partnerCustomerB2CConfiguration->setName('customer_b2c'); //Business to Consumer
@@ -72,16 +127,16 @@ class DocumentCreateTest extends WebTestCase
         $partnerEmployeeConfiguration->setName('internal_employee');
         $partnerEmployeeConfiguration->setBaseClass('Vespolina\PartnerBundle\Model\Employee');
         
-        $customer = $partnerService->createInstance($partnerCustomerB2CConfiguration);
-        $employee = $partnerService->createInstance($partnerEmployeeConfiguration);
+        $customer = $c['partnerService']->createInstance($partnerCustomerB2CConfiguration);
+        $employee = $c['partnerService']->createInstance($partnerEmployeeConfiguration);
 
         //Attach the partner to the business object and let it have the role of a customer for this document
-        $document->addPartner($customer, new DocumentPartnerFunction('customer'));
+        $c['document1']->addPartner($customer, new DocumentPartnerFunction('customer'));
         
         //Attach the partner to the business object and let it have the role of a sales manager for this document
-        $document->addPartner($employee, new DocumentPartnerFunction('contact_person'));
+        $c['document1']->addPartner($employee, new DocumentPartnerFunction('contact_person'));
         
-        if ($customers = $document->getPartners(new DocumentPartnerFunction('customer'))){
+        if ($customers = $c['document1']->getPartners(new DocumentPartnerFunction('customer'))){
         
             $customer = $customers[0];
             
@@ -91,7 +146,7 @@ class DocumentCreateTest extends WebTestCase
         //$DocumentService->addPartner($Document, $customer, new PartnerFunction('customer'));
         //$DocumentService->addPartner($Document, $employee, new PartnerFunction('employee'));
         
-        
+        return $c;
 
     }
 }

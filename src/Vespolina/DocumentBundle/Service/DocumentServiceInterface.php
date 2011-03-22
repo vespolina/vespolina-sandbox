@@ -16,16 +16,27 @@ use Vespolina\DocumentBundle\Model\DocumentInterface;
 interface DocumentServiceInterface
 {
     /**
-     * Create an instance for the given document configuration
+     * Create a document instance for the given document configuration
      *
      * @abstract
-     * @param \Vespolina\DocumentBundle\Model\DocumentConfigurationInterface $DocumentConfiguration
+     * @param \Vespolina\DocumentBundle\Model\DocumentConfigurationInterface $documentConfiguration
      * @return void
      */
-    function createInstance(DocumentConfigurationInterface $DocumentConfiguration);
+    function create(DocumentConfigurationInterface $documentConfiguration);
 
     /**
-     * Generate a document id for the supplied document identified by the supplie document id name
+     * Create a document item and attach it to the document
+     *
+     * @abstract
+     * @param \Vespolina\DocumentBundle\Model\Document $document The document for which we want to create an item
+     * @param \Vespolina\DocumentBundle\Model\DocumentConfigurationInterface $documentConfiguration
+     *
+     * @return void
+     */
+    function createItem(DocumentInterface $document, DocumentConfigurationInterface $documentConfiguration = null);
+
+    /**
+     * Generate a document id for the supplied document identified by the supplied document id name
      *
      * @abstract
      * @param DocumentInterface $document

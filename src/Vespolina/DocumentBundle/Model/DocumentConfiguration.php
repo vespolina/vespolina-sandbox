@@ -17,6 +17,7 @@ class DocumentConfiguration implements DocumentConfigurationInterface
 {
     protected $baseClass;
     protected $documentIdentificationConfigurations;
+    protected $itemBaseClass;
     protected $name;
 
     /**
@@ -38,14 +39,27 @@ class DocumentConfiguration implements DocumentConfigurationInterface
         $this->documentIdentificationConfigurations[$name] = $documentIdentificationConfiguration;
     }
 
-
-    public function getDocumentIdentificationConfiguration($name)
+    /**
+     * @inheritdoc
+     */
+    public function getBaseClass()
     {
 
+        return $this->baseClass;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getDocumentIdentificationConfiguration($name)
+    {
 
         return $this->documentIdentificationConfigurations[$name];
 
     }
+
+
+
     /**
      * @inheritdoc
      */
@@ -57,9 +71,9 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     /**
      * @inheritdoc
      */
-    public function getBaseClass(){
+    public function getItemBaseClass(){
         
-        return $this->baseClass;
+        return $this->itemBaseClass;
     
     }
 
@@ -79,7 +93,16 @@ class DocumentConfiguration implements DocumentConfigurationInterface
         $this->baseClass = $baseClass;
         
     }
-    
+
+    /**
+     * @inheritdoc
+     */
+    public function setItemBaseClass($itemBaseClass){
+
+        $this->itemBaseClass = $itemBaseClass;
+
+    }
+
     /**
      * @inheritdoc
      */

@@ -10,11 +10,20 @@
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentInterface;
+use Vespolina\DocumentBundle\Model\DocumentItemInterface;
+
 use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
 interface DocumentInterface
 {
+
+    /**
+     * Add item to the collection
+     */
+    function addItem(DocumentItemInterface $documentItem);
+
+
     /**
      * Add a partner to this document
      *
@@ -38,6 +47,12 @@ interface DocumentInterface
      * Get the document identification identified by the supplied name
      */
     function getDocumentIdentification($name);
+
+
+    /**
+     * Get items belonging to this document
+     */
+    function getItems();
 
     /**
      * Retrieve all partners or filtered for a given partner role

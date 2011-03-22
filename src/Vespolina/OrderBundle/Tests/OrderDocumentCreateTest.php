@@ -36,12 +36,14 @@ class OrderDocumentCreateTest extends WebTestCase
     
         $documentService = $this->getKernel()->getContainer()->get('vespolina.document');
 
-        $documentConfiguration = new DocumentConfiguration();
+        $documentConfiguration = $documentService->getDocumentConfiguration('generic_document');
         $documentConfiguration->setName('sales_order_third_party');
         $documentConfiguration->setBaseClass('Vespolina\OrderBundle\Model\OrderDocument');
+        $documentConfiguration->setItemBaseClass('Vespolina\OrderBundle\Model\OrderDocumentItem');
+
         
-        
-        $businessDocument = $documentService->createInstance($documentConfiguration);
-       
+        $orderDocument = $documentService->create($documentConfiguration);
+        $orderDocumentItem = $documentService->createItem($orderDocument);
+
     }
 }

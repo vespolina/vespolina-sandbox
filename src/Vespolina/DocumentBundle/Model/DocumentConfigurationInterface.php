@@ -25,9 +25,17 @@ interface DocumentConfigurationInterface
      * Retrieve the base class of document instance(s) which this configuration should create
      *
      * @abstract
-     * @return void
+     * @return string
      */
     function getBaseClass();
+
+    /**
+     * Retrieve the base class of document item instance(s) which this configuration should create
+     *
+     * @abstract
+     * @return string
+     */
+    function getItemBaseClass();
 
 
     /**
@@ -60,6 +68,16 @@ interface DocumentConfigurationInterface
      * @return void
      */
     function setBaseClass($baseClass);
+
+
+    /**
+     * Set the base class of document item instance(s) which this configuration should create
+     *
+     * @abstract
+     * @param  $itemBaseClass
+     * @return void
+     */
+    function setItemBaseClass($itemBaseClass);
 
     /**
      * Set the document configuration name

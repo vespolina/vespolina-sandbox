@@ -10,6 +10,7 @@
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentInterface;
+use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
@@ -18,16 +19,25 @@ class Document implements DocumentInterface
 
     protected $documentConfigurationName;
     protected $identifications;
+    protected $items;
     protected $partners;
     
     public function __construct($documentConfigurationName)
     {
         $this->documentConfigurationName = $documentConfigurationName;
         $this->identifications = array();
+        $this->items = array();
         $this->partners = array();
     
     }
-    
+
+     /**
+     * @inheritdoc
+     */
+     public function addItem(DocumentItemInterface $documentItem)
+     {
+         $this->items[] = $documentItem;
+     }
     /**
      * @inheritdoc
      */
@@ -59,6 +69,15 @@ class Document implements DocumentInterface
     {
         return $this->documentConfigurationName;
     }
+
+    /**
+         * @inheritdoc
+         */
+    public function getItems()
+    {
+        return $this->items;
+    }
+
 
     /**
      * @inheritdoc
