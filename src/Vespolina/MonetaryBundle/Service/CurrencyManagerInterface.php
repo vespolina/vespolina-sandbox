@@ -5,7 +5,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
-namespace Vespolina\MonetaryBundle\Model;
+namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
@@ -34,4 +34,14 @@ interface CurrencyManagerInterface
      * @param DateTime $datetime optional date and time of exchange rate, defaults to now
      */
     public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
+
+    /**
+     * Get the exchange rate between the base currency and the desired currency
+     *
+     * @param  mixed $baseCurrency
+     * @param  mixed $currency
+     * @param DateTime $datetime optional date and time of exchange rate, defaults to now
+     * @return rate
+     */
+    function getExchangeRate($baseCurrency, $currency, \DateTime $datetime=null);
 }
