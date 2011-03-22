@@ -115,4 +115,12 @@ class MonetaryService implements MonetaryServiceInterface
     {
 
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getExchangeRate($baseCurrency, $currency)
+    {
+
+    }
 }
