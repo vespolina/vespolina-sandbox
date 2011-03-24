@@ -10,10 +10,10 @@
 namespace Vespolina\OrderBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentInterface;
-use Vespolina\PricingBundle\Model\PriceableEntityInterface;
+use Vespolina\PricingBundle\Model\PriceableInterface;
 
-interface OrderDocumentInterface extends DocumentInterface
+interface OrderDocumentInterface extends DocumentInterface, PriceableInterface
 {
-   public function getDocumentId();
-   
+    public function getCustomer();
+
 }

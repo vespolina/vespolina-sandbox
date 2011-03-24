@@ -55,18 +55,22 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     {
         if (!$documentConfiguration) {
 
+
             if (!$documentConfiguration = $this->getDocumentConfiguration($document->getDocumentConfigurationName())) {
 
                 //Throw exception
             }
         }
 
-        $itemBaseClass = $documentConfiguration->getItemBaseClass();
-        $documentItem = new $itemBaseClass($document);
+        if ($itemBaseClass = $documentConfiguration->getItemBaseClass()) {
 
-        $document->addItem($documentItem);
+            $documentItem = new $itemBaseClass($document);
 
-        return $documentItem;
+            $document->addItem($documentItem);
+
+            return $documentItem;
+
+        }
 
     }
 

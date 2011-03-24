@@ -7,7 +7,7 @@ use Vespolina\DocumentBundle\Model\DocumentIdentificationConfiguration;
 use Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification;
 
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
-use Vespolina\DocumentBundle\Model\DocumentPartnerFunction;
+use Vespolina\DocumentBundle\Model\DocumentPartnerRole;
 
 use Vespolina\OrderBundle\Model\OrderDocument;
 use Vespolina\PartnerBundle\Service\PartnerServiceInterface;
@@ -104,7 +104,7 @@ class DocumentCreateTest extends WebTestCase
 
         $documentItem1a = $c['documentService']->createItem($c['document1']);
 
-        //$this->assertNotEquals($documentItem1a, null);
+        $this->assertNotEquals($documentItem1a, null);
         $documentItems = $c['document1']->getItems();
 
         return $c;
@@ -131,21 +131,24 @@ class DocumentCreateTest extends WebTestCase
         $employee = $c['partnerService']->createInstance($partnerEmployeeConfiguration);
 
         //Attach the partner to the business object and let it have the role of a customer for this document
-        $c['document1']->addPartner($customer, new DocumentPartnerFunction('customer'));
+        $c['document1']->addPartner($customer, new DocumentPartnerRole('customer'));
         
         //Attach the partner to the business object and let it have the role of a sales manager for this document
-        $c['document1']->addPartner($employee, new DocumentPartnerFunction('contact_person'));
-        
-        if ($customers = $c['document1']->getPartners(new DocumentPartnerFunction('customer'))){
-        
+        $c['document1']->addPartner($employee, new DocumentPartnerRole('contact_person'));
+
+        $this->assertEquals(count($c['document1']->getPartners()), 2);
+
+        $customer = null;
+        if ($customers = $c['document1']->getPartners(new DocumentPartnerRole('customer'))){
+
             $customer = $customers[0];
-            
+
         }
-        
-        
-        //$DocumentService->addPartner($Document, $customer, new PartnerFunction('customer'));
-        //$DocumentService->addPartner($Document, $employee, new PartnerFunction('employee'));
-        
+        $this->assertNotEmpty($customer);
+        $this->assertEquals($customer->getPartnerConfigurationName(), 'customer_b2c');
+
+
+
         return $c;
 
     }

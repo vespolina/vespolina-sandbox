@@ -5,6 +5,7 @@ namespace Vespolina\OrderBundle\Tests\Service;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Vespolina\ProductBundle\Model\Product;
 use Vespolina\OrderBundle\Model\OrderDocument;
+
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
 use Vespolina\PricingBundle\Service\Pricing;
 
@@ -41,9 +42,25 @@ class OrderDocumentCreateTest extends WebTestCase
         $documentConfiguration->setBaseClass('Vespolina\OrderBundle\Model\OrderDocument');
         $documentConfiguration->setItemBaseClass('Vespolina\OrderBundle\Model\OrderDocumentItem');
 
-        
+
         $orderDocument = $documentService->create($documentConfiguration);
-        $orderDocumentItem = $documentService->createItem($orderDocument);
+        $orderDocumentItem1 = $documentService->createItem($orderDocument, $documentConfiguration);
+
+        $productA = new Product();
+        $productB = new Product();
+
+        $orderDocumentItem1->setProduct($productA);
+        $orderDocumentItem1->setOrderedQuantity(10);
+
+        $this->assertEquals(count($orderDocument->getItems()), 1);
+        $this->assertEquals(($orderDocumentItem1->getOrderedQuantity()), 10);
+
+        $orderDocumentItem2 = $documentService->createItem($orderDocument, $documentConfiguration);
+        $orderDocumentItem2->setProduct($productB);
+        $orderDocumentItem2->setOrderedQuantity(5);
+
+        $this->assertEquals(count($orderDocument->getItems()), 2);
+        $this->assertEquals(($orderDocumentItem2->getOrderedQuantity()), 5);
 
     }
 }

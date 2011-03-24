@@ -20,10 +20,10 @@ use Vespolina\PartnerBundle\Service\PartnerBundleServiceInterface;
 class PartnerService extends ContainerAware implements PartnerServiceInterface
 {
 
-    function createInstance(PartnerConfigurationInterface $interface)
+    function createInstance(PartnerConfigurationInterface $partnerConfiguration)
     {
 
-        return new Partner();
+        return new Partner($partnerConfiguration->getName());
     }
   
     public function getPricingConfiguration($name)

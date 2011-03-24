@@ -9,9 +9,9 @@
  
 namespace Vespolina\DocumentBundle\Model;
 
-use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
+use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 
-interface DocumentPartnerFunctionInterface
+interface DocumentPartnerRoleInterface
 {
 
   public function getName();

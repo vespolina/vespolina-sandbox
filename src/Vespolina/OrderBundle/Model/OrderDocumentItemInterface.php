@@ -9,11 +9,11 @@
  
 namespace Vespolina\OrderBundle\Model;
 
-use Vespolina\PricingBundle\Model\PriceableEntityInterface;
+use Vespolina\PricingBundle\Model\PriceableInterface;
 use Vespolina\ProductBundle\Model\ProductInterface;
 use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 
-interface OrderItemInterface extends DocumentItemInterface, PriceableInterface
+interface OrderDocumentItemInterface extends DocumentItemInterface
 {
 
     /**
@@ -47,6 +47,6 @@ interface OrderItemInterface extends DocumentItemInterface, PriceableInterface
      * @param  $quantity
      * @return void
      */
-    function setOrdererdQuantity($quantity);
+    function setOrderedQuantity($quantity);
    
 }

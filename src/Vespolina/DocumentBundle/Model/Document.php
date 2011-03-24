@@ -11,7 +11,7 @@ namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentInterface;
 use Vespolina\DocumentBundle\Model\DocumentItemInterface;
-use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
+use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
 class Document implements DocumentInterface
@@ -20,14 +20,17 @@ class Document implements DocumentInterface
     protected $documentConfigurationName;
     protected $identifications;
     protected $items;
-    protected $partners;
-    
+    protected $partnersByRole;
+
+    /**
+     * Constructor
+     */
     public function __construct($documentConfigurationName)
     {
         $this->documentConfigurationName = $documentConfigurationName;
         $this->identifications = array();
         $this->items = array();
-        $this->partners = array();
+        $this->partnersByRole = array();
     
     }
 
@@ -38,19 +41,20 @@ class Document implements DocumentInterface
      {
          $this->items[] = $documentItem;
      }
+
     /**
      * @inheritdoc
      */
-    public function addPartner(PartnerInterface $partner, DocumentPartnerFunctionInterface $partnerFunction)
+    public function addPartner(PartnerInterface $partner, DocumentPartnerRoleInterface $partnerFunction)
     {
-        $partnerFunctionName = $partnerFunction->getName();
+        $partnerRoleName = $partnerFunction->getName();
         
-        if (!array_key_exists($partnerFunctionName, $this->partners)) {
+        if (!array_key_exists($partnerRoleName, $this->partnersByRole)) {
             
-            $this->partners[$partnerFunctionName][] = array($partner);
+            $this->partnersByRole[$partnerRoleName] = array();
         }
         
-        $this->partners[$partnerFunctionName][] = $partner;
+        $this->partnersByRole[$partnerRoleName][] = $partner;
     }
 
     /**
@@ -71,8 +75,8 @@ class Document implements DocumentInterface
     }
 
     /**
-         * @inheritdoc
-         */
+      * @inheritdoc
+      */
     public function getItems()
     {
         return $this->items;
@@ -82,15 +86,25 @@ class Document implements DocumentInterface
     /**
      * @inheritdoc
      */
-    public function getPartners(DocumentPartnerFunctionInterface $partnerFunction = null)
+    public function getPartners(DocumentPartnerRoleInterface $partnerRole = null)
     {
-        if ($partnerFunction) {
+        if ($partnerRole) {
 
-            return $this->partners[$partnerFunction->getName()];
+            return $this->partnersByRole[$partnerRole->getName()];
             
         } else {
-        
-        
+
+            $partners = array();
+
+            foreach($this->partnersByRole as $partnersInRole) {
+
+                foreach($partnersInRole as $partnerInRole) {
+
+                    $partners[] = $partnerInRole;
+                }
+            }
+
+            return $partners;
         }
     
     }
@@ -102,5 +116,4 @@ class Document implements DocumentInterface
     {
         $this->identifications[$name] = $documentIdentification;
     }
-	
 }

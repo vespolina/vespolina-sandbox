@@ -9,9 +9,9 @@
 
 namespace Vespolina\DocumentBundle\Model;
 
-use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
+use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 
-class DocumentPartnerFunction implements DocumentPartnerFunctionInterface
+class DocumentPartnerRole implements DocumentPartnerRoleInterface
 {
     
     protected $name;

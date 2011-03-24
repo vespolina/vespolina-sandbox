@@ -12,7 +12,7 @@ namespace Vespolina\DocumentBundle\Model;
 use Vespolina\DocumentBundle\Model\DocumentInterface;
 use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 
-use Vespolina\DocumentBundle\Model\DocumentPartnerFunctionInterface;
+use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
 interface DocumentInterface
@@ -32,7 +32,7 @@ interface DocumentInterface
      * @param DocumentPartnerFunctionInterface $partnerFunction
      * @return void
      */
-    function addPartner(PartnerInterface $partner, DocumentPartnerFunctionInterface $partnerFunction);
+    function addPartner(PartnerInterface $partner, DocumentPartnerRoleInterface $partnerFunction);
 
 
     /**
@@ -55,12 +55,12 @@ interface DocumentInterface
     function getItems();
 
     /**
-     * Retrieve all partners or filtered for a given partner role
+     * Retrieve all partners or all matching the supplied partner role
      *
      * @abstract
-     * @param null|DocumentPartnerFunctionInterface $partnerFunction
+     * @param null|DocumentPartnerRoleInterface $partnerFunction
      * @return void
      */
-    function getPartners(DocumentPartnerFunctionInterface $partnerFunction = null);
+    function getPartners(DocumentPartnerRoleInterface $partnerRole = null);
 
 }

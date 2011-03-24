@@ -9,23 +9,51 @@
 
 namespace Vespolina\OrderBundle\Model;
 
-use Vespolina\PricingBundle\Model\OrderDocumentItemInterface;
+use Vespolina\DocumentBundle\Model\DocumentItem;
+use Vespolina\OrderBundle\Model\OrderDocumentItemInterface;
+use Vespolina\ProductBundle\Model\ProductInterface;
 
-class OrderDocumentItem implements OrderDocumentItemInterface
+class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterface
 {
-	protected $pricingSet = null;
-	
-    public function getId(){}
-	
-	public function getPricingSet(){
-		
-      return $this->pricingSet;
-	}
-  
-  public function setPricingSet(PricingSetInterface $pricingSet){
-  
-    $this->pricingSet = $pricingSet;
-  }
-   
-	
+
+    protected $orderedQuantity;
+    protected $product;
+
+    /**
+     * @inheritdoc
+     */
+    function getOrderedQuantity()
+    {
+
+        return $this->orderedQuantity;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    function getProduct()
+    {
+
+        return $this->product;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    function setOrderedQuantity($orderedQuantity)
+    {
+
+        $this->orderedQuantity = $orderedQuantity;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    function setProduct(ProductInterface $product)
+    {
+
+        $this->product = $product;
+    }
+
+
 }

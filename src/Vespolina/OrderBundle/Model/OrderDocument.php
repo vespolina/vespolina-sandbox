@@ -13,45 +13,73 @@ use Vespolina\DocumentBundle\Model\Document;
 use Vespolina\OrderBundle\Model\OrderDocumentInterface;
 use Vespolina\PricingBundle\Model\PricingElementContainer;
 use Vespolina\PricingBundle\Model\PricingSetInterface;
-use Vespolina\PartnerBundle\Model\PartnerFunction;
+use Vespolina\PartnerBundle\Model\PartnerRole;
 
 
 class OrderDocument extends Document implements OrderDocumentInterface
 {
-	protected $documentIdentifcations = null;
+    protected $customer = null;
+    protected $documentIdentifications = null;
     protected $pricingSet = null;
     
-    public function OrderDocument()
+    public function __construct($documentConfigurationName)
     {
+        parent::__construct($documentConfigurationName);
 
         $this->documentIdentifications = array();
 
     }
-    
+
+    /**
+     * Get the (primary) customer for this order
+     */
     public function getCustomer()
     {
-    
-        if ($partners = $this->getPartners(new PartnerFunction('customer'))) {
-        
-            return $partners[0];
-        }
-        
-    }
-    
-    public function getDocumentId()
-    {
+        if (!$this->customer) {
 
+            if ($partners = $this->getPartners(new PartnerRole('customer'))) {
+
+               $this->customer = $partners[0];
+            }
+        }
+
+        return $this->customer;
     }
-	
-	public function getPricingSet(){
-		
+
+    /**
+     * @inheritdoc
+     */
+    public function getPricingSet(){
+
       return $this->pricingSet;
-	}
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setPricingSet(PricingSetInterface $pricingSet){
   
-  public function setPricingSet(PricingSetInterface $pricingSet){
-  
-    $this->pricingSet = $pricingSet;
-  }
-   
-	
+        $this->pricingSet = $pricingSet;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getPricingSets()
+    {
+        //A typical order has only one pricing set
+
+        return array($this->pricingSet);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function addPricingSet(PricingSetInterface $pricingSet)
+    {
+        //A typical order has only one pricing set
+
+        $this->setPricingSet($pricingSet);
+    }
 }

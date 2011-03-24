@@ -12,6 +12,40 @@ namespace Vespolina\PartnerBundle\Model;
 interface PartnerInterface
 {
 
-  public function getAddresses();
+    /**
+     * Get unique identification
+     */
+    public function getId();
+
+
+    /**
+     * Name of the partner
+     */
+    public function getName();
+
+    /**
+     * Get the name of the partner configuration to which this partner belongs
+     */
+    public function getPartnerConfigurationName();
+
+    /**
+     * Set the partner id
+     *
+     * @abstract
+     * @param  $id
+     * @return void
+     */
+    public function setId($id);
+
+    /**
+     * Set partner name
+     *
+     * @abstract
+     * @param  $name
+     * @return void
+     */
+    public function setName($name);
+
+
   
 }

@@ -15,7 +15,6 @@ class DocumentIdentificationConfiguration implements DocumentIdentificationConfi
 
     protected $baseClass;
 
-
     /**
      * @inheritdoc
      */

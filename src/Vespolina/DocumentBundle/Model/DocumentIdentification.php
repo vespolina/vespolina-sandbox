@@ -15,16 +15,25 @@ abstract class DocumentIdentification implements DocumentIdentificationInterface
 
     protected $id;
 
+    /**
+     * @inheritdoc
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function setId($id)
     {
         $this->id = $id;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function valid( )
     {
         return ($this->id == '' ? true: false);
