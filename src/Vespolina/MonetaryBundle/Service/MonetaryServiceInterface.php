@@ -8,9 +8,9 @@
 namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
-use Vespolina\MonetaryBundle\Model\CurrencyManagerInterface;
+use Vespolina\MonetaryBundle\Service\CurrencyManagerInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
-use Vespolina\MonetaryBundle\Model\MonetaryManagerInterface;
+use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
 
 /**
  * @author Richard Shank <develop@zestic.com>

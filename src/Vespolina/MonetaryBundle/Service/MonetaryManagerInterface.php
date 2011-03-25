@@ -7,8 +7,8 @@
  */
 namespace Vespolina\MonetaryBundle\Service;
 
-use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
+use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 
 /**
  * @author Richard Shank <develop@zestic.com>

@@ -7,6 +7,8 @@
  */
 namespace Vespolina\MonetaryBundle\Service;
 
+use Vespolina\MonetaryBundle\Model\CurrencyInterface;
+use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
 
 /**
@@ -16,7 +18,7 @@ class MonetaryService implements MonetaryServiceInterface
 {
     public function __construct()
     {
-      
+
     }
 
     /**
@@ -119,7 +121,7 @@ class MonetaryService implements MonetaryServiceInterface
     /**
      * {@inheritdoc}
      */
-    protected function getExchangeRate($baseCurrency, $currency)
+    public function getExchangeRate($baseCurrency, $currency, \DateTime $datetime=null)
     {
 
     }
