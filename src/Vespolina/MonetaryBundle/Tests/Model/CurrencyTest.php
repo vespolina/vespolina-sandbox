@@ -2,10 +2,9 @@
 
 namespace Vespolina\MonetaryBundle\Tests\Model;
 
-use Vespolina\MonetaryBundle\Model\Currency;
-use Vespolina\MonetaryBundle\Model\BaseCurrency;
+use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
 
-class CurrencyTest extends \PHPUnit_Framework_TestCase
+class CurrencyTest extends MonetaryTestBase
 {
     protected $currency;
     protected $largerCurrency;
@@ -62,45 +61,8 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->startTime = new \DateTime('now');
-        $this->currency = $this->getCurrency(null, 'VES', 'V', 1, new \DateTime('2010-07-05T06:00:00'));
+        $this->currency = $this->getBaseCurrency();
         $this->largerCurrency = $this->getCurrency($this->currency, 'LGR', 'L', 2);
         $this->smallerCurrency = $this->getCurrency($this->currency, 'SML', 'S', .5);
-    }
-
-    protected function getCurrency($baseCurrency=null, $code, $symbol, $exchangeRate, $time=null)
-    {
-        $currency = $this->getMockForAbstractClass('Vespolina\MonetaryBundle\Model\Currency');
-        $rc = new \ReflectionClass($currency);
-
-        if (!$baseCurrency) {
-            $baseCurrency = new BaseCurrency();
-        }
-        $property = $rc->getProperty('baseCurrency');
-        $property->setAccessible(true);
-        $property->setValue($currency, $baseCurrency);
-
-        $property = $rc->getProperty('currencyCode');
-        $property->setAccessible(true);
-        $property->setValue($currency, $code);
-
-        $property = $rc->getProperty('symbol');
-        $property->setAccessible(true);
-        $property->setValue($currency, $symbol);
-
-        $property = $rc->getProperty('exchangeRate');
-        $property->setAccessible(true);
-        $property->setValue($currency, $exchangeRate);
-
-        if ($time) {
-            $property = $rc->getProperty('exchangeDateTime');
-            $property->setAccessible(true);
-            $property->setValue($currency, $time);
-        }
-
-        $property = $rc->getProperty('precision');
-        $property->setAccessible(true);
-        $property->setValue($currency, 2);
-
-        return $currency;
     }
 }
