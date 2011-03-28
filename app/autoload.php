@@ -22,3 +22,7 @@ $loader->registerPrefixes(array(
     'Swift_'             => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
 $loader->register();
+
+//require_once __DIR__.'/../vendor/zetacomponents/Base/base.php';
+//ezcBase::setWorkingDirectory(__DIR__.'/../vendor/zetacomponents/Base/src/');
+//spl_autoload_register( array( 'ezcBase', 'autoload' ) );

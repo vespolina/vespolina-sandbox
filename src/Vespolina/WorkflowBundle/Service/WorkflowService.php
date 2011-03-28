@@ -22,16 +22,22 @@ use Vespolina\WorkflowBundle\Service\WorkflowServiceInterface;
 class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 {
 
+    /**
+     * @inheritdoc
+     */
     function create(WorkflowConfigurationInterface $workflowConfiguration)
     {
+        $className = 'Vespolina\WorkflowBundle\Model\Workflow';
 
-        return new Workflow($workflowConfiguration->getName());
+        return new $className($workflowConfiguration->getName());
     }
   
+    /**
+     * @inheritdoc
+     */
     public function getWorkflowConfiguration($name)
     {
-  
-        $workflowConfiguration = new WorkflowConfiguration($this);
+        $workflowConfiguration = new WorkflowConfiguration($name);
   
         return $workflowConfiguration;
     }

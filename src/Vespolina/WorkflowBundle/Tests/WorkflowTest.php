@@ -3,11 +3,8 @@
 namespace Vespolina\WorkflowBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Vespolina\ProductBundle\Model\Product;
-use Vespolina\OrderBundle\Model\OrderDocument;
+use Vespolina\WorkflowBundle\Model\Workflow;
 
-use Vespolina\DocumentBundle\Model\DocumentConfiguration;
-use Vespolina\PricingBundle\Service\Pricing;
 
 class WorkflowTest extends WebTestCase
 {
@@ -34,10 +31,19 @@ class WorkflowTest extends WebTestCase
      */
     public function testWorkflowCreate()
     {
-    
+        //$workflow = new \ezcWorkflow( 'Test' );
+        //$workflow->test();
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
 
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('order_to_cash_b2c');
+        $workflow = $workflowService->create($workflowConfiguration);
+
+        $this->assertEquals($workflow->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
+
+        $isStartSuccess = $workflow->start();
+
+        $this->assertTrue($isStartSuccess);
+
 
         /**$documentConfiguration->setName('sales_order_third_party');
         $documentConfiguration->setBaseClass('Vespolina\OrderBundle\Model\OrderDocument');

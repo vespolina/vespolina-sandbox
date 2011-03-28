@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\PartnerBundle\VespolinaPartnerBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
+            new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
 
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
