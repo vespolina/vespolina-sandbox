@@ -23,6 +23,5 @@ $loader->registerPrefixes(array(
 ));
 $loader->register();
 
-//require_once __DIR__.'/../vendor/zetacomponents/Base/base.php';
-//ezcBase::setWorkingDirectory(__DIR__.'/../vendor/zetacomponents/Base/src/');
-//spl_autoload_register( array( 'ezcBase', 'autoload' ) );
+require_once 'ezc/Base/base.php';
+spl_autoload_register( array( 'ezcBase', 'autoload' ) );

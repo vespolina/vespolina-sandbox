@@ -17,6 +17,7 @@ class Workflow implements WorkflowInterface
 {
 
     protected $container;
+    protected $runtimeInstance;
     protected $name;
     protected $status;
 
@@ -38,9 +39,11 @@ class Workflow implements WorkflowInterface
         }
 
         $this->name = $name;
+
         //Set container values which we know at this point
         $this->container->set('workflow.name', $this->name);
     }
+
 
     /**
      * @inheritdoc
@@ -58,10 +61,37 @@ class Workflow implements WorkflowInterface
         return $this->container;
     }
 
+
+    /**
+     * Retrieve the runtime instance
+     *
+     * @return
+     */
+    public function getRuntimeInstance()
+    {
+
+        return $this->runtimeInstance;
+    }
+
+
+    public function setRuntimeInstance($runtimeInstance)
+    {
+
+        $this->runtimeInstance = $runtimeInstance;
+    }
+
     /**
      * @inheritdoc
      */
-    public function start(){
+    public function start()
+    {
+
+        if (!$this->runtimeInstance) {
+
+            return false;
+        }
+
+        //$ezcInstance->start();
 
         return true;
     }
@@ -82,5 +112,6 @@ class Workflow implements WorkflowInterface
         $this->name = $name;
         
     }
+
 
 }

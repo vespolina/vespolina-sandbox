@@ -15,6 +15,9 @@ use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 class WorkflowConfiguration implements WorkflowConfigurationInterface
 {
 
+    protected $baseClass;
+    protected $builderClass;
+    protected $builderOptions;
     protected $name;
 
     /**
@@ -28,11 +31,63 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
     /**
      * @inheritdoc
      */
+    public function getBaseClass()
+    {
+
+        return $this->baseClass;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getBuilderClass()
+    {
+
+        return $this->builderClass;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getBuilderOptions()
+    {
+
+        return $this->builderOptions;
+    }
+    /**
+     * @inheritdoc
+     */
     public function getName(){
     
         return $this->name;
     }
-    
+
+    /**
+     * @inheritdoc
+     */
+    public function setBaseClass($baseClass){
+
+        $this->baseClass = $baseClass;
+
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setBuilderClass($builderClass){
+
+        $this->builderClass = $builderClass;
+
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setBuilderOptions($builderOptions){
+
+        $this->builderOptions = $builderOptions;
+
+    }
     /**
      * @inheritdoc
      */

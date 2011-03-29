@@ -27,20 +27,25 @@ class WorkflowTest extends WebTestCase
     }
 
     /**
-     * @covers Vespolina\OrderBundle\Service\OrderService::create
+     * @covers Vespolina\WorkflowBundle\Service\WorkflowService::create
      */
     public function testWorkflowCreate()
     {
-        //$workflow = new \ezcWorkflow( 'Test' );
+
+
         //$workflow->test();
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
 
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('order_to_cash_b2c');
+        $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\Workflow');
+        $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Model\WorkflowBuilder\XmlWorkflowBuilder');
+        $workflowConfiguration->setBuilderOptions(array('source' => 'test' . DIRECTORY_SEPARATOR));
+
         $workflow = $workflowService->create($workflowConfiguration);
 
         $this->assertEquals($workflow->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
 
-        $isStartSuccess = $workflow->start();
+        $isStartSuccess = $workflowService->start($workflow);
 
         $this->assertTrue($isStartSuccess);
 
