@@ -17,5 +17,4 @@ use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
  */
 interface MonetaryServiceInterface extends CurrencyManagerInterface, MonetaryManagerInterface
 {
-  public function __construct();
 }

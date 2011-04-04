@@ -24,7 +24,7 @@ interface CurrencyManagerInterface
      *
      * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
      */
-    public function getCurrency($currencyCode, CurrencyInterface $currency, \DateTime $datetime=null);
+    public function getCurrency($currencyCode, CurrencyInterface $baseCurrency, \DateTime $datetime=null);
 
     /**
      * Exchange an amount against a currency, this is short cut to having to get an instance of a currency
