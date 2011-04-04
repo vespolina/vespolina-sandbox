@@ -16,6 +16,8 @@ use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
  */
 class MonetaryService implements MonetaryServiceInterface
 {
+    protected $currencyRoot = "Vespolina\MonetaryBundle\Currency";
+
     public function __construct()
     {
 
@@ -105,8 +107,16 @@ class MonetaryService implements MonetaryServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function getCurrency($currencyCode, CurrencyInterface $currency, \DateTime $datetime=null)
+    public function getCurrency($currencyCode, CurrencyInterface $baseCurrency, \DateTime $datetime=null)
     {
+        $class = sprintf("$this->currencyRoot\%sCurrency", $currencyCode);
+
+        $currency = new $class();
+
+        $baseCode = $baseCurrency->getCurrencyCode();
+        $url = sprintf("http://www.google.com/ig/calculator?hl=en&q=1%s%3D%3F%s", $baseCode, $currencyCode);
+        $conversion = wget($url);
+        $rc = new \ReflectionClass($currency);
 
     }
 

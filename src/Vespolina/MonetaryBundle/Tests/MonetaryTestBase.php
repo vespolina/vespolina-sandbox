@@ -10,7 +10,6 @@ use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
 
 class MonetaryTestBase extends \PHPUnit_Framework_TestCase
 {
-
     protected function getCurrency($baseCurrency=null, $code, $symbol, $exchangeRate, $time=null)
     {
         $currency = $this->getMockForAbstractClass('Vespolina\MonetaryBundle\Model\Currency');

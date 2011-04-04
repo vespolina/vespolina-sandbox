@@ -15,8 +15,8 @@ class MonetaryServiceTest extends MonetaryTestBase
 
     public function testGetCurrency()
     {
-        $currency = $this->service->getCurrency('MOCK', $this->baseCurrency);
-        $this->assertInstanceOf('MOCKCurrency', $currency, 'currency instance, based on another currency and time');
+        $currency = $this->service->getCurrency('MOCK', $this->baseCurrency);2
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Tests\Document\MOCKCurrency', $currency, 'currency instance, based on another currency and time');
     }
 
     public function testExchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null)
@@ -154,10 +154,15 @@ class MonetaryServiceTest extends MonetaryTestBase
     {
 
     }
-    
-    public function setUp()
+
+    protected function setUp()
     {
         $this->service = $this->getMock('Vespolina\MonetaryBundle\Service\MonetaryService');
+        $rc = new \ReflectionClass($this->service);
+        $property = $rc->getProperty('currencyRoot');
+        $property->setAccessible(true);
+        $property->setValue($this->service, 'Vespolina\MonetaryBundle\Tests\Document');
+
         $this->baseCurrency = $this->getBaseCurrency();
     }
 }
