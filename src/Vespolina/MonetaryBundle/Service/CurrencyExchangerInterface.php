@@ -9,7 +9,7 @@ namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 
-interface CurrencyExchangeInterface
+interface CurrencyExchangerInterface
 {
     /**
      * Get the exchange rate from on currency to another.  $from and $to can be an
