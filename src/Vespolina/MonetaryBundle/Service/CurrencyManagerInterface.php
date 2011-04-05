@@ -7,7 +7,6 @@
  */
 namespace Vespolina\MonetaryBundle\Service;
 
-use Vespolina\MonetaryBundle\Model\CurrencyExchangerInterface;
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 
@@ -45,12 +44,4 @@ interface CurrencyManagerInterface
      * @return rate
      */
     public function getExchangeRate($baseCurrency, $currency, \DateTime $datetime=null);
-
-    /**
-     * Set the CurrencyExchanger used to find the exchange rate
-     *
-     * @param CurrencyExchangerInterface $currencyExchanger
-     * @return void
-     */
-    public function setCurrencyExchanger(CurrencyExchangerInterface $currencyExchanger);
 }
