@@ -9,16 +9,18 @@
 
 namespace Vespolina\DocumentBundle\Model;
 
+use Vespolina\CoreBundle\Component\Identifier\IdentifierInterface;
 use Vespolina\DocumentBundle\Model\DocumentInterface;
 use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
+
 class Document implements DocumentInterface
 {
 
     protected $documentConfigurationName;
-    protected $identifications;
+    protected $identifiers;
     protected $items;
     protected $partnersByRole;
 
@@ -28,7 +30,7 @@ class Document implements DocumentInterface
     public function __construct($documentConfigurationName)
     {
         $this->documentConfigurationName = $documentConfigurationName;
-        $this->identifications = array();
+        $this->identifiers = array();
         $this->items = array();
         $this->partnersByRole = array();
     
@@ -60,9 +62,9 @@ class Document implements DocumentInterface
     /**
      * @inheritdoc
      */
-    public function getDocumentIdentification($name)
+    public function getDocumentIdentifier($name)
     {
-        return $this->identifications[$name];
+        return $this->identifiers[$name];
     }
 
 
@@ -112,8 +114,8 @@ class Document implements DocumentInterface
     /**
      * @inheritdoc
      */
-    public function setDocumentIdentification($name, DocumentIdentificationInterface $documentIdentification)
+    public function setDocumentIdentifier($name, IdentifierInterface $documentIdentifier)
     {
-        $this->identifications[$name] = $documentIdentification;
+        $this->identifiers[$name] = $documentIdentifier;
     }
 }

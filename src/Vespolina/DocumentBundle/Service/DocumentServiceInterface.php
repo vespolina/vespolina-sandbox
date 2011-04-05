@@ -40,11 +40,11 @@ interface DocumentServiceInterface
      *
      * @abstract
      * @param DocumentInterface $document
-     * @param  $identificationName The name of the document identification
+     * @param  $identifierName The name of the document identifier
      * @param  $context The required context to generate the id
          * @return void
      */
-    function generateDocumentIdentification(DocumentInterface $document, $identificationName = 'id', $context);
+    function generateDocumentIdentifier(DocumentInterface $document, $identifierName = 'id', $context);
 
     /**
      * Save the document

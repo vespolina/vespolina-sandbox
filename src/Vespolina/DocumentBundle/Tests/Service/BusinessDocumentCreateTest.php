@@ -3,8 +3,8 @@
 namespace Vespolina\DocumentBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Vespolina\DocumentBundle\Model\DocumentIdentificationConfiguration;
-use Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification;
+use Vespolina\DocumentBundle\Model\DocumentIdentifierConfiguration;
+use Vespolina\CoreBundle\Component\Identifier\Identifier;
 
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
 use Vespolina\DocumentBundle\Model\DocumentPartnerRole;
@@ -55,20 +55,20 @@ class DocumentCreateTest extends WebTestCase
         $c['documentConfigurationGenericDoc2']->setBaseClass('Vespolina\DocumentBundle\Model\Document');
         $c['documentConfigurationGenericDoc2']->setItemBaseClass('Vespolina\DocumentBundle\Model\DocumentItem');
 
-        //Create document identification configurations (how documents should be identified/numbered)
-        $documentIdentificationConfiguration1 = new DocumentIdentificationConfiguration();
-        $documentIdentificationConfiguration1->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+        //Create document identifier configurations (how documents should be identified/numbered)
+        $documentIdentifierConfiguration1 = new DocumentIdentifierConfiguration();
+        $documentIdentifierConfiguration1->setBaseClass('Vespolina\CoreBundle\Component\Identifier\Identifier');
 
-        $documentIdentificationConfiguration2a = new DocumentIdentificationConfiguration();
-        $documentIdentificationConfiguration2a->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+        $documentIdentifierConfiguration2a = new DocumentIdentifierConfiguration();
+        $documentIdentifierConfiguration2a->setBaseClass('Vespolina\CoreBundle\Component\Identifier\Identifier');
 
-        $documentIdentificationConfiguration2b = new DocumentIdentificationConfiguration();
-        $documentIdentificationConfiguration2b->setBaseClass('Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification');
+        $documentIdentifierConfiguration2b = new DocumentIdentifierConfiguration();
+        $documentIdentifierConfiguration2b->setBaseClass('Vespolina\CoreBundle\Component\Identifier\Identifier');
 
-        $c['documentConfigurationGenericDoc1']->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration1);
+        $c['documentConfigurationGenericDoc1']->addDocumentIdentifierConfiguration('id', $documentIdentifierConfiguration1);
 
-        $c['documentConfigurationGenericDoc2']->addDocumentIdentificationConfiguration('id', $documentIdentificationConfiguration2a);
-        $c['documentConfigurationGenericDoc2']->addDocumentIdentificationConfiguration('barcode', $documentIdentificationConfiguration2b);
+        $c['documentConfigurationGenericDoc2']->addDocumentIdentifierConfiguration('id', $documentIdentifierConfiguration2a);
+        $c['documentConfigurationGenericDoc2']->addDocumentIdentifierConfiguration('barcode', $documentIdentifierConfiguration2b);
 
 
         return $c;
@@ -87,11 +87,11 @@ class DocumentCreateTest extends WebTestCase
         $this->assertEquals('generic_document_2', $c['document2']->getDocumentConfigurationName());
 
        //Generate the document id identified in the document configuration by the name 'id'
-        $identificationContext = array();
+        $identifierContext = array();
 
-        $c['documentService']->generateDocumentIdentification( $c['document1'], 'id', $identificationContext);
-        $c['documentService']->generateDocumentIdentification( $c['document2'], 'id', $identificationContext);
-        $c['documentService']->generateDocumentIdentification( $c['document2'], 'barcode', $identificationContext);
+        $c['documentService']->generateDocumentIdentifier( $c['document1'], 'id', $identifierContext);
+        $c['documentService']->generateDocumentIdentifier( $c['document2'], 'id', $identifierContext);
+        $c['documentService']->generateDocumentIdentifier( $c['document2'], 'barcode', $identifierContext);
 
         return $c;
     }

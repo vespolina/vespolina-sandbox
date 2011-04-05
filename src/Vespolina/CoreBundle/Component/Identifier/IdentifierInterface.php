@@ -7,16 +7,13 @@
  * with this source code in the file LICENSE.
  */
  
-namespace Vespolina\DocumentBundle\Model;
+namespace Vespolina\CoreBundle\Component\Identifier;
 
-use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
-
-
-interface DocumentIdentificationInterface
+interface IdentifierInterface
 {
 
     /**
-     * Get identification value
+     * Get identifier value
      *
      * @abstract
      * @return string
@@ -24,14 +21,12 @@ interface DocumentIdentificationInterface
     function getId();
 
     /**
-     * Generate the identification value
+     * Get identifier name
      *
      * @abstract
-     * @param array $context
-     * @return string   the newly generated id
+     * @return string
      */
-    function generate(DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration, $context = array());
-
+    function getName();
 
     /**
      * Set the id value
@@ -42,7 +37,16 @@ interface DocumentIdentificationInterface
     function setId($id);
 
     /**
-     * Is the document identification valid?
+     * Set the id name
+     *
+     * @abstract
+     * @param string $name
+     */
+    function setName($name);
+
+
+    /**
+     * Is the document identifier valid?
      *
      * @abstract
      * @return bool

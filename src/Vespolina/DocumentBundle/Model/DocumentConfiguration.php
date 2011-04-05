@@ -10,13 +10,13 @@
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
-use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
+use Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface;
 
 
 class DocumentConfiguration implements DocumentConfigurationInterface
 {
     protected $baseClass;
-    protected $documentIdentificationConfigurations;
+    protected $documentIdentifierConfigurations;
     protected $itemBaseClass;
     protected $name;
 
@@ -25,18 +25,18 @@ class DocumentConfiguration implements DocumentConfigurationInterface
      */
     public function __construct($name)
     {
-        $this->documentIdentificationConfigurations = array();
+        $this->documentIdentifierConfigurations = array();
         $this->name = $name;
     }
 
 
     /**
-     * Add a document identification configuration
+     * Add a document identifier configuration
      *
      */
-    public function addDocumentIdentificationConfiguration($name, DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration)
+    public function addDocumentIdentifierConfiguration($name, DocumentIdentifierConfigurationInterface $documentIdentifierConfiguration)
     {
-        $this->documentIdentificationConfigurations[$name] = $documentIdentificationConfiguration;
+        $this->documentIdentifierConfigurations[$name] = $documentIdentifierConfiguration;
     }
 
     /**
@@ -51,11 +51,10 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     /**
      * @inheritdoc
      */
-    public function getDocumentIdentificationConfiguration($name)
+    public function getDocumentIdentifierConfiguration($name)
     {
 
-        return $this->documentIdentificationConfigurations[$name];
-
+        return $this->documentIdentifierConfigurations[$name];
     }
 
 
@@ -63,7 +62,8 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     /**
      * @inheritdoc
      */
-    public function getName(){
+    public function getName()
+    {
     
         return $this->name;
     }
@@ -71,27 +71,27 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     /**
      * @inheritdoc
      */
-    public function getItemBaseClass(){
+    public function getItemBaseClass()
+    {
         
         return $this->itemBaseClass;
-    
     }
 
     /**
      * @inheritdoc
      */
-    public function getDocumentIdentificationConfigurations()
+    public function getDocumentIdentifierConfigurations()
     {
-        return $this->documentIdentificationConfigurations;
+        return $this->documentIdentifierConfigurations;
     }
 
     /**
      * @inheritdoc
      */
-    public function setBaseClass($baseClass){
+    public function setBaseClass($baseClass)
+    {
     
         $this->baseClass = $baseClass;
-        
     }
 
     /**
@@ -100,16 +100,15 @@ class DocumentConfiguration implements DocumentConfigurationInterface
     public function setItemBaseClass($itemBaseClass){
 
         $this->itemBaseClass = $itemBaseClass;
-
     }
 
     /**
      * @inheritdoc
      */
-    public function setName($name){
+    public function setName($name)
+    {
     
         $this->name = $name;
-        
     }
 
 }

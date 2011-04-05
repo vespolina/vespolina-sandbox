@@ -10,16 +10,16 @@
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
-use Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface;
+use Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface;
 
 interface DocumentConfigurationInterface
 {
 
     /**
-     * Add a document identification configuration
+     * Add a document identifier configuration
      *
      */
-    function addDocumentIdentificationConfiguration($name, DocumentIdentificationConfigurationInterface $documentIdentificationConfiguration);
+    function addDocumentIdentifierConfiguration($name, DocumentIdentifierConfigurationInterface $documentIdentifierConfiguration);
 
     /**
      * Retrieve the base class of document instance(s) which this configuration should create
@@ -39,24 +39,24 @@ interface DocumentConfigurationInterface
 
 
     /**
-     * Retrieve the list of known document identification configurations
+     * Retrieve the list of known document identifier configurations
      *
      * @abstract
-     * @return array Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface instance
+     * @return array Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface instance
      */
-    function getDocumentIdentificationConfigurations();
+    function getDocumentIdentifierConfigurations();
 
     /**
-     * Retrieve the document identification configuration specified by the supplied name
+     * Retrieve the document identifier configuration specified by the supplied name
      *
      */
-    function getDocumentIdentificationConfiguration($name);
+    function getDocumentIdentifierConfiguration($name);
 
     /**
      * Get the document configuration name
      *
      * @abstract
-     * @return \Vespolina\DocumentBundle\Model\DocumentIdentificationConfigurationInterface
+     * @return \Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface
      */
     function getName();
 

@@ -39,8 +39,13 @@ class WorkflowTest extends WebTestCase
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('order_to_cash_b2c');
         $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\Workflow');
         $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Model\WorkflowBuilder\XmlWorkflowBuilder');
-        $workflowConfiguration->setBuilderOptions(array('source' => 'test' . DIRECTORY_SEPARATOR));
 
+        //Point builder to folder Resources/config/tests
+        $workflowConfiguration->setBuilderOptions(array('source' => 'Resources'. DIRECTORY_SEPARATOR.
+                                                                    'config'. DIRECTORY_SEPARATOR.
+                                                                    'tests' . DIRECTORY_SEPARATOR));
+
+        //Create the workflow
         $workflow = $workflowService->create($workflowConfiguration);
 
         $this->assertEquals($workflow->getContainer()->get('workflow.name'), 'order_to_cash_b2c');

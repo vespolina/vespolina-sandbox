@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
 use Vespolina\DocumentBundle\Model\DocumentInterface;
-use Vespolina\DocumentBundle\Model\DocumentIdentification\DbDocumentIdentification;
+use Vespolina\DocumentBundle\Model\DocumentIdentifier\DbDocumentIdentifier;
 use Vespolina\DocumentBundle\Service\DocumentServiceInterface;
 
 
@@ -39,12 +39,13 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
         
         $document = new $baseClass($documentConfiguration->getName());
 
-        //Init document identification instances
-        foreach ($documentConfiguration->getDocumentIdentificationConfigurations() as $name => $documentIdentificationConfiguration)
+        //Init document identifier instances
+        foreach ($documentConfiguration->getDocumentIdentifierConfigurations() as $name => $documentIdentifierConfiguration)
         {
-            $baseClass = $documentIdentificationConfiguration->getBaseClass();
-            $documentIdentification = new $baseClass();
-            $document->setDocumentIdentification($name, $documentIdentification);
+            $baseClass = $documentIdentifierConfiguration->getBaseClass();
+            $documentIdentifier = new $baseClass();
+            $documentIdentifier->setName($name);
+            $document->setDocumentIdentifier($name, $documentIdentifier);
         }
 
 
@@ -77,12 +78,12 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     /**
      * @inheritdoc
      */
-    public function generateDocumentIdentification(DocumentInterface $document, $identificationName = 'id', $context)
+    public function generateDocumentIdentifier(DocumentInterface $document, $identifierName = 'id', $context)
     {
         $documentConfiguration = $this->documentConfigurations[$document->getDocumentConfigurationName()];
-        $documentIdentificationConfiguration = $documentConfiguration->getDocumentIdentificationConfiguration($identificationName);
+        $documentIdentifierConfiguration = $documentConfiguration->getDocumentIdentifierConfiguration($identifierName);
 
-        return $document->getDocumentIdentification($identificationName)->generate($documentIdentificationConfiguration, $context);
+        //Todo handle generation part
     }
 
     /**
@@ -103,7 +104,8 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     /**
      * @inheritdoc
      */
-    public function save(DocumentInterface $document){
+    public function save(DocumentInterface $document)
+    {
     }
     
 

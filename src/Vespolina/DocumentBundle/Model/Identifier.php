@@ -9,9 +9,9 @@
 
 namespace Vespolina\DocumentBundle\Model;
 
-use Vespolina\DocumentBundle\Model\DocumentIdentificationInterface;
+use Vespolina\DocumentBundle\Model\DocumentIdentifierInterface;
 
-abstract class DocumentIdentification implements DocumentIdentificationInterface {
+abstract class DocumentIdentifier implements DocumentIdentifierInterface {
 
     protected $id;
 

@@ -44,9 +44,9 @@ interface DocumentInterface
     function getDocumentConfigurationName();
 
     /**
-     * Get the document identification identified by the supplied name
+     * Get the document identifier identified by the supplied name
      */
-    function getDocumentIdentification($name);
+    function getDocumentIdentifier($name);
 
 
     /**

@@ -13,7 +13,7 @@ interface PartnerInterface
 {
 
     /**
-     * Get unique identification
+     * Get unique identifier
      */
     public function getId();
 
