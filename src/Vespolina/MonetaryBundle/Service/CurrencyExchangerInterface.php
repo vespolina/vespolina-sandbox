@@ -15,9 +15,11 @@ interface CurrencyExchangerInterface
      * Get the exchange rate from on currency to another.  $from and $to can be an
      * ISO 4217 currency code or a Currency object
      * 
-     * @param  mixed $from string | Vespolina\MonetaryBundle\Model\CurrencyInterface
-     * @param  mixed $to string | Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @param mixed $from string | Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @param mixed $to string | Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @param DateTime the date and time of the exchange rate, defaults to current date and time
+     * 
      * @return float
      */
-    public function getExchangeRate($from, $to);
+    public function getExchangeRate($from, $to, \DateTime $datetime=null);
 }
