@@ -13,7 +13,6 @@ use Vespolina\OrderBundle\Model\OrderDocument;
 use Vespolina\PartnerBundle\Service\PartnerServiceInterface;
 use Vespolina\PartnerBundle\Model\PartnerConfiguration;
 
-
 class DocumentCreateTest extends WebTestCase
 {
     protected $client;
@@ -39,10 +38,8 @@ class DocumentCreateTest extends WebTestCase
         return $this->kernel;
     }
 
-
     public function testA1DocumentConfigurationCreate()
     {
-
         $c['documentService'] = $this->getKernel()->getContainer()->get('vespolina.document');
 
         //Test 1: create document configuration
@@ -70,7 +67,6 @@ class DocumentCreateTest extends WebTestCase
         $c['documentConfigurationGenericDoc2']->addDocumentIdentifierConfiguration('id', $documentIdentifierConfiguration2a);
         $c['documentConfigurationGenericDoc2']->addDocumentIdentifierConfiguration('barcode', $documentIdentifierConfiguration2b);
 
-
         return $c;
     }
 
@@ -79,19 +75,18 @@ class DocumentCreateTest extends WebTestCase
      */
     public function testB1DocumentCreate($c)
     {
-
         $c['document1'] = $c['documentService']->create($c['documentConfigurationGenericDoc1']);
         $c['document2'] = $c['documentService']->create($c['documentConfigurationGenericDoc2']);
 
         $this->assertEquals('generic_document_1', $c['document1']->getDocumentConfigurationName());
         $this->assertEquals('generic_document_2', $c['document2']->getDocumentConfigurationName());
 
-       //Generate the document id identified in the document configuration by the name 'id'
+        //Generate the document id identified in the document configuration by the name 'id'
         $identifierContext = array();
 
-        $c['documentService']->generateDocumentIdentifier( $c['document1'], 'id', $identifierContext);
-        $c['documentService']->generateDocumentIdentifier( $c['document2'], 'id', $identifierContext);
-        $c['documentService']->generateDocumentIdentifier( $c['document2'], 'barcode', $identifierContext);
+        $c['documentService']->generateDocumentIdentifier($c['document1'], 'id', $identifierContext);
+        $c['documentService']->generateDocumentIdentifier($c['document2'], 'id', $identifierContext);
+        $c['documentService']->generateDocumentIdentifier($c['document2'], 'barcode', $identifierContext);
 
         return $c;
     }
@@ -101,14 +96,12 @@ class DocumentCreateTest extends WebTestCase
      */
     public function testB2DocumentItemCreate($c)
     {
-
         $documentItem1a = $c['documentService']->createItem($c['document1']);
 
         $this->assertNotEquals($documentItem1a, null);
         $documentItems = $c['document1']->getItems();
 
         return $c;
-
     }
 
     /**
@@ -116,30 +109,29 @@ class DocumentCreateTest extends WebTestCase
      */
     public function testB3DocumentPartnerCreate($c)
     {
-
         $c['partnerService'] = $this->getKernel()->getContainer()->get('vespolina.partner');
 
         $partnerCustomerB2CConfiguration = new PartnerConfiguration();
         $partnerCustomerB2CConfiguration->setName('customer_b2c'); //Business to Consumer
         $partnerCustomerB2CConfiguration->setBaseClass('Vespolina\PartnerBundle\Model\Customer');
-        
+
         $partnerEmployeeConfiguration = new PartnerConfiguration();
         $partnerEmployeeConfiguration->setName('internal_employee');
         $partnerEmployeeConfiguration->setBaseClass('Vespolina\PartnerBundle\Model\Employee');
-        
+
         $customer = $c['partnerService']->createInstance($partnerCustomerB2CConfiguration);
         $employee = $c['partnerService']->createInstance($partnerEmployeeConfiguration);
 
         //Attach the partner to the business object and let it have the role of a customer for this document
         $c['document1']->addPartner($customer, new DocumentPartnerRole('customer'));
-        
+
         //Attach the partner to the business object and let it have the role of a sales manager for this document
         $c['document1']->addPartner($employee, new DocumentPartnerRole('contact_person'));
 
         $this->assertEquals(count($c['document1']->getPartners()), 2);
 
         $customer = null;
-        if ($customers = $c['document1']->getPartners(new DocumentPartnerRole('customer'))){
+        if ($customers = $c['document1']->getPartners(new DocumentPartnerRole('customer'))) {
 
             $customer = $customers[0];
 
@@ -147,9 +139,6 @@ class DocumentCreateTest extends WebTestCase
         $this->assertNotEmpty($customer);
         $this->assertEquals($customer->getPartnerConfigurationName(), 'customer_b2c');
 
-
-
         return $c;
-
     }
 }

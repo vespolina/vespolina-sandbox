@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <container xmlns="http://www.symfony-project.org/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
 
-	 <parameters>
+    <parameters>
         <parameter key="vespolina.document.class">Vespolina\DocumentBundle\Service\DocumentService</parameter>
     </parameters>
 
-	
     <services>
         <service id="vespolina.document" class="%vespolina.document.class%">
             <call method="setContainer">
-                <argument type="service" id="service_container" />
+                <argument type="service" id="service_container"/>
             </call>
         </service>
     </services>

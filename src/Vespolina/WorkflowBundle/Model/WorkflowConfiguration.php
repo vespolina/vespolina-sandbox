@@ -11,10 +11,8 @@ namespace Vespolina\WorkflowBundle\Model;
 
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 
-
 class WorkflowConfiguration implements WorkflowConfigurationInterface
 {
-
     protected $baseClass;
     protected $builderClass;
     protected $builderOptions;
@@ -33,7 +31,6 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBaseClass()
     {
-
         return $this->baseClass;
     }
 
@@ -42,7 +39,6 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBuilderClass()
     {
-
         return $this->builderClass;
     }
 
@@ -51,50 +47,46 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBuilderOptions()
     {
-
         return $this->builderOptions;
     }
+
     /**
      * @inheritdoc
      */
-    public function getName(){
-    
+    public function getName()
+    {
         return $this->name;
     }
 
     /**
      * @inheritdoc
      */
-    public function setBaseClass($baseClass){
-
+    public function setBaseClass($baseClass)
+    {
         $this->baseClass = $baseClass;
-
     }
 
     /**
      * @inheritdoc
      */
-    public function setBuilderClass($builderClass){
-
+    public function setBuilderClass($builderClass)
+    {
         $this->builderClass = $builderClass;
-
     }
 
     /**
      * @inheritdoc
      */
-    public function setBuilderOptions($builderOptions){
-
+    public function setBuilderOptions($builderOptions)
+    {
         $this->builderOptions = $builderOptions;
-
     }
+
     /**
      * @inheritdoc
      */
-    public function setName($name){
-    
+    public function setName($name)
+    {
         $this->name = $name;
-        
     }
-
 }

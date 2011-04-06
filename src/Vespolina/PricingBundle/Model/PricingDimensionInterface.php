@@ -6,10 +6,10 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\PricingBundle\Model;
 
-//use Vespolina\PricingModel\Model\PricingSetInterface;
+use Vespolina\PricingBundle\Model\PricingSetInterface;
 
 interface PricingDimensionInterface
 {
@@ -58,5 +58,4 @@ interface PricingDimensionInterface
      * @return void
      */
     function setDefaultParametersForPricingSet(PricingSetInterface $pricingSet);
-  
 }

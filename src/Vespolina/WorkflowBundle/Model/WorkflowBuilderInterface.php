@@ -9,14 +9,11 @@
  
 namespace Vespolina\WorkflowBundle\Model;
 
-
 interface WorkflowBuilderInterface
 {
-
     /**
      * Build the runtime workflow
      *
      */
     function build(WorkflowInterface $workflow);
-
 }

@@ -11,7 +11,6 @@ namespace Vespolina\CoreBundle\Component\Identifier;
 
 interface IdentifierInterface
 {
-
     /**
      * Get identifier value
      *
@@ -44,7 +43,6 @@ interface IdentifierInterface
      */
     function setName($name);
 
-
     /**
      * Is the document identifier valid?
      *
@@ -52,5 +50,4 @@ interface IdentifierInterface
      * @return bool
      */
     function valid();
-   
 }

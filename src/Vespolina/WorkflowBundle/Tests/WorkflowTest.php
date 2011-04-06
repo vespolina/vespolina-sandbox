@@ -1,10 +1,14 @@
 <?php
-
+/**
+ * (c) 2011 Vespolina Project http://www.vespolina-project.org
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 namespace Vespolina\WorkflowBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Vespolina\WorkflowBundle\Model\Workflow;
-
 
 class WorkflowTest extends WebTestCase
 {
@@ -18,11 +22,9 @@ class WorkflowTest extends WebTestCase
     public function getKernel(array $options = array())
     {
         if (!$this->kernel) {
-        
             $this->kernel = $this->createKernel($options);
             $this->kernel->boot();
         }
-
         return $this->kernel;
     }
 
@@ -31,8 +33,6 @@ class WorkflowTest extends WebTestCase
      */
     public function testWorkflowCreate()
     {
-
-
         //$workflow->test();
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
 
@@ -41,8 +41,8 @@ class WorkflowTest extends WebTestCase
         $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Model\WorkflowBuilder\XmlWorkflowBuilder');
 
         //Point builder to folder Resources/config/tests
-        $workflowConfiguration->setBuilderOptions(array('source' => 'Resources'. DIRECTORY_SEPARATOR.
-                                                                    'config'. DIRECTORY_SEPARATOR.
+        $workflowConfiguration->setBuilderOptions(array('source' => 'Resources' . DIRECTORY_SEPARATOR .
+                                                                    'config' . DIRECTORY_SEPARATOR .
                                                                     'tests' . DIRECTORY_SEPARATOR));
 
         //Create the workflow
@@ -78,6 +78,6 @@ class WorkflowTest extends WebTestCase
 
         $this->assertEquals(count($orderDocument->getItems()), 2);
         $this->assertEquals(($orderDocumentItem2->getOrderedQuantity()), 5);
-        */
+         */
     }
 }

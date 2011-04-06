@@ -9,7 +9,6 @@
  
 namespace Vespolina\WorkflowBundle\Service;
 
-
 interface WorkflowServiceInterface
 {
 	

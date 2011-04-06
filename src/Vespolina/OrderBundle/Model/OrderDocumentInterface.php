@@ -15,5 +15,4 @@ use Vespolina\PricingBundle\Model\PriceableInterface;
 interface OrderDocumentInterface extends DocumentInterface, PriceableInterface
 {
     public function getCustomer();
-
 }

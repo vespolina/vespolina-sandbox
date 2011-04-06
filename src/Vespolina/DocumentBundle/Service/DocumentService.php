@@ -6,7 +6,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\DocumentBundle\Service;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
@@ -15,13 +15,10 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Vespolina\DocumentBundle\Model\DocumentConfiguration;
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
 use Vespolina\DocumentBundle\Model\DocumentInterface;
-use Vespolina\DocumentBundle\Model\DocumentIdentifier\DbDocumentIdentifier;
 use Vespolina\DocumentBundle\Service\DocumentServiceInterface;
-
 
 class DocumentService extends ContainerAware implements DocumentServiceInterface
 {
-
     protected $documentConfigurations;
 
     function __construct()
@@ -34,45 +31,35 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
      */
     public function create(DocumentConfigurationInterface $documentConfiguration)
     {
-        
         $baseClass = $documentConfiguration->getBaseClass();
-        
+
         $document = new $baseClass($documentConfiguration->getName());
 
         //Init document identifier instances
-        foreach ($documentConfiguration->getDocumentIdentifierConfigurations() as $name => $documentIdentifierConfiguration)
-        {
+        foreach ($documentConfiguration->getDocumentIdentifierConfigurations() as $name => $documentIdentifierConfiguration) {
             $baseClass = $documentIdentifierConfiguration->getBaseClass();
             $documentIdentifier = new $baseClass();
             $documentIdentifier->setName($name);
             $document->setDocumentIdentifier($name, $documentIdentifier);
         }
-
-
         return $document;
     }
 
     public function createItem(DocumentInterface $document, DocumentConfigurationInterface $documentConfiguration = null)
     {
         if (!$documentConfiguration) {
-
-
             if (!$documentConfiguration = $this->getDocumentConfiguration($document->getDocumentConfigurationName())) {
-
                 //Throw exception
             }
         }
 
         if ($itemBaseClass = $documentConfiguration->getItemBaseClass()) {
-
             $documentItem = new $itemBaseClass($document);
 
             $document->addItem($documentItem);
 
             return $documentItem;
-
         }
-
     }
 
     /**
@@ -92,13 +79,10 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     public function getDocumentConfiguration($name)
     {
         if (!array_key_exists($name, $this->documentConfigurations)) {
-
             $this->documentConfigurations[$name] = new DocumentConfiguration($name);
-
         }
 
         return $this->documentConfigurations[$name];
-
     }
 
     /**
@@ -107,7 +91,4 @@ class DocumentService extends ContainerAware implements DocumentServiceInterface
     public function save(DocumentInterface $document)
     {
     }
-    
-
-
 }

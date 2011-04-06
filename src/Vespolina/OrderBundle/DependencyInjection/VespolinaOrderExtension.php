@@ -6,7 +6,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\OrderBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
@@ -19,11 +19,11 @@ class VespolinaOrderExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-     
+
     }
-	
+
     public function getNamespace()
     {
-       return 'http://www.vespolina-org/schema/dic/vespolina-order-v1';
+        return 'http://www.vespolina-org/schema/dic/vespolina-order-v1';
     }
 }

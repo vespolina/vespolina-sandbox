@@ -13,19 +13,15 @@ use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 
 class DocumentPartnerRole implements DocumentPartnerRoleInterface
 {
-    
     protected $name;
- 
- 
-	  public function getName()
-      { 
-        
+
+    public function getName()
+    {
         return $this->name;
-      }
-      
-      public function setName(){
-      
+    }
+
+    public function setName()
+    {
         $this->name;
-      }
-  
+    }
 }

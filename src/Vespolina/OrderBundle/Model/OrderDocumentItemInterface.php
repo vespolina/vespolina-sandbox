@@ -6,7 +6,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\OrderBundle\Model;
 
 use Vespolina\PricingBundle\Model\PriceableInterface;
@@ -15,7 +15,6 @@ use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 
 interface OrderDocumentItemInterface extends DocumentItemInterface
 {
-
     /**
      * Get the product associated to this order item
      *
@@ -48,5 +47,4 @@ interface OrderDocumentItemInterface extends DocumentItemInterface
      * @return void
      */
     function setOrderedQuantity($quantity);
-   
 }

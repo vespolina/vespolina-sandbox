@@ -6,14 +6,13 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\PricingBundle\Model;
 
 use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
 interface PricingExecutionStepInterface
 {
-
     /**
      * Initialize this pricing execution step (eg. init cache )
      *
@@ -22,7 +21,7 @@ interface PricingExecutionStepInterface
      * @return void
      */
     function init(PricingContextContainerInterface $pricingContextContainer);
-   
+
     /**
      * Execute this step
      *

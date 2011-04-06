@@ -13,7 +13,6 @@ use Vespolina\PartnerBundle\Model\PartnerInterface;
 
 class Partner implements PartnerInterface
 {
-
     protected $partnerConfigurationName;
 
     public function __construct($partnerConfigurationName)
@@ -54,7 +53,7 @@ class Partner implements PartnerInterface
     {
         $this->id = $id;
     }
-  
+
     /**
      * @inheritdoc
      */

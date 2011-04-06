@@ -6,11 +6,11 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\PricingBundle\Model;
 
-class PricingContextContainer implements PricingContextContainerInterface {
-
+class PricingContextContainer implements PricingContextContainerInterface
+{
     protected $entities;
     protected $data;
 
@@ -27,10 +27,8 @@ class PricingContextContainer implements PricingContextContainerInterface {
 
     public function getEntities()
     {
-    
         return $this->entities;
     }
-
 
     public function setEntities($entities)
     {
@@ -40,15 +38,10 @@ class PricingContextContainer implements PricingContextContainerInterface {
     public function get($key, $default = null)
     {
         if (array_key_exists($key, $this->data)) {
-        
             return $this->data[$key];
-            
-        } elseif($default) {
-        
+        } elseif ($default) {
             return $default;
-        
-        } else{
-        
+        } else {
             return null;
         }
     }

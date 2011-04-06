@@ -14,7 +14,6 @@ use Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface;
 
 interface DocumentConfigurationInterface
 {
-
     /**
      * Add a document identifier configuration
      *
@@ -69,7 +68,6 @@ interface DocumentConfigurationInterface
      */
     function setBaseClass($baseClass);
 
-
     /**
      * Set the base class of document item instance(s) which this configuration should create
      *
@@ -87,5 +85,4 @@ interface DocumentConfigurationInterface
      * @return void
      */
     function setName($name);
-
 }

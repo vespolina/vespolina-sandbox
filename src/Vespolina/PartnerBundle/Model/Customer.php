@@ -9,13 +9,12 @@
 
 namespace Vespolina\PartnerBundle\Model;
 
-use Vespolina\PartnerBundle\Model\PartnerInterface;
+use Vespolina\PartnerBundle\Model\Partner;
 
-class Customer implements PartnerInterface
+class Customer extends Partner
 {
-  
-	  public function getAddresses()
-      { 
-      }
-  
+    public function getAddresses()
+    {
+
+    }
 }

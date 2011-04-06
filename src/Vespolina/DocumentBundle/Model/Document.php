@@ -15,10 +15,8 @@ use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
-
 class Document implements DocumentInterface
 {
-
     protected $documentConfigurationName;
     protected $identifiers;
     protected $items;
@@ -33,16 +31,15 @@ class Document implements DocumentInterface
         $this->identifiers = array();
         $this->items = array();
         $this->partnersByRole = array();
-    
     }
 
-     /**
+    /**
      * @inheritdoc
      */
-     public function addItem(DocumentItemInterface $documentItem)
-     {
-         $this->items[] = $documentItem;
-     }
+    public function addItem(DocumentItemInterface $documentItem)
+    {
+        $this->items[] = $documentItem;
+    }
 
     /**
      * @inheritdoc
@@ -50,12 +47,11 @@ class Document implements DocumentInterface
     public function addPartner(PartnerInterface $partner, DocumentPartnerRoleInterface $partnerFunction)
     {
         $partnerRoleName = $partnerFunction->getName();
-        
+
         if (!array_key_exists($partnerRoleName, $this->partnersByRole)) {
-            
             $this->partnersByRole[$partnerRoleName] = array();
         }
-        
+
         $this->partnersByRole[$partnerRoleName][] = $partner;
     }
 
@@ -77,13 +73,12 @@ class Document implements DocumentInterface
     }
 
     /**
-      * @inheritdoc
-      */
+     * @inheritdoc
+     */
     public function getItems()
     {
         return $this->items;
     }
-
 
     /**
      * @inheritdoc
@@ -91,24 +86,17 @@ class Document implements DocumentInterface
     public function getPartners(DocumentPartnerRoleInterface $partnerRole = null)
     {
         if ($partnerRole) {
-
             return $this->partnersByRole[$partnerRole->getName()];
-            
         } else {
-
             $partners = array();
 
-            foreach($this->partnersByRole as $partnersInRole) {
-
-                foreach($partnersInRole as $partnerInRole) {
-
+            foreach ($this->partnersByRole as $partnersInRole) {
+                foreach ($partnersInRole as $partnerInRole) {
                     $partners[] = $partnerInRole;
                 }
             }
-
             return $partners;
         }
-    
     }
 
     /**

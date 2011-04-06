@@ -14,7 +14,6 @@ use Vespolina\PricingBundle\Model\PricingContextContainerInterface;
 
 interface PricingConfigurationInterface
 {
-
     /**
      * Create a pricing set for this pricing configuration
      *
@@ -46,6 +45,4 @@ interface PricingConfigurationInterface
     function buildPricingSet(PricingSetInterface $pricingSet, 
                            PricingContextContainerInterface $container, 
                            $options = array());
-	
-  
  }

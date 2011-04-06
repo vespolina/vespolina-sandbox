@@ -13,7 +13,6 @@ use Vespolina\PricingBundle\Model\PricingDimension;
 
 class PeriodPricingDimension extends PricingDimension
 {
-
     protected $from;
     protected $name;
     protected $parameters;
@@ -22,12 +21,10 @@ class PeriodPricingDimension extends PricingDimension
     public function __construct($name)
     {
         parent::__construct($name);
-        
     }
     
     public function getDeterminationKeyForParameters($parameters)
     {
         return 'default';
     }
-    
 }

@@ -12,10 +12,8 @@ namespace Vespolina\WorkflowBundle\Model;
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 use Vespolina\WorkflowBundle\Model\WorkflowContainerInterface;
 
-
 class Workflow implements WorkflowInterface
 {
-
     protected $container;
     protected $runtimeInstance;
     protected $name;
@@ -30,11 +28,8 @@ class Workflow implements WorkflowInterface
     public function __construct($name, WorkflowContainerInterface $container = null)
     {
         if ($container) {
-
             $this->container = $container;
-
         } else {
-
             $this->container = new WorkflowContainer();
         }
 
@@ -44,23 +39,21 @@ class Workflow implements WorkflowInterface
         $this->container->set('workflow.name', $this->name);
     }
 
-
     /**
      * @inheritdoc
      */
-    public function getConfigurationName(){
-    
+    public function getConfigurationName()
+    {
         return $this->name;
     }
 
     /**
      * @inheritdoc
      */
-    public function getContainer(){
-
+    public function getContainer()
+    {
         return $this->container;
     }
-
 
     /**
      * Retrieve the runtime instance
@@ -69,14 +62,11 @@ class Workflow implements WorkflowInterface
      */
     public function getRuntimeInstance()
     {
-
         return $this->runtimeInstance;
     }
 
-
     public function setRuntimeInstance($runtimeInstance)
     {
-
         $this->runtimeInstance = $runtimeInstance;
     }
 
@@ -85,9 +75,7 @@ class Workflow implements WorkflowInterface
      */
     public function start()
     {
-
         if (!$this->runtimeInstance) {
-
             return false;
         }
 
@@ -99,19 +87,16 @@ class Workflow implements WorkflowInterface
     /**
      * @inheritdoc
      */
-    public function getStatus(){
-
+    public function getStatus()
+    {
         return $this->status;
     }
 
     /**
      * @inheritdoc
      */
-    public function setConfigurationName($name){
-    
+    public function setConfigurationName($name)
+    {
         $this->name = $name;
-        
     }
-
-
 }

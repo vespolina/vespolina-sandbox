@@ -7,11 +7,11 @@
  * with this source code in the file LICENSE.
  */
  
-namespace Vespolina\OrderFulfillmentBundle\Model;
+namespace Vespolina\FulfillmentBundle\Model;
 
-use Vespolina\CoreBundle\Model\ActivityDocumentInterface;
+use Vespolina\DocumentBundle\Model\DocumentInterface;
 
-interface OrderFulfillmentInterface implements ActivityDocumentInterface;
+interface OrderFulfillmentInterface extends DocumentInterface
 {
    
 }

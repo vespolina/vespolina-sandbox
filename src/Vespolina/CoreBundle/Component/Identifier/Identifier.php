@@ -11,11 +11,10 @@ namespace Vespolina\CoreBundle\Component\Identifier;
 
 use Vespolina\CoreBundle\Component\Identifier\IdentifierInterface;
 
-class Identifier implements IdentifierInterface {
-
+class Identifier implements IdentifierInterface
+{
     protected $id;
     protected $name;
-
 
     /**
      * @inheritdoc
@@ -41,7 +40,6 @@ class Identifier implements IdentifierInterface {
         $this->id = $id;
     }
 
-
     /**
      * @inheritdoc
      */
@@ -53,8 +51,8 @@ class Identifier implements IdentifierInterface {
     /**
      * @inheritdoc
      */
-    public function valid( )
+    public function valid()
     {
-        return ($this->id == '' ? true: false);
+        return ($this->id == '' ? true : false);
     }
 }

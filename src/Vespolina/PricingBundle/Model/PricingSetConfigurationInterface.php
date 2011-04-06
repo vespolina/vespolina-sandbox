@@ -6,7 +6,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\PricingBundle\Model;
 
 use Vespolina\PricingBundle\Model\PricingSetInterface;
@@ -15,7 +15,6 @@ use Vespolina\PricingBundle\Model\PricingDimensionInterface;
 
 interface PricingSetConfigurationInterface
 {
-
     /**
      * Add a pricing dimension to this pricing set configuration
      *
@@ -60,7 +59,6 @@ interface PricingSetConfigurationInterface
      * @param  $executionEvent  all | context_dependent | context_independent
      * @return void
      */
-
     function getPricingExecutionSteps($executionEvent = '');
 
     /**
@@ -71,6 +69,4 @@ interface PricingSetConfigurationInterface
      * @return void
      */
     function getPricingElements();
-
-
- }
+}

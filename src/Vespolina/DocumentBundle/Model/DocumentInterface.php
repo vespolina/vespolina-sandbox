@@ -6,23 +6,20 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentInterface;
 use Vespolina\DocumentBundle\Model\DocumentItemInterface;
-
 use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 use Vespolina\PartnerBundle\Model\PartnerInterface;
 
 interface DocumentInterface
 {
-
     /**
      * Add item to the collection
      */
     function addItem(DocumentItemInterface $documentItem);
-
 
     /**
      * Add a partner to this document
@@ -33,7 +30,6 @@ interface DocumentInterface
      * @return void
      */
     function addPartner(PartnerInterface $partner, DocumentPartnerRoleInterface $partnerFunction);
-
 
     /**
      * Get the document configuration name
@@ -48,7 +44,6 @@ interface DocumentInterface
      */
     function getDocumentIdentifier($name);
 
-
     /**
      * Get items belonging to this document
      */
@@ -62,5 +57,4 @@ interface DocumentInterface
      * @return void
      */
     function getPartners(DocumentPartnerRoleInterface $partnerRole = null);
-
 }

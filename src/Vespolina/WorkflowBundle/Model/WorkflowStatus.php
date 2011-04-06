@@ -11,10 +11,8 @@ namespace Vespolina\WorkflowBundle\Model;
 
 use Vespolina\WorkflowBundle\Model\WorkflowStatusInterface;
 
-
 class WorkflowStatus implements WorkflowStatusInterface
 {
-
     protected $name;
 
     /**
@@ -28,18 +26,16 @@ class WorkflowStatus implements WorkflowStatusInterface
     /**
      * @inheritdoc
      */
-    public function getName(){
-    
+    public function getName()
+    {
         return $this->name;
     }
-    
+
     /**
      * @inheritdoc
      */
-    public function setName($name){
-    
+    public function setName($name)
+    {
         $this->name = $name;
-        
     }
-
 }

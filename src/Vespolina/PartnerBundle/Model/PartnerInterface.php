@@ -11,12 +11,10 @@ namespace Vespolina\PartnerBundle\Model;
 
 interface PartnerInterface
 {
-
     /**
      * Get unique identifier
      */
     public function getId();
-
 
     /**
      * Name of the partner
@@ -45,7 +43,4 @@ interface PartnerInterface
      * @return void
      */
     public function setName($name);
-
-
-  
 }

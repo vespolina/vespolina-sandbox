@@ -13,7 +13,6 @@ use Vespolina\PricingBundle\Model\PricingElementInterface;
 
 interface PricingSetInterface
 {
-
     /**
      * Add pricing element to this pricing set
      *

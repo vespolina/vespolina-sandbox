@@ -9,7 +9,6 @@
  
 namespace Vespolina\PartnerBundle\Service;
 
-
 interface PartnerServiceInterface
 {
 	

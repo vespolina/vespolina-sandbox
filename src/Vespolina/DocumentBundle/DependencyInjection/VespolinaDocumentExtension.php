@@ -6,7 +6,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\DocumentBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
@@ -19,11 +19,10 @@ class VespolinaDocumentExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-     	$loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
         foreach (array('service') as $basename) {
             $loader->load(sprintf('%s.xml', $basename));
-		}     
+        }
     }
-	
 }

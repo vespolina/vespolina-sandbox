@@ -14,17 +14,11 @@ use Vespolina\DocumentBundle\Model\DocumentItemInterface;
 
 class DocumentItem implements DocumentItemInterface
 {
-
     protected $document;
     protected $status;
 
     public function __construct(DocumentInterface $document)
     {
-
         $this->document = $document;
     }
-
-
-
-    
 }

@@ -11,8 +11,8 @@ namespace Vespolina\DocumentBundle\Model;
 
 use Vespolina\DocumentBundle\Model\DocumentIdentifierConfigurationInterface;
 
-class DocumentIdentifierConfiguration implements DocumentIdentifierConfigurationInterface {
-
+class DocumentIdentifierConfiguration implements DocumentIdentifierConfigurationInterface
+{
     protected $baseClass;
 
     /**
@@ -20,7 +20,6 @@ class DocumentIdentifierConfiguration implements DocumentIdentifierConfiguration
      */
     public function getBaseClass()
     {
-
         return $this->baseClass;
     }
 
@@ -29,8 +28,6 @@ class DocumentIdentifierConfiguration implements DocumentIdentifierConfiguration
      */
     public function setBaseClass($baseClass)
     {
-
         $this->baseClass = $baseClass;
     }
-
 }

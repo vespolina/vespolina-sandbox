@@ -13,7 +13,5 @@ use Vespolina\DocumentBundle\Model\DocumentPartnerRoleInterface;
 
 interface DocumentPartnerRoleInterface
 {
-
   public function getName();
-  
 }

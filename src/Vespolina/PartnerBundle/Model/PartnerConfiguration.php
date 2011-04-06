@@ -11,33 +11,24 @@ namespace Vespolina\PartnerBundle\Model;
 
 use Vespolina\PartnerBundle\Model\PartnerConfigurationInterface;
 
-
 class PartnerConfiguration implements PartnerConfigurationInterface
 {
     protected $baseClass;
     protected $name;
     
     public function getName(){
-    
         return $this->name;
     }
     
     public function getBaseClass(){
-        
         return $this->baseClass;
-    
     }
     
     public function setBaseClass($baseClass){
-    
         $this->baseClass = $baseClass;
-        
     }
     
     public function setName($name){
-    
         $this->name = $name;
-        
-    }  
-	
+    }
 }

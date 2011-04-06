@@ -12,9 +12,9 @@ class VespolinaCoreExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-     
+
     }
-	
+
     public function getNamespace()
     {
         return 'http://www.symfony-project.org/schema/dic/vespolinacore';

@@ -6,12 +6,11 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\DocumentBundle\Service;
 
 use Vespolina\DocumentBundle\Model\DocumentConfigurationInterface;
 use Vespolina\DocumentBundle\Model\DocumentInterface;
-
 
 interface DocumentServiceInterface
 {
@@ -42,7 +41,7 @@ interface DocumentServiceInterface
      * @param DocumentInterface $document
      * @param  $identifierName The name of the document identifier
      * @param  $context The required context to generate the id
-         * @return void
+     * @return void
      */
     function generateDocumentIdentifier(DocumentInterface $document, $identifierName = 'id', $context);
 
@@ -54,6 +53,4 @@ interface DocumentServiceInterface
      * @return void
      */
     function save(DocumentInterface $document);
-   
-   
 }

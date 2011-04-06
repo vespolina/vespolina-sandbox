@@ -6,11 +6,11 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
+
 namespace Vespolina\PricingBundle\Model;
 
-class PricingElementContainer {
-
+class PricingElementContainer
+{
     protected $entities;
     protected $data;
 
@@ -19,34 +19,30 @@ class PricingElementContainer {
         $this->entities = array();
         $this->data = $data;
     }
-	
-	public function addEntity(&$entity)
+
+    public function addEntity(&$entity)
     {
-		$this->entities[] = $entity;
-	}
-	
+        $this->entities[] = $entity;
+    }
+
     public function getEntities()
     {
-    
         return $this->entities;
     }
-	
+
 
     public function setEntities($entities)
     {
         $this->entities = $entities;
     }
-    
+
     public function get($key, $default = null)
     {
-        if (array_key_exists($key, $this->data)){
-            
+        if (array_key_exists($key, $this->data)) {
             return $this->data[$key];
-        } elseif($default) {
-            
+        } elseif ($default) {
             return $default;
         } else {
-            
             return null;
         }
     }

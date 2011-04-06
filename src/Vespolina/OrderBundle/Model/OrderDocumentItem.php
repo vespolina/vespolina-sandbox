@@ -13,9 +13,8 @@ use Vespolina\DocumentBundle\Model\DocumentItem;
 use Vespolina\OrderBundle\Model\OrderDocumentItemInterface;
 use Vespolina\ProductBundle\Model\ProductInterface;
 
-class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterface
+class OrderDocumentItem extends DocumentItem implements OrderDocumentItemInterface
 {
-
     protected $orderedQuantity;
     protected $product;
 
@@ -24,7 +23,6 @@ class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterf
      */
     function getOrderedQuantity()
     {
-
         return $this->orderedQuantity;
     }
 
@@ -33,7 +31,6 @@ class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterf
      */
     function getProduct()
     {
-
         return $this->product;
     }
 
@@ -42,7 +39,6 @@ class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterf
      */
     function setOrderedQuantity($orderedQuantity)
     {
-
         $this->orderedQuantity = $orderedQuantity;
     }
 
@@ -51,9 +47,6 @@ class OrderDocumentItem  extends DocumentItem implements OrderDocumentItemInterf
      */
     function setProduct(ProductInterface $product)
     {
-
         $this->product = $product;
     }
-
-
 }

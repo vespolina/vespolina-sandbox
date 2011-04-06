@@ -15,19 +15,17 @@ use Vespolina\PricingBundle\Model\PricingElementContainer;
 use Vespolina\PricingBundle\Model\PricingSetInterface;
 use Vespolina\PartnerBundle\Model\PartnerRole;
 
-
 class OrderDocument extends Document implements OrderDocumentInterface
 {
     protected $customer = null;
     protected $documentIdentifications = null;
     protected $pricingSet = null;
-    
+
     public function __construct($documentConfigurationName)
     {
         parent::__construct($documentConfigurationName);
 
         $this->documentIdentifications = array();
-
     }
 
     /**
@@ -36,29 +34,26 @@ class OrderDocument extends Document implements OrderDocumentInterface
     public function getCustomer()
     {
         if (!$this->customer) {
-
             if ($partners = $this->getPartners(new PartnerRole('customer'))) {
-
-               $this->customer = $partners[0];
+                $this->customer = $partners[0];
             }
         }
-
         return $this->customer;
     }
 
     /**
      * @inheritdoc
      */
-    public function getPricingSet(){
-
-      return $this->pricingSet;
+    public function getPricingSet()
+    {
+        return $this->pricingSet;
     }
 
     /**
      * @inheritdoc
      */
-    public function setPricingSet(PricingSetInterface $pricingSet){
-  
+    public function setPricingSets(PricingSetInterface $pricingSet)
+    {
         $this->pricingSet = $pricingSet;
     }
 
@@ -68,18 +63,15 @@ class OrderDocument extends Document implements OrderDocumentInterface
     public function getPricingSets()
     {
         //A typical order has only one pricing set
-
         return array($this->pricingSet);
     }
-
 
     /**
      * @inheritdoc
      */
     public function addPricingSet(PricingSetInterface $pricingSet)
     {
-        //A typical order has only one pricing set
-
+        // A typical order has only one pricing set
         $this->setPricingSet($pricingSet);
     }
 }

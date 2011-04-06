@@ -14,7 +14,6 @@ use Vespolina\PricingBundle\Model\PricingSetInterface;
 
 class PricingDimension implements PricingDimensionInterface
 {
-
     protected $name;
     protected $parameters;
 
@@ -33,9 +32,7 @@ class PricingDimension implements PricingDimensionInterface
      */
     public function getName()
     {
-
         return $this->name;
-
     }
 
     /**
@@ -47,9 +44,7 @@ class PricingDimension implements PricingDimensionInterface
      */
     public function addParameter($name, $value)
     {
-
         $this->parameters[$name] = $value;
-
     }
 
     /**
@@ -59,7 +54,6 @@ class PricingDimension implements PricingDimensionInterface
      */
     public function getParameterNames()
     {
-
         return array_keys($this->parameters);
     }
 
@@ -72,7 +66,6 @@ class PricingDimension implements PricingDimensionInterface
     public function getParameter($name)
     {
         if (array_keys_exist($name)) {
-
             return $this->parameters[$name];
         }
     }
@@ -84,15 +77,11 @@ class PricingDimension implements PricingDimensionInterface
      */
     public function getParameters()
     {
-
         return $this->parameters;
     }
-
 
     public function setDefaultParametersForPricingSet(PricingSetInterface $pricingSet)
     {
 
     }
-
-  
 }

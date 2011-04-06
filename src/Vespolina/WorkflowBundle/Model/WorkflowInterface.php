@@ -6,13 +6,11 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
- 
-namespace Vespolina\WorkflowBundle\Model;
 
+namespace Vespolina\WorkflowBundle\Model;
 
 interface WorkflowInterface
 {
-
     /**
      * Get the workflow configuration name
      *
@@ -20,6 +18,7 @@ interface WorkflowInterface
      * @return string
      */
     function getConfigurationName();
+
     /**
      * Set the workflow configuration name
      *
@@ -27,15 +26,13 @@ interface WorkflowInterface
      * @param  $name
      * @return void
      */
+    function setConfigurationName($name);
 
     /**
      * Return the workflow container
      * @return Vespolina\WorkflowBundle\Model\WorkflowContainerInterface
      */
     function getContainer();
-
-
-    function setConfigurationName($name);
 
     /**
      * Get the current status of the workflow
@@ -52,5 +49,4 @@ interface WorkflowInterface
      * @return bool
      */
     function start();
-
 }

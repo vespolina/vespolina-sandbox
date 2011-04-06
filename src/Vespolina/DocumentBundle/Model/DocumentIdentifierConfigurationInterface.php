@@ -11,8 +11,6 @@ namespace Vespolina\DocumentBundle\Model;
 
 interface DocumentIdentifierConfigurationInterface
 {
-
-
     /**
      * Retrieve the base class of document identifier instance(s) which this configuration should create
      *
@@ -29,5 +27,4 @@ interface DocumentIdentifierConfigurationInterface
      * @return void
      */
     function setBaseClass($baseClass);
-
 }

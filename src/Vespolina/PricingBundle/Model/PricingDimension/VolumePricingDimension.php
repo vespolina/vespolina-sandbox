@@ -14,5 +14,4 @@ use Vespolina\PricingBundle\Model\PricingDimension;
 class VolumePricingDimension extends PricingDimension
 {
 
-
 }

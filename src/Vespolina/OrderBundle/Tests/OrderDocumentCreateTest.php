@@ -21,7 +21,6 @@ class OrderDocumentCreateTest extends WebTestCase
     public function getKernel(array $options = array())
     {
         if (!$this->kernel) {
-        
             $this->kernel = $this->createKernel($options);
             $this->kernel->boot();
         }
@@ -34,7 +33,6 @@ class OrderDocumentCreateTest extends WebTestCase
      */
     public function testOrderDocumentCreate()
     {
-    
         $documentService = $this->getKernel()->getContainer()->get('vespolina.document');
 
         $documentConfiguration = $documentService->getDocumentConfiguration('generic_document');
@@ -61,6 +59,5 @@ class OrderDocumentCreateTest extends WebTestCase
 
         $this->assertEquals(count($orderDocument->getItems()), 2);
         $this->assertEquals(($orderDocumentItem2->getOrderedQuantity()), 5);
-
     }
 }
