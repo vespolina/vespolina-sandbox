@@ -13,7 +13,6 @@ use Vespolina\PricingBundle\Model\PricingSetInterface;
 
 interface PriceableInterface
 {
-
     /**
      * Attach the supplied pricing set to an priceable document
      *
@@ -23,14 +22,21 @@ interface PriceableInterface
      */
     public function addPricingSet(PricingSetInterface $pricingSet);
 
-
     /**
      * Retrieve all pricing sets
      *
      * @abstract
-     * @return void
+     * @return array
      */
     public function getPricingSets();
-   
-   
+
+    /**
+     * Set a collection of pricing sets
+     * 
+     * @abstract
+     * @param  array $pricingSets
+     * @return void
+     */
+    public function setPricingSets($pricingSets);
+
 }

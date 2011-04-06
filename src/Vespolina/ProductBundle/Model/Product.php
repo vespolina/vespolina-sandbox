@@ -14,19 +14,24 @@ use Vespolina\PricingBundle\Model\PricingSetInterface;
 
 class Product implements ProductInterface
 {
-	protected $pricingSet = array();
-	
-    public function getId(){}
-	
-	public function getPricingSets(){
-		
-      return $this->pricingSets;
-	}
-  
-    public function addPricingSet(PricingSetInterface $pricingSet){
+    protected $pricingSet = array();
 
+    public function getId()
+    {
+    }
+
+    public function getPricingSets()
+    {
+        return $this->pricingSets;
+    }
+
+    public function setPricingSets($pricingSets)
+    {
+        return $this->pricingSets = $pricingSets;
+    }
+
+    public function addPricingSet(PricingSetInterface $pricingSet)
+    {
         $this->pricingSets[$pricingSet->getKey()] = $pricingSet;
     }
-   
-	
 }
