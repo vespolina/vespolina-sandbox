@@ -16,15 +16,13 @@ use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 interface CurrencyManagerInterface
 {
     /**
-     * Get currency instance, based on another currency and time
+     * Get currency instance
      *
      * @param string ISO 4217 currency code
-     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency
-     * @param DateTime $datetime optional date and time of exchange rate, defaults to now
      *
      * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
      */
-    public function getCurrency($currencyCode, CurrencyInterface $baseCurrency, \DateTime $datetime=null);
+    public function getCurrency($currencyCode);
 
     /**
      * Exchange an amount against a currency, this is short cut to having to get an instance of a currency
@@ -36,12 +34,14 @@ interface CurrencyManagerInterface
     public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
 
     /**
-     * Get the exchange rate between the base currency and the desired currency
+     * Get the exchange rate from on currency to another.  $from and $to can be an
+     * ISO 4217 currency code or a Currency object
      *
-     * @param  mixed $baseCurrency
-     * @param  mixed $currency
-     * @param DateTime $datetime optional date and time of exchange rate, defaults to now
-     * @return rate
+     * @param mixed $from string | Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @param mixed $to string | Vespolina\MonetaryBundle\Model\CurrencyInterface
+     * @param DateTime the date and time of the exchange rate, defaults to current date and time
+     *
+     * @return float
      */
-    public function getExchangeRate($baseCurrency, $currency, \DateTime $datetime=null);
+    public function getExchangeRate($from, $to, \DateTime $datetime=null);
 }

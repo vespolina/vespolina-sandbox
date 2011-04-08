@@ -109,17 +109,10 @@ class MonetaryService implements MonetaryServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function getCurrency($currencyCode, CurrencyInterface $baseCurrency, \DateTime $datetime=null)
+    public function getCurrency($currencyCode)
     {
-        $class = sprintf("$this->currencyRoot\%sCurrency", $currencyCode);
-
-        $currency = new $class();
-
-        $baseCode = $baseCurrency->getCurrencyCode();
-        $url = sprintf("http://www.google.com/ig/calculator?hl=en&q=1%s%3D%3F%s", $baseCode, $currencyCode);
-        $conversion = wget($url);
-        $rc = new \ReflectionClass($currency);
-
+        $class = $this->getCurrencyClassName($currencyCode);
+        return new $class();
     }
 
     /**
@@ -127,14 +120,26 @@ class MonetaryService implements MonetaryServiceInterface
      */
     public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null)
     {
+        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$this->exchangeRate, 16));
+    }
 
+    protected function rounding($amount)
+    {
+        $roundUp = '.'.substr('0000000000000005', -($this->precision+1));
+        return bcadd((string)$amount, $roundUp, $this->precision);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getExchangeRate($baseCurrency, $currency, \DateTime $datetime=null)
+    public function getExchangeRate($from, $to, \DateTime $datetime=null)
     {
+        return $this->currencyExchanger->getExchangeRate($from, $to, $datetime);
+    }
 
+    protected function getCurrencyClassName($currencyCode)
+    {
+        // todo: expand this to allow user defined currencies in configuration
+        return sprintf("%s\%sCurrency", $this->currencyRoot, $currencyCode);
     }
 }
