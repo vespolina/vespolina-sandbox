@@ -9,7 +9,11 @@ namespace Vespolina\MonetaryBundle\Tests\Service;
 
 use Vespolina\MonetaryBundle\Service\MonetaryService;
 use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
+use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
 
+/**
+ * @author Richard Shank <develop@zestic.com>
+ */
 class MonetaryServiceTest extends MonetaryTestBase
 {
     protected $baseCurrency;
@@ -17,8 +21,9 @@ class MonetaryServiceTest extends MonetaryTestBase
 
     public function testGetCurrency()
     {
-        $currency = $this->service->getCurrency('MOCK', $this->baseCurrency);
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Tests\Document\MOCKCurrency', $currency, 'currency instance, based on another currency and time');
+        $currency = $this->service->getCurrency('XTS');
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Document\Currency', $currency, 'currency instance');
+        $this->assertSame('XTS', $currency->getCurrencyCode(), 'make sure the data was loaded correctly');
     }
 
     public function testExchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null)
@@ -28,9 +33,9 @@ class MonetaryServiceTest extends MonetaryTestBase
 
     function testGetExchangeRate()
     {
-        $usdCurrency = $this->service->getCurrency('MOCK', $this->baseCurrency);
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', 'MOCK'), 'get rate with two symbols');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'MOCK'), 'get rate with currency and symbol');
+        $usdCurrency = $this->service->getCurrency('USD');
+        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', 'USD'), 'get rate with two symbols');
+        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'USD'), 'get rate with currency and symbol');
         $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', $usdCurrency), 'get rate with a symbol and a currency');
         $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, $usdCurrency), 'get rate with two currencies');
     }
@@ -159,11 +164,7 @@ class MonetaryServiceTest extends MonetaryTestBase
 
     protected function setUp()
     {
-        $this->service = $this->getMock('Vespolina\MonetaryBundle\Service\MonetaryService');
-        $rc = new \ReflectionClass($this->service);
-        $property = $rc->getProperty('currencyRoot');
-        $property->setAccessible(true);
-        $property->setValue($this->service, 'Vespolina\MonetaryBundle\Tests\Document');
+        $this->service = new MonetaryService(new CurrencyExchanger());
 
         $this->baseCurrency = $this->getBaseCurrency();
     }
