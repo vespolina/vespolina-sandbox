@@ -81,18 +81,4 @@ abstract class Currency implements CurrencyInterface
     {
         return $this->baseCurrency->getCurrencyCode() == 'VESPOLINA_BASE_CURRENCY' ? null : $this->baseCurrency;
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function exchange($amount)
-    {
-        return (float)$this->rounding(bcmul((string)$amount,(string)$this->exchangeRate, 16));
-    }
-
-    protected function rounding($amount)
-    {
-        $roundUp = '.'.substr('0000000000000005', -($this->precision+1));
-        return bcadd((string)$amount, $roundUp, $this->precision);
-    }
 }
