@@ -14,16 +14,26 @@ use Vespolina\MonetaryBundle\Model\CurrencyInterface;
  */
 abstract class Currency implements CurrencyInterface
 {
-    protected $baseCurrency;
     protected $currencyCode;
-    protected $exchangeRate;
-    protected $exchangeDateTime;
+    protected $name;
     protected $precision;
+    protected $shortName;
     protected $symbol;
 
-    public function __construct()
+    /**
+     * @inheritdoc
+     */
+    public function getName()
     {
-        $this->exchangeDateTime = new \DateTime('now');
+        return $this->name;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getShortName()
+    {
+        return $this->shortName;
     }
 
     /**
@@ -56,29 +66,5 @@ abstract class Currency implements CurrencyInterface
     public function formatAmount($amount)
     {
         return sprintf('%s%s', $this->symbol, $this->rounding($amount));
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getExchangeRate()
-    {
-        return $this->exchangeRate;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getExchangeDateTime()
-    {
-        return $this->exchangeDateTime;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getBaseCurrency()
-    {
-        return $this->baseCurrency->getCurrencyCode() == 'VESPOLINA_BASE_CURRENCY' ? null : $this->baseCurrency;
     }
 }
