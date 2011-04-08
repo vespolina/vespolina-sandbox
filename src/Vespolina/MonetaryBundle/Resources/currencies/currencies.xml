@@ -1,1900 +1,2147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <currencies>
-	<name>
-		<entity>AFGHANISTAN</entity>
-		<name>Afghani</name>
-		<name_code>AFN</name_code>
-		<numeric_code>971</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ÅLAND ISLANDS</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ALBANIA</entity>
-		<name>Lek</name>
-		<name_code>ALL</name_code>
-		<numeric_code>008</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ALGERIA</entity>
-		<name>Algerian Dinar</name>
-		<name_code>DZD</name_code>
-		<numeric_code>012</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>AMERICAN SAMOA</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ANDORRA</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ANGOLA</entity>
-		<name>Kwanza</name>
-		<name_code>AOA</name_code>
-		<numeric_code>973</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ANGUILLA</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ANTARCTICA</entity>
-		<name>No universal name</name>
-		<name_code/>
-		<numeric_code/>
-		<precision/>
-	</name>
-	<name>
-		<entity>ANTIGUA AND BARBUDA</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ARGENTINA</entity>
-		<name>Argentine Peso</name>
-		<name_code>ARS</name_code>
-		<numeric_code>032</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ARMENIA</entity>
-		<name>Armenian Dram</name>
-		<name_code>AMD</name_code>
-		<numeric_code>051</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ARUBA</entity>
-		<name>Aruban Guilder</name>
-		<name_code>AWG</name_code>
-		<numeric_code>533</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>AUSTRALIA</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>AUSTRIA</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>AZERBAIJAN</entity>
-		<name>Azerbaijanian Manat</name>
-		<name_code>AZN</name_code>
-		<numeric_code>944</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BAHAMAS</entity>
-		<name>Bahamian Dollar</name>
-		<name_code>BSD</name_code>
-		<numeric_code>044</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BAHRAIN</entity>
-		<name>Bahraini Dinar</name>
-		<name_code>BHD</name_code>
-		<numeric_code>048</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>BANGLADESH</entity>
-		<name>Taka</name>
-		<name_code>BDT</name_code>
-		<numeric_code>050</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BARBADOS</entity>
-		<name>Barbados Dollar</name>
-		<name_code>BBD</name_code>
-		<numeric_code>052</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BELARUS</entity>
-		<name>Belarussian Ruble</name>
-		<name_code>BYR</name_code>
-		<numeric_code>974</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>BELGIUM</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BELIZE</entity>
-		<name>Belize Dollar</name>
-		<name_code>BZD</name_code>
-		<numeric_code>084</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BENIN</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>BERMUDA</entity>
-		<name>Bermudian Dollar</name>
-		<name_code>BMD</name_code>
-		<numeric_code>060</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BHUTAN</entity>
-		<name>Indian Rupee</name>
-		<name_code>INR</name_code>
-		<numeric_code>356</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BHUTAN</entity>
-		<name>Ngultrum </name>
-		<name_code>BTN</name_code>
-		<numeric_code>064</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BOLIVIA, PLURINATIONAL STATE OF</entity>
-		<name>Boliviano</name>
-		<name_code>BOB</name_code>
-		<numeric_code>068</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BOLIVIA, PLURINATIONAL STATE OF</entity>
-		<name>Mvdol </name>
-		<name_code>BOV</name_code>
-		<numeric_code>984</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BONAIRE, SAINT EUSTATIUS AND SABA</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BOSNIA &amp; HERZEGOVINA</entity>
-		<name>Convertible Mark</name>
-		<name_code>BAM</name_code>
-		<numeric_code>977</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BOTSWANA</entity>
-		<name>Pula</name>
-		<name_code>BWP</name_code>
-		<numeric_code>072</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BOUVET ISLAND</entity>
-		<name>Norwegian Krone</name>
-		<name_code>NOK</name_code>
-		<numeric_code>578</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BRAZIL</entity>
-		<name>Brazilian Real</name>
-		<name_code>BRL</name_code>
-		<numeric_code>986</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BRITISH INDIAN OCEAN TERRITORY</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BRUNEI DARUSSALAM</entity>
-		<name>Brunei Dollar</name>
-		<name_code>BND</name_code>
-		<numeric_code>096</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BULGARIA</entity>
-		<name>Bulgarian Lev</name>
-		<name_code>BGN</name_code>
-		<numeric_code>975</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>BURKINA FASO</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>BURUNDI</entity>
-		<name>Burundi Franc</name>
-		<name_code>BIF</name_code>
-		<numeric_code>108</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CAMBODIA</entity>
-		<name>Riel</name>
-		<name_code>KHR</name_code>
-		<numeric_code>116</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CAMEROON</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CANADA</entity>
-		<name>Canadian Dollar</name>
-		<name_code>CAD</name_code>
-		<numeric_code>124</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CAPE VERDE</entity>
-		<name>Cape Verde Escudo</name>
-		<name_code>CVE</name_code>
-		<numeric_code>132</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CAYMAN ISLANDS</entity>
-		<name>Cayman Islands Dollar</name>
-		<name_code>KYD</name_code>
-		<numeric_code>136</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CENTRAL AFRICAN REPUBLIC</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CHAD</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CHILE</entity>
-		<name>Chilean Peso</name>
-		<name_code>CLP</name_code>
-		<numeric_code>152</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CHILE</entity>
-		<name>Unidades de fomento </name>
-		<name_code>CLF</name_code>
-		<numeric_code>990</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CHINA</entity>
-		<name>Yuan Renminbi</name>
-		<name_code>CNY</name_code>
-		<numeric_code>156</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CHRISTMAS ISLAND</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COCOS (KEELING) ISLANDS</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COLOMBIA</entity>
-		<name>Colombian Peso</name>
-		<name_code>COP</name_code>
-		<numeric_code>170</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COLOMBIA</entity>
-		<name>Unidad de Valor Real </name>
-		<name_code>COU</name_code>
-		<numeric_code>970</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COMOROS</entity>
-		<name>Comoro Franc</name>
-		<name_code>KMF</name_code>
-		<numeric_code>174</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CONGO</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CONGO, THE DEMOCRATIC REPUBLIC OF</entity>
-		<name>Congolese Franc </name>
-		<name_code>CDF</name_code>
-		<numeric_code>976</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COOK ISLANDS</entity>
-		<name>New Zealand Dollar</name>
-		<name_code>NZD</name_code>
-		<numeric_code>554</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>COSTA RICA</entity>
-		<name>Costa Rican Colon</name>
-		<name_code>CRC</name_code>
-		<numeric_code>188</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CÔTE D'IVOIRE</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>CROATIA</entity>
-		<name>Croatian Kuna</name>
-		<name_code>HRK</name_code>
-		<numeric_code>191</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CUBA</entity>
-		<name>Cuban Peso</name>
-		<name_code>CUP</name_code>
-		<numeric_code>192</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CUBA</entity>
-		<name>Peso Convertible  </name>
-		<name_code>CUC</name_code>
-		<numeric_code>931</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CURACAO</entity>
-		<name>Netherlands Antillean Guilder</name>
-		<name_code>ANG</name_code>
-		<numeric_code>532</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CYPRUS</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>CZECH REPUBLIC</entity>
-		<name>Czech Koruna</name>
-		<name_code>CZK</name_code>
-		<numeric_code>203</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>DENMARK</entity>
-		<name>Danish Krone</name>
-		<name_code>DKK</name_code>
-		<numeric_code>208</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>DJIBOUTI</entity>
-		<name>Djibouti Franc</name>
-		<name_code>DJF</name_code>
-		<numeric_code>262</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>DOMINICA</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>DOMINICAN REPUBLIC</entity>
-		<name>Dominican Peso</name>
-		<name_code>DOP</name_code>
-		<numeric_code>214</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ECUADOR</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>EGYPT</entity>
-		<name>Egyptian Pound</name>
-		<name_code>EGP</name_code>
-		<numeric_code>818</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>EL SALVADOR</entity>
-		<name>El Salvador Colon</name>
-		<name_code>SVC</name_code>
-		<numeric_code>222</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>EL SALVADOR</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>EQUATORIAL GUINEA</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>ERITREA</entity>
-		<name>Nakfa</name>
-		<name_code>ERN</name_code>
-		<numeric_code>232</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ESTONIA</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ETHIOPIA</entity>
-		<name>Ethiopian Birr</name>
-		<name_code>ETB</name_code>
-		<numeric_code>230</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>EUROPEAN UNION </entity>
-		<name>Euro </name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FALKLAND ISLANDS (MALVINAS)</entity>
-		<name>Falkland Islands Pound</name>
-		<name_code>FKP</name_code>
-		<numeric_code>238</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FAROE ISLANDS</entity>
-		<name>Danish Krone</name>
-		<name_code>DKK</name_code>
-		<numeric_code>208</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FIJI</entity>
-		<name>Fiji Dollar</name>
-		<name_code>FJD</name_code>
-		<numeric_code>242</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FINLAND</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FRANCE</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FRENCH GUIANA</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>FRENCH POLYNESIA</entity>
-		<name>CFP Franc</name>
-		<name_code>XPF</name_code>
-		<numeric_code>953</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>FRENCH SOUTHERN TERRITORIES</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GABON</entity>
-		<name>CFA Franc BEAC </name>
-		<name_code>XAF</name_code>
-		<numeric_code>950</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>GAMBIA</entity>
-		<name>Dalasi</name>
-		<name_code>GMD</name_code>
-		<numeric_code>270</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GEORGIA</entity>
-		<name>Lari</name>
-		<name_code>GEL</name_code>
-		<numeric_code>981</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GERMANY</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GHANA</entity>
-		<name>Cedi</name>
-		<name_code>GHS</name_code>
-		<numeric_code>936</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GIBRALTAR</entity>
-		<name>Gibraltar Pound</name>
-		<name_code>GIP</name_code>
-		<numeric_code>292</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GREECE</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GREENLAND</entity>
-		<name>Danish Krone</name>
-		<name_code>DKK</name_code>
-		<numeric_code>208</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GRENADA</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GUADELOUPE</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GUAM</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GUATEMALA</entity>
-		<name>Quetzal</name>
-		<name_code>GTQ</name_code>
-		<numeric_code>320</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GUERNSEY</entity>
-		<name>Pound Sterling</name>
-		<name_code>GBP</name_code>
-		<numeric_code>826</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>GUINEA</entity>
-		<name>Guinea Franc</name>
-		<name_code>GNF</name_code>
-		<numeric_code>324</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>GUINEA-BISSAU</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>GUYANA</entity>
-		<name>Guyana Dollar</name>
-		<name_code>GYD</name_code>
-		<numeric_code>328</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HAITI</entity>
-		<name>Gourde</name>
-		<name_code>HTG</name_code>
-		<numeric_code>332</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HAITI</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HEARD ISLAND AND McDONALD ISLANDS</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HOLY SEE (VATICAN CITY STATE)</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HONDURAS</entity>
-		<name>Lempira</name>
-		<name_code>HNL</name_code>
-		<numeric_code>340</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HONG KONG</entity>
-		<name>Hong Kong Dollar</name>
-		<name_code>HKD</name_code>
-		<numeric_code>344</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>HUNGARY</entity>
-		<name>Forint</name>
-		<name_code>HUF</name_code>
-		<numeric_code>348</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ICELAND</entity>
-		<name>Iceland Krona</name>
-		<name_code>ISK</name_code>
-		<numeric_code>352</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>INDIA</entity>
-		<name>Indian Rupee</name>
-		<name_code>INR</name_code>
-		<numeric_code>356</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>INDONESIA</entity>
-		<name>Rupiah</name>
-		<name_code>IDR</name_code>
-		<numeric_code>360</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>INTERNATIONAL MONETARY FUND (IMF) </entity>
-		<name>SDR (Special Drawing Right)</name>
-		<name_code>XDR</name_code>
-		<numeric_code>960</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>IRAN, ISLAMIC REPUBLIC OF</entity>
-		<name>Iranian Rial</name>
-		<name_code>IRR</name_code>
-		<numeric_code>364</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>IRAQ</entity>
-		<name>Iraqi Dinar</name>
-		<name_code>IQD</name_code>
-		<numeric_code>368</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>IRELAND</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ISLE OF MAN</entity>
-		<name>Pound Sterling</name>
-		<name_code>GBP</name_code>
-		<numeric_code>826</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ISRAEL</entity>
-		<name>New Israeli Sheqel</name>
-		<name_code>ILS</name_code>
-		<numeric_code>376</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ITALY</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>JAMAICA</entity>
-		<name>Jamaican Dollar</name>
-		<name_code>JMD</name_code>
-		<numeric_code>388</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>JAPAN</entity>
-		<name>Yen</name>
-		<name_code>JPY</name_code>
-		<numeric_code>392</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>JERSEY</entity>
-		<name>Pound Sterling</name>
-		<name_code>GBP</name_code>
-		<numeric_code>826</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>JORDAN</entity>
-		<name>Jordanian Dinar</name>
-		<name_code>JOD</name_code>
-		<numeric_code>400</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>KAZAKHSTAN</entity>
-		<name>Tenge</name>
-		<name_code>KZT</name_code>
-		<numeric_code>398</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>KENYA</entity>
-		<name>Kenyan Shilling</name>
-		<name_code>KES</name_code>
-		<numeric_code>404</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>KIRIBATI</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF</entity>
-		<name>North Korean Won</name>
-		<name_code>KPW</name_code>
-		<numeric_code>408</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>KOREA, REPUBLIC OF</entity>
-		<name>Won</name>
-		<name_code>KRW</name_code>
-		<numeric_code>410</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>KUWAIT</entity>
-		<name>Kuwaiti Dinar</name>
-		<name_code>KWD</name_code>
-		<numeric_code>414</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>KYRGYZSTAN</entity>
-		<name>Som</name>
-		<name_code>KGS</name_code>
-		<numeric_code>417</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LAO PEOPLE’S DEMOCRATIC REPUBLIC</entity>
-		<name>Kip</name>
-		<name_code>LAK</name_code>
-		<numeric_code>418</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LATVIA</entity>
-		<name>Latvian Lats</name>
-		<name_code>LVL</name_code>
-		<numeric_code>428</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LEBANON</entity>
-		<name>Lebanese Pound</name>
-		<name_code>LBP</name_code>
-		<numeric_code>422</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LESOTHO</entity>
-		<name>Loti</name>
-		<name_code>LSL</name_code>
-		<numeric_code>426</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LESOTHO</entity>
-		<name>Rand</name>
-		<name_code>ZAR</name_code>
-		<numeric_code>710</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LIBERIA</entity>
-		<name>Liberian Dollar</name>
-		<name_code>LRD</name_code>
-		<numeric_code>430</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LIBYAN ARAB JAMAHIRIYA</entity>
-		<name>Libyan Dinar</name>
-		<name_code>LYD</name_code>
-		<numeric_code>434</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>LIECHTENSTEIN</entity>
-		<name>Swiss Franc</name>
-		<name_code>CHF</name_code>
-		<numeric_code>756</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LITHUANIA</entity>
-		<name>Lithuanian Litas</name>
-		<name_code>LTL</name_code>
-		<numeric_code>440</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>LUXEMBOURG</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MACAO</entity>
-		<name>Pataca</name>
-		<name_code>MOP</name_code>
-		<numeric_code>446</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</entity>
-		<name>Denar</name>
-		<name_code>MKD</name_code>
-		<numeric_code>807</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MADAGASCAR</entity>
-		<name>Malagasy Ariary</name>
-		<name_code>MGA</name_code>
-		<numeric_code>969</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MALAWI</entity>
-		<name>Kwacha</name>
-		<name_code>MWK</name_code>
-		<numeric_code>454</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MALAYSIA</entity>
-		<name>Malaysian Ringgit</name>
-		<name_code>MYR</name_code>
-		<numeric_code>458</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MALDIVES</entity>
-		<name>Rufiyaa</name>
-		<name_code>MVR</name_code>
-		<numeric_code>462</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MALI</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>MALTA</entity>
-		<name>Euro </name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MARSHALL ISLANDS</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MARTINIQUE</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MAURITANIA</entity>
-		<name>Ouguiya</name>
-		<name_code>MRO</name_code>
-		<numeric_code>478</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MAURITIUS</entity>
-		<name>Mauritius Rupee</name>
-		<name_code>MUR</name_code>
-		<numeric_code>480</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MAYOTTE</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP</entity>
-		<name>ADB Unit of Account</name>
-		<name_code>XUA</name_code>
-		<numeric_code>965</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>MEXICO</entity>
-		<name>Mexican Peso</name>
-		<name_code>MXN</name_code>
-		<numeric_code>484</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MEXICO</entity>
-		<name>Mexican Unidad de Inversion (UDI) </name>
-		<name_code>MXV</name_code>
-		<numeric_code>979</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MICRONESIA, FEDERATED STATES OF</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MOLDOVA, REPUBLIC OF</entity>
-		<name>Moldovan Leu</name>
-		<name_code>MDL</name_code>
-		<numeric_code>498</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MONACO</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MONGOLIA</entity>
-		<name>Tugrik</name>
-		<name_code>MNT</name_code>
-		<numeric_code>496</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MONTENEGRO</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MONTSERRAT</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MOROCCO</entity>
-		<name>Moroccan Dirham</name>
-		<name_code>MAD</name_code>
-		<numeric_code>504</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MOZAMBIQUE</entity>
-		<name>Metical</name>
-		<name_code>MZN</name_code>
-		<numeric_code>943</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>MYANMAR</entity>
-		<name>Kyat</name>
-		<name_code>MMK</name_code>
-		<numeric_code>104</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NAMIBIA</entity>
-		<name>Namibia Dollar</name>
-		<name_code>NAD</name_code>
-		<numeric_code>516</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NAMIBIA</entity>
-		<name>South African Rand</name>
-		<name_code>ZAR</name_code>
-		<numeric_code>710</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NAURU</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NEPAL</entity>
-		<name>Nepalese Rupee</name>
-		<name_code>NPR</name_code>
-		<numeric_code>524</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NETHERLANDS</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NEW CALEDONIA</entity>
-		<name>CFP Franc</name>
-		<name_code>XPF</name_code>
-		<numeric_code>953</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>NEW ZEALAND</entity>
-		<name>New Zealand Dollar</name>
-		<name_code>NZD</name_code>
-		<numeric_code>554</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NICARAGUA</entity>
-		<name>Cordoba Oro</name>
-		<name_code>NIO</name_code>
-		<numeric_code>558</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NIGER</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>NIGERIA</entity>
-		<name>Naira</name>
-		<name_code>NGN</name_code>
-		<numeric_code>566</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NIUE</entity>
-		<name>New Zealand Dollar</name>
-		<name_code>NZD</name_code>
-		<numeric_code>554</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NORFOLK ISLAND</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NORTHERN MARIANA ISLANDS</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>NORWAY</entity>
-		<name>Norwegian Krone</name>
-		<name_code>NOK</name_code>
-		<numeric_code>578</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>OMAN</entity>
-		<name>Rial Omani</name>
-		<name_code>OMR</name_code>
-		<numeric_code>512</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>PAKISTAN</entity>
-		<name>Pakistan Rupee</name>
-		<name_code>PKR</name_code>
-		<numeric_code>586</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PALAU</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PALESTINIAN TERRITORY, OCCUPIED</entity>
-		<name>No universal name</name>
-		<name_code/>
-		<numeric_code/>
-		<precision/>
-	</name>
-	<name>
-		<entity>PANAMA</entity>
-		<name>Balboa</name>
-		<name_code>PAB</name_code>
-		<numeric_code>590</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PANAMA</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PAPUA NEW GUINEA</entity>
-		<name>Kina</name>
-		<name_code>PGK</name_code>
-		<numeric_code>598</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PARAGUAY</entity>
-		<name>Guarani</name>
-		<name_code>PYG</name_code>
-		<numeric_code>600</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>PERU</entity>
-		<name>Nuevo Sol</name>
-		<name_code>PEN</name_code>
-		<numeric_code>604</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PHILIPPINES</entity>
-		<name>Philippine Peso</name>
-		<name_code>PHP</name_code>
-		<numeric_code>608</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PITCAIRN</entity>
-		<name>New Zealand Dollar</name>
-		<name_code>NZD</name_code>
-		<numeric_code>554</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>POLAND</entity>
-		<name>Zloty</name>
-		<name_code>PLN</name_code>
-		<numeric_code>985</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PORTUGAL</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>PUERTO RICO</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>QATAR</entity>
-		<name>Qatari Rial</name>
-		<name_code>QAR</name_code>
-		<numeric_code>634</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>RÉUNION</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ROMANIA</entity>
-		<name>Leu  </name>
-		<name_code>RON</name_code>
-		<numeric_code>946</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>RUSSIAN FEDERATION</entity>
-		<name>Russian Ruble</name>
-		<name_code>RUB</name_code>
-		<numeric_code>643</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>RWANDA</entity>
-		<name>Rwanda Franc</name>
-		<name_code>RWF</name_code>
-		<numeric_code>646</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</entity>
-		<name>Saint Helena Pound</name>
-		<name_code>SHP</name_code>
-		<numeric_code>654</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT KITTS AND NEVIS</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT LUCIA</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT MARTIN</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT PIERRE AND MIQUELON</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT VINCENT AND THE GRENADINES</entity>
-		<name>East Caribbean Dollar</name>
-		<name_code>XCD</name_code>
-		<numeric_code>951</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAINT-BARTHÉLEMY</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAMOA</entity>
-		<name>Tala</name>
-		<name_code>WST</name_code>
-		<numeric_code>882</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAN MARINO</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SÃO TOME AND PRINCIPE</entity>
-		<name>Dobra</name>
-		<name_code>STD</name_code>
-		<numeric_code>678</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SAUDI ARABIA</entity>
-		<name>Saudi Riyal</name>
-		<name_code>SAR</name_code>
-		<numeric_code>682</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SENEGAL</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>SERBIA </entity>
-		<name>Serbian Dinar</name>
-		<name_code>RSD</name_code>
-		<numeric_code>941</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SEYCHELLES</entity>
-		<name>Seychelles Rupee</name>
-		<name_code>SCR</name_code>
-		<numeric_code>690</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SIERRA LEONE</entity>
-		<name>Leone</name>
-		<name_code>SLL</name_code>
-		<numeric_code>694</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SINGAPORE</entity>
-		<name>Singapore Dollar</name>
-		<name_code>SGD</name_code>
-		<numeric_code>702</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SINT MAARTEN (DUTCH PART)</entity>
-		<name>Netherlands Antillean Guilder</name>
-		<name_code>ANG</name_code>
-		<numeric_code>532</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS "SUCRE" </entity>
-		<name>Sucre</name>
-		<name_code>XSU</name_code>
-		<numeric_code>994</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>SLOVAKIA</entity>
-		<name>Euro </name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SLOVENIA</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SOLOMON ISLANDS</entity>
-		<name>Solomon Islands Dollar</name>
-		<name_code>SBD</name_code>
-		<numeric_code>090</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SOMALIA</entity>
-		<name>Somali Shilling</name>
-		<name_code>SOS</name_code>
-		<numeric_code>706</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SOUTH AFRICA</entity>
-		<name>Rand</name>
-		<name_code>ZAR</name_code>
-		<numeric_code>710</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</entity>
-		<name>No universal name</name>
-		<name_code/>
-		<numeric_code/>
-		<precision/>
-	</name>
-	<name>
-		<entity>SPAIN</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SRI LANKA</entity>
-		<name>Sri Lanka Rupee</name>
-		<name_code>LKR</name_code>
-		<numeric_code>144</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SUDAN</entity>
-		<name>Sudanese Pound </name>
-		<name_code>SDG</name_code>
-		<numeric_code>938</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SURINAME</entity>
-		<name>Surinam Dollar</name>
-		<name_code>SRD</name_code>
-		<numeric_code>968</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SVALBARD AND JAN MAYEN</entity>
-		<name>Norwegian Krone</name>
-		<name_code>NOK</name_code>
-		<numeric_code>578</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SWAZILAND</entity>
-		<name>Lilangeni</name>
-		<name_code>SZL</name_code>
-		<numeric_code>748</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SWEDEN</entity>
-		<name>Swedish Krona</name>
-		<name_code>SEK</name_code>
-		<numeric_code>752</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SWITZERLAND</entity>
-		<name>Swiss Franc</name>
-		<name_code>CHF</name_code>
-		<numeric_code>756</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SWITZERLAND</entity>
-		<name>WIR Euro </name>
-		<name_code>CHE</name_code>
-		<numeric_code>947</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SWITZERLAND</entity>
-		<name>WIR Franc  </name>
-		<name_code>CHW</name_code>
-		<numeric_code>948</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>SYRIAN ARAB REPUBLIC</entity>
-		<name>Syrian Pound</name>
-		<name_code>SYP</name_code>
-		<numeric_code>760</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TAIWAN, PROVINCE OF CHINA</entity>
-		<name>New Taiwan Dollar</name>
-		<name_code>TWD</name_code>
-		<numeric_code>901</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TAJIKISTAN</entity>
-		<name>Somoni      </name>
-		<name_code>TJS</name_code>
-		<numeric_code>972</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TANZANIA, UNITED REPUBLIC OF</entity>
-		<name>Tanzanian Shilling</name>
-		<name_code>TZS</name_code>
-		<numeric_code>834</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>THAILAND</entity>
-		<name>Baht</name>
-		<name_code>THB</name_code>
-		<numeric_code>764</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TIMOR-LESTE</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TOGO</entity>
-		<name>CFA Franc BCEAO </name>
-		<name_code>XOF</name_code>
-		<numeric_code>952</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>TOKELAU</entity>
-		<name>New Zealand Dollar</name>
-		<name_code>NZD</name_code>
-		<numeric_code>554</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TONGA</entity>
-		<name>Pa’anga</name>
-		<name_code>TOP</name_code>
-		<numeric_code>776</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TRINIDAD AND TOBAGO</entity>
-		<name>Trinidad and Tobago Dollar</name>
-		<name_code>TTD</name_code>
-		<numeric_code>780</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TUNISIA</entity>
-		<name>Tunisian Dinar</name>
-		<name_code>TND</name_code>
-		<numeric_code>788</numeric_code>
-		<precision>3</precision>
-	</name>
-	<name>
-		<entity>TURKEY</entity>
-		<name>Turkish Lira  </name>
-		<name_code>TRY</name_code>
-		<numeric_code>949</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TURKMENISTAN</entity>
-		<name>New Manat</name>
-		<name_code>TMT</name_code>
-		<numeric_code>934</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TURKS AND CAICOS ISLANDS</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>TUVALU</entity>
-		<name>Australian Dollar</name>
-		<name_code>AUD</name_code>
-		<numeric_code>036</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UGANDA</entity>
-		<name>Uganda Shilling</name>
-		<name_code>UGX</name_code>
-		<numeric_code>800</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UKRAINE</entity>
-		<name>Hryvnia</name>
-		<name_code>UAH</name_code>
-		<numeric_code>980</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED ARAB EMIRATES</entity>
-		<name>UAE Dirham</name>
-		<name_code>AED</name_code>
-		<numeric_code>784</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED KINGDOM</entity>
-		<name>Pound Sterling</name>
-		<name_code>GBP</name_code>
-		<numeric_code>826</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED STATES</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED STATES</entity>
-		<name>US Dollar (Next day) </name>
-		<name_code>USN</name_code>
-		<numeric_code>997</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED STATES</entity>
-		<name>US Dollar (Same day) </name>
-		<name_code>USS</name_code>
-		<numeric_code>998</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>UNITED STATES MINOR OUTLYING ISLANDS</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>URUGUAY</entity>
-		<name>Peso Uruguayo</name>
-		<name_code>UYU</name_code>
-		<numeric_code>858</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>URUGUAY</entity>
-		<name>Uruguay Peso en Unidades Indexadas (URUIURUI)  </name>
-		<name_code>UYI</name_code>
-		<numeric_code>940</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>UZBEKISTAN</entity>
-		<name>Uzbekistan Sum</name>
-		<name_code>UZS</name_code>
-		<numeric_code>860</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>VANUATU</entity>
-		<name>Vatu</name>
-		<name_code>VUV</name_code>
-		<numeric_code>548</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>Vatican City State (HOLY SEE)</entity>
-		<name>Euro</name>
-		<name_code>EUR</name_code>
-		<numeric_code>978</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>VENEZUELA, BOLIVARIAN REPUBLIC OF</entity>
-		<name>Bolivar Fuerte </name>
-		<name_code>VEF</name_code>
-		<numeric_code>937</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>VIET NAM</entity>
-		<name>Dong</name>
-		<name_code>VND</name_code>
-		<numeric_code>704</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>VIRGIN ISLANDS (BRITISH)</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>VIRGIN ISLANDS (US)</entity>
-		<name>US Dollar</name>
-		<name_code>USD</name_code>
-		<numeric_code>840</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>WALLIS AND FUTUNA</entity>
-		<name>CFP Franc</name>
-		<name_code>XPF</name_code>
-		<numeric_code>953</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>WESTERN SAHARA</entity>
-		<name>Moroccan Dirham</name>
-		<name_code>MAD</name_code>
-		<numeric_code>504</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>YEMEN</entity>
-		<name>Yemeni Rial</name>
-		<name_code>YER</name_code>
-		<numeric_code>886</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ZAMBIA</entity>
-		<name>Zambian Kwacha</name>
-		<name_code>ZMK</name_code>
-		<numeric_code>894</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ZIMBABWE</entity>
-		<name>Zimbabwe Dollar</name>
-		<name_code>ZWL</name_code>
-		<numeric_code>932</numeric_code>
-		<precision>2</precision>
-	</name>
-	<name>
-		<entity>ZZ06_Testing_Code</entity>
-		<name>Codes specifically reserved for testing purposes</name>
-		<name_code>XTS</name_code>
-		<numeric_code>963</numeric_code>
-		<precision>0</precision>
-	</name>
-	<name>
-		<entity>ZZ07_No_name</entity>
-		<name>The codes assigned for transactions where no name is involved</name>
-		<name_code>XXX</name_code>
-		<numeric_code>999</numeric_code>
-		<precision>0</precision>
-	</name>
+    <name>
+        <entity>AFGHANISTAN</entity>
+        <name>Afghani</name>
+        <name_code>AFN</name_code>
+        <numeric_code>971</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ÅLAND ISLANDS</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ALBANIA</entity>
+        <name>Lek</name>
+        <name_code>ALL</name_code>
+        <numeric_code>008</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ALGERIA</entity>
+        <name>Algerian Dinar</name>
+        <name_code>DZD</name_code>
+        <numeric_code>012</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>AMERICAN SAMOA</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ANDORRA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ANGOLA</entity>
+        <name>Kwanza</name>
+        <name_code>AOA</name_code>
+        <numeric_code>973</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ANGUILLA</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ANTARCTICA</entity>
+        <name>No universal name</name>
+        <name_code/>
+        <numeric_code/>
+        <precision/>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ANTIGUA AND BARBUDA</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ARGENTINA</entity>
+        <name>Argentine Peso</name>
+        <name_code>ARS</name_code>
+        <numeric_code>032</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ARMENIA</entity>
+        <name>Armenian Dram</name>
+        <name_code>AMD</name_code>
+        <numeric_code>051</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ARUBA</entity>
+        <name>Aruban Guilder</name>
+        <name_code>AWG</name_code>
+        <numeric_code>533</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>AUSTRALIA</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>AUSTRIA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>AZERBAIJAN</entity>
+        <name>Azerbaijanian Manat</name>
+        <name_code>AZN</name_code>
+        <numeric_code>944</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BAHAMAS</entity>
+        <name>Bahamian Dollar</name>
+        <name_code>BSD</name_code>
+        <numeric_code>044</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BAHRAIN</entity>
+        <name>Bahraini Dinar</name>
+        <name_code>BHD</name_code>
+        <numeric_code>048</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BANGLADESH</entity>
+        <name>Taka</name>
+        <name_code>BDT</name_code>
+        <numeric_code>050</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BARBADOS</entity>
+        <name>Barbados Dollar</name>
+        <name_code>BBD</name_code>
+        <numeric_code>052</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BELARUS</entity>
+        <name>Belarussian Ruble</name>
+        <name_code>BYR</name_code>
+        <numeric_code>974</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BELGIUM</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BELIZE</entity>
+        <name>Belize Dollar</name>
+        <name_code>BZD</name_code>
+        <numeric_code>084</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BENIN</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BERMUDA</entity>
+        <name>Bermudian Dollar</name>
+        <name_code>BMD</name_code>
+        <numeric_code>060</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BHUTAN</entity>
+        <name>Indian Rupee</name>
+        <name_code>INR</name_code>
+        <numeric_code>356</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BHUTAN</entity>
+        <name>Ngultrum </name>
+        <name_code>BTN</name_code>
+        <numeric_code>064</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BOLIVIA, PLURINATIONAL STATE OF</entity>
+        <name>Boliviano</name>
+        <name_code>BOB</name_code>
+        <numeric_code>068</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BOLIVIA, PLURINATIONAL STATE OF</entity>
+        <name>Mvdol</name>
+        <name_code>BOV</name_code>
+        <numeric_code>984</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BONAIRE, SAINT EUSTATIUS AND SABA</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BOSNIA &amp; HERZEGOVINA</entity>
+        <name>Convertible Mark</name>
+        <name_code>BAM</name_code>
+        <numeric_code>977</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BOTSWANA</entity>
+        <name>Pula</name>
+        <name_code>BWP</name_code>
+        <numeric_code>072</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BOUVET ISLAND</entity>
+        <name>Norwegian Krone</name>
+        <name_code>NOK</name_code>
+        <numeric_code>578</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BRAZIL</entity>
+        <name>Brazilian Real</name>
+        <name_code>BRL</name_code>
+        <numeric_code>986</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BRITISH INDIAN OCEAN TERRITORY</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BRUNEI DARUSSALAM</entity>
+        <name>Brunei Dollar</name>
+        <name_code>BND</name_code>
+        <numeric_code>096</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BULGARIA</entity>
+        <name>Bulgarian Lev</name>
+        <name_code>BGN</name_code>
+        <numeric_code>975</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BURKINA FASO</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>BURUNDI</entity>
+        <name>Burundi Franc</name>
+        <name_code>BIF</name_code>
+        <numeric_code>108</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CAMBODIA</entity>
+        <name>Riel</name>
+        <name_code>KHR</name_code>
+        <numeric_code>116</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CAMEROON</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CANADA</entity>
+        <name>Canadian Dollar</name>
+        <name_code>CAD</name_code>
+        <numeric_code>124</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CAPE VERDE</entity>
+        <name>Cape Verde Escudo</name>
+        <name_code>CVE</name_code>
+        <numeric_code>132</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CAYMAN ISLANDS</entity>
+        <name>Cayman Islands Dollar</name>
+        <name_code>KYD</name_code>
+        <numeric_code>136</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CENTRAL AFRICAN REPUBLIC</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CHAD</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CHILE</entity>
+        <name>Chilean Peso</name>
+        <name_code>CLP</name_code>
+        <numeric_code>152</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CHILE</entity>
+        <name>Unidades de fomento </name>
+        <name_code>CLF</name_code>
+        <numeric_code>990</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CHINA</entity>
+        <name>Yuan Renminbi</name>
+        <name_code>CNY</name_code>
+        <numeric_code>156</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CHRISTMAS ISLAND</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COCOS (KEELING) ISLANDS</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COLOMBIA</entity>
+        <name>Colombian Peso</name>
+        <name_code>COP</name_code>
+        <numeric_code>170</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COLOMBIA</entity>
+        <name>Unidad de Valor Real</name>
+        <name_code>COU</name_code>
+        <numeric_code>970</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COMOROS</entity>
+        <name>Comoro Franc</name>
+        <name_code>KMF</name_code>
+        <numeric_code>174</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CONGO</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CONGO, THE DEMOCRATIC REPUBLIC OF</entity>
+        <name>Congolese Franc</name>
+        <name_code>CDF</name_code>
+        <numeric_code>976</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COOK ISLANDS</entity>
+        <name>New Zealand Dollar</name>
+        <name_code>NZD</name_code>
+        <numeric_code>554</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>COSTA RICA</entity>
+        <name>Costa Rican Colon</name>
+        <name_code>CRC</name_code>
+        <numeric_code>188</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CÔTE D'IVOIRE</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CROATIA</entity>
+        <name>Croatian Kuna</name>
+        <name_code>HRK</name_code>
+        <numeric_code>191</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CUBA</entity>
+        <name>Cuban Peso</name>
+        <name_code>CUP</name_code>
+        <numeric_code>192</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CUBA</entity>
+        <name>Peso Convertible</name>
+        <name_code>CUC</name_code>
+        <numeric_code>931</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CURACAO</entity>
+        <name>Netherlands Antillean Guilder</name>
+        <name_code>ANG</name_code>
+        <numeric_code>532</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CYPRUS</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>CZECH REPUBLIC</entity>
+        <name>Czech Koruna</name>
+        <name_code>CZK</name_code>
+        <numeric_code>203</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>DENMARK</entity>
+        <name>Danish Krone</name>
+        <name_code>DKK</name_code>
+        <numeric_code>208</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>DJIBOUTI</entity>
+        <name>Djibouti Franc</name>
+        <name_code>DJF</name_code>
+        <numeric_code>262</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>DOMINICA</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>DOMINICAN REPUBLIC</entity>
+        <name>Dominican Peso</name>
+        <name_code>DOP</name_code>
+        <numeric_code>214</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ECUADOR</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>EGYPT</entity>
+        <name>Egyptian Pound</name>
+        <name_code>EGP</name_code>
+        <numeric_code>818</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>EL SALVADOR</entity>
+        <name>El Salvador Colon</name>
+        <name_code>SVC</name_code>
+        <numeric_code>222</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>EL SALVADOR</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>EQUATORIAL GUINEA</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ERITREA</entity>
+        <name>Nakfa</name>
+        <name_code>ERN</name_code>
+        <numeric_code>232</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ESTONIA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ETHIOPIA</entity>
+        <name>Ethiopian Birr</name>
+        <name_code>ETB</name_code>
+        <numeric_code>230</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>EUROPEAN UNION</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol>€</symbol>
+    </name>
+    <name>
+        <entity>FALKLAND ISLANDS (MALVINAS)</entity>
+        <name>Falkland Islands Pound</name>
+        <name_code>FKP</name_code>
+        <numeric_code>238</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FAROE ISLANDS</entity>
+        <name>Danish Krone</name>
+        <name_code>DKK</name_code>
+        <numeric_code>208</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FIJI</entity>
+        <name>Fiji Dollar</name>
+        <name_code>FJD</name_code>
+        <numeric_code>242</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FINLAND</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FRANCE</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FRENCH GUIANA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FRENCH POLYNESIA</entity>
+        <name>CFP Franc</name>
+        <name_code>XPF</name_code>
+        <numeric_code>953</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>FRENCH SOUTHERN TERRITORIES</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GABON</entity>
+        <name>CFA Franc BEAC </name>
+        <name_code>XAF</name_code>
+        <numeric_code>950</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GAMBIA</entity>
+        <name>Dalasi</name>
+        <name_code>GMD</name_code>
+        <numeric_code>270</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GEORGIA</entity>
+        <name>Lari</name>
+        <name_code>GEL</name_code>
+        <numeric_code>981</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GERMANY</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GHANA</entity>
+        <name>Cedi</name>
+        <name_code>GHS</name_code>
+        <numeric_code>936</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GIBRALTAR</entity>
+        <name>Gibraltar Pound</name>
+        <name_code>GIP</name_code>
+        <numeric_code>292</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GREECE</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GREENLAND</entity>
+        <name>Danish Krone</name>
+        <name_code>DKK</name_code>
+        <numeric_code>208</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GRENADA</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUADELOUPE</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUAM</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUATEMALA</entity>
+        <name>Quetzal</name>
+        <name_code>GTQ</name_code>
+        <numeric_code>320</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUERNSEY</entity>
+        <name>Pound Sterling</name>
+        <name_code>GBP</name_code>
+        <numeric_code>826</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUINEA</entity>
+        <name>Guinea Franc</name>
+        <name_code>GNF</name_code>
+        <numeric_code>324</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUINEA-BISSAU</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>GUYANA</entity>
+        <name>Guyana Dollar</name>
+        <name_code>GYD</name_code>
+        <numeric_code>328</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HAITI</entity>
+        <name>Gourde</name>
+        <name_code>HTG</name_code>
+        <numeric_code>332</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HAITI</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HEARD ISLAND AND McDONALD ISLANDS</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HOLY SEE (VATICAN CITY STATE)</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HONDURAS</entity>
+        <name>Lempira</name>
+        <name_code>HNL</name_code>
+        <numeric_code>340</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HONG KONG</entity>
+        <name>Hong Kong Dollar</name>
+        <name_code>HKD</name_code>
+        <numeric_code>344</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>HUNGARY</entity>
+        <name>Forint</name>
+        <name_code>HUF</name_code>
+        <numeric_code>348</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ICELAND</entity>
+        <name>Iceland Krona</name>
+        <name_code>ISK</name_code>
+        <numeric_code>352</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>INDIA</entity>
+        <name>Indian Rupee</name>
+        <name_code>INR</name_code>
+        <numeric_code>356</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>INDONESIA</entity>
+        <name>Rupiah</name>
+        <name_code>IDR</name_code>
+        <numeric_code>360</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>INTERNATIONAL MONETARY FUND (IMF) </entity>
+        <name>SDR (Special Drawing Right)</name>
+        <name_code>XDR</name_code>
+        <numeric_code>960</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>IRAN, ISLAMIC REPUBLIC OF</entity>
+        <name>Iranian Rial</name>
+        <name_code>IRR</name_code>
+        <numeric_code>364</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>IRAQ</entity>
+        <name>Iraqi Dinar</name>
+        <name_code>IQD</name_code>
+        <numeric_code>368</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>IRELAND</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ISLE OF MAN</entity>
+        <name>Pound Sterling</name>
+        <name_code>GBP</name_code>
+        <numeric_code>826</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ISRAEL</entity>
+        <name>New Israeli Sheqel</name>
+        <name_code>ILS</name_code>
+        <numeric_code>376</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ITALY</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>JAMAICA</entity>
+        <name>Jamaican Dollar</name>
+        <name_code>JMD</name_code>
+        <numeric_code>388</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>JAPAN</entity>
+        <name>Yen</name>
+        <name_code>JPY</name_code>
+        <numeric_code>392</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>JERSEY</entity>
+        <name>Pound Sterling</name>
+        <name_code>GBP</name_code>
+        <numeric_code>826</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>JORDAN</entity>
+        <name>Jordanian Dinar</name>
+        <name_code>JOD</name_code>
+        <numeric_code>400</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KAZAKHSTAN</entity>
+        <name>Tenge</name>
+        <name_code>KZT</name_code>
+        <numeric_code>398</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KENYA</entity>
+        <name>Kenyan Shilling</name>
+        <name_code>KES</name_code>
+        <numeric_code>404</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KIRIBATI</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KOREA, DEMOCRATIC PEOPLE’S REPUBLIC OF</entity>
+        <name>North Korean Won</name>
+        <name_code>KPW</name_code>
+        <numeric_code>408</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KOREA, REPUBLIC OF</entity>
+        <name>Won</name>
+        <name_code>KRW</name_code>
+        <numeric_code>410</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KUWAIT</entity>
+        <name>Kuwaiti Dinar</name>
+        <name_code>KWD</name_code>
+        <numeric_code>414</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>KYRGYZSTAN</entity>
+        <name>Som</name>
+        <name_code>KGS</name_code>
+        <numeric_code>417</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LAO PEOPLE’S DEMOCRATIC REPUBLIC</entity>
+        <name>Kip</name>
+        <name_code>LAK</name_code>
+        <numeric_code>418</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LATVIA</entity>
+        <name>Latvian Lats</name>
+        <name_code>LVL</name_code>
+        <numeric_code>428</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LEBANON</entity>
+        <name>Lebanese Pound</name>
+        <name_code>LBP</name_code>
+        <numeric_code>422</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LESOTHO</entity>
+        <name>Loti</name>
+        <name_code>LSL</name_code>
+        <numeric_code>426</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LESOTHO</entity>
+        <name>Rand</name>
+        <name_code>ZAR</name_code>
+        <numeric_code>710</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LIBERIA</entity>
+        <name>Liberian Dollar</name>
+        <name_code>LRD</name_code>
+        <numeric_code>430</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LIBYAN ARAB JAMAHIRIYA</entity>
+        <name>Libyan Dinar</name>
+        <name_code>LYD</name_code>
+        <numeric_code>434</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LIECHTENSTEIN</entity>
+        <name>Swiss Franc</name>
+        <name_code>CHF</name_code>
+        <numeric_code>756</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LITHUANIA</entity>
+        <name>Lithuanian Litas</name>
+        <name_code>LTL</name_code>
+        <numeric_code>440</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>LUXEMBOURG</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MACAO</entity>
+        <name>Pataca</name>
+        <name_code>MOP</name_code>
+        <numeric_code>446</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</entity>
+        <name>Denar</name>
+        <name_code>MKD</name_code>
+        <numeric_code>807</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MADAGASCAR</entity>
+        <name>Malagasy Ariary</name>
+        <name_code>MGA</name_code>
+        <numeric_code>969</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MALAWI</entity>
+        <name>Kwacha</name>
+        <name_code>MWK</name_code>
+        <numeric_code>454</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MALAYSIA</entity>
+        <name>Malaysian Ringgit</name>
+        <name_code>MYR</name_code>
+        <numeric_code>458</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MALDIVES</entity>
+        <name>Rufiyaa</name>
+        <name_code>MVR</name_code>
+        <numeric_code>462</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MALI</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MALTA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MARSHALL ISLANDS</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MARTINIQUE</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MAURITANIA</entity>
+        <name>Ouguiya</name>
+        <name_code>MRO</name_code>
+        <numeric_code>478</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MAURITIUS</entity>
+        <name>Mauritius Rupee</name>
+        <name_code>MUR</name_code>
+        <numeric_code>480</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MAYOTTE</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP</entity>
+        <name>ADB Unit of Account</name>
+        <name_code>XUA</name_code>
+        <numeric_code>965</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MEXICO</entity>
+        <name>Mexican Peso</name>
+        <name_code>MXN</name_code>
+        <numeric_code>484</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MICRONESIA, FEDERATED STATES OF</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MOLDOVA, REPUBLIC OF</entity>
+        <name>Moldovan Leu</name>
+        <name_code>MDL</name_code>
+        <numeric_code>498</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MONACO</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MONGOLIA</entity>
+        <name>Tugrik</name>
+        <name_code>MNT</name_code>
+        <numeric_code>496</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MONTENEGRO</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MONTSERRAT</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MOROCCO</entity>
+        <name>Moroccan Dirham</name>
+        <name_code>MAD</name_code>
+        <numeric_code>504</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MOZAMBIQUE</entity>
+        <name>Metical</name>
+        <name_code>MZN</name_code>
+        <numeric_code>943</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>MYANMAR</entity>
+        <name>Kyat</name>
+        <name_code>MMK</name_code>
+        <numeric_code>104</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NAMIBIA</entity>
+        <name>Namibia Dollar</name>
+        <name_code>NAD</name_code>
+        <numeric_code>516</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NAMIBIA</entity>
+        <name>South African Rand</name>
+        <name_code>ZAR</name_code>
+        <numeric_code>710</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NAURU</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NEPAL</entity>
+        <name>Nepalese Rupee</name>
+        <name_code>NPR</name_code>
+        <numeric_code>524</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NETHERLANDS</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NEW CALEDONIA</entity>
+        <name>CFP Franc</name>
+        <name_code>XPF</name_code>
+        <numeric_code>953</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NEW ZEALAND</entity>
+        <name>New Zealand Dollar</name>
+        <name_code>NZD</name_code>
+        <numeric_code>554</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NICARAGUA</entity>
+        <name>Cordoba Oro</name>
+        <name_code>NIO</name_code>
+        <numeric_code>558</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NIGER</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NIGERIA</entity>
+        <name>Naira</name>
+        <name_code>NGN</name_code>
+        <numeric_code>566</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NIUE</entity>
+        <name>New Zealand Dollar</name>
+        <name_code>NZD</name_code>
+        <numeric_code>554</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NORFOLK ISLAND</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NORTHERN MARIANA ISLANDS</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>NORWAY</entity>
+        <name>Norwegian Krone</name>
+        <name_code>NOK</name_code>
+        <numeric_code>578</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>OMAN</entity>
+        <name>Rial Omani</name>
+        <name_code>OMR</name_code>
+        <numeric_code>512</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PAKISTAN</entity>
+        <name>Pakistan Rupee</name>
+        <name_code>PKR</name_code>
+        <numeric_code>586</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PALAU</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PALESTINIAN TERRITORY, OCCUPIED</entity>
+        <name>No universal name</name>
+        <name_code/>
+        <numeric_code/>
+        <precision/>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PANAMA</entity>
+        <name>Balboa</name>
+        <name_code>PAB</name_code>
+        <numeric_code>590</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PANAMA</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PAPUA NEW GUINEA</entity>
+        <name>Kina</name>
+        <name_code>PGK</name_code>
+        <numeric_code>598</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PARAGUAY</entity>
+        <name>Guarani</name>
+        <name_code>PYG</name_code>
+        <numeric_code>600</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PERU</entity>
+        <name>Nuevo Sol</name>
+        <name_code>PEN</name_code>
+        <numeric_code>604</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PHILIPPINES</entity>
+        <name>Philippine Peso</name>
+        <name_code>PHP</name_code>
+        <numeric_code>608</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PITCAIRN</entity>
+        <name>New Zealand Dollar</name>
+        <name_code>NZD</name_code>
+        <numeric_code>554</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>POLAND</entity>
+        <name>Zloty</name>
+        <name_code>PLN</name_code>
+        <numeric_code>985</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PORTUGAL</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>PUERTO RICO</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>QATAR</entity>
+        <name>Qatari Rial</name>
+        <name_code>QAR</name_code>
+        <numeric_code>634</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>RÉUNION</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ROMANIA</entity>
+        <name>Leu</name>
+        <name_code>RON</name_code>
+        <numeric_code>946</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>RUSSIAN FEDERATION</entity>
+        <name>Russian Ruble</name>
+        <name_code>RUB</name_code>
+        <numeric_code>643</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>RWANDA</entity>
+        <name>Rwanda Franc</name>
+        <name_code>RWF</name_code>
+        <numeric_code>646</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</entity>
+        <name>Saint Helena Pound</name>
+        <name_code>SHP</name_code>
+        <numeric_code>654</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT KITTS AND NEVIS</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT LUCIA</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT MARTIN</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT PIERRE AND MIQUELON</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT VINCENT AND THE GRENADINES</entity>
+        <name>East Caribbean Dollar</name>
+        <name_code>XCD</name_code>
+        <numeric_code>951</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAINT-BARTHÉLEMY</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAMOA</entity>
+        <name>Tala</name>
+        <name_code>WST</name_code>
+        <numeric_code>882</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAN MARINO</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SÃO TOME AND PRINCIPE</entity>
+        <name>Dobra</name>
+        <name_code>STD</name_code>
+        <numeric_code>678</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SAUDI ARABIA</entity>
+        <name>Saudi Riyal</name>
+        <name_code>SAR</name_code>
+        <numeric_code>682</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SENEGAL</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SERBIA</entity>
+        <name>Serbian Dinar</name>
+        <name_code>RSD</name_code>
+        <numeric_code>941</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SEYCHELLES</entity>
+        <name>Seychelles Rupee</name>
+        <name_code>SCR</name_code>
+        <numeric_code>690</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SIERRA LEONE</entity>
+        <name>Leone</name>
+        <name_code>SLL</name_code>
+        <numeric_code>694</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SINGAPORE</entity>
+        <name>Singapore Dollar</name>
+        <name_code>SGD</name_code>
+        <numeric_code>702</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SINT MAARTEN (DUTCH PART)</entity>
+        <name>Netherlands Antillean Guilder</name>
+        <name_code>ANG</name_code>
+        <numeric_code>532</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS "SUCRE"</entity>
+        <name>Sucre</name>
+        <name_code>XSU</name_code>
+        <numeric_code>994</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SLOVAKIA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SLOVENIA</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SOLOMON ISLANDS</entity>
+        <name>Solomon Islands Dollar</name>
+        <name_code>SBD</name_code>
+        <numeric_code>090</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SOMALIA</entity>
+        <name>Somali Shilling</name>
+        <name_code>SOS</name_code>
+        <numeric_code>706</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SOUTH AFRICA</entity>
+        <name>Rand</name>
+        <name_code>ZAR</name_code>
+        <numeric_code>710</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</entity>
+        <name>No universal name</name>
+        <name_code/>
+        <numeric_code/>
+        <precision/>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SPAIN</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SRI LANKA</entity>
+        <name>Sri Lanka Rupee</name>
+        <name_code>LKR</name_code>
+        <numeric_code>144</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SUDAN</entity>
+        <name>Sudanese Pound</name>
+        <name_code>SDG</name_code>
+        <numeric_code>938</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SURINAME</entity>
+        <name>Surinam Dollar</name>
+        <name_code>SRD</name_code>
+        <numeric_code>968</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SVALBARD AND JAN MAYEN</entity>
+        <name>Norwegian Krone</name>
+        <name_code>NOK</name_code>
+        <numeric_code>578</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SWAZILAND</entity>
+        <name>Lilangeni</name>
+        <name_code>SZL</name_code>
+        <numeric_code>748</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SWEDEN</entity>
+        <name>Swedish Krona</name>
+        <name_code>SEK</name_code>
+        <numeric_code>752</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SWITZERLAND</entity>
+        <name>Swiss Franc</name>
+        <name_code>CHF</name_code>
+        <numeric_code>756</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SWITZERLAND</entity>
+        <name>WIR Euro</name>
+        <name_code>CHE</name_code>
+        <numeric_code>947</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SWITZERLAND</entity>
+        <name>WIR Franc</name>
+        <name_code>CHW</name_code>
+        <numeric_code>948</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>SYRIAN ARAB REPUBLIC</entity>
+        <name>Syrian Pound</name>
+        <name_code>SYP</name_code>
+        <numeric_code>760</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TAIWAN, PROVINCE OF CHINA</entity>
+        <name>New Taiwan Dollar</name>
+        <name_code>TWD</name_code>
+        <numeric_code>901</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TAJIKISTAN</entity>
+        <name>Somoni</name>
+        <name_code>TJS</name_code>
+        <numeric_code>972</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TANZANIA, UNITED REPUBLIC OF</entity>
+        <name>Tanzanian Shilling</name>
+        <name_code>TZS</name_code>
+        <numeric_code>834</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>THAILAND</entity>
+        <name>Baht</name>
+        <name_code>THB</name_code>
+        <numeric_code>764</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TIMOR-LESTE</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TOGO</entity>
+        <name>CFA Franc BCEAO </name>
+        <name_code>XOF</name_code>
+        <numeric_code>952</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TOKELAU</entity>
+        <name>New Zealand Dollar</name>
+        <name_code>NZD</name_code>
+        <numeric_code>554</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TONGA</entity>
+        <name>Pa’anga</name>
+        <name_code>TOP</name_code>
+        <numeric_code>776</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TRINIDAD AND TOBAGO</entity>
+        <name>Trinidad and Tobago Dollar</name>
+        <name_code>TTD</name_code>
+        <numeric_code>780</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TUNISIA</entity>
+        <name>Tunisian Dinar</name>
+        <name_code>TND</name_code>
+        <numeric_code>788</numeric_code>
+        <precision>3</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TURKEY</entity>
+        <name>Turkish Lira</name>
+        <name_code>TRY</name_code>
+        <numeric_code>949</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TURKMENISTAN</entity>
+        <name>New Manat</name>
+        <name_code>TMT</name_code>
+        <numeric_code>934</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TURKS AND CAICOS ISLANDS</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>TUVALU</entity>
+        <name>Australian Dollar</name>
+        <name_code>AUD</name_code>
+        <numeric_code>036</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UGANDA</entity>
+        <name>Uganda Shilling</name>
+        <name_code>UGX</name_code>
+        <numeric_code>800</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UKRAINE</entity>
+        <name>Hryvnia</name>
+        <name_code>UAH</name_code>
+        <numeric_code>980</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UNITED ARAB EMIRATES</entity>
+        <name>UAE Dirham</name>
+        <name_code>AED</name_code>
+        <numeric_code>784</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UNITED KINGDOM</entity>
+        <name>Pound Sterling</name>
+        <name_code>GBP</name_code>
+        <numeric_code>826</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UNITED STATES</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol>$</symbol>
+    </name>
+    <name>
+        <entity>UNITED STATES MINOR OUTLYING ISLANDS</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>URUGUAY</entity>
+        <name>Peso Uruguayo</name>
+        <name_code>UYU</name_code>
+        <numeric_code>858</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>URUGUAY</entity>
+        <name>Uruguay Peso en Unidades Indexadas (URUIURUI)</name>
+        <name_code>UYI</name_code>
+        <numeric_code>940</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>UZBEKISTAN</entity>
+        <name>Uzbekistan Sum</name>
+        <name_code>UZS</name_code>
+        <numeric_code>860</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>VANUATU</entity>
+        <name>Vatu</name>
+        <name_code>VUV</name_code>
+        <numeric_code>548</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>Vatican City State (HOLY SEE)</entity>
+        <name>Euro</name>
+        <name_code>EUR</name_code>
+        <numeric_code>978</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>VENEZUELA, BOLIVARIAN REPUBLIC OF</entity>
+        <name>Bolivar Fuerte</name>
+        <name_code>VEF</name_code>
+        <numeric_code>937</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>VIET NAM</entity>
+        <name>Dong</name>
+        <name_code>VND</name_code>
+        <numeric_code>704</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>VIRGIN ISLANDS (BRITISH)</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>VIRGIN ISLANDS (US)</entity>
+        <name>US Dollar</name>
+        <name_code>USD</name_code>
+        <numeric_code>840</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>WALLIS AND FUTUNA</entity>
+        <name>CFP Franc</name>
+        <name_code>XPF</name_code>
+        <numeric_code>953</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>WESTERN SAHARA</entity>
+        <name>Moroccan Dirham</name>
+        <name_code>MAD</name_code>
+        <numeric_code>504</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>YEMEN</entity>
+        <name>Yemeni Rial</name>
+        <name_code>YER</name_code>
+        <numeric_code>886</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ZAMBIA</entity>
+        <name>Zambian Kwacha</name>
+        <name_code>ZMK</name_code>
+        <numeric_code>894</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ZIMBABWE</entity>
+        <name>Zimbabwe Dollar</name>
+        <name_code>ZWL</name_code>
+        <numeric_code>932</numeric_code>
+        <precision>2</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ZZ06_Testing_Code</entity>
+        <name>Codes specifically reserved for testing purposes</name>
+        <name_code>XTS</name_code>
+        <numeric_code>963</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
+    <name>
+        <entity>ZZ07_No_name</entity>
+        <name>The codes assigned for transactions where no name is involved</name>
+        <name_code>XXX</name_code>
+        <numeric_code>999</numeric_code>
+        <precision>0</precision>
+        <symbol></symbol>
+    </name>
 </currencies>
