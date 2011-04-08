@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * (c) 2011 Vespolina Project http://www.vespolina-project.org
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 namespace Vespolina\MonetaryBundle\Tests\Service;
 
 use Vespolina\MonetaryBundle\Service\MonetaryService;
@@ -8,14 +13,11 @@ use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
 class MonetaryServiceTest extends MonetaryTestBase
 {
     protected $baseCurrency;
-    protected $exchangeRate = array(
-        'VES' => array('MOCK' => 1.4175),
-    );
     protected $service;
 
     public function testGetCurrency()
     {
-        $currency = $this->service->getCurrency('MOCK', $this->baseCurrency);2
+        $currency = $this->service->getCurrency('MOCK', $this->baseCurrency);
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Tests\Document\MOCKCurrency', $currency, 'currency instance, based on another currency and time');
     }
 
