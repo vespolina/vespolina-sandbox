@@ -18,7 +18,7 @@ interface CurrencyExchangerInterface
      * @param mixed $from string | Vespolina\MonetaryBundle\Model\CurrencyInterface
      * @param mixed $to string | Vespolina\MonetaryBundle\Model\CurrencyInterface
      * @param DateTime the date and time of the exchange rate, defaults to current date and time
-     * 
+     *
      * @return float
      */
     public function getExchangeRate($from, $to, \DateTime $datetime=null);
