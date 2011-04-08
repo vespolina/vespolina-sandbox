@@ -9,7 +9,7 @@ namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
-use Vespolina\MonetaryBundle\Model\CurrencyExchangerInterface;
+use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
 use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
 
 /**
