@@ -6,7 +6,7 @@
         <name_code>AFN</name_code>
         <numeric_code>971</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>؋</symbol>
     </name>
     <name>
         <entity>ÅLAND ISLANDS</entity>
@@ -14,7 +14,7 @@
         <name_code>EUR</name_code>
         <numeric_code>978</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>€</symbol>
     </name>
     <name>
         <entity>ALBANIA</entity>
@@ -22,7 +22,7 @@
         <name_code>ALL</name_code>
         <numeric_code>008</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>Lek</symbol>
     </name>
     <name>
         <entity>ALGERIA</entity>
@@ -30,7 +30,7 @@
         <name_code>DZD</name_code>
         <numeric_code>012</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>DA</symbol>
     </name>
     <name>
         <entity>AMERICAN SAMOA</entity>
@@ -38,7 +38,7 @@
         <name_code>USD</name_code>
         <numeric_code>840</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>$</symbol>
     </name>
     <name>
         <entity>ANDORRA</entity>
@@ -46,7 +46,7 @@
         <name_code>EUR</name_code>
         <numeric_code>978</numeric_code>
         <precision>2</precision>
-        <symbol></symbol>
+        <symbol>€</symbol>
     </name>
     <name>
         <entity>ANGOLA</entity>
