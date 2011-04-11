@@ -111,8 +111,11 @@ class MonetaryService implements MonetaryServiceInterface
      */
     public function getCurrency($currencyCode)
     {
-        $class = $this->getCurrencyClassName($currencyCode);
-        return new $class();
+        // find currency
+        
+//        $currency = new Currency();
+
+        return $currency;
     }
 
     /**
@@ -135,11 +138,5 @@ class MonetaryService implements MonetaryServiceInterface
     public function getExchangeRate($from, $to, \DateTime $datetime=null)
     {
         return $this->currencyExchanger->getExchangeRate($from, $to, $datetime);
-    }
-
-    protected function getCurrencyClassName($currencyCode)
-    {
-        // todo: expand this to allow user defined currencies in configuration
-        return sprintf("%s\%sCurrency", $this->currencyRoot, $currencyCode);
     }
 }
