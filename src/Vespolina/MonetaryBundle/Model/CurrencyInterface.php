@@ -13,11 +13,6 @@ namespace Vespolina\MonetaryBundle\Model;
 interface CurrencyInterface
 {
     /**
-     * The date and time of now should be set by default
-     */
-    public function __construct();
-
-    /**
      * Return the name of the currency
      */
     public function getName();
