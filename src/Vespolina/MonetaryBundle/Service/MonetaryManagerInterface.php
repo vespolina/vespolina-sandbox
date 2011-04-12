@@ -63,6 +63,15 @@ interface MonetaryManagerInterface
     public function divideBy(MonetaryInterface $dividend, $divisor);
 
     /**
+     * Exchange an amount against a currency, this is short cut to having to get an instance of a currency
+     *
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $monetary
+     * @param string ISO 4217 currency code
+     * @param DateTime $datetime optional date and time of exchange rate, defaults to now
+     */
+    public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
+
+    /**
      * Retrieve an monetary instance of a set amount
      * If $baseCurrency is not set, the global base currency will be used
      *  

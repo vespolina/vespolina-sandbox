@@ -25,15 +25,6 @@ interface CurrencyManagerInterface
     public function getCurrency($currencyCode);
 
     /**
-     * Exchange an amount against a currency, this is short cut to having to get an instance of a currency
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $monetary
-     * @param string ISO 4217 currency code
-     * @param DateTime $datetime optional date and time of exchange rate, defaults to now
-     */
-    public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
-
-    /**
      * Get the exchange rate from on currency to another.  $from and $to can be an
      * ISO 4217 currency code or a Currency object
      *
