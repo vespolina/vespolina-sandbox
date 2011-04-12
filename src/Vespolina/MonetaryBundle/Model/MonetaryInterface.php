@@ -26,7 +26,7 @@ interface MonetaryInterface
     /**
      * Divide the monetary instance by a divisor
      *
-     * @parma mixed $divisor
+     * @param mixed $divisor
      */
     public function divide($divisor);
 
@@ -45,7 +45,7 @@ interface MonetaryInterface
     public function multiply($multiplier);
 
     /**
-     * Set the monitary value
+     * Set the monetary value
      *
      * @param $amount
      */
@@ -59,17 +59,9 @@ interface MonetaryInterface
     public function subtract(MonetaryInterface $subtrahend);
 
     /**
-     * Get the value of the monetary amount.
+     * Get the value of the monetary amount
      *
-     * @param Vespolina\MonetaryBundle\CurrencyInterface
+     * @return float
      */
-    public function getValue(CurrencyInterface $currency = null);
-
-    /**
-     * Set the currency for the monitary value
-     *
-     * @param Vespolina\MonetaryBundle\CurrencyInterface $currency
-     */
-    public function setCurrency(CurrencyInterface $currency);
-
+    public function getValue();
 }
