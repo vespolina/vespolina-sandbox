@@ -9,12 +9,15 @@ namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
+use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
 
 /**
  * @author Richard Shank <develop@zestic.com>
  */
 interface CurrencyManagerInterface
 {
+    public function __construct(CurrencyExchangerInterface $currencyExchanger);
+
     /**
      * Get currency instance
      *
