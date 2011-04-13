@@ -9,20 +9,17 @@ namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
-use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
-use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
+use Vespolina\MonetaryBundle\Service\CurrencyManagerInterface;
+use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
 
 /**
  * @author Richard Shank <develop@zestic.com>
  */
-class MonetaryService implements MonetaryServiceInterface
+class MonetaryManager implements MonetaryManagerInterface
 {
-    protected $currencyRoot = "Vespolina\MonetaryBundle\Currency";
-    protected $currencyExchanger;
-
-    public function __construct(CurrencyExchangerInterface $currencyExchanger)
+    public function __construct(CurrencyManagerInterface $currencyManager)
     {
-        $this->currencyExchanger = $currencyExchanger;
+        $this->currencyManager = $currencyManager;
     }
 
     /**
@@ -109,34 +106,15 @@ class MonetaryService implements MonetaryServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function getCurrency($currencyCode)
-    {
-        // find currency
-        
-//        $currency = new Currency();
-
-        return $currency;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null)
     {
-        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$this->exchangeRate, 16));
+        $exchangeRate = $this->currencyManager->getExchangeRate($monetary->getCurrency, $currencyCode);
+        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16));
     }
 
     protected function rounding($amount)
     {
         $roundUp = '.'.substr('0000000000000005', -($this->precision+1));
         return bcadd((string)$amount, $roundUp, $this->precision);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getExchangeRate($from, $to, \DateTime $datetime=null)
-    {
-        return $this->currencyExchanger->getExchangeRate($from, $to, $datetime);
     }
 }

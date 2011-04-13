@@ -14,33 +14,18 @@ use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
 /**
  * @author Richard Shank <develop@zestic.com>
  */
-class MonetaryServiceTest extends MonetaryTestBase
+class MonetaryManagerTest extends MonetaryTestBase
 {
     protected $baseCurrency;
     protected $service;
 
-    public function testGetCurrency()
+    public function testExchange()
     {
-        $currency = $this->service->getCurrency('XTS');
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Document\Currency', $currency, 'currency instance');
-        $this->assertSame('XTS', $currency->getCurrencyCode(), 'make sure the data was loaded correctly');
-    }
-
-    public function testExchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null)
-    {
+        // $->exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
 //        $this->assertEquals(2.835, $this->service->exchange($this->eurMonetary, 'USD'));
     }
 
-    function testGetExchangeRate()
-    {
-        $usdCurrency = $this->service->getCurrency('USD');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', 'USD'), 'get rate with two symbols');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'USD'), 'get rate with currency and symbol');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', $usdCurrency), 'get rate with a symbol and a currency');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, $usdCurrency), 'get rate with two currencies');
-    }
-
-        /**
+    /**
      * Return an instance with the sum of two addends
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend1
@@ -50,6 +35,8 @@ class MonetaryServiceTest extends MonetaryTestBase
      */
     public function testAdd(MonetaryInterface $addend1, MonetaryInterface $addend2)
     {
+        $monetary1 = new Monetary(1,$this->baseCurrency);
+        $monetaryTotal = $this->service->add($monetary1, $monetary1);
 
     }
 
