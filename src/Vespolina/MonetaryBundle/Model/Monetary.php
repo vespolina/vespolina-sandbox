@@ -15,9 +15,13 @@ use Vespolina\MonetaryBundle\Model\MonetaryInterface;
  */
 class Monetary implements MonetaryInterface
 {
+    protected $value;
+    protected $currency;
+
     public function __construct($amount, CurrencyInterface $currency)
     {
-
+        $this->value = $amount;
+        $this->currency = $currency;
     }
 
     /**
@@ -25,7 +29,7 @@ class Monetary implements MonetaryInterface
      */
     public function divide($divisor)
     {
-
+        $this->value = $this->value / $divisor;
     }
 
     /**
@@ -33,7 +37,7 @@ class Monetary implements MonetaryInterface
      */
     public function getCurrency()
     {
-        
+        return $this->currency;
     }
 
     /**
@@ -41,7 +45,7 @@ class Monetary implements MonetaryInterface
      */
     public function multiply($multiplier)
     {
-
+        $this->value = $this->value * $multiplier;
     }
 
     /**
@@ -49,7 +53,7 @@ class Monetary implements MonetaryInterface
      */
     public function setValue($amount)
     {
-
+        $this->value = $amount;
     }
 
     /**
@@ -57,6 +61,6 @@ class Monetary implements MonetaryInterface
      */
     public function getValue()
     {
-
+        return $this->value;
     }
 }
