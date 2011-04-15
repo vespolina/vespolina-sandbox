@@ -49,29 +49,40 @@ class MonetaryManagerTest extends MonetaryTestBase
         $this->assertEquals(2, $monetary1->getValue(), 'adding different currencies correctly');
     }
 
-    /**
-     * Return an instance with the sum of a set of addends
-     *
-     * @param array of Vespolina\MonetaryBundle\Model\MonetaryInterface
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testAddSet($set)
+    public function testAddSet()
     {
+        $set = array(
+            new Monetary(2, $this->baseCurrency),
+            new Monetary(3, $this->baseCurrency),
+            new Monetary(4, $this->baseCurrency),
+        );
+        $monetaryTotal = $this->service->addSet($set);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $this->assertEquals(9, $monetaryTotal->getValue(), 'adding set of monetaries with same currencies');
 
+        $set = array(
+            new Monetary(2, $this->baseCurrency),
+            new Monetary(3, $this->secondCurrency),
+            new Monetary(4, $this->baseCurrency),
+        );
+        $monetaryTotal = $this->service->addSet($set);
+        $this->assertEquals(9, $monetaryTotal->getValue(), 'adding set of monetaries with different currencies');
     }
 
-    /**
-     * Return a monetary quotent for monetary dividend and divisor
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
-     * @parma mixed $divisor
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testDivide(MonetaryInterface $dividend, $divisor)
+    public function testDivide()
     {
+        $monetary1 = new Monetary(1, $this->baseCurrency);
+        $monetaryTotal = $this->service->divide($monetary1, .5);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $this->assertEquals(2, $monetaryTotal->getValue(), 'divide by a float');
 
+        $monetary2 = new Monetary(2, $this->baseCurrency);
+        $monetaryTotal = $this->service->divide($monetary2, $monetary1);
+        $this->assertEquals(2, $monetaryTotal->getValue(), 'divide same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $monetaryTotal = $this->service->add($monetary1, $monetary3);
+        $this->assertEquals(2, $monetaryTotal->getValue(), 'divide different currencies');
     }
 
 
