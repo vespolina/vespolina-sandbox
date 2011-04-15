@@ -17,13 +17,6 @@ interface MonetaryInterface
     public function __construct($amount, CurrencyInterface $currency);
 
     /**
-     * Add monetary amount to this instance.
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend
-     */
-    public function add(MonetaryInterface $addend);
-
-    /**
      * Divide the monetary instance by a divisor
      *
      * @param mixed $divisor
@@ -50,13 +43,6 @@ interface MonetaryInterface
      * @param $amount
      */
     public function setValue($amount);
-
-    /**
-     * Subtract a monetary $subtrahend from this instance.
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
-     */
-    public function subtract(MonetaryInterface $subtrahend);
 
     /**
      * Get the value of the monetary amount
