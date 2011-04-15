@@ -7,7 +7,9 @@
  */
 namespace Vespolina\MonetaryBundle\Tests\Service;
 
-use Vespolina\MonetaryBundle\Service\MonetaryService;
+use Vespolina\MonetaryBundle\Model\Monetary;
+use Vespolina\MonetaryBundle\Service\MonetaryManager;
+use Vespolina\MonetaryBundle\Service\CurrencyManager;
 use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
 use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
 
@@ -17,6 +19,7 @@ use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
 class MonetaryManagerTest extends MonetaryTestBase
 {
     protected $baseCurrency;
+    protected $secondCurrency;
     protected $service;
 
     public function testExchange()
@@ -25,30 +28,25 @@ class MonetaryManagerTest extends MonetaryTestBase
 //        $this->assertEquals(2.835, $this->service->exchange($this->eurMonetary, 'USD'));
     }
 
-    /**
-     * Return an instance with the sum of two addends
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend1
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend2
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testAdd(MonetaryInterface $addend1, MonetaryInterface $addend2)
+    public function testAdd()
     {
         $monetary1 = new Monetary(1,$this->baseCurrency);
         $monetaryTotal = $this->service->add($monetary1, $monetary1);
-
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $this->assertEquals(2, $monetaryTotal->getValue(), 'adding same currency correctly');
+        $monetary2 = new Monetary(2, $this->secondCurrency);
+        $monetaryTotal = $this->service->add($monetary1, $monetary2);
+        $this->assertEquals(2, $monetaryTotal->getValue(), 'adding different currencies correctly');
     }
 
-    /**
-     * Set addend1 to the sum of addend1 and addend2
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend1
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend2
-     */
-    public function testAddTo(MonetaryInterface $addend1, MonetaryInterface $addend2)
+    public function testAddTo()
     {
-
+        $monetary1 = new Monetary(1,$this->baseCurrency);
+        $monetaryTotal = $this->service->add($monetary1, $monetary1);
+        $this->assertEquals(2, $monetary1->getValue(), 'adding same currency correctly');
+        $monetary2 = new Monetary(2, $this->secondCurrency);
+        $monetaryTotal = $this->service->add($monetary1, $monetary2);  // monetary1 is 2
+        $this->assertEquals(2, $monetary1->getValue(), 'adding different currencies correctly');
     }
 
     /**
@@ -151,8 +149,10 @@ class MonetaryManagerTest extends MonetaryTestBase
 
     protected function setUp()
     {
-        $this->service = new MonetaryService(new CurrencyExchanger());
+        $currencyManager = new CurrencyManager(new CurrencyExchanger());
+        $this->service = new MonetaryManager($currencyManager);
 
         $this->baseCurrency = $this->getBaseCurrency();
+        $this->secondCurrency = $this->getCurrency('The codes assigned for transactions where no name is involve', 'XXX', 'X', 0);
     }
 }

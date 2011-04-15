@@ -7,11 +7,10 @@
  */
 namespace Vespolina\MonetaryBundle\Tests;
 
-use Vespolina\MonetaryBundle\Model\BaseCurrency;
 use Vespolina\MonetaryBundle\Model\Currency;
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
-use Vespolina\MonetaryBundle\Service\MonetaryServiceInterface;
+use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
 
 class MonetaryTestBase extends \PHPUnit_Framework_TestCase
 {
@@ -41,6 +40,6 @@ class MonetaryTestBase extends \PHPUnit_Framework_TestCase
 
     protected function getBaseCurrency()
     {
-        return $this->getCurrency('Euro', 'EUR', '€');
+        return $this->getCurrency('Codes specifically reserved for testing purpose', 'XTS', 'Z');
     }
 }
