@@ -12,8 +12,8 @@ use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
 class CurrencyExchanger implements CurrencyExchangerInterface
 {
     protected $exchangeRate = array(
-        'VES' => array('MOCK' => 1.4175),
-        'MOCK' => array('VES' => 0.705467372),
+        'XXX' => array('XTS' => 1.4175),
+        'XTS' => array('XXX' => 0.705467372),
     );
 
     public function getExchangeRate($from, $to, \DateTime $datetime=null)

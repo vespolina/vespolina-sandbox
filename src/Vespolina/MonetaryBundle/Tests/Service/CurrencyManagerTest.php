@@ -7,6 +7,7 @@
  */
 namespace Vespolina\MonetaryBundle\Tests\Service;
 
+use Vespolina\MonetaryBundle\Service\CurrencyManager;
 use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
 use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
 
@@ -27,10 +28,17 @@ class CurrencyManagerTest extends MonetaryTestBase
 
     function testGetExchangeRate()
     {
-        $usdCurrency = $this->service->getCurrency('USD');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', 'USD'), 'get rate with two symbols');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'USD'), 'get rate with currency and symbol');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('VES', $usdCurrency), 'get rate with a symbol and a currency');
+        $usdCurrency = $this->service->getCurrency('XXX');
+        $this->assertEquals(1.4175, $this->service->getExchangeRate('XTS', 'XXX'), 'get rate with two symbols');
+        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'XXX'), 'get rate with currency and symbol');
+        $this->assertEquals(1.4175, $this->service->getExchangeRate('XTS', $usdCurrency), 'get rate with a symbol and a currency');
         $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, $usdCurrency), 'get rate with two currencies');
+    }
+    
+    protected function setUp()
+    {
+        $this->service = new CurrencyManager(new CurrencyExchanger());
+
+        $this->baseCurrency = $this->getBaseCurrency();
     }
 }
