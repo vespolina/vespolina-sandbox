@@ -15,7 +15,6 @@ use Vespolina\MonetaryBundle\Model\MonetaryInterface;
  */
 interface MonetaryManagerInterface
 {
-
     /**
      * Return an instance with the sum of two addends
      *
