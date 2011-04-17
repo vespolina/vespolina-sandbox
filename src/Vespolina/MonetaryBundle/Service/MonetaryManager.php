@@ -17,9 +17,13 @@ use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
  */
 class MonetaryManager implements MonetaryManagerInterface
 {
-    public function __construct(CurrencyManagerInterface $currencyManager)
+    protected $baseCurrency;
+    protected $currencyManager;
+    
+    public function __construct(CurrencyManagerInterface $currencyManager, $baseCurrency)
     {
         $this->currencyManager = $currencyManager;
+        $this->setBaseCurrency($baseCurrency);
     }
 
     /**
@@ -76,7 +80,7 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function getBaseCurrency()
     {
-
+        return $this->baseCurrency;
     }
 
     /**
@@ -100,7 +104,12 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function setBaseCurrency(CurrencyInterface $currency)
     {
-
+        $rc = new \ReflectionClass($currency);
+        if ($rc->implementsInterface('Vespolina\MonetaryBundle\Model\CurrencyInterface')) {
+            $this->baseCurrency = $currency;
+        } else {
+            $this->baseCurrency = $this->currencyManager->createCurrency($currency);
+        }
     }
 
     /**

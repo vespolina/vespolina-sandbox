@@ -19,13 +19,13 @@ interface CurrencyManagerInterface
     public function __construct(CurrencyExchangerInterface $currencyExchanger);
 
     /**
-     * Get currency instance
+     * Create a currency instance
      *
      * @param string ISO 4217 currency code
      *
      * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
      */
-    public function getCurrency($currencyCode);
+    public function createCurrency($currencyCode);
 
     /**
      * Get the exchange rate from on currency to another.  $from and $to can be an

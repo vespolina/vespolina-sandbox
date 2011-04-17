@@ -28,7 +28,9 @@ class MonetaryManagerTest extends MonetaryTestBase
         $currencyManager = new CurrencyManager(new CurrencyExchanger());
 
         $monetaryMgr = new MonetaryManager($currencyManager, $this->baseCurrency);
-        $this->assertSame($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set in construct with currency object');
+        var_dump($baseCurrency);
+        var_dump($monetaryMgr->getBaseCurrency());
+        $this->assertEquals($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set in construct with currency object');
 
         $monetaryMgr = new MonetaryManager($currencyManager, 'XXX');
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
