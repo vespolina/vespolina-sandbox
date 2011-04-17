@@ -22,10 +22,37 @@ class MonetaryManagerTest extends MonetaryTestBase
     protected $secondCurrency;
     protected $service;
 
+    public function testSetBaseCurrency()
+    {
+        $baseCurrency = $this->getBaseCurrency();
+        $currencyManager = new CurrencyManager(new CurrencyExchanger());
+
+        $monetaryMgr = new MonetaryManager($currencyManager, $this->baseCurrency);
+        $this->assertSame($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set in construct with currency object');
+
+        $monetaryMgr = new MonetaryManager($currencyManager, 'XXX');
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
+        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCode(), 'correct code set in construct with ISO code');
+
+        $monetaryMgr->setBaseCurrency($baseCurrency);
+        $this->assertSame($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set by method with currency object');
+
+        $monetaryMgr->setBaseCurrency('XXX');
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
+        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCode(), 'correct code set in construct with ISO code');
+    }
+
     public function testExchange()
     {
-        // $->exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
-//        $this->assertEquals(2.835, $this->service->exchange($this->eurMonetary, 'USD'));
+        $monetary1 = new Monetary(1,$this->baseCurrency);
+
+        $monetaryTotal = $this->service->exchange($monetary1, 'XXX');
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $this->assertEquals(2.835, $monetaryTotal->getValue(), 'exchange currency with ISO');
+
+        $monetaryTotal = $this->service->exchange($monetary1, $this->secondCurrency);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $this->assertEquals(2.835, $monetaryTotal->getValue(), 'exchange currency with Currency');
     }
 
     public function testAdd()
@@ -77,93 +104,116 @@ class MonetaryManagerTest extends MonetaryTestBase
         $this->assertEquals(2, $monetaryTotal->getValue(), 'divide by a float');
 
         $monetary2 = new Monetary(2, $this->baseCurrency);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
         $monetaryTotal = $this->service->divide($monetary2, $monetary1);
         $this->assertEquals(2, $monetaryTotal->getValue(), 'divide same currency');
 
         $monetary3 = new Monetary(2, $this->secondCurrency);
-        $monetaryTotal = $this->service->add($monetary1, $monetary3);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
+        $monetaryTotal = $this->service->divide($monetary1, $monetary3);
         $this->assertEquals(2, $monetaryTotal->getValue(), 'divide different currencies');
     }
 
-
-    /**
-     * Set the monetary dividend to the quotent of itself and a divisor
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
-     * @parma mixed $divisor
-     */
-    public function testDivideBy(MonetaryInterface $dividend, $divisor)
+    public function testDivideBy()
     {
+        $monetary1 = new Monetary(1, $this->baseCurrency);
+        $this->service->divideBy($monetary1, .5);
+        $this->assertEquals(2, $monetary1->getValue(), 'divide by a float');
 
+        $monetary2 = new Monetary(2, $this->baseCurrency);
+        $this->service->divideBy($monetary2, $monetary1);
+        $this->assertEquals(2, $monetary2->getValue(), 'divide same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $this->service->divideBy($monetary1, $monetary3);
+        $this->assertEquals(2, $monetary3->getValue(), 'divide different currencies');
     }
 
-    /**
-     * Retrieve an monetary instance of a set amount
-     * If $baseCurrency is not set, the global base currency will be used
-     *
-     * @param  $amount
-     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency optional
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testGetMonetary($amount, CurrencyInterface $baseCurrency=null)
+    public function testCreateMonetary()
     {
+        $this->service->setBaseCurrency($this->baseCurrency);
+        $monetary = $this->service->createMonetary(2);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetary);
+        $this->assertSame($this->baseCurrency, $monetary->getCurrency(), 'set to base currency in monetary mgr');
 
+        $monetary = $this->service->createMonetary(4, $this->secondCurrency);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetary);
+        $this->assertSame($this->secondCurrency, $monetary->getCurrency(), 'set specific currency');
     }
 
-    /**
-     * Return the product of a Monetary multiplicand and multiplier
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface multiplicand
-     * @param $multiplier
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testMultiply(MonetaryInterface $multiplicand, $multiplier)
+    public function testMultiply()
     {
+        $monetary1 = new Monetary(2, $this->baseCurrency);
+        $totalMonetary = $this->service->multiply($monetary1, 2);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(4, $totalMonetary->getValue(), 'multiply by a numeric');
 
+        $monetary2 = new Monetary(2, $this->baseCurrency);
+        $totalMonetary = $this->service->multiply($monetary2, $monetary1);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(4, $totalMonetary->getValue(), 'multiply by  same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $totalMonetary = $this->service->multiply($monetary1, $monetary3);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(4, $totalMonetary->getValue(), 'multiply by different currencies');
     }
 
-    /**
-     * Set the Monetary multiplicand to the product of itself and multiplier
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface multiplicand
-     * @param $multiplier
-     */
-    public function testMultiplyBy(MonetaryInterface $multiplicand, $multiplier)
+    public function testMultiplyBy()
     {
+        $monetary1 = new Monetary(2, $this->baseCurrency);
+        $this->service->multiplyBy($monetary1, 2);
+        $this->assertEquals(4, $monetary1->getValue(), 'multiply by a numeric');
 
+        $monetary2 = new Monetary(2, $this->baseCurrency);
+        $this->service->multiplyBy($monetary2, $monetary1);
+        $this->assertEquals(4, $monetary2->getValue(), 'multiply by  same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $this->service->multiplyBy($monetary1, $monetary3);
+        $this->assertEquals(4, $monetary1->getValue(), 'multiply by different currencies');
     }
 
-    /**
-     * Return a instance with difference between two Monetary values
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
-     */
-    public function testSubtract(MonetaryInterface $minuend, MonetaryInterface $subtrahend)
+    public function testSubtract()
     {
+        $monetary1 = new Monetary(8, $this->baseCurrency);
+        $totalMonetary = $this->service->subtract($monetary1, 5);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(3, $totalMonetary->getValue(), 'subtract by a numeric');
 
+        $monetary2 = new Monetary(5, $this->baseCurrency);
+        $totalMonetary = $this->service->subtract($monetary2, $monetary1);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(3, $totalMonetary->getValue(), 'subtract by same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $totalMonetary = $this->service->subtract($monetary1, $monetary3);
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $totalMonetary);
+        $this->assertEquals(4, $totalMonetary->getValue(), 'subtract by different currencies');
     }
 
-    /**
-     * Set the minuend with the difference between itself and the subtrahend
-     *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
-     */
-    public function testSubtractFrom(MonetaryInterface $minuend, MonetaryInterface $subtrahend)
+    public function testSubtractFrom()
     {
+        $monetary1 = new Monetary(8, $this->baseCurrency);
+        $this->service->subtractFrom($monetary1, 5);
+        $this->assertEquals(3, $monetary1->getValue(), 'subtract by a numeric');
 
+        $monetary2 = new Monetary(5, $this->baseCurrency);
+        $this->service->subtractFrom($monetary2, $monetary1);
+        $this->assertEquals(3, $monetary2->getValue(), 'subtract by same currency');
+
+        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $this->service->subtractFrom($monetary1, $monetary3);
+        $this->assertEquals(4, $monetary1->getValue(), 'subtract by different currencies');
     }
 
     protected function setUp()
     {
-        $currencyManager = new CurrencyManager(new CurrencyExchanger());
-        $this->service = new MonetaryManager($currencyManager);
-
         $this->baseCurrency = $this->getBaseCurrency();
+
+        $currencyManager = new CurrencyManager(new CurrencyExchanger());
+        $this->service = new MonetaryManager($currencyManager, $this->baseCurrency);
+
         $this->secondCurrency = $this->getCurrency('The codes assigned for transactions where no name is involve', 'XXX', 'X', 0);
     }
 }
