@@ -26,7 +26,7 @@ class CurrencyManager implements CurrencyManagerInterface
     /**
      * @inheritdoc
      */
-    public function getCurrency($currencyCode)
+    public function createCurrency($currencyCode)
     {
 
     }
