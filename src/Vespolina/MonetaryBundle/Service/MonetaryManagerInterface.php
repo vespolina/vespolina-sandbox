@@ -43,7 +43,17 @@ interface MonetaryManagerInterface
     public function addSet($set);
 
     /**
-     * Return a monetary quotent for monetary dividend and divisor
+     * Create a monetary instance of a set amount
+     * If $baseCurrency is not set, the global base currency will be used
+     *
+     * @param  $amount
+     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency optional
+     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
+     */
+    public function createMonetary($amount, CurrencyInterface $baseCurrency=null);
+
+    /**
+     * Return a monetary quotient for monetary dividend and divisor
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
      * @parma mixed $divisor
@@ -52,12 +62,11 @@ interface MonetaryManagerInterface
      */
     public function divide(MonetaryInterface $dividend, $divisor);
 
-
     /**
      * Set the monetary dividend to the quotent of itself and a divisor
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
-     * @parma mixed $divisor
+     * @param mixed $divisor
      */
     public function divideBy(MonetaryInterface $dividend, $divisor);
 
@@ -70,20 +79,18 @@ interface MonetaryManagerInterface
      */
     public function exchange(MonetaryInterface $monetary, $currencyCode, \DateTime $datetime=null);
 
+
     /**
-     * Retrieve an monetary instance of a set amount
-     * If $baseCurrency is not set, the global base currency will be used
-     *  
-     * @param  $amount
-     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency optional
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
+     * Return the base currency for the functions
+     *
+     * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
      */
-    public function getMonetary($amount, CurrencyInterface $baseCurrency=null );
+    public function getBaseCurrency();
 
     /**
      * Return the product of a Monetary multiplicand and multiplier
      *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface multiplicand
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $multiplicand
      * @param $multiplier
      *
      * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
@@ -93,26 +100,33 @@ interface MonetaryManagerInterface
     /**
      * Set the Monetary multiplicand to the product of itself and multiplier
      *
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface multiplicand
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $multiplicand
      * @param $multiplier
      */
     public function multiplyBy(MonetaryInterface $multiplicand, $multiplier);
 
     /**
+     * Set the base currency for functions
+     *
+     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $currency
+     */
+    public function setBaseCurrency(CurrencyInterface $currency);
+
+    /**
      * Return a instance with difference between two Monetary values
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
+     * @param mixed $subtrahend
+     *
+     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
      */
-    public function subtract(MonetaryInterface $minuend, MonetaryInterface $subtrahend);
+    public function subtract(MonetaryInterface $minuend, $subtrahend);
 
     /**
      * Set the minuend with the difference between itself and the subtrahend
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
-     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
-     *
-     * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
+     * @param mixed $subtrahend
      */
-    public function subtractFrom(MonetaryInterface $minuend, MonetaryInterface $subtrahend);
+    public function subtractFrom(MonetaryInterface $minuend, $subtrahend);
 }
