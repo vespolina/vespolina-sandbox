@@ -18,6 +18,12 @@ class CurrencyExchanger implements CurrencyExchangerInterface
 
     public function getExchangeRate($from, $to, \DateTime $datetime=null)
     {
+        if (is_object($from)) {
+            $from = $from->getCurrencyCode();
+        }
+        if (is_object($to)) {
+            $to = $to->getCurrencyCode();
+        }
         return $this->exchangeRate[$from][$to];
     }
 }
