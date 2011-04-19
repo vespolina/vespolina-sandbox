@@ -27,10 +27,10 @@ class MonetaryManagerTest extends MonetaryTestBase
         $baseCurrency = $this->getBaseCurrency();
         $currencyManager = new CurrencyManager(new CurrencyExchanger());
 
-        $monetaryMgr = new MonetaryManager($currencyManager, $this->baseCurrency);
+        $monetaryMgr = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, $this->baseCurrency);
         $this->assertEquals($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set in construct with currency object');
 
-        $monetaryMgr = new MonetaryManager($currencyManager, 'XXX');
+        $monetaryMgr = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, 'XXX');
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
         $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCode(), 'correct code set in construct with ISO code');
 
@@ -48,11 +48,11 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetaryTotal = $this->service->exchange($monetary1, 'XXX');
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
-        $this->assertEquals(2.835, $monetaryTotal->getValue(), 'exchange currency with ISO');
+        $this->assertEquals(0.705467372, $monetaryTotal->getValue(), 'exchange currency with ISO');
 
         $monetaryTotal = $this->service->exchange($monetary1, $this->secondCurrency);
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
-        $this->assertEquals(2.835, $monetaryTotal->getValue(), 'exchange currency with Currency');
+        $this->assertEquals(0.705467372, $monetaryTotal->getValue(), 'exchange currency with Currency');
     }
 
     public function testAdd()
@@ -71,7 +71,7 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetary1 = new Monetary(1,$this->baseCurrency);
         $this->service->addTo($monetary1, $monetary1);
         $this->assertEquals(2, $monetary1->getValue(), 'adding same currency correctly');
-        $monetary2 = new Monetary(2, $this->secondCurrency);
+        $monetary2 = new Monetary(2, $this->secondCurrency); // converted value is 
         $this->service->addTo($monetary1, $monetary2);  // monetary1 is 2
         $this->assertEquals(2, $monetary1->getValue(), 'adding different currencies correctly');
     }
@@ -212,7 +212,7 @@ class MonetaryManagerTest extends MonetaryTestBase
         $this->baseCurrency = $this->getBaseCurrency();
 
         $currencyManager = new CurrencyManager(new CurrencyExchanger());
-        $this->service = new MonetaryManager($currencyManager, $this->baseCurrency);
+        $this->service = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, $this->baseCurrency);
 
         $this->secondCurrency = $this->getCurrency('The codes assigned for transactions where no name is involve', 'XXX', 'X', 0);
     }
