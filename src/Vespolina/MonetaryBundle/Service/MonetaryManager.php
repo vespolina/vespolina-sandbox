@@ -74,8 +74,10 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function exchange(MonetaryInterface $monetary, $currency, \DateTime $datetime=null)
     {
-        $exchangeRate = $this->currencyManager->getExchangeRate($monetary->getCurrency(), $currency);
-        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16));
+        $baseCurrency = $monetary->getCurrency();
+        $exchangeRate = $this->currencyManager->getExchangeRate($baseCurrency, $currency);
+        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16),
+                                      $baseCurrency->getPrecision());
     }
 
     /**
@@ -139,9 +141,9 @@ class MonetaryManager implements MonetaryManagerInterface
 
     }
 
-    protected function rounding($amount)
+    protected function rounding($amount, $precision)
     {
-        $roundUp = '.'.substr('0000000000000005', -($this->precision+1));
-        return bcadd((string)$amount, $roundUp, $this->precision);
+        $roundUp = '.'.substr('0000000000000005', -($precision+1));
+        return bcadd((string)$amount, $roundUp, $precision);
     }
 }
