@@ -74,6 +74,14 @@ class MonetaryManager implements MonetaryManagerInterface
     }
 
     /**
+     * @inheritdoc
+     */
+    public function divideBy(MonetaryInterface &$dividend, $divisor)
+    {
+
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function exchange(MonetaryInterface $monetary, $currency, \DateTime $datetime=null)
@@ -83,14 +91,6 @@ class MonetaryManager implements MonetaryManagerInterface
         $value = (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16),
                                         $baseCurrency->getPrecision());
         return $this->createMonetary($value, $baseCurrency);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function divideBy(MonetaryInterface $dividend, $divisor)
-    {
-
     }
 
     /**
@@ -112,7 +112,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function multiplyBy(MonetaryInterface $multiplicand, $multiplier)
+    public function multiplyBy(MonetaryInterface &$multiplicand, $multiplier)
     {
 
     }
@@ -141,7 +141,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function subtractFrom(MonetaryInterface $minuend, $subtrahend)
+    public function subtractFrom(MonetaryInterface &$minuend, $subtrahend)
     {
 
     }
