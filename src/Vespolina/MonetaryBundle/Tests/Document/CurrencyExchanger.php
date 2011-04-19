@@ -24,6 +24,9 @@ class CurrencyExchanger implements CurrencyExchangerInterface
         if (is_object($to)) {
             $to = $to->getCurrencyCode();
         }
+        if ($from == $to) {
+            return 1;
+        }
         return $this->exchangeRate[$from][$to];
     }
 }
