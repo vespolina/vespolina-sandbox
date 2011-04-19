@@ -19,9 +19,11 @@ class MonetaryManager implements MonetaryManagerInterface
 {
     protected $baseCurrency;
     protected $currencyManager;
+    protected $monetaryClass;
     
-    public function __construct(CurrencyManagerInterface $currencyManager, $baseCurrency)
+    public function __construct($monetaryClass, CurrencyManagerInterface $currencyManager, $baseCurrency)
     {
+        $this->monetaryClass = $monetaryClass;
         $this->currencyManager = $currencyManager;
         $this->setBaseCurrency($baseCurrency);
     }
@@ -58,7 +60,7 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function createMonetary($amount, CurrencyInterface $baseCurrency=null )
     {
-
+        return new $this->monetaryClass($amount, $baseCurrency);
     }
 
     /**
@@ -76,8 +78,9 @@ class MonetaryManager implements MonetaryManagerInterface
     {
         $baseCurrency = $monetary->getCurrency();
         $exchangeRate = $this->currencyManager->getExchangeRate($baseCurrency, $currency);
-        return (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16),
-                                      $baseCurrency->getPrecision());
+        $value = (float)$this->rounding(bcmul((string)$monetary->getValue(),(string)$exchangeRate, 16),
+                                        $baseCurrency->getPrecision());
+        return $this->createMonetary($value, $baseCurrency);
     }
 
     /**

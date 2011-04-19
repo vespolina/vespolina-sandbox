@@ -18,10 +18,11 @@ interface MonetaryManagerInterface
     /**
      * construct
      *
+     * @param string $monetaryClass
      * @param Vespolina\MonetaryBundle\Service\CurrencyManagerInterface $currencyManager
      * @param mixed $baseCurrency
      */
-    public function __construct(CurrencyManagerInterface $currencyManager, $baseCurrency);
+    public function __construct($monetaryClass, CurrencyManagerInterface $currencyManager, $baseCurrency);
 
     /**
      * Return an instance with the sum of two addends
