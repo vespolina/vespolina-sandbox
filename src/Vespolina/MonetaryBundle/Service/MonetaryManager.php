@@ -42,9 +42,11 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function addTo(MonetaryInterface $addend1, MonetaryInterface $addend2)
+    public function addTo(MonetaryInterface &$addend1, MonetaryInterface $addend2)
     {
-
+        $baseCurrency = $addend1->getCurrency();
+        $addend2 = $this->exchange($addend2, $baseCurrency);
+        $addend1->setValue($addend1->getValue() + $addend2->getValue());
     }
 
     /**
