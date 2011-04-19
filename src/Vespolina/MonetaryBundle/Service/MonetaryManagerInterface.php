@@ -40,7 +40,7 @@ interface MonetaryManagerInterface
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend1
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $addend2
      */
-    public function addTo(MonetaryInterface $addend1, MonetaryInterface $addend2);
+    public function addTo(MonetaryInterface &$addend1, MonetaryInterface $addend2);
 
     /**
      * Return an instance with the sum of a set of addends
@@ -77,7 +77,7 @@ interface MonetaryManagerInterface
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
      * @param mixed $divisor
      */
-    public function divideBy(MonetaryInterface $dividend, $divisor);
+    public function divideBy(MonetaryInterface &$dividend, $divisor);
 
     /**
      * Exchange an amount against a currency, this is short cut to having to get an instance of a currency
@@ -112,7 +112,7 @@ interface MonetaryManagerInterface
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $multiplicand
      * @param $multiplier
      */
-    public function multiplyBy(MonetaryInterface $multiplicand, $multiplier);
+    public function multiplyBy(MonetaryInterface &$multiplicand, $multiplier);
 
     /**
      * Set the base currency for functions
@@ -137,5 +137,5 @@ interface MonetaryManagerInterface
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
      * @param mixed $subtrahend
      */
-    public function subtractFrom(MonetaryInterface $minuend, $subtrahend);
+    public function subtractFrom(MonetaryInterface &$minuend, $subtrahend);
 }
