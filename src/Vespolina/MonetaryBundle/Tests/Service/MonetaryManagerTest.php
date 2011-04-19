@@ -71,9 +71,9 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetary1 = new Monetary(1,$this->baseCurrency);
         $this->service->addTo($monetary1, $monetary1);
         $this->assertEquals(2, $monetary1->getValue(), 'adding same currency correctly');
-        $monetary2 = new Monetary(2, $this->secondCurrency); // converted value is 1.42
+        $monetary2 = new Monetary(2, $this->secondCurrency); // converted value is 2.84
         $this->service->addTo($monetary1, $monetary2);  // monetary1 is 2
-        $this->assertEquals(3.42, $monetary1->getValue(), 'adding different currencies correctly');
+        $this->assertEquals(4.84, $monetary1->getValue(), 'adding different currencies correctly');
     }
 
     public function testAddSet()
