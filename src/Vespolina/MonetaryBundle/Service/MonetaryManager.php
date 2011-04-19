@@ -34,8 +34,8 @@ class MonetaryManager implements MonetaryManagerInterface
     public function add(MonetaryInterface $addend1, MonetaryInterface $addend2)
     {
         $baseCurrency = $addend1->getCurrency();
-        $addend = $this->exchange($addend2, $baseCurrency);
-        $sum = $addend1->getValue() + $addend->getValue();
+        $addend2 = $this->exchange($addend2, $baseCurrency);
+        $sum = $addend1->getValue() + $addend2->getValue();
         return $this->createMonetary($sum, $baseCurrency);
     }
 
