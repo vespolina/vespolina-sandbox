@@ -36,7 +36,7 @@ class MonetaryManager implements MonetaryManagerInterface
         $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
         $addend1 = $this->exchange($addend1, $baseCurrency);
         $addend2 = $this->exchange($addend2, $baseCurrency);
-        $sum = bcadd((string)$addend1->getValue(), (string)$addend2->getValue(), $baseCurrency->getPrecision());
+        $sum = bcadd($addend1->getValue(), $addend2->getValue(), $baseCurrency->getPrecision());
         return $this->createMonetary($sum, $baseCurrency);
     }
 
@@ -47,7 +47,7 @@ class MonetaryManager implements MonetaryManagerInterface
     {
         $baseCurrency = $addend1->getCurrency();
         $addend2 = $this->exchange($addend2, $baseCurrency);
-        $sum = bcadd((string)$addend1->getValue(), (string)$addend2->getValue(), $baseCurrency->getPrecision());
+        $sum = bcadd($addend1->getValue(), $addend2->getValue(), $baseCurrency->getPrecision());
         $addend1->setValue($sum);
     }
 
@@ -61,7 +61,7 @@ class MonetaryManager implements MonetaryManagerInterface
         foreach ($set as $monetary) {
             $monetary = $this->exchange($monetary, $baseCurrency);
             $value = $monetary->getValue();
-            $total += $value;
+            $total = bcadd($total, $value, $baseCurrency->getPrecision());
         }
         return $this->createMonetary($total, $baseCurrency);
     }
@@ -79,7 +79,10 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function divide(MonetaryInterface $dividend, $divisor, CurrencyInterface $baseCurrency = null)
     {
-
+        $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
+        $dividend = $this->exchange($dividend, $baseCurrency);
+        $quotient = $dividend->getValue()/$divisor;
+        return $this->createMonetary($quotient, $baseCurrency);
     }
 
     /**
