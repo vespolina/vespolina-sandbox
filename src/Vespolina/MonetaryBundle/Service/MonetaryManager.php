@@ -81,7 +81,7 @@ class MonetaryManager implements MonetaryManagerInterface
     {
         $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
         $dividend = $this->exchange($dividend, $baseCurrency);
-        $quotient = $dividend->getValue()/$divisor;
+        $quotient = bcdiv($dividend->getValue(), $divisor, $baseCurrency->getPrecision());
         return $this->createMonetary($quotient, $baseCurrency);
     }
 
