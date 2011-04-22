@@ -36,7 +36,7 @@ class MonetaryManager implements MonetaryManagerInterface
         $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
         $addend1 = $this->exchange($addend1, $baseCurrency);
         $addend2 = $this->exchange($addend2, $baseCurrency);
-        $sum = bcadd((string)$addend1->getValue(), $addend2->getValue(), $baseCurrency->getPrecision());
+        $sum = bcadd((string)$addend1->getValue(), (string)$addend2->getValue(), $baseCurrency->getPrecision());
         return $this->createMonetary($sum, $baseCurrency);
     }
 
@@ -47,7 +47,8 @@ class MonetaryManager implements MonetaryManagerInterface
     {
         $baseCurrency = $addend1->getCurrency();
         $addend2 = $this->exchange($addend2, $baseCurrency);
-        $addend1->setValue($addend1->getValue() + $addend2->getValue());
+        $sum = bcadd((string)$addend1->getValue(), (string)$addend2->getValue(), $baseCurrency->getPrecision());
+        $addend1->setValue($sum);
     }
 
     /**
