@@ -57,7 +57,7 @@ class MonetaryManagerTest extends MonetaryTestBase
 
     public function testAdd()
     {
-        $monetary1 = new Monetary(1, $this->secondCurrency);
+        $monetary1 = new Monetary(1, $this->secondCurrency); // 1.42
         $monetaryTotal = $this->service->add($monetary1, $monetary1);
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
         $this->assertEquals($this->baseCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the manager base currency should be returned');
@@ -67,9 +67,9 @@ class MonetaryManagerTest extends MonetaryTestBase
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
         $this->assertEquals(2, $monetaryTotal->getValue(), 'adding same currency correctly');
 
-        $monetary2 = new Monetary(2, $this->firstCurrency);
+        $monetary2 = new Monetary(2, $this->baseCurrency);
         $monetaryTotal = $this->service->add($monetary1, $monetary2);
-        $this->assertEquals(3.84, $monetaryTotal->getValue(), 'adding different currencies correctly');
+        $this->assertEquals(3.42, $monetaryTotal->getValue(), 'adding different currencies correctly');
     }
 
     public function testAddTo()
@@ -77,6 +77,7 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetary1 = new Monetary(1,$this->baseCurrency);
         $this->service->addTo($monetary1, $monetary1);
         $this->assertEquals(2, $monetary1->getValue(), 'adding same currency correctly');
+
         $monetary2 = new Monetary(2, $this->secondCurrency); // converted value is 2.84
         $this->service->addTo($monetary1, $monetary2);  // monetary1 is 2
         $this->assertEquals(4.84, $monetary1->getValue(), 'adding different currencies correctly');
@@ -96,15 +97,15 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetaryTotal = $this->service->addSet($set, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
-        $this->assertEquals(12.78, $monetaryTotal->getValue(), 'adding same currency correctly');
+        $this->assertEquals(12.76, $monetaryTotal->getValue(), 'adding same currency correctly'); // 2.84, 4.25, 5.67
 
         $set = array(
             new Monetary(2, $this->baseCurrency),
-            new Monetary(3, $this->secondCurrency), // 3.13
+            new Monetary(3, $this->secondCurrency), // 4.25
             new Monetary(4, $this->baseCurrency),
         );
         $monetaryTotal = $this->service->addSet($set);
-        $this->assertEquals(9, $monetaryTotal->getValue(), 'adding set of monetaries with different currencies');
+        $this->assertEquals(10.25, $monetaryTotal->getValue(), 'adding set of monetaries with different currencies');
     }
 
     public function testDivide()
@@ -117,17 +118,17 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetaryTotal = $this->service->divide($monetary1, .5, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
-        $this->assertEquals(11.36, $monetaryTotal->getValue(), 'adding same currency correctly');
+        $this->assertEquals(11.34, $monetaryTotal->getValue(), 'adding same currency correctly');
 
         $monetary2 = new Monetary(2, $this->baseCurrency);
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
-        $monetaryTotal = $this->service->divide($monetary2, $monetary1);
+        $monetaryTotal = $this->service->divide($monetary1, $monetary2);
         $this->assertEquals(2, $monetaryTotal->getValue(), 'divide same currency');
 
-        $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
+        $monetary3 = new Monetary(2, $this->secondCurrency); // 2.84
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
         $monetaryTotal = $this->service->divide($monetary1, $monetary3);
-        $this->assertEquals(2.82, $monetaryTotal->getValue(), 'divide different currencies');
+        $this->assertEquals(1.41, $monetaryTotal->getValue(), 'divide different currencies');
     }
 
     public function testDivideBy()
@@ -142,7 +143,7 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetary3 = new Monetary(2, $this->secondCurrency);
         $this->service->divideBy($monetary1, $monetary3);
-        $this->assertEquals(2.82, $monetary3->getValue(), 'divide different currencies');
+        $this->assertEquals(1.41, $monetary3->getValue(), 'divide different currencies');
     }
 
     public function testCreateMonetary()
@@ -167,12 +168,12 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetaryTotal = $this->service->multiply($monetary1, 2, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
-        $this->assertEquals(5.58, $monetaryTotal->getValue(), 'adding same currency correctly');
+        $this->assertEquals(5.68, $monetaryTotal->getValue(), 'set base currency');
 
         $monetary2 = new Monetary(2, $this->baseCurrency);
         $monetaryTotal = $this->service->multiply($monetary2, $monetary1);
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal);
-        $this->assertEquals(4, $monetaryTotal->getValue(), 'multiply by  same currency');
+        $this->assertEquals(4, $monetaryTotal->getValue(), 'multiply by same currency');
 
         $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
         $monetaryTotal = $this->service->multiply($monetary1, $monetary3);
@@ -188,9 +189,9 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetary2 = new Monetary(2, $this->baseCurrency);
         $this->service->multiplyBy($monetary2, $monetary1);
-        $this->assertEquals(4, $monetary2->getValue(), 'multiply by  same currency');
+        $this->assertEquals(4, $monetary2->getValue(), 'multiply by same currency');
 
-        $monetary3 = new Monetary(2, $this->secondCurrency);
+        $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
         $this->service->multiplyBy($monetary1, $monetary3);
         $this->assertEquals(2.82, $monetary1->getValue(), 'multiply by different currencies');
     }
@@ -207,7 +208,7 @@ class MonetaryManagerTest extends MonetaryTestBase
 
         $monetaryTotal = $this->service->subtract($monetary1, $monetary2);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
-        $this->assertEquals(3, $monetaryTotal->getValue(), 'subtract same currency correctly');
+        $this->assertEquals(4.25, $monetaryTotal->getValue(), 'subtract same currency correctly');
 
         $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
         $monetaryTotal = $this->service->subtract($monetary1, $monetary3);
@@ -218,16 +219,14 @@ class MonetaryManagerTest extends MonetaryTestBase
     public function testSubtractFrom()
     {
         $monetary1 = new Monetary(8, $this->baseCurrency);
-        $this->service->subtractFrom($monetary1, 5);
-        $this->assertEquals(3, $monetary1->getValue(), 'subtract by a numeric');
-
         $monetary2 = new Monetary(5, $this->baseCurrency);
-        $this->service->subtractFrom($monetary2, $monetary1);
-        $this->assertEquals(2, $monetary2->getValue(), 'subtract by same currency');
+
+        $this->service->subtractFrom($monetary1, $monetary2);
+        $this->assertEquals(3, $monetary2->getValue(), 'subtract by same currency');
 
         $monetary3 = new Monetary(2, $this->secondCurrency);  // 1.42
         $this->service->subtractFrom($monetary1, $monetary3);
-        $this->assertEquals(.68, $monetary1->getValue(), 'subtract by different currencies');
+        $this->assertEquals(1.58, $monetary1->getValue(), 'subtract by different currencies');
     }
 
     protected function setUp()
