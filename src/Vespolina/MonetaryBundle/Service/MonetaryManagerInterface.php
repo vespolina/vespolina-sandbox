@@ -78,7 +78,7 @@ interface MonetaryManagerInterface
     public function divide(MonetaryInterface $dividend, $divisor, CurrencyInterface $baseCurrency = null);
 
     /**
-     * Set the monetary dividend to the quotent of itself and a divisor
+     * Set the monetary dividend to the quotient of itself and a divisor
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $dividend
      * @param mixed $divisor
