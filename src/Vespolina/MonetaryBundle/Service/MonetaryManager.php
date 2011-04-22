@@ -55,7 +55,14 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function addSet($set, CurrencyInterface $baseCurrency = null)
     {
-
+        $total = 0;
+        $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
+        foreach ($set as $monetary) {
+            $monetary = $this->exchange($monetary, $baseCurrency);
+            $value = $monetary->getValue();
+            $total += $value;
+        }
+        return $this->createMonetary($total, $baseCurrency);
     }
 
     /**
