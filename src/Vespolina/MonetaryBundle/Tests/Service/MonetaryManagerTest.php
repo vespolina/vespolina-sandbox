@@ -119,16 +119,6 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetaryTotal = $this->service->divide($monetary1, .5, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
         $this->assertEquals(5.64, $monetaryTotal->getValue(), 'adding same currency correctly');
-
-        $monetary2 = new Monetary(2, $this->baseCurrency);
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
-        $monetaryTotal = $this->service->divide($monetary1, $monetary2);
-        $this->assertEquals(2, $monetaryTotal->getValue(), 'divide same currency');
-
-        $monetary3 = new Monetary(2, $this->secondCurrency); // 2.84
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal, 'make sure a Monetary class is returned');
-        $monetaryTotal = $this->service->divide($monetary1, $monetary3);
-        $this->assertEquals(1.41, $monetaryTotal->getValue(), 'divide different currencies');
     }
 
     public function testDivideBy()
@@ -169,16 +159,6 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetaryTotal = $this->service->multiply($monetary1, 2, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
         $this->assertEquals(2.82, $monetaryTotal->getValue(), 'set base currency');
-
-        $monetary2 = new Monetary(2, $this->baseCurrency);
-        $monetaryTotal = $this->service->multiply($monetary2, $monetary1);
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal);
-        $this->assertEquals(4, $monetaryTotal->getValue(), 'multiply by same currency');
-
-        $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
-        $monetaryTotal = $this->service->multiply($monetary1, $monetary3);
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\MonetaryInterface', $monetaryTotal);
-        $this->assertEquals(2.82, $monetaryTotal->getValue(), 'multiply by different currencies');
     }
 
     public function testMultiplyBy()
