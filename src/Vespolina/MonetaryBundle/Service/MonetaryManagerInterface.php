@@ -134,12 +134,12 @@ interface MonetaryManagerInterface
      * The optional third parameter can be used to set the currency of the instance.
      *
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
-     * @param mixed $subtrahend
+     * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $subtrahend
      * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency
      *
      * @return Vespolina\MonetaryBundle\Model\MonetaryInterface
      */
-    public function subtract(MonetaryInterface $minuend, $subtrahend, CurrencyInterface $baseCurrency = null);
+    public function subtract(MonetaryInterface $minuend, MonetaryInterface $subtrahend, CurrencyInterface $baseCurrency = null);
 
     /**
      * Set the minuend with the difference between itself and the subtrahend
@@ -147,5 +147,5 @@ interface MonetaryManagerInterface
      * @param Vespolina\MonetaryBundle\Model\MonetaryInterface $minuend
      * @param mixed $subtrahend
      */
-    public function subtractFrom(MonetaryInterface &$minuend, $subtrahend);
+    public function subtractFrom(MonetaryInterface &$minuend, MonetaryInterface $subtrahend);
 }
