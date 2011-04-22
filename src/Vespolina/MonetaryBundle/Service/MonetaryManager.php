@@ -31,7 +31,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function add(MonetaryInterface $addend1, MonetaryInterface $addend2)
+    public function add(MonetaryInterface $addend1, MonetaryInterface $addend2, CurrencyInterface $baseCurrency = null)
     {
         $baseCurrency = $addend1->getCurrency();
         $addend2 = $this->exchange($addend2, $baseCurrency);
@@ -52,7 +52,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function addSet($set)
+    public function addSet($set, CurrencyInterface $baseCurrency = null)
     {
 
     }
@@ -68,7 +68,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function divide(MonetaryInterface $dividend, $divisor)
+    public function divide(MonetaryInterface $dividend, $divisor, CurrencyInterface $baseCurrency = null)
     {
 
     }
@@ -104,7 +104,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function multiply(MonetaryInterface $multiplicand, $multiplier)
+    public function multiply(MonetaryInterface $multiplicand, $multiplier, CurrencyInterface $baseCurrency = null)
     {
 
     }
@@ -133,7 +133,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function subtract(MonetaryInterface $minuend, $subtrahend)
+    public function subtract(MonetaryInterface $minuend, MonetaryInterface $subtrahend, CurrencyInterface $baseCurrency = null)
     {
 
     }
@@ -141,7 +141,7 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function subtractFrom(MonetaryInterface &$minuend, $subtrahend)
+    public function subtractFrom(MonetaryInterface &$minuend, MonetaryInterface $subtrahend)
     {
 
     }
