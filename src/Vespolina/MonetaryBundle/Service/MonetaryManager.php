@@ -90,7 +90,7 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function divideBy(MonetaryInterface &$dividend, $divisor)
     {
-        $baseCurrency = $addend1->getCurrency();
+        $baseCurrency = $dividend->getCurrency();
 
     }
 
@@ -128,7 +128,7 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function multiplyBy(MonetaryInterface &$multiplicand, $multiplier)
     {
-        $baseCurrency = $addend1->getCurrency();
+        $baseCurrency = $multiplicand->getCurrency();
 
     }
 
@@ -159,7 +159,7 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function subtractFrom(MonetaryInterface &$minuend, MonetaryInterface $subtrahend)
     {
-        $baseCurrency = $addend1->getCurrency();
+        $baseCurrency = $minuend->getCurrency();
 
     }
 
