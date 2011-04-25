@@ -123,17 +123,9 @@ class MonetaryManagerTest extends MonetaryTestBase
 
     public function testDivideBy()
     {
-        $monetary1 = new Monetary(4, $this->baseCurrency);
-        $this->service->divideBy($monetary1, .5);
-        $this->assertEquals(8, $monetary1->getValue(), 'divide by a float');
-
-        $monetary2 = new Monetary(2, $this->baseCurrency);
-        $this->service->divideBy($monetary2, $monetary1);
-        $this->assertEquals(2, $monetary2->getValue(), 'divide same currency');
-
-        $monetary3 = new Monetary(2, $this->secondCurrency);
-        $this->service->divideBy($monetary1, $monetary3);
-        $this->assertEquals(1.41, $monetary3->getValue(), 'divide different currencies');
+        $monetary = new Monetary(4, $this->baseCurrency);
+        $this->service->divideBy($monetary, .5);
+        $this->assertEquals(8, $monetary->getValue(), 'divide by a float');
     }
 
     public function testCreateMonetary()
@@ -186,7 +178,7 @@ class MonetaryManagerTest extends MonetaryTestBase
         $this->assertEquals($this->baseCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the manager base currency should be returned');
         $this->assertEquals(3, $monetaryTotal->getValue(), 'subtract same currency correctly');
 
-        $monetaryTotal = $this->service->subtract($monetary1, $monetary, $this->secondCurrency);
+        $monetaryTotal = $this->service->subtract($monetary1, $monetary2, $this->secondCurrency);
         $this->assertEquals($this->secondCurrency->getCurrencyCode(),$monetaryTotal->getCurrency()->getCurrencyCode(), 'the passed currency should be returned');
         $this->assertEquals(3.52, $monetaryTotal->getValue(), 'set base currency');
 
