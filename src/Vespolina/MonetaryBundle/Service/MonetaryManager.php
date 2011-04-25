@@ -123,7 +123,9 @@ class MonetaryManager implements MonetaryManagerInterface
     public function multiply(MonetaryInterface $multiplicand, $multiplier, CurrencyInterface $baseCurrency = null)
     {
         $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
-
+        $multiplicand = $this->exchange($multiplicand, $baseCurrency);
+        $result = bcmul($multiplicand->getValue(), $multiplier, $baseCurrency->getPrecision());
+        return $this->createMonetary($result, $baseCurrency);
     }
 
     /**
@@ -132,7 +134,8 @@ class MonetaryManager implements MonetaryManagerInterface
     public function multiplyBy(MonetaryInterface &$multiplicand, $multiplier)
     {
         $baseCurrency = $multiplicand->getCurrency();
-
+        $result = bcmul($multiplicand->getValue(), $multiplier, $baseCurrency->getPrecision());
+        $multiplicand->setValue($result);
     }
 
     /**
