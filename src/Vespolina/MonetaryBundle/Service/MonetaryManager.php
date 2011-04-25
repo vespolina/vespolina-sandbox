@@ -168,7 +168,9 @@ class MonetaryManager implements MonetaryManagerInterface
     public function subtractFrom(MonetaryInterface &$minuend, MonetaryInterface $subtrahend)
     {
         $baseCurrency = $minuend->getCurrency();
-
+        $subtrahend = $this->exchange($subtrahend, $baseCurrency);
+        $difference = bcsub($minuend->getValue(), $subtrahend->getValue(), $baseCurrency->getPrecision());
+        $minuend->setValue($difference);
     }
 
     protected function rounding($amount, $precision)
