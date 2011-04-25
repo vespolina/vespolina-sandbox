@@ -156,7 +156,10 @@ class MonetaryManager implements MonetaryManagerInterface
     public function subtract(MonetaryInterface $minuend, MonetaryInterface $subtrahend, CurrencyInterface $baseCurrency = null)
     {
         $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
-
+        $minuend = $this->exchange($minuend, $baseCurrency);
+        $subtrahend = $this->exchange($subtrahend, $baseCurrency);
+        $difference = bcsub($minuend->getValue(), $subtrahend->getValue(), $baseCurrency->getPrecision());
+        return $this->createMonetary($difference, $baseCurrency);
     }
 
     /**
