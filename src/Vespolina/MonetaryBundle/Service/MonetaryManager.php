@@ -91,7 +91,9 @@ class MonetaryManager implements MonetaryManagerInterface
     public function divideBy(MonetaryInterface &$dividend, $divisor)
     {
         $baseCurrency = $dividend->getCurrency();
-
+        $dividend = $this->exchange($dividend, $baseCurrency);
+        $quotient = bcdiv($dividend->getValue(), $divisor, $baseCurrency->getPrecision());
+        $dividend->setValue($quotient);
     }
 
     /**
