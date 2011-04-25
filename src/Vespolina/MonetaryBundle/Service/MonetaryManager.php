@@ -69,8 +69,9 @@ class MonetaryManager implements MonetaryManagerInterface
     /**
      * @inheritdoc
      */
-    public function createMonetary($amount, CurrencyInterface $baseCurrency=null )
+    public function createMonetary($amount, CurrencyInterface $baseCurrency=null)
     {
+        $baseCurrency = $baseCurrency ? $baseCurrency : $this->baseCurrency;
         return new $this->monetaryClass($amount, $baseCurrency);
     }
 
