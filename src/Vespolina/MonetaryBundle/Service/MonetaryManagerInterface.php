@@ -125,9 +125,9 @@ interface MonetaryManagerInterface
     /**
      * Set the base currency for functions
      *
-     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $currency
+     * @param mixed Vespolina\MonetaryBundle\Model\CurrencyInterface | ISO 4217 $currency
      */
-    public function setBaseCurrency(CurrencyInterface $currency);
+    public function setBaseCurrency($currency);
 
     /**
      * Return a instance  of the service base currency with difference between two Monetary values
