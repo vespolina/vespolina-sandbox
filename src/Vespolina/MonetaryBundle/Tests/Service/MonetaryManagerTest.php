@@ -158,14 +158,6 @@ class MonetaryManagerTest extends MonetaryTestBase
         $monetary1 = new Monetary(2, $this->baseCurrency);
         $this->service->multiplyBy($monetary1, 2);
         $this->assertEquals(4, $monetary1->getValue(), 'multiply by a numeric');
-
-        $monetary2 = new Monetary(2, $this->baseCurrency);
-        $this->service->multiplyBy($monetary2, $monetary1);
-        $this->assertEquals(4, $monetary2->getValue(), 'multiply by same currency');
-
-        $monetary3 = new Monetary(2, $this->secondCurrency); // 1.42
-        $this->service->multiplyBy($monetary1, $monetary3);
-        $this->assertEquals(2.82, $monetary1->getValue(), 'multiply by different currencies');
     }
 
     public function testSubtract()
