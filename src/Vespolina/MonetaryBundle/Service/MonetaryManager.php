@@ -142,11 +142,10 @@ class MonetaryManager implements MonetaryManagerInterface
      */
     public function setBaseCurrency($currency)
     {
-        $rc = new \ReflectionClass($currency);
-        if ($rc->implementsInterface('Vespolina\MonetaryBundle\Model\CurrencyInterface')) {
-            $this->baseCurrency = $currency;
-        } else {
+        if (is_string($currency)) {
             $this->baseCurrency = $this->currencyManager->createCurrency($currency);
+        } else {
+            $this->baseCurrency = $currency;
         }
     }
 
