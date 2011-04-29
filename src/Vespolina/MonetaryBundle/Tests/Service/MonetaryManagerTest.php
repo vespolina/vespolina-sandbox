@@ -9,9 +9,9 @@ namespace Vespolina\MonetaryBundle\Tests\Service;
 
 use Vespolina\MonetaryBundle\Model\Monetary;
 use Vespolina\MonetaryBundle\Service\MonetaryManager;
-use Vespolina\MonetaryBundle\Service\CurrencyManager;
 use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
-use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
+use Vespolina\MonetaryBundle\Tests\Mock\CurrencyExchanger;
+use Vespolina\MonetaryBundle\Tests\Mock\CurrencyManager;
 
 /**
  * @author Richard Shank <develop@zestic.com>
@@ -25,21 +25,23 @@ class MonetaryManagerTest extends MonetaryTestBase
     public function testSetBaseCurrency()
     {
         $baseCurrency = $this->getBaseCurrency();
-        $currencyManager = new CurrencyManager(new CurrencyExchanger());
+        $currencyExchanger = new CurrencyExchanger();
+        $currencyManager = new CurrencyManager($currencyExchanger);
 
         $monetaryMgr = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, $this->baseCurrency);
-        $this->assertEquals($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set in construct with currency object');
+        $this->assertEquals($baseCurrency->getCurrencyCode(), $monetaryMgr->getBaseCurrency()->getCurrencyCode(), 'base currency set in construct with currency object');
 
         $monetaryMgr = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, 'XXX');
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
-        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCode(), 'correct code set in construct with ISO code');
+
+        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCurrencyCode(), 'correct code set in construct with ISO code');
 
         $monetaryMgr->setBaseCurrency($baseCurrency);
         $this->assertSame($baseCurrency, $monetaryMgr->getBaseCurrency(), 'base currency set by method with currency object');
 
         $monetaryMgr->setBaseCurrency('XXX');
         $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $monetaryMgr->getBaseCurrency(), 'base currency set in construct with ISO code');
-        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCode(), 'correct code set in construct with ISO code');
+        $this->assertSame('XXX', $monetaryMgr->getBaseCurrency()->getCurrencyCode(), 'correct code set in construct with ISO code');
     }
 
     public function testExchange()

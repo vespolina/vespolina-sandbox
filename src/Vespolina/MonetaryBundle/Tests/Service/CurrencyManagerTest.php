@@ -9,7 +9,7 @@ namespace Vespolina\MonetaryBundle\Tests\Service;
 
 use Vespolina\MonetaryBundle\Service\CurrencyManager;
 use Vespolina\MonetaryBundle\Tests\MonetaryTestBase;
-use Vespolina\MonetaryBundle\Tests\Document\CurrencyExchanger;
+use Vespolina\MonetaryBundle\Tests\Mock\CurrencyExchanger;
 
 /**
  * @author Richard Shank <develop@zestic.com>
