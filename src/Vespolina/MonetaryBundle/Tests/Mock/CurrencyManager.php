@@ -32,45 +32,50 @@ class CurrencyManager extends \PHPUnit_Framework_TestCase implements CurrencyMan
     {
         if ($currencyCode=='XXX') {
             $currency = $this->getMockForAbstractClass('Vespolina\MonetaryBundle\Model\Currency');
-            $rc = new \ReflectionClass($currency);
 
-            $property = $rc->getProperty('name');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'XXX is normally no currency');
+            $currency->expects($this->any())
+                 ->method('getCurrencyCode')
+                 ->will($this->returnValue('XXX'));
 
-            $property = $rc->getProperty('currencyCode');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'XXX');
+            $currency->expects($this->any())
+                 ->method('getName')
+                 ->will($this->returnValue('XXX is normally no currency'));
 
-            $property = $rc->getProperty('symbol');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'X');
+            $currency->expects($this->any())
+                 ->method('getPrecision')
+                 ->will($this->returnValue(2));
 
-            $property = $rc->getProperty('precision');
-            $property->setAccessible(true);
-            $property->setValue($currency, 2);
+            $currency->expects($this->any())
+                 ->method('getShortName')
+                 ->will($this->returnValue('XXX'));
+
+            $currency->expects($this->any())
+                 ->method('getSymbol')
+                 ->will($this->returnValue('X'));
 
             return $currency;
         }
         if ($currencyCode=='XTS') {
-            $currency = $this->getMockForAbstractClass('Vespolina\MonetaryBundle\Model\Currency');
-            $rc = new \ReflectionClass($currency);
 
-            $property = $rc->getProperty('name');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'Codes specifically reserved for testing purpose');
+            $currency->expects($this->any())
+                 ->method('getCurrencyCode')
+                 ->will($this->returnValue('XTS'));
 
-            $property = $rc->getProperty('currencyCode');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'XTS');
+            $currency->expects($this->any())
+                 ->method('getName')
+                 ->will($this->returnValue('Codes specifically reserved for testing purpose'));
 
-            $property = $rc->getProperty('symbol');
-            $property->setAccessible(true);
-            $property->setValue($currency, 'Z');
+            $currency->expects($this->any())
+                 ->method('getPrecision')
+                 ->will($this->returnValue(2));
 
-            $property = $rc->getProperty('precision');
-            $property->setAccessible(true);
-            $property->setValue($currency, 2);
+            $currency->expects($this->any())
+                 ->method('getShortName')
+                 ->will($this->returnValue('XTS'));
+
+            $currency->expects($this->any())
+                 ->method('getSymbol')
+                 ->will($this->returnValue('Z'));
 
             return $currency;
         }
