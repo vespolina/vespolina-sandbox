@@ -17,23 +17,26 @@ class MonetaryTestBase extends \PHPUnit_Framework_TestCase
     protected function getCurrency($name, $code, $symbol, $precision=2)
     {
         $currency = $this->getMockForAbstractClass('Vespolina\MonetaryBundle\Model\Currency');
-        $rc = new \ReflectionClass($currency);
 
-        $property = $rc->getProperty('name');
-        $property->setAccessible(true);
-        $property->setValue($currency, $name);
+        $currency->expects($this->any())
+             ->method('getCurrencyCode')
+             ->will($this->returnValue($code));
 
-        $property = $rc->getProperty('currencyCode');
-        $property->setAccessible(true);
-        $property->setValue($currency, $code);
+        $currency->expects($this->any())
+             ->method('getName')
+             ->will($this->returnValue($name));
 
-        $property = $rc->getProperty('symbol');
-        $property->setAccessible(true);
-        $property->setValue($currency, $symbol);
+        $currency->expects($this->any())
+             ->method('getPrecision')
+             ->will($this->returnValue($precision));
 
-        $property = $rc->getProperty('precision');
-        $property->setAccessible(true);
-        $property->setValue($currency, $precision);
+        $currency->expects($this->any())
+             ->method('getShortName')
+             ->will($this->returnValue($name));
+
+        $currency->expects($this->any())
+             ->method('getSymbol')
+             ->will($this->returnValue($symbol));
 
         return $currency;
     }
