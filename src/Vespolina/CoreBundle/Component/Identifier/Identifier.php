@@ -53,6 +53,6 @@ class Identifier implements IdentifierInterface
      */
     public function valid()
     {
-        return ($this->id == '' ? true : false);
+        return !empty($this->id);
     }
 }
