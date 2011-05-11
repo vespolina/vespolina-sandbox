@@ -10,6 +10,9 @@ namespace Vespolina\MonetaryBundle\Service;
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
 
+/**
+ * @author Richard Shank <develop@zestic.com>
+ */
 abstract class CurrencyExchanger implements CurrencyExchangerInterface
 {
     protected function getCode($currency)

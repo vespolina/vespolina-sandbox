@@ -16,7 +16,11 @@ use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
  */
 interface CurrencyManagerInterface
 {
-    public function __construct(CurrencyExchangerInterface $currencyExchanger);
+    /**
+     * @param Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface  CurrencyExchanger to be used
+     * @param $currencyCacheDir where generated currencies will be located
+     */
+    public function __construct(CurrencyExchangerInterface $currencyExchanger, $currencyCacheDir, $options = null);
 
     /**
      * Create a currency instance

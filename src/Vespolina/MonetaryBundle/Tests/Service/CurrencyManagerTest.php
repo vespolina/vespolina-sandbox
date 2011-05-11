@@ -37,7 +37,9 @@ class CurrencyManagerTest extends MonetaryTestBase
     
     protected function setUp()
     {
-        $this->service = new CurrencyManager(new CurrencyExchanger());
+        $this->client = $this->createClient();
+        $cacheDir = $this->kernel->getContainer()->getParameter('vespolina.monetary.currency_dir');
+        $this->service = new CurrencyManager(new CurrencyExchanger(), $cacheDir);
 
         $this->baseCurrency = $this->getBaseCurrency();
     }

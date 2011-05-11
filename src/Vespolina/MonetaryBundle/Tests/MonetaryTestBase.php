@@ -12,7 +12,9 @@ use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 use Vespolina\MonetaryBundle\Service\MonetaryManagerInterface;
 
-class MonetaryTestBase extends \PHPUnit_Framework_TestCase
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+class MonetaryTestBase extends WebTestCase
 {
     protected function getCurrency($name, $code, $symbol, $precision=2)
     {

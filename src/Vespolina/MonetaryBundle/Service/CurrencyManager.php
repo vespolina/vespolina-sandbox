@@ -37,13 +37,13 @@ class CurrencyManager implements CurrencyManagerInterface
      *                 determined automatically base on the debug value.
      *
      * @param CurrencyExchangerInterface   $currencyExchanger  A CurrencyExchangerInterface instance
-     * @param $cache An absolute path where to store the compiled templates
+     * @param $currencyCacheDir An absolute path where to store the compiled templates
      * @param array                  $options An array of options
      */
-    public function __construct(CurrencyExchangerInterface $currencyExchanger, $cache, $options = array())
+    public function __construct(CurrencyExchangerInterface $currencyExchanger, $currencyCacheDir, $options = array())
     {
         $this->currencyExchanger  = $currencyExchanger;
-        $this->cache              = $cache;
+        $this->cache              = $currencyCacheDir;
 
         $options = array_merge(array(
             'debug'               => false,

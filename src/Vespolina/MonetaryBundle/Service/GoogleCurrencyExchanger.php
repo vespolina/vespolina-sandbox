@@ -10,6 +10,9 @@ namespace Vespolina\MonetaryBundle\Service;
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 use Vespolina\MonetaryBundle\Service\CurrencyExchanger;
  
+/**
+ * @author Richard Shank <develop@zestic.com>
+ */
 class GoogleCurrencyExchanger extends CurrencyExchanger
 {
     /**

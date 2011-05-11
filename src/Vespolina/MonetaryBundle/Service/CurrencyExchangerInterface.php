@@ -9,6 +9,9 @@ namespace Vespolina\MonetaryBundle\Service;
 
 use Vespolina\MonetaryBundle\Model\CurrencyInterface;
 
+/**
+ * @author Richard Shank <develop@zestic.com>
+ */
 interface CurrencyExchangerInterface
 {
     /**
