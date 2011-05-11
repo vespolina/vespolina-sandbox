@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://www.symfony-project.org/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="vespolina.monetary.service.currency_exchanger_class">Vespolina\MonetaryBundle\Service\GoogleCurrencyExchanger</parameter>
+        <parameter key="vespolina.monetary.service.currency_manager_class">Vespolina\MonetaryBundle\Service\CurrencyManager</parameter>
+        <parameter key="vespolina.monetary.service.monetary_manager_class">Vespolina\MonetaryBundle\Service\MonetaryManager</parameter>
+        <parameter key="vespolina.monetary.model.monetary_class">Vespolina\MonetaryBundle\Model\Monetary</parameter>
+
+        <parameter key="vespolina.monetary.currency_dir">%kernel.cache_dir%/vespolina/currencies</parameter>
+    </parameters>
+    <services>
+        <service id="vespolina.monetary.service.currency_exchanger" class="%vespolina.monetary.service.currency_exchanger_class%" />
+        <service id="vespolina.monetary.service.currency_manager" class="%vespolina.monetary.service.currency_manager_class%">
+            <argument type="service" id="vespolina.monetary.service.currency_exchanger" />
+            <argument>%vespolina.monetary.currency_dir%</argument>
+        </service>
+        <service id="vespolina.monetary.service.monetary_manager" class="%vespolina.monetary.service.monetary_manager_class%">
+            <argument>%vespolina.monetary.model.monetary_class%</argument>
+            <argument type="service" id="vespolina.monetary.service.currency_manager" />
+            <argument>EUR</argument>
+        </service>
+    </services>
+</container>
