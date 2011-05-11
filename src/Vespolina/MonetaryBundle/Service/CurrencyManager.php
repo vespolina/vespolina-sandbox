@@ -99,7 +99,7 @@ class CurrencyManager implements CurrencyManagerInterface
     {
         $this->cache = $cache ? $cache : false;
     }
-    
+
     /**
      * {@inheritdoc}
      */
