@@ -21,18 +21,18 @@ class CurrencyManagerTest extends MonetaryTestBase
 
     public function testGetCurrency()
     {
-        $currency = $this->service->getCurrency('XTS');
-        $this->assertInstanceOf('Vespolina\MonetaryBundle\Document\Currency', $currency, 'currency instance');
+        $currency = $this->service->createCurrency('XTS');
+        $this->assertInstanceOf('Vespolina\MonetaryBundle\Model\CurrencyInterface', $currency, 'currency instance');
         $this->assertSame('XTS', $currency->getCurrencyCode(), 'make sure the data was loaded correctly');
     }
 
     function testGetExchangeRate()
     {
-        $usdCurrency = $this->service->getCurrency('XXX');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('XTS', 'XXX'), 'get rate with two symbols');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, 'XXX'), 'get rate with currency and symbol');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate('XTS', $usdCurrency), 'get rate with a symbol and a currency');
-        $this->assertEquals(1.4175, $this->service->getExchangeRate($this->baseCurrency, $usdCurrency), 'get rate with two currencies');
+        $xxxCurrency = $this->service->createCurrency('XXX');
+        $this->assertEquals(0.705467372, $this->service->getExchangeRate('XTS', 'XXX'), 'get rate with two symbols');
+        $this->assertEquals(0.705467372, $this->service->getExchangeRate($this->baseCurrency, 'XXX'), 'get rate with currency and symbol');
+        $this->assertEquals(0.705467372, $this->service->getExchangeRate('XTS', $xxxCurrency), 'get rate with a symbol and a currency');
+        $this->assertEquals(0.705467372, $this->service->getExchangeRate($this->baseCurrency, $xxxCurrency), 'get rate with two currencies');
     }
     
     protected function setUp()
