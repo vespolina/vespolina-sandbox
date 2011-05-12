@@ -1,18 +1,27 @@
 <?php
-
+/**
+ * (c) 2011 Vespolina Project http://www.vespolina-project.org
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 namespace Vespolina\MonetaryBundle\Model;
 
+/**
+ * @author Richard Shank <develop@zestic.com>
+ */
 interface CurrencyInterface
 {
     /**
-     * Create a currency instance
-     *
-     * @param Vespolina\MonetaryBundle\Model\CurrencyInterface $baseCurrency
-     * @param mixed $exchangeRate
-     * @param \DateTime $datetime optional the date and time of the exchange rate, defaults to now
+     * Return the name of the currency
      */
-    public function __construct(CurrencyInterface $baseCurrency, $exhangeRate, \DateTime $datetime=null);
-    
+    public function getName();
+
+    /**
+     * Return the short name of the currency
+     */
+    public function getShortName();
+
     /**
      * Get the ISO 4217 currency code of this currency.
      *
@@ -23,18 +32,16 @@ interface CurrencyInterface
     /**
      * Get the symbol for the currency
      *
-     * @param string optional locale
-     *
      * @return string
      */
-    public function getSymbol($locale=null);
+    public function getSymbol();
 
     /**
-     * Get the default number of fraction digits for the currency
+     * Get the default number of precision digits for the currency
      *
      * @return integer
      */
-    public function getFractionalDigits();
+    public function getPrecision();
 
     /**
      * Return the amount, formatted for the currency
@@ -44,35 +51,4 @@ interface CurrencyInterface
      * @return string
      */
     public function formatAmount($amount);
-
-    /**
-     * Return the exchange rate, based on base currency
-     *
-     * @return mixed $rate
-     */
-    public function getExchangeRate();
-
-    /**
-     * Return the date and time of the exchange rate
-     *
-     * @return \DateTime
-     */
-    public function getExchangeDateTime();
-
-    /**
-     * Return the base currency for the exchange rate
-     *
-     * @return Vespolina\MonetaryBundle\Model\CurrencyInterface
-     */
-    public function getBaseCurrency();
-
-    /**
-     * Return the value after the currency conversion, this can be an instance of
-     * Vespolina\MonetaryBundle\Model\MonetaryInterface.  If a Monetary object is passed in as the amount
-     * an new instance of Vespolina\MonetaryBundle\Model\MonetaryInterface, with this currency is returned
-     *
-     * @param mixed $amount
-     * @return mixed
-     */
-    public function exchange($amount);
 }
