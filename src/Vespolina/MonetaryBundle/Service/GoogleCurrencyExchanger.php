@@ -20,8 +20,8 @@ class GoogleCurrencyExchanger extends CurrencyExchanger
      */
     public function getExchangeRate($from, $to, \DateTime $datetime=null)
     {
-        $from = $this->getCurrency($from);
-        $to = $this->getCurrency($to);
+        $from = $this->extractCode($from);
+        $to = $this->extractCode($to);
         $url = sprintf("http://www.google.com/ig/calculator?hl=en&q=1%s%3D%3F%s", $from, $to);
         $conversion = wget($url);
 
