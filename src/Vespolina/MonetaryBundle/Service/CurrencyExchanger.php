@@ -15,7 +15,7 @@ use Vespolina\MonetaryBundle\Service\CurrencyExchangerInterface;
  */
 abstract class CurrencyExchanger implements CurrencyExchangerInterface
 {
-    protected function getCode($currency)
+    protected function extractCode($currency)
     {
         if ($currency instanceof Vespolina\MonetaryBundle\Model\CurrencyInterface)
         {
