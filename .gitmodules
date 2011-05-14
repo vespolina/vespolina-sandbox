@@ -31,3 +31,15 @@
 [submodule "vendor/doctrine/data-fixtures"]
 	path = vendor/doctrine/data-fixtures
 	url = https://github.com/doctrine/data-fixtures.git
+[submodule "vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle"]
+	path = vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+	url = git://github.com/symfony/DoctrineMongoDBBundle.git
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = http://github.com/Seldaek/monolog.git
+[submodule "vendor/doctrine/orm"]
+	path = vendor/doctrine/orm
+	url = http://github.com/doctrine/doctrine2.git
+[submodule "vendor/doctrine/dbal"]
+	path = vendor/doctrine/dbal
+	url = http://github.com/doctrine/dbal.git
