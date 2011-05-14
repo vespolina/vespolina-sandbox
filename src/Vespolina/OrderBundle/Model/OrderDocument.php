@@ -52,7 +52,7 @@ class OrderDocument extends Document implements OrderDocumentInterface
     /**
      * @inheritdoc
      */
-    public function setPricingSets(PricingSetInterface $pricingSet)
+    public function setPricingSets($pricingSet)
     {
         $this->pricingSet = $pricingSet;
     }
