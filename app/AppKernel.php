@@ -2,6 +2,9 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\ClassLoader\DebugUniversalClassLoader;
+use Symfony\Component\HttpKernel\Debug\ErrorHandler;
+use Symfony\Component\HttpKernel\Debug\ExceptionHandler;
 
 class AppKernel extends Kernel
 {
@@ -20,13 +23,14 @@ class AppKernel extends Kernel
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
             new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
 
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\ZendBundle\ZendBundle(),
+            new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
+            new Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -36,9 +40,18 @@ class AppKernel extends Kernel
         return $bundles;
     }
 
-    public function registerRootDir()
+    public function init()
     {
-        return __DIR__;
+        if ($this->debug) {
+            ini_set('display_errors', 1);
+            error_reporting(-1);
+
+            DebugUniversalClassLoader::enable();
+            ErrorHandler::register();
+            ExceptionHandler::register();
+        } else {
+            ini_set('display_errors', 0);
+        }
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

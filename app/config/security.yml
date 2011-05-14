@@ -16,7 +16,7 @@ security:
 
 fos_user:
     db_driver: mongodb
-    provider_key: main
+    firewall_name: main
     encoder:
         iterations: 1
         encode_as_base64: false
@@ -24,5 +24,7 @@ fos_user:
     class:
         model:
             user: Application\UserBundle\Document\User
-            group: FOS\UserBundle\Document\DefaultGroup
+    group:
+        class:
+            model: FOS\UserBundle\Document\DefaultGroup
 

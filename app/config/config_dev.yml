@@ -8,8 +8,3 @@ framework:
 web_profiler:
     toolbar: true
     intercept_redirects: true
-
-zend:
-    logger:
-        priority: debug
-        path:     %kernel.logs_dir%/%kernel.environment%.log
