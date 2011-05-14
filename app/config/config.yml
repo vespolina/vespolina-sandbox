@@ -2,23 +2,27 @@
 assetic: ~
 
 framework:
+    secret: xxxxxxxxxx
     charset:       UTF-8
-    error_handler: null
     csrf_protection:
         enabled: true
-        secret: xxxxxxxxxx
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
     validation:    { enabled: true, annotations: true }
     templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
     session:
         default_locale: en
         lifetime:       3600
-        auto_start:     false
+        auto_start:     true
         name:           symfony
 
-doctrine_mongo_db:
+doctrine_mongodb:
     default_database: app_%kernel.environment%
     default_document_manager: default
+    connections:
+            default:
+                server: mongodb://localhost:27017
+                options:
+                    connect: true
     document_managers:
         default:
             mappings:
