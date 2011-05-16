@@ -1,5 +1,4 @@
 <?php
-
 use Symfony\Component\ClassLoader\UniversalClassLoader;
 
 $loader = new UniversalClassLoader();
@@ -11,9 +10,9 @@ $loader->registerNamespaces(array(
     'Doctrine\\DBAL'            => __DIR__.'/../vendor/doctrine/dbal/lib',
     'Doctrine'                  => __DIR__.'/../vendor/doctrine/orm/lib',
     'Doctrine\\Common\\DataFixtures'    => __DIR__.'/../vendor/doctrine/data-fixtures/lib',
-    'FOS'                       => __DIR__.'/../src',
+    'FOS'                       => __DIR__.'/../vendor/bundles/FOS',
     'Application'               => __DIR__.'/../src',
-    'Vespolina'                 => __DIR__.'/../src',
+    'Vespolina'                 => __DIR__.'/../vendor/bundles/Vespolina',
     'Monolog'                   => __DIR__.'/../vendor/monolog/src',
     'Symfony'                   => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
     'vendor'                    => __DIR__.'/../src',
