@@ -12,8 +12,8 @@
          bootstrap="bootstrap.php.cache"
 >
   <testsuites>
-      <testsuite name="Project Test Suite">
-          <directory>../src/*/*Bundle/Tests</directory>
+      <testsuite name="Vespolina Test Suite">
+          <directory>../vendor/bundles/Vespolina/*Bundle/Tests</directory>
       </testsuite>
   </testsuites>
 
