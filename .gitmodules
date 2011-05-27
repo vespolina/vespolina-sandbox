@@ -16,9 +16,6 @@
 [submodule "vendor/twig-extensions"]
 	path = vendor/twig-extensions
 	url = git://github.com/fabpot/Twig-extensions.git
-[submodule "src/FOS/UserBundle"]
-	path = src/FOS/UserBundle
-	url = git://github.com/FriendsOfSymfony/UserBundle.git
 [submodule "vendor/doctrine/mongodb"]
 	path = vendor/doctrine/mongodb
 	url = https://github.com/doctrine/mongodb.git
@@ -43,3 +40,6 @@
 [submodule "vendor/doctrine/dbal"]
 	path = vendor/doctrine/dbal
 	url = http://github.com/doctrine/dbal.git
+[submodule "vendor/bundles/FOS"]
+	path = vendor/bundles/FOS
+	url = git://github.com/FriendsOfSymfony/UserBundle.git
