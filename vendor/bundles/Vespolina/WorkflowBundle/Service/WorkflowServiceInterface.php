@@ -9,7 +9,37 @@
  
 namespace Vespolina\WorkflowBundle\Service;
 
+use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface;
+
 interface WorkflowServiceInterface
 {
-	
+
+    /**
+     * Create a workflow instance for the given configuration
+     *
+     * @abstract
+     * @param \Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface $workflowConfiguration
+     * @return \Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface
+     */
+    public function create(WorkflowConfigurationInterface $workflowConfiguration);
+
+    /**
+     * Get the workflow configuration for the given name
+     *
+     * @abstract
+     * @param  $name
+     * @return \Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface
+     */
+    public function getWorkflowConfiguration($name);
+
+    /**
+     * Save the state of the given workflow instance
+     *
+     * @abstract
+     * @param \Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface $workflowInstance
+     * @return true on success
+     */
+    public function save(WorkflowInstanceInterface $workflowInstance);
+
 }

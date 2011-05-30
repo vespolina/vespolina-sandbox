@@ -2,7 +2,6 @@
 
 namespace { require_once __DIR__.'/autoload.php'; }
 
-
 namespace Symfony\Component\DependencyInjection
 {
 interface ContainerInterface

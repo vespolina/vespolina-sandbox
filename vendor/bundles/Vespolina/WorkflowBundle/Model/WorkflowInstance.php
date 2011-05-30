@@ -11,8 +11,10 @@ namespace Vespolina\WorkflowBundle\Model;
 
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 use Vespolina\WorkflowBundle\Model\WorkflowContainerInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface;
 
-class Workflow implements WorkflowInterface
+
+class WorkflowInstance implements WorkflowInstanceInterface
 {
     protected $container;
     protected $runtimeInstance;

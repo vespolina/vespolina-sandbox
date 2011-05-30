@@ -10,7 +10,9 @@
 namespace Vespolina\WorkflowBundle\Model\WorkflowBuilder;
 
 use Vespolina\WorkflowBundle\Model\WorkflowBuilderInterface;
-use Vespolina\WorkflowBundle\Model\WorkflowInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface;
+
 
 class XmlWorkflowBuilder implements WorkflowBuilderInterface
 {
@@ -24,7 +26,7 @@ class XmlWorkflowBuilder implements WorkflowBuilderInterface
     /**
      * @inheritdoc
      */
-    public function build(WorkflowInterface $workflow)
+    public function build(WorkflowConfigurationInterface $workflowConfiguration)
     {
         $xmlSource = $this->builderOptions['source'];
 
@@ -37,24 +39,26 @@ class XmlWorkflowBuilder implements WorkflowBuilderInterface
         }
          */
 
-        //Test for now: just manually create the workflow runtime instance
-        $runtimeInstance = $this->createPrototype($workflow);
+        //Test for now: just manually create the workflow instance from some sample ecz code
+        $runtimeInstance = $this->createPrototype($workflowConfiguration);
 
-        return true;
+
+
+
+        return $runtimeInstance;
     }
 
-    public function createPrototype($workflow)
+    public function createPrototype($workflowConfiguration)
     {
         //Example taken from Zeta Components library
-        $runtimeInstance = new \ezcWorkflow($workflow->getConfigurationName());
-        $workflow->setRuntimeInstance($runtimeInstance);
-
+        $workflow = new \ezcWorkflow($workflowConfiguration->getName());
+        
         $input = new \ezcWorkflowNodeInput(
             array('choice' => new \ezcWorkflowConditionIsBool)
         );
         // Add the previously created Input node
         // as an outgoing node to the start node.
-        $runtimeInstance->startNode->addOutNode($input);
+        $workflow->startNode->addOutNode($input);
         // Create a new Exclusive Choice node and add it as an
         // outgoing node to the previously created Input node.
         // This node will choose which output to run based on the
@@ -85,8 +89,8 @@ class XmlWorkflowBuilder implements WorkflowBuilderInterface
         $merge = new \ezcWorkflowNodeSimpleMerge;
         $merge->addInNode($trueNode);
         $merge->addInNode($falseNode);
-        $merge->addOutNode($runtimeInstance->endNode);
+        $merge->addOutNode($workflow->endNode);
 
-        return $runtimeInstance;
+        return $workflow;
     }
 }

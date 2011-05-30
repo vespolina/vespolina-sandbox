@@ -10,7 +10,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-	    $bundles = array(
+        $bundles = array(
             new FOS\UserBundle\FOSUserBundle(),
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),

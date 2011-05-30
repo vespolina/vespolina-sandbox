@@ -9,7 +9,7 @@
 
 namespace Vespolina\WorkflowBundle\Model;
 
-interface WorkflowInterface
+interface WorkflowInstanceInterface
 {
     /**
      * Get the workflow configuration name
