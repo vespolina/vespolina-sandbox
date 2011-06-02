@@ -11,16 +11,17 @@ namespace Vespolina\WorkflowBundle\Model;
 
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 use Vespolina\WorkflowBundle\Model\WorkflowContainerInterface;
-use Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface;
 
 
-class WorkflowInstance implements WorkflowInstanceInterface
+class WorkflowExecution implements WorkflowExecutionInterface
 {
     protected $container;
-    protected $runtimeInstance;
     protected $name;
     protected $status;
-
+    protected $workflowExecutionId;
+    protected $workflowRuntimeDefinition;
+    
     /**
      * Constructor
      *
@@ -62,14 +63,34 @@ class WorkflowInstance implements WorkflowInstanceInterface
      *
      * @return
      */
-    public function getRuntimeInstance()
+    public function getWorkflowRuntimeDefinition()
     {
-        return $this->runtimeInstance;
+        return $this->workflowRuntimeDefinition;
     }
 
-    public function setRuntimeInstance($runtimeInstance)
+    /**
+     * @inheritdoc
+     */
+    public function setWorkflowRuntimeDefinition($workflowRuntimeDefinition)
     {
-        $this->runtimeInstance = $runtimeInstance;
+        $this->workflowRuntimeDefinition = $workflowRuntimeDefinition;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getWorkflowExecutionId()
+    {
+        return $this->workflowExecutionId;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function setWorkflowExecutionId($workflowExecutionId)
+    {
+        $this->workflowExecutionId = $workflowExecutionId;
     }
 
     /**

@@ -9,7 +9,7 @@
 
 namespace Vespolina\WorkflowBundle\Model;
 
-interface WorkflowInstanceInterface
+interface WorkflowExecutionInterface
 {
     /**
      * Get the workflow configuration name
@@ -20,19 +20,12 @@ interface WorkflowInstanceInterface
     function getConfigurationName();
 
     /**
-     * Set the workflow configuration name
-     *
-     * @abstract
-     * @param  $name
-     * @return void
-     */
-    function setConfigurationName($name);
-
-    /**
      * Return the workflow container
      * @return Vespolina\WorkflowBundle\Model\WorkflowContainerInterface
      */
     function getContainer();
+
+    function getWorkflowRuntimeDefinition();
 
     /**
      * Get the current status of the workflow
@@ -43,10 +36,21 @@ interface WorkflowInstanceInterface
     function getStatus();
 
     /**
-     * Start workflow execution
+     * Get the workflow execution id
+     */
+    function getWorkflowExecutionId();
+    
+    /**
+     * Set the workflow configuration name
      *
      * @abstract
-     * @return bool
+     * @param  $name
+     * @return void
      */
-    function start();
+    function setConfigurationName($name);
+
+    function setWorkflowRuntimeDefinition($workflowRuntimeDefinition);
+
+
+    function setWorkflowExecutionId($worfklowExecutionId);
 }

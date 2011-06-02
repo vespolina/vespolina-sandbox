@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Vespolina\WorkflowBundle\Model\Workflow;
 use Vespolina\WorkflowBundle\Model\WorkflowConfiguration;
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
-use Vespolina\WorkflowBundle\Model\WorkflowInstanceInterface;
+use Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface;
 
 use Vespolina\WorkflowBundle\Service\WorkflowServiceInterface;
 
@@ -41,11 +41,12 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     /**
      * @inheritdoc
      */
-    function create(WorkflowConfigurationInterface $workflowConfiguration)
+    function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration)
     {
         $className = $workflowConfiguration->getBaseClass();
         $builderClass = $workflowConfiguration->getBuilderClass();
-        $workflowInstance = null;
+
+        $workflowRuntimeDefinition = null;
         
         if (!array_key_exists($builderClass, $this->workflowBuilders)) {
             $this->workflowBuilders[$builderClass] = $this->loadWorkflowBuilder($workflowConfiguration);
@@ -56,19 +57,19 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         //Build the workflow instance
         if ($workflowBuilder) {
 
-            //Ecz runtime instance
-            $workflowRuntimeInstance = $workflowBuilder->build($workflowConfiguration);
+            //Build Ecz workflow runtime definition
+            $workflowRuntimeDefinition = $workflowBuilder->build($workflowConfiguration);
 
-            //...needs to be encapsulated in a class implementing WorkflowInstanceInterface
-            $workflowInstance = new $className($workflowConfiguration->getName());
-            $workflowInstance->setRuntimeInstance($workflowRuntimeInstance);
+            //...needs to be encapsulated in a class implementing WorkflowExecutionInterface
+            $workflowExecution = new $className($workflowConfiguration->getName());
+            $workflowExecution->setWorkflowRuntimeDefinition($workflowRuntimeDefinition);
 
         } else {
             
             return false;
         }
 
-        return $workflowInstance;
+        return $workflowExecution;
     }
 
     /**
@@ -87,22 +88,64 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     {
         $this->dbalConnection = $dbalConnection;
     }
-    
+
     /**
      * @inheritdoc
      */
-    public function save(WorkflowInstanceInterface $workflowInstance){
+    public function execute(WorkflowExecutionInterface $workflowExecution)
+    {
+
+        $workflowExecutionId = $workflowExecution->getWorkflowExecutionId();
+        $workflowConfiguration = $this->getWorkflowConfiguration($workflowExecution->getConfigurationName());
+        $workflowManager = $this->getWorkflowManager();
+
+        //Get latest workflow id which will be used for creating the DoctrineExtensions/Workflow/DoctrineExecution instance
+        $workflowId = $this->getLatestWorkflowIdforConfiguration($workflowConfiguration);
+
+        if(!$workflowId)
+        {
+
+            //TODO exception
+            return false;
+        }
+
+        if($workflowId > 0)
+        {
+
+            if(!$execution = $workflowManager->createExecutionByWorkflowId($workflowId))
+            {
+                //TODO Exception
+            }
+
+
+        }else{
+
+            $workflowRuntimeDefinition = $workflowExecution->getWorkflowRuntimeDefinition();
+            $execution = $workflowManager->createExecution($workflowRuntimeDefinition);
+        }
+
+        if($execution)
+        {
+
+            $execution->start();
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function save(WorkflowExecutionInterface $workflowExecution){
 
     }
 
-
     /**
      * @inheritdoc
      */
-    public function start(WorkflowInstanceInterface $workflowInstance)
-    {
-      
-        return $workflowInstance->start();
+    public function saveConfiguration(WorkflowConfigurationInterface $workflowConfigurationName){
+
+
+        $workflowManager = $this->getWorkflowManager();
+
 
     }
 
@@ -119,6 +162,14 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         return new $builderClassName($builderOptions);
     }
 
+    /**
+     * Get the latest workflow id version which will be used to create a new workflow execution
+     */
+    protected function getLatestWorkflowIdforConfiguration(WorkflowConfigurationInterface $workflowConfiguration)
+    {
+        $sql = 'SELECT workflow_id from wf_workflow WHERE workflow_name = ? AND workflow_outdated=0';
+        return $this->dbalConnection->fetchColumn($sql, array($workflowConfiguration->getName()), 0);
+    }
     
     /**
      * Get the workflow db manager
@@ -131,5 +182,6 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
             $this->workflowManager = new WorkflowManager($this->dbalConnection, new WorkflowOptions($prefix = 'wf_'));
 
         }
+        return $this->workflowManager;
     }
 }

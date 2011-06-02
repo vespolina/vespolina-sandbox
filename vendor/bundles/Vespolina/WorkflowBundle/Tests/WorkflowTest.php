@@ -39,7 +39,7 @@ class WorkflowTest extends WebTestCase
         $workflowService->setDbalConnection($this->getKernel()->getContainer()->get('database_connection'));
 
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('order_to_cash_b2c');
-        $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowInstance');
+        $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowExecution');
         $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Model\WorkflowBuilder\XmlWorkflowBuilder');
 
         //Point builder to folder Resources/config/tests
@@ -47,12 +47,18 @@ class WorkflowTest extends WebTestCase
                                                                     'config' . DIRECTORY_SEPARATOR .
                                                                     'tests' . DIRECTORY_SEPARATOR));
 
-        //Create the workflow
-        $workflowInstance = $workflowService->create($workflowConfiguration);
+        //Save the workflow configuration to the database
+        $workflowService->saveConfiguration($workflowConfiguration);
 
-        $this->assertEquals($workflowInstance->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
 
-        $isStartSuccess = $workflowService->start($workflowInstance);
+
+        //Create a workflow execution instance for the template workflow
+        $workflowExecution = $workflowService->createWorkflowExecution($workflowConfiguration);
+
+        //Verify that the workflow container holds the name of the workflow definition
+        $this->assertEquals($workflowExecution->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
+
+        $isStartSuccess = $workflowService->execute($workflowExecution);
 
         //$this->assertTrue($isStartSuccess);
 

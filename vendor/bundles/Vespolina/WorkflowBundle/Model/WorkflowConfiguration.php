@@ -17,12 +17,14 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
     protected $builderClass;
     protected $builderOptions;
     protected $name;
+    protected $version;
 
     /**
      * Constructor
      */
     public function __construct($name)
     {
+
         $this->name = $name;
     }
 
@@ -31,6 +33,7 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBaseClass()
     {
+
         return $this->baseClass;
     }
 
@@ -39,6 +42,7 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBuilderClass()
     {
+
         return $this->builderClass;
     }
 
@@ -47,6 +51,7 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getBuilderOptions()
     {
+
         return $this->builderOptions;
     }
 
@@ -55,9 +60,18 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
      */
     public function getName()
     {
+
         return $this->name;
     }
 
+    /**
+     * Get the workflow version
+     */
+    public function getVersion()
+    {
+
+        return $this->version;
+    }
     /**
      * @inheritdoc
      */
@@ -88,5 +102,13 @@ class WorkflowConfiguration implements WorkflowConfigurationInterface
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
     }
 }
