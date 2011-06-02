@@ -16,15 +16,6 @@ use Vespolina\MonetaryBundle\Model\MonetaryInterface;
 interface MonetaryManagerInterface
 {
     /**
-     * construct
-     *
-     * @param string $monetaryClass
-     * @param Vespolina\MonetaryBundle\Service\CurrencyManagerInterface $currencyManager
-     * @param mixed $baseCurrency
-     */
-    public function __construct($monetaryClass, CurrencyManagerInterface $currencyManager, $baseCurrency);
-
-    /**
      * Return a monetary instance of the service base currency with the sum of two addends.
      * The optional third parameter can be used to set the currency of the instance.
      *

@@ -21,6 +21,13 @@ class MonetaryManager implements MonetaryManagerInterface
     protected $currencyManager;
     protected $monetaryClass;
     
+    /**
+     * construct
+     *
+     * @param string $monetaryClass
+     * @param Vespolina\MonetaryBundle\Service\CurrencyManagerInterface $currencyManager
+     * @param mixed $baseCurrency
+     */
     public function __construct($monetaryClass, CurrencyManagerInterface $currencyManager, $baseCurrency)
     {
         $this->monetaryClass = $monetaryClass;
