@@ -17,7 +17,7 @@ interface WorkflowActivityInterface{
      * Complete this workflow activity.  This is typically invoked after the activity was executed succesful
      *
      */
-    public function complete();
+    public function completeActivity();
 
     /**
      * Execute this workflow activity
@@ -25,7 +25,7 @@ interface WorkflowActivityInterface{
      * @abstract
      * @return void
      */
-    public function execute();
+    public function executeActivity();
 
     /**
      * Get the local activity container
@@ -34,6 +34,11 @@ interface WorkflowActivityInterface{
      * @return void
      */
     public function getContainer();
+
+    /**
+     * Returns whether or not the execution for this activity has been ended
+     */
+    function getIsExecutionFinished();
 
     /**
      * Get name of the current activity (eg. vespolina.event.paypal_payment
@@ -57,6 +62,12 @@ interface WorkflowActivityInterface{
      * @abstract
      * @return void
      */
-    public function init();
-    
+    public function initActivity();
+
+
+    /**
+     * Set whether or not the execution for this activity has been ended
+     */
+    function setIsExecutionFinished($isExecutionFinished);
+
 }

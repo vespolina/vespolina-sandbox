@@ -18,6 +18,7 @@ class WorkflowActivity implements WorkflowActivityInterface{
 
     protected $container;
     protected $dispatcher;
+    protected $isExecutionFinished;
     protected $name;
     protected $workflow;
 
@@ -27,27 +28,57 @@ class WorkflowActivity implements WorkflowActivityInterface{
         $this->container = new WorkflowContainer();
         $this->dispatcher = $dispatcher;
         $this->name = $name;
+        $this->isExecutionFinished = false;
         $this->workflow = $workflow;
     }
 
     /**
      * @inheritdoc
      */
-    public function complete()
+    public function completeActivity()
     {
 
         $event = new WorkflowActivityEvent($this);
         $this->dispatcher($this, $this->name . '.completed', $event);
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function initActivity()
+    {
+
+        $event = new WorkflowActivityEvent($this);
+        $this->dispatcher($this, $this->name . '.init', $event);
+    }
     
     /**
      * @inheritdoc
      */
-    public function execute()
+    public function executeActivity()
     {
 
+        //Trigger initialization event listeners
+        $this->initActivity();
+
+        //Trigger execution event listeners
         $event = new WorkflowActivityEvent($this);
         $this->dispatcher($this, $this->name . '.execute', $event);
+
+        //Trigger completion event listeners
+
+        $isExecutionFinished = $this->getIsExecutionFinished();
+
+
+        if( $isExecutionFinished )
+        {
+
+            //Trigger completion event listeners
+            $this->completeActivity();
+        }
+
+         return $isExecutionFinished;
+
     }
 
     /**
@@ -56,6 +87,14 @@ class WorkflowActivity implements WorkflowActivityInterface{
     public function getContainer()
     {
         return $this->container;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getIsExecutionFinished()
+    {
+        return $this->isExecutionFinished;
     }
 
     /**
@@ -76,13 +115,14 @@ class WorkflowActivity implements WorkflowActivityInterface{
         return $this->workflow;
     }
 
+
     /**
      * @inheritdoc
      */
-    public function init()
+    public function setIsExecutionFinished($executionIsFinished)
     {
-
-        $event = new WorkflowActivityEvent($this);
-        $this->dispatcher($this, $this->name . '.init', $event);
+        return $this->isExecutionFinished = $executionIsFinished;
     }
+
+
 }

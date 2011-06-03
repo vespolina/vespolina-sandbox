@@ -21,6 +21,8 @@ class WorkflowExecution implements WorkflowExecutionInterface
     protected $status;
     protected $workflowExecutionId;
     protected $workflowRuntimeDefinition;
+    protected $workflowRuntimeExecution;
+
     
     /**
      * Constructor
@@ -59,13 +61,19 @@ class WorkflowExecution implements WorkflowExecutionInterface
     }
 
     /**
-     * Retrieve the runtime instance
-     *
-     * @return
+     * @inheritdoc
      */
     public function getWorkflowRuntimeDefinition()
     {
         return $this->workflowRuntimeDefinition;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getWorkflowRuntimeExecution()
+    {
+        return $this->workflowRuntimeExecution;
     }
 
     /**
@@ -79,6 +87,14 @@ class WorkflowExecution implements WorkflowExecutionInterface
     /**
      * @inheritdoc
      */
+    public function setWorkflowRuntimeExecution($workflowRuntimeExecution)
+    {
+        $this->workflowRuntimeExecution = $workflowRuntimeExecution;
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function getWorkflowExecutionId()
     {
         return $this->workflowExecutionId;
@@ -86,25 +102,12 @@ class WorkflowExecution implements WorkflowExecutionInterface
 
 
     /**
-     * @inheritdoc
-     */
-    public function setWorkflowExecutionId($workflowExecutionId)
+        * @inheritdoc
+        */
+       public function getIsExecutionFinished()
     {
-        $this->workflowExecutionId = $workflowExecutionId;
-    }
+        return $this->isExecutionFinished;
 
-    /**
-     * @inheritdoc
-     */
-    public function start()
-    {
-        if (!$this->runtimeInstance) {
-            return false;
-        }
-
-        //$ezcInstance->start();
-
-        return true;
     }
 
     /**
@@ -115,6 +118,7 @@ class WorkflowExecution implements WorkflowExecutionInterface
         return $this->status;
     }
 
+
     /**
      * @inheritdoc
      */
@@ -122,4 +126,14 @@ class WorkflowExecution implements WorkflowExecutionInterface
     {
         $this->name = $name;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function setWorkflowExecutionId($workflowExecutionId)
+    {
+        $this->workflowExecutionId = $workflowExecutionId;
+    }
+
+
 }

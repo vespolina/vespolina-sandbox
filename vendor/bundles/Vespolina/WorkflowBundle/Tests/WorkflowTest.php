@@ -55,10 +55,14 @@ class WorkflowTest extends WebTestCase
         //Create a workflow execution instance for the template workflow
         $workflowExecution = $workflowService->createWorkflowExecution($workflowConfiguration);
 
+
+
         //Verify that the workflow container holds the name of the workflow definition
         $this->assertEquals($workflowExecution->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
 
-        $isStartSuccess = $workflowService->execute($workflowExecution);
+
+
+        $workflowService->execute($workflowExecution);
 
         //$this->assertTrue($isStartSuccess);
 

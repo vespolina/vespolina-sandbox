@@ -45,6 +45,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     {
         $className = $workflowConfiguration->getBaseClass();
         $builderClass = $workflowConfiguration->getBuilderClass();
+        $workflowManager = $this->getWorkflowManager();
 
         $workflowRuntimeDefinition = null;
         
@@ -63,6 +64,17 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
             //...needs to be encapsulated in a class implementing WorkflowExecutionInterface
             $workflowExecution = new $className($workflowConfiguration->getName());
             $workflowExecution->setWorkflowRuntimeDefinition($workflowRuntimeDefinition);
+
+            //Now we still need to create the Doctrine WF runtime execution
+
+            //Get latest workflow id which will be used for creating the DoctrineExtensions/Workflow/DoctrineExecution instance
+            $workflowId = $this->getLatestWorkflowIdforConfiguration($workflowConfiguration);
+
+            if($runtimeExecution = $workflowManager->createExecutionByWorkflowId($workflowId))
+            {
+                $workflowExecution->setWorkflowRuntimeExecution($runtimeExecution);
+            }
+
 
         } else {
             
@@ -95,46 +107,38 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     public function execute(WorkflowExecutionInterface $workflowExecution)
     {
 
-        $workflowExecutionId = $workflowExecution->getWorkflowExecutionId();
-        $workflowConfiguration = $this->getWorkflowConfiguration($workflowExecution->getConfigurationName());
-        $workflowManager = $this->getWorkflowManager();
+        $runtimeExecution = $workflowExecution->getWorkflowRuntimeExecution();
 
-        //Get latest workflow id which will be used for creating the DoctrineExtensions/Workflow/DoctrineExecution instance
-        $workflowId = $this->getLatestWorkflowIdforConfiguration($workflowConfiguration);
-
-        if(!$workflowId)
+        if($runtimeExecution)
         {
 
-            //TODO exception
-            return false;
-        }
-
-        if($workflowId > 0)
-        {
-
-            if(!$execution = $workflowManager->createExecutionByWorkflowId($workflowId))
+            if($runtimeExecution->isSuspended())
             {
-                //TODO Exception
+
+                //$workflowContainerData = $workflowExecution->getContainer()->getContainerData();
+                //$runtimeExecution->resume($workflowContainerData);
+
+
+            }else{
+
+                $runtimeExecution->start();
             }
 
+            
 
-        }else{
 
-            $workflowRuntimeDefinition = $workflowExecution->getWorkflowRuntimeDefinition();
-            $execution = $workflowManager->createExecution($workflowRuntimeDefinition);
-        }
 
-        if($execution)
-        {
 
-            $execution->start();
         }
     }
+
+
 
     /**
      * @inheritdoc
      */
-    public function save(WorkflowExecutionInterface $workflowExecution){
+    public function save(WorkflowExecutionInterface $workflowExecution)
+    {
 
     }
 

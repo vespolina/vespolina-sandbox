@@ -26,9 +26,11 @@ interface WorkflowExecutionInterface
     function getContainer();
 
     function getWorkflowRuntimeDefinition();
+    
+    function getWorkflowRuntimeExecution();
 
     /**
-     * Get the current status of the workflow
+     * Get the current status of the overall workflow execution
      *
      * @abstract
      * @return void
@@ -39,7 +41,8 @@ interface WorkflowExecutionInterface
      * Get the workflow execution id
      */
     function getWorkflowExecutionId();
-    
+
+
     /**
      * Set the workflow configuration name
      *
@@ -49,8 +52,31 @@ interface WorkflowExecutionInterface
      */
     function setConfigurationName($name);
 
+
+    /**
+     * Set the workflow runtime definition
+     *
+     * @abstract
+     * @param  $workflowRuntimeDefinition
+     * @return void
+     */
     function setWorkflowRuntimeDefinition($workflowRuntimeDefinition);
 
+    /**
+     * Set the workflow runtime execution of the definition
+     *
+     * @abstract
+     * @param  $workflowRuntimeDefinition
+     * @return void
+     */
+    function setWorkflowRuntimeExecution($workflowRuntimeExecution);
 
+    /**
+     * Set the workflow execution id
+     *
+     * @abstract
+     * @param  $worfklowExecutionId
+     * @return void
+     */
     function setWorkflowExecutionId($worfklowExecutionId);
 }
