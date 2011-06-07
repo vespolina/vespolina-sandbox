@@ -9,7 +9,9 @@
 
 namespace Vespolina\WorkflowBundle\Model;
 
-
+/**
+ * The workflow activity represents an activity in the workflow process
+ */
 interface WorkflowActivityInterface{
 
 
@@ -41,7 +43,7 @@ interface WorkflowActivityInterface{
     function getIsExecutionFinished();
 
     /**
-     * Get name of the current activity (eg. vespolina.event.paypal_payment
+     * Get name of the current activity (eg. vespolina.event.paypal_payment)
      *
      * @abstract
      * @return void

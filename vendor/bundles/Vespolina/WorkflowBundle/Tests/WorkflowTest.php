@@ -9,6 +9,8 @@ namespace Vespolina\WorkflowBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Vespolina\WorkflowBundle\Model\Workflow;
+use Vespolina\WorkflowBundle\Model\WorkflowAgent;
+use Vespolina\WorkflowBundle\Model\WorkflowTask;
 
 class WorkflowTest extends WebTestCase
 {
@@ -28,11 +30,30 @@ class WorkflowTest extends WebTestCase
         return $this->kernel;
     }
 
+    public function testCreateAgentAndTask()
+    {
+
+        $workflowAgentJamesBond = new WorkflowAgent(true);
+        $workflowAgentJamesBond->setName('James Bond 007');
+
+        $workflowTask = new WorkflowTask();
+        $workflowTask->setName('kill Goldfinger');
+        $workflowTask->assignTo($workflowAgentJamesBond);
+
+        $this->assertEquals('James Bond 007',
+                            $workflowTask->getAssignedTo()->getName());
+
+        $this->assertTrue($workflowTask->isAssigned());
+        $this->assertTrue($workflowTask->getAssignedTo()->isHuman());
+
+    }
+
     /**
      * @covers Vespolina\WorkflowBundle\Service\WorkflowService::create
      */
     public function testWorkflowCreate()
     {
+        
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
 
         //The workflow service needs a DBAL connection to the database (Doctrine Extensions > Doctrine Workflow )
@@ -92,4 +113,5 @@ class WorkflowTest extends WebTestCase
         $this->assertEquals(($orderDocumentItem2->getOrderedQuantity()), 5);
          */
     }
+
 }
