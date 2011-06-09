@@ -13,13 +13,16 @@ use DoctrineExtensions\Workflow\SchemaBuilder;
 use DoctrineExtensions\Workflow\WorkflowManager;
 use DoctrineExtensions\Workflow\WorkflowOptions;
 use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+use Vespolina\WorkflowBundle\Model\EcWorkflow\CustomWorkflowFactory;
 use Vespolina\WorkflowBundle\Model\Workflow;
 use Vespolina\WorkflowBundle\Model\WorkflowConfiguration;
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 use Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface;
 
-use Vespolina\WorkflowBundle\Service\WorkflowServiceInterface;
+
 
 class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 {
@@ -27,7 +30,8 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     protected $workflowBuilders;
     protected $workflowConfigurations;
     protected $workflowManager;
-
+    protected $workflowFactory;
+    
     /**
      * Constructor
      */
@@ -44,28 +48,21 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration)
     {
         $className = $workflowConfiguration->getBaseClass();
-        $builderClass = $workflowConfiguration->getBuilderClass();
         $workflowManager = $this->getWorkflowManager();
 
         $workflowRuntimeDefinition = null;
-        
-        if (!array_key_exists($builderClass, $this->workflowBuilders)) {
-            $this->workflowBuilders[$builderClass] = $this->loadWorkflowBuilder($workflowConfiguration);
-        }
 
-        $workflowBuilder = $this->workflowBuilders[$builderClass];
+        $workflowBuilder = $this->getWorkflowBuilder($workflowConfiguration);
 
         //Build the workflow instance
         if ($workflowBuilder) {
 
-            //Build Ecz workflow runtime definition
-            $workflowRuntimeDefinition = $workflowBuilder->build($workflowConfiguration);
+            //Build the workflow runtime definition
+            $workflowRuntimeDefinition = $workflowBuilder->build($workflowConfiguration, $this->workflowFactory);
 
-            //...needs to be encapsulated in a class implementing WorkflowExecutionInterface
+            //The runtime definition instance is encapsulated in a class implementing the WorkflowExecutionInterface interface
             $workflowExecution = new $className($workflowConfiguration->getName());
             $workflowExecution->setWorkflowRuntimeDefinition($workflowRuntimeDefinition);
-
-            //Now we still need to create the Doctrine WF runtime execution
 
             //Get latest workflow id which will be used for creating the DoctrineExtensions/Workflow/DoctrineExecution instance
             $workflowId = $this->getLatestWorkflowIdforConfiguration($workflowConfiguration);
@@ -73,6 +70,9 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
             if($runtimeExecution = $workflowManager->createExecutionByWorkflowId($workflowId))
             {
                 $workflowExecution->setWorkflowRuntimeExecution($runtimeExecution);
+
+                $runtimeExecution->setVariable('WorkflowContainer', $workflowExecution->getWorkflowContainer());
+                
             }
 
 
@@ -84,12 +84,14 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         return $workflowExecution;
     }
 
+    
     /**
      * @inheritdoc
      */
     public function getWorkflowConfiguration($name)
     {
         if (!array_key_exists($name, $this->workflowConfigurations)) {
+            
             $this->workflowConfigurations[$name] = new WorkflowConfiguration($name);
         }
 
@@ -145,11 +147,31 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     /**
      * @inheritdoc
      */
-    public function saveConfiguration(WorkflowConfigurationInterface $workflowConfigurationName){
+    public function saveConfiguration(WorkflowConfigurationInterface $workflowConfiguration){
 
 
         $workflowManager = $this->getWorkflowManager();
+        $workflowBuilder = $this->getWorkflowBuilder($workflowConfiguration);
+ 
+        //First we need to build the runtime definition and subsequently we save it to the database
+        $workflowRuntimeDefinition = $workflowBuilder->build($workflowConfiguration, $this->workflowFactory);
 
+        $workflowManager->save($workflowRuntimeDefinition);
+
+    }
+
+    protected function getWorkflowBuilder(WorkflowConfigurationInterface $workflowConfiguration)
+    {
+        $builderClass = $workflowConfiguration->getBuilderClass();
+
+        if (!array_key_exists($builderClass, $this->workflowBuilders))
+        {
+            $this->workflowBuilders[$builderClass] = $this->loadWorkflowBuilder($workflowConfiguration);
+
+
+        }
+
+        return $this->workflowBuilders[$builderClass];
 
     }
 
@@ -159,7 +181,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     protected function loadWorkflowBuilder(WorkflowConfigurationInterface $workflowConfiguration)
     {
         
-        //Load the builder class, for now we only support the build of an ecz workflow
+        //Load the builder class
         $builderClassName = $workflowConfiguration->getBuilderClass();
         $builderOptions = $workflowConfiguration->getBuilderOptions();
 
@@ -174,18 +196,37 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         $sql = 'SELECT workflow_id from wf_workflow WHERE workflow_name = ? AND workflow_outdated=0';
         return $this->dbalConnection->fetchColumn($sql, array($workflowConfiguration->getName()), 0);
     }
-    
+
     /**
-     * Get the workflow db manager
+     * Get the workflow factory
      *
      */
-    protected function getWorkflowManager(){
+    protected function getWorkflowFactory()
+    {
+        if (!$this->workflowFactory)
+        {
 
-        if(!$this->workflowManager){
+            $this->workflowFactory = new CustomWorkflowFactory();
+            $this->workflowFactory->setEventDispatcher($this->container->get('event_dispatcher'));
+        }
+    }
+    /**
+     * Get the workflow manager
+     *
+     */
+    protected function getWorkflowManager()
+    {
 
-            $this->workflowManager = new WorkflowManager($this->dbalConnection, new WorkflowOptions($prefix = 'wf_'));
+        if (!$this->workflowManager)
+        {
+
+            $this->workflowManager = new WorkflowManager($this->dbalConnection,
+                                            new WorkflowOptions($prefix = 'wf_',
+                                                                'ezWorkflow',
+                                                                $this->getWorkflowFactory()));
 
         }
+
         return $this->workflowManager;
     }
 }

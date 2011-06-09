@@ -26,7 +26,7 @@ class XmlWorkflowBuilder implements WorkflowBuilderInterface
     /**
      * @inheritdoc
      */
-    public function build(WorkflowConfigurationInterface $workflowConfiguration)
+    public function build(WorkflowConfigurationInterface $workflowConfiguration, $workflowFactory)
     {
         $xmlSource = $this->builderOptions['source'];
 

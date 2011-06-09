@@ -55,7 +55,7 @@ class WorkflowExecution implements WorkflowExecutionInterface
     /**
      * @inheritdoc
      */
-    public function getContainer()
+    public function getWorkflowContainer()
     {
         return $this->container;
     }

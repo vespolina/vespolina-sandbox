@@ -23,7 +23,7 @@ interface WorkflowExecutionInterface
      * Return the workflow container
      * @return Vespolina\WorkflowBundle\Model\WorkflowContainerInterface
      */
-    function getContainer();
+    function getWorkflowContainer();
 
     function getWorkflowRuntimeDefinition();
     

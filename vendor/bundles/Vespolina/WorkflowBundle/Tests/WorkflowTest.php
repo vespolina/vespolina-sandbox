@@ -59,59 +59,26 @@ class WorkflowTest extends WebTestCase
         //The workflow service needs a DBAL connection to the database (Doctrine Extensions > Doctrine Workflow )
         $workflowService->setDbalConnection($this->getKernel()->getContainer()->get('database_connection'));
 
-        $workflowConfiguration = $workflowService->getWorkflowConfiguration('order_to_cash_b2c');
+        $workflowConfiguration = $workflowService->getWorkflowConfiguration('test_1');
         $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowExecution');
-        $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Model\WorkflowBuilder\XmlWorkflowBuilder');
-
-        //Point builder to folder Resources/config/tests
-        $workflowConfiguration->setBuilderOptions(array('source' => 'Resources' . DIRECTORY_SEPARATOR .
-                                                                    'config' . DIRECTORY_SEPARATOR .
-                                                                    'tests' . DIRECTORY_SEPARATOR));
+        $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Tests\Mockup\PHPTest1WorkflowBuilder');
 
         //Save the workflow configuration to the database
         $workflowService->saveConfiguration($workflowConfiguration);
 
-
-
+      
         //Create a workflow execution instance for the template workflow
         $workflowExecution = $workflowService->createWorkflowExecution($workflowConfiguration);
 
 
 
         //Verify that the workflow container holds the name of the workflow definition
-        $this->assertEquals($workflowExecution->getContainer()->get('workflow.name'), 'order_to_cash_b2c');
+        $this->assertEquals($workflowExecution->getWorkflowContainer()->get('workflow.name'), 'test_1');
 
 
 
         $workflowService->execute($workflowExecution);
 
-        //$this->assertTrue($isStartSuccess);
-
-
-        /**$documentConfiguration->setName('sales_order_third_party');
-        $documentConfiguration->setBaseClass('Vespolina\OrderBundle\Model\OrderDocument');
-        $documentConfiguration->setItemBaseClass('Vespolina\OrderBundle\Model\OrderDocumentItem');
-
-
-        $orderDocument = $documentService->create($documentConfiguration);
-        $orderDocumentItem1 = $documentService->createItem($orderDocument, $documentConfiguration);
-
-        $productA = new Product();
-        $productB = new Product();
-
-        $orderDocumentItem1->setProduct($productA);
-        $orderDocumentItem1->setOrderedQuantity(10);
-
-        $this->assertEquals(count($orderDocument->getItems()), 1);
-        $this->assertEquals(($orderDocumentItem1->getOrderedQuantity()), 10);
-
-        $orderDocumentItem2 = $documentService->createItem($orderDocument, $documentConfiguration);
-        $orderDocumentItem2->setProduct($productB);
-        $orderDocumentItem2->setOrderedQuantity(5);
-
-        $this->assertEquals(count($orderDocument->getItems()), 2);
-        $this->assertEquals(($orderDocumentItem2->getOrderedQuantity()), 5);
-         */
     }
 
 }

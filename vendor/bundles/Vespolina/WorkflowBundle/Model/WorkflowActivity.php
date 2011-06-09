@@ -20,16 +20,16 @@ class WorkflowActivity implements WorkflowActivityInterface{
     protected $dispatcher;
     protected $isExecutionFinished;
     protected $name;
-    protected $workflow;
+    protected $workflowExecution;
 
-    public function __construct($name, $workflow, $dispatcher)
+    public function __construct($name, $workflowExecution, $eventDispatcher)
     {
 
         $this->container = new WorkflowContainer();
-        $this->dispatcher = $dispatcher;
-        $this->name = $name;
+        $this->eventDispatcher = $eventDispatcher;
+        $this->name = 'vespolina.workflow.activity.' . $this->getName();
         $this->isExecutionFinished = false;
-        $this->workflow = $workflow;
+        $this->workflowExecution = $workflowExecution;
     }
 
     /**
@@ -39,7 +39,7 @@ class WorkflowActivity implements WorkflowActivityInterface{
     {
 
         $event = new WorkflowActivityEvent($this);
-        $this->dispatcher($this, $this->name . '.completed', $event);
+        $this->eventDispatcher->dispatch($this->name . '.completed', $event);
     }
 
     /**
@@ -49,7 +49,7 @@ class WorkflowActivity implements WorkflowActivityInterface{
     {
 
         $event = new WorkflowActivityEvent($this);
-        $this->dispatcher($this, $this->name . '.init', $event);
+        $this->eventDispatcher->dispatch($this->name . '.init', $event);
     }
     
     /**
@@ -63,7 +63,8 @@ class WorkflowActivity implements WorkflowActivityInterface{
 
         //Trigger execution event listeners
         $event = new WorkflowActivityEvent($this);
-        $this->dispatcher($this, $this->name . '.execute', $event);
+
+        $this->eventDispatcher->dispatch($this->name . '.execute', $event);
 
         //Trigger completion event listeners
 

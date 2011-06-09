@@ -16,5 +16,5 @@ interface WorkflowBuilderInterface
      * Build the runtime workflow
      *
      */
-    function build(WorkflowConfigurationInterface $workflowConfiguration);
+    function build(WorkflowConfigurationInterface $workflowConfiguration, $workflowFactory);
 }
