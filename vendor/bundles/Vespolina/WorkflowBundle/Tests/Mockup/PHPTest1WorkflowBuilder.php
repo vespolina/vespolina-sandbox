@@ -43,6 +43,7 @@ class PHPTest1WorkflowBuilder implements WorkflowBuilderInterface
         $activity1 = $workflowFactory->createWorkflowActivityInvokerNode(
                             'Vespolina\WorkflowBundle\Tests\Mockup\AddOneToTotalWorkflowActivity',
                             'activity_1');
+        
         $activity2 = $workflowFactory->createWorkflowActivityInvokerNode(
                             'Vespolina\WorkflowBundle\Tests\Mockup\AddOneToTotalWorkflowActivity',
                             'activity_2');

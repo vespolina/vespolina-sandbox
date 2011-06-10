@@ -36,6 +36,10 @@ interface WorkflowServiceInterface
      */
     public function getWorkflowConfiguration($name);
 
+
+    public function getWorkflowExecutionById();
+    public function getWorkflowExecutionByRuntimeInstance($runtimeInstance);
+
     /**
      * Save the state of the given workflow instance
      *
@@ -54,5 +58,6 @@ interface WorkflowServiceInterface
      * @return void
      */
     public function saveConfiguration(WorkflowConfigurationInterface $workflowConfiguration);
+
 
 }

@@ -51,9 +51,20 @@ class WorkflowTest extends WebTestCase
     /**
      * @covers Vespolina\WorkflowBundle\Service\WorkflowService::create
      */
-    public function testWorkflowCreate()
+    public function test1WorkflowExecution()
     {
-        
+        /**
+         *
+         * Test scenario "test 1", workflow implementation can be found in Mockup\PHPTest1WorkflowBuilder.php
+         *
+         * In this test we try to have a very simple flow executed in memory (thus without db persistence)
+         *
+         * Start => Activity1 => Activity2 => End
+         *
+         * Activity 1 sets the workflow container value "total" to 1
+         * Activity 2 sets the workflow container value "total" to 2
+         */
+
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
 
         //The workflow service needs a DBAL connection to the database (Doctrine Extensions > Doctrine Workflow )
@@ -66,7 +77,6 @@ class WorkflowTest extends WebTestCase
         //Save the workflow configuration to the database
         $workflowService->saveConfiguration($workflowConfiguration);
 
-      
         //Create a workflow execution instance for the template workflow
         $workflowExecution = $workflowService->createWorkflowExecution($workflowConfiguration);
 
@@ -78,6 +88,8 @@ class WorkflowTest extends WebTestCase
 
 
         $workflowService->execute($workflowExecution);
+
+        $this->assertEquals($workflowExecution->getWorkflowContainer()->get('total'), 2);
 
     }
 

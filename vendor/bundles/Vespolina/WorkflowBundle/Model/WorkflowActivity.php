@@ -24,10 +24,10 @@ class WorkflowActivity implements WorkflowActivityInterface{
 
     public function __construct($name, $workflowExecution, $eventDispatcher)
     {
-
-        $this->container = new WorkflowContainer();
+       
+        $this->container = $workflowExecution->getWorkflowContainer();
         $this->eventDispatcher = $eventDispatcher;
-        $this->name = 'vespolina.workflow.activity.' . $this->getName();
+        $this->name = $name;
         $this->isExecutionFinished = false;
         $this->workflowExecution = $workflowExecution;
     }
@@ -35,51 +35,50 @@ class WorkflowActivity implements WorkflowActivityInterface{
     /**
      * @inheritdoc
      */
-    public function completeActivity()
+    public function complete()
     {
 
-        $event = new WorkflowActivityEvent($this);
-        $this->eventDispatcher->dispatch($this->name . '.completed', $event);
+        $this->fireEvent('completed');
     }
 
     /**
      * @inheritdoc
      */
-    public function initActivity()
+    public function init()
     {
 
-        $event = new WorkflowActivityEvent($this);
-        $this->eventDispatcher->dispatch($this->name . '.init', $event);
+        $this->fireEvent('init');
     }
     
     /**
      * @inheritdoc
      */
-    public function executeActivity()
+    public function activate()
     {
+        $this->init();
 
-        //Trigger initialization event listeners
-        $this->initActivity();
-
-        //Trigger execution event listeners
-        $event = new WorkflowActivityEvent($this);
-
-        $this->eventDispatcher->dispatch($this->name . '.execute', $event);
-
-        //Trigger completion event listeners
+        $this->execute();
 
         $isExecutionFinished = $this->getIsExecutionFinished();
-
+        $isExecutionFinished = true;
 
         if( $isExecutionFinished )
         {
 
             //Trigger completion event listeners
-            $this->completeActivity();
+            $this->complete();
         }
 
          return $isExecutionFinished;
 
+    }
+
+   /**
+     * @inheritdoc
+     */
+    public function execute()
+    {
+        $this->fireEvent('execute');
     }
 
     /**
@@ -124,6 +123,18 @@ class WorkflowActivity implements WorkflowActivityInterface{
     {
         return $this->isExecutionFinished = $executionIsFinished;
     }
+
+    
+    protected function fireEvent($name)
+    {
+        $event = new WorkflowActivityEvent($this);
+
+        if( $this->eventDispatcher )
+        {
+
+          $this->eventDispatcher->dispatch('vespolina.workflow.activity.' . $name, $event);
+        }
+      }
 
 
 }

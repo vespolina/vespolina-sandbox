@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-use Vespolina\WorkflowBundle\Model\EcWorkflow\CustomWorkflowFactory;
+use Vespolina\WorkflowBundle\Model\EczWorkflow\CustomWorkflowFactory;
 use Vespolina\WorkflowBundle\Model\Workflow;
 use Vespolina\WorkflowBundle\Model\WorkflowConfiguration;
 use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
@@ -27,6 +27,7 @@ use Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface;
 class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 {
     protected $dbalConnection;
+    protected $runtimeInstanceToWorkflowExecutionMap;
     protected $workflowBuilders;
     protected $workflowConfigurations;
     protected $workflowManager;
@@ -37,6 +38,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
      */
     public function __construct()
     {
+        $this->runtimeInstanceToExecutionMap = array();
         $this->workflowBuilders = array();
         $this->workflowConfigurations = array();
         $this->workflowManager = null;
@@ -72,7 +74,9 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
                 $workflowExecution->setWorkflowRuntimeExecution($runtimeExecution);
 
                 $runtimeExecution->setVariable('WorkflowContainer', $workflowExecution->getWorkflowContainer());
-                
+
+                //Store the association between runtime and execution instance, we need it later on
+                $this->runtimeInstanceToWorkflowExecutionMap[spl_object_hash($runtimeExecution)] = $workflowExecution;
             }
 
 
@@ -81,7 +85,15 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
             return false;
         }
 
+
+
         return $workflowExecution;
+    }
+
+    public function getWorkflowExecutionByRuntimeInstance($runtimeInstance)
+    {
+        return $this->runtimeInstanceToWorkflowExecutionMap[spl_object_hash($runtimeInstance)];
+
     }
 
     
@@ -197,6 +209,11 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         return $this->dbalConnection->fetchColumn($sql, array($workflowConfiguration->getName()), 0);
     }
 
+    public function getWorkflowExecutionById()
+    {
+
+    }
+
     /**
      * Get the workflow factory
      *
@@ -207,7 +224,9 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         {
 
             $this->workflowFactory = new CustomWorkflowFactory();
-            $this->workflowFactory->setEventDispatcher($this->container->get('event_dispatcher'));
+
+             //Some evil OO hack (it sets a static attribute internally)
+            $this->workflowFactory->setDIContainer($this->container);
         }
     }
     /**
@@ -222,7 +241,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 
             $this->workflowManager = new WorkflowManager($this->dbalConnection,
                                             new WorkflowOptions($prefix = 'wf_',
-                                                                'ezWorkflow',
+                                                                'ezcWorkflow',
                                                                 $this->getWorkflowFactory()));
 
         }

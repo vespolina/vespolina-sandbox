@@ -32,16 +32,21 @@ class WorkflowExecution implements WorkflowExecutionInterface
      */
     public function __construct($name, WorkflowContainerInterface $container = null)
     {
-        if ($container) {
+        if ($container != null)
+        {
             $this->container = $container;
-        } else {
+
+        } else
+        {
+
             $this->container = new WorkflowContainer();
+            
+            //Set container values which we know at this point
         }
 
         $this->name = $name;
-
-        //Set container values which we know at this point
         $this->container->set('workflow.name', $this->name);
+
     }
 
     /**

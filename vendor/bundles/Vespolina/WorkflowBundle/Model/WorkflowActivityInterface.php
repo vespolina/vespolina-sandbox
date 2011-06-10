@@ -19,7 +19,16 @@ interface WorkflowActivityInterface{
      * Complete this workflow activity.  This is typically invoked after the activity was executed succesful
      *
      */
-    public function completeActivity();
+    public function complete();
+
+
+/**
+     * Activate this workflow activity.  This triggers init(), execute(), complete() and so on
+     *
+     * @abstract
+     * @return void
+     */
+    public function activate();
 
     /**
      * Execute this workflow activity
@@ -27,7 +36,7 @@ interface WorkflowActivityInterface{
      * @abstract
      * @return void
      */
-    public function executeActivity();
+    public function execute();
 
     /**
      * Get the local activity container
@@ -59,12 +68,12 @@ interface WorkflowActivityInterface{
     public function getWorkflow();
 
     /**
-     * Initialize this activity
+     * Initialize this activity for activation & execution
      *
      * @abstract
      * @return void
      */
-    public function initActivity();
+    public function init();
 
 
     /**
