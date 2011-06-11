@@ -16,15 +16,15 @@ interface WorkflowServiceInterface
 {
 
     /**
-     * Create a workflow exeuction instance for a given workflow configuration
+     * Create a workflow execution instance for a given workflow configuration
      *
      * @abstract
      * @param \Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface $workflowConfiguration
      * @return \Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface
      */
-    public function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration);
+     function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration);
 
-    public function execute(WorkflowExecutionInterface $workflowExecution);
+     function execute(WorkflowExecutionInterface $workflowExecution);
 
 
     /**
@@ -34,11 +34,11 @@ interface WorkflowServiceInterface
      * @param  $name
      * @return \Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface
      */
-    public function getWorkflowConfiguration($name);
+     function getWorkflowConfiguration($name);
 
 
-    public function getWorkflowExecutionById();
-    public function getWorkflowExecutionByRuntimeInstance($runtimeInstance);
+     function getWorkflowExecutionById();
+     function getWorkflowExecutionByRuntimeInstance($runtimeInstance);
 
     /**
      * Save the state of the given workflow instance
@@ -47,7 +47,7 @@ interface WorkflowServiceInterface
      * @param \Vespolina\WorkflowBundle\Model\WorkflowExecutionInterface $workflowExecution
      * @return true on success
      */
-    public function save(WorkflowExecutionInterface $workflowExecution);
+     function save(WorkflowExecutionInterface $workflowExecution);
 
 
     /**
@@ -57,7 +57,7 @@ interface WorkflowServiceInterface
      * @param \Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface $workflowConfiguration
      * @return void
      */
-    public function saveConfiguration(WorkflowConfigurationInterface $workflowConfiguration);
+     function saveConfiguration(WorkflowConfigurationInterface $workflowConfiguration);
 
 
 }

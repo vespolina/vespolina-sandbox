@@ -28,8 +28,9 @@ class WorkflowActivityInvokerServiceObject implements \ezcWorkflowServiceObject 
     public function __construct($workflowActivityClass, $activityName )
     {
 
+        $this->container = CustomWorkflowFactory::getDIContainer(); //TODO remove static stuff
         $this->activityName = $activityName;
-        $this->eventDispatcher = CustomWorkflowFactory::getDIContainer()->get('event_dispatcher'); //TODO
+        $this->eventDispatcher = $this->container->get('event_dispatcher');
         $this->workflowActivityClass = $workflowActivityClass;
       
     }
@@ -37,7 +38,7 @@ class WorkflowActivityInvokerServiceObject implements \ezcWorkflowServiceObject 
     public function execute( \ezcWorkflowExecution $execution )
     {
 
-        $workflowService = CustomWorkflowFactory::getDIContainer()->get('vespolina.workflow');  //TODO
+        $workflowService = $this->container->get('vespolina.workflow');
 
         $workflowContainer = $execution->getVariable('WorkflowContainer');
 
@@ -49,7 +50,7 @@ class WorkflowActivityInvokerServiceObject implements \ezcWorkflowServiceObject 
                                             $workflowExecution,
                                             $this->eventDispatcher);
 
-        
+        $workflowActivity->setContainer(CustomWorkflowFactory::getDIContainer());
 
         //Activate the workflow activity, if for some reason it needs to be suspended because it can't complete
         //false will be returned

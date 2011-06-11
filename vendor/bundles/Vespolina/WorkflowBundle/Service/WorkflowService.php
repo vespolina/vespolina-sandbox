@@ -47,7 +47,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
     /**
      * @inheritdoc
      */
-    function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration)
+    public function createWorkflowExecution(WorkflowConfigurationInterface $workflowConfiguration)
     {
         $className = $workflowConfiguration->getBaseClass();
         $workflowManager = $this->getWorkflowManager();
@@ -92,6 +92,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 
     public function getWorkflowExecutionByRuntimeInstance($runtimeInstance)
     {
+
         return $this->runtimeInstanceToWorkflowExecutionMap[spl_object_hash($runtimeInstance)];
 
     }
@@ -123,10 +124,10 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 
         $runtimeExecution = $workflowExecution->getWorkflowRuntimeExecution();
 
-        if($runtimeExecution)
+        if ($runtimeExecution)
         {
 
-            if($runtimeExecution->isSuspended())
+            if ($runtimeExecution->isSuspended())
             {
 
                 //$workflowContainerData = $workflowExecution->getContainer()->getContainerData();
@@ -138,14 +139,8 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
                 $runtimeExecution->start();
             }
 
-            
-
-
-
-
         }
     }
-
 
 
     /**
@@ -165,7 +160,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         $workflowManager = $this->getWorkflowManager();
         $workflowBuilder = $this->getWorkflowBuilder($workflowConfiguration);
  
-        //First we need to build the runtime definition and subsequently we save it to the database
+        //Build the runtime definition and subsequently save it to the database
         $workflowRuntimeDefinition = $workflowBuilder->build($workflowConfiguration, $this->workflowFactory);
 
         $workflowManager->save($workflowRuntimeDefinition);
@@ -179,7 +174,6 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         if (!array_key_exists($builderClass, $this->workflowBuilders))
         {
             $this->workflowBuilders[$builderClass] = $this->loadWorkflowBuilder($workflowConfiguration);
-
 
         }
 
@@ -209,7 +203,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
         return $this->dbalConnection->fetchColumn($sql, array($workflowConfiguration->getName()), 0);
     }
 
-    public function getWorkflowExecutionById()
+     function getWorkflowExecutionById()
     {
 
     }
@@ -225,7 +219,7 @@ class WorkflowService extends ContainerAware implements WorkflowServiceInterface
 
             $this->workflowFactory = new CustomWorkflowFactory();
 
-             //Some evil OO hack (it sets a static attribute internally)
+             //TODO: remove this evil OO hack (it sets a static attribute internally)
             $this->workflowFactory->setDIContainer($this->container);
         }
     }

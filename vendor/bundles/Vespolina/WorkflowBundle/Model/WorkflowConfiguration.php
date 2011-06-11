@@ -13,7 +13,7 @@ use Vespolina\WorkflowBundle\Model\WorkflowConfigurationInterface;
 
 class WorkflowConfiguration implements WorkflowConfigurationInterface
 {
-    protected $baseClass;
+    protected $baseClass  = 'Vespolina\WorkflowBundle\Model\WorkflowExecution';
     protected $builderClass;
     protected $builderOptions;
     protected $name;

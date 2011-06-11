@@ -16,16 +16,14 @@ class AddOneToTotalWorkflowActivity extends WorkflowActivity {
     public function execute()
     {
 
-        $workflowContainer = $this->getContainer();
-
-        if( !$total = $workflowContainer->get('total') )
+        if( !$total = $this->workflowContainer->get('total') )
         {
             $total = 0;
         }
 
         $total = $total + 1;
 
-        $workflowContainer->set('total', $total);
+        $this->workflowContainer->set('total', $total);
 
         echo 'total for ' . $this->name . ' is ' . $total;
     }

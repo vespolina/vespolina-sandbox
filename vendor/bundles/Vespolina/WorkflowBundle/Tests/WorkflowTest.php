@@ -27,16 +27,19 @@ class WorkflowTest extends WebTestCase
             $this->kernel = $this->createKernel($options);
             $this->kernel->boot();
         }
+
         return $this->kernel;
     }
 
     public function testCreateAgentAndTask()
     {
 
+        $workflowTaskService = $this->getKernel()->getContainer()->get('vespolina.workflow_task');
+
         $workflowAgentJamesBond = new WorkflowAgent(true);
         $workflowAgentJamesBond->setName('James Bond 007');
 
-        $workflowTask = new WorkflowTask();
+        $workflowTask = $workflowTaskService->createTask();
         $workflowTask->setName('kill Goldfinger');
         $workflowTask->assignTo($workflowAgentJamesBond);
 
@@ -63,15 +66,17 @@ class WorkflowTest extends WebTestCase
          *
          * Activity 1 sets the workflow container value "total" to 1
          * Activity 2 sets the workflow container value "total" to 2
+         * Activity 3 creates a workflow task to verify the result
          */
 
         $workflowService = $this->getKernel()->getContainer()->get('vespolina.workflow');
+        $workflowTaskService = $this->getKernel()->getContainer()->get('vespolina.workflow_task');
 
         //The workflow service needs a DBAL connection to the database (Doctrine Extensions > Doctrine Workflow )
         $workflowService->setDbalConnection($this->getKernel()->getContainer()->get('database_connection'));
 
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('test_1');
-        $workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowExecution');
+        //$workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowExecution');
         $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Tests\Mockup\PHPTest1WorkflowBuilder');
 
         //Save the workflow configuration to the database
@@ -80,16 +85,30 @@ class WorkflowTest extends WebTestCase
         //Create a workflow execution instance for the template workflow
         $workflowExecution = $workflowService->createWorkflowExecution($workflowConfiguration);
 
-
-
         //Verify that the workflow container holds the name of the workflow definition
         $this->assertEquals($workflowExecution->getWorkflowContainer()->get('workflow.name'), 'test_1');
 
-
-
         $workflowService->execute($workflowExecution);
 
+        //The workflow container 'total' value should have value 2
         $this->assertEquals($workflowExecution->getWorkflowContainer()->get('total'), 2);
+
+        //Verify if a task was created by the workflow
+        $workflowAgentJamesBond = new WorkflowAgent(true);
+        $workflowAgentJamesBond->setName('James Bond 007');
+
+        $tasks = $workflowTaskService->getTasksForWorkflowAgent($workflowAgentJamesBond);
+        
+        $this->assertGreaterThan(0, count($tasks));
+
+        //For now we assume that it's on the top of the list
+        $task = $tasks[0];
+
+        $this->assertEquals($task->getName(), 'verify_results');
+
+        //Verify that James Bond is assigned to the task
+        $this->assertEquals($task->getAssignedTo()->getName(), $workflowAgentJamesBond->getName());
+
 
     }
 

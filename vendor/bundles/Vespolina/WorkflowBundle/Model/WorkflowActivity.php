@@ -9,6 +9,7 @@
 
 namespace Vespolina\WorkflowBundle\Model;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\WorkflowBundle\Event\WorkflowActivityEvent;
 use Vespolina\WorkflowBundle\Model\WorkflowActivityInterface;
 use Vespolina\WorkflowBundle\Model\WorkflowContainer;
@@ -16,19 +17,20 @@ use Vespolina\WorkflowBundle\Model\WorkflowContainer;
 
 class WorkflowActivity implements WorkflowActivityInterface{
 
-    protected $container;
+    protected $container;   //DI container
     protected $dispatcher;
     protected $isExecutionFinished;
     protected $name;
+    protected $workflowContainer;
     protected $workflowExecution;
 
     public function __construct($name, $workflowExecution, $eventDispatcher)
     {
        
-        $this->container = $workflowExecution->getWorkflowContainer();
         $this->eventDispatcher = $eventDispatcher;
         $this->name = $name;
         $this->isExecutionFinished = false;
+        $this->workflowContainer = $workflowExecution->getWorkflowContainer();
         $this->workflowExecution = $workflowExecution;
     }
 
@@ -84,9 +86,9 @@ class WorkflowActivity implements WorkflowActivityInterface{
     /**
      * @inheritdoc
      */
-    public function getContainer()
+    public function getWorkflowContainer()
     {
-        return $this->container;
+        return $this->workflowContainer;
     }
 
     /**
@@ -109,12 +111,16 @@ class WorkflowActivity implements WorkflowActivityInterface{
     /**
      * @inheritdoc
      */
-    public function getWorkflow()
+    public function getWorkflowExecution()
     {
 
-        return $this->workflow;
+        return $this->workflowExecution;
     }
 
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->container = $container;
+    }
 
     /**
      * @inheritdoc
@@ -127,12 +133,11 @@ class WorkflowActivity implements WorkflowActivityInterface{
     
     protected function fireEvent($name)
     {
-        $event = new WorkflowActivityEvent($this);
 
         if( $this->eventDispatcher )
         {
-
-          $this->eventDispatcher->dispatch('vespolina.workflow.activity.' . $name, $event);
+            $event = new WorkflowActivityEvent($this);
+            $this->eventDispatcher->dispatch('vespolina.workflow.activity.' . $name, $event);
         }
       }
 

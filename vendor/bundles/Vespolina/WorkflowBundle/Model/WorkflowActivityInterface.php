@@ -9,20 +9,14 @@
 
 namespace Vespolina\WorkflowBundle\Model;
 
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+
 /**
  * The workflow activity represents an activity in the workflow process
  */
-interface WorkflowActivityInterface{
-
+interface WorkflowActivityInterface extends ContainerAwareInterface{
 
     /**
-     * Complete this workflow activity.  This is typically invoked after the activity was executed succesful
-     *
-     */
-    public function complete();
-
-
-/**
      * Activate this workflow activity.  This triggers init(), execute(), complete() and so on
      *
      * @abstract
@@ -31,20 +25,18 @@ interface WorkflowActivityInterface{
     public function activate();
 
     /**
+     * Complete this workflow activity.  This is typically invoked after the activity was executed succesful
+     *
+     */
+    public function complete();
+
+    /**
      * Execute this workflow activity
      *
      * @abstract
      * @return void
      */
     public function execute();
-
-    /**
-     * Get the local activity container
-     *
-     * @abstract
-     * @return void
-     */
-    public function getContainer();
 
     /**
      * Returns whether or not the execution for this activity has been ended
@@ -60,12 +52,21 @@ interface WorkflowActivityInterface{
     public function getName();
 
     /**
-     * Get the workflow instance which this activity is part off
+     * Get the workflow container
      *
      * @abstract
      * @return void
      */
-    public function getWorkflow();
+    public function getWorkflowContainer();
+
+
+    /**
+     * Get the workflow execution instance which this activity is part off
+     *
+     * @abstract
+     * @return void
+     */
+    public function getWorkflowExecution();
 
     /**
      * Initialize this activity for activation & execution
@@ -80,5 +81,6 @@ interface WorkflowActivityInterface{
      * Set whether or not the execution for this activity has been ended
      */
     function setIsExecutionFinished($isExecutionFinished);
+
 
 }
