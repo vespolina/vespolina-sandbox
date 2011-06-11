@@ -10,9 +10,11 @@ $loader->registerNamespaces(array(
     'Doctrine\\DBAL'            => __DIR__.'/../vendor/doctrine/dbal/lib',
     'Doctrine'                  => __DIR__.'/../vendor/doctrine/orm/lib',
     'Doctrine\\Common\\DataFixtures'    => __DIR__.'/../vendor/doctrine/data-fixtures/lib',
+    'DoctrineExtensions\\Workflow'=> __DIR__.'/../vendor/doctrine-extensions/doctrine-workflow/lib',
     'FOS'                       => __DIR__.'/../vendor/bundles',
     'Application'               => __DIR__.'/../src',
     'Vespolina'                 => __DIR__.'/../vendor/bundles',
+                                
     'Monolog'                   => __DIR__.'/../vendor/monolog/src',
     'Symfony'                   => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
     'vendor'                    => __DIR__.'/../src',

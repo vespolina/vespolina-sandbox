@@ -28,7 +28,19 @@ doctrine_mongodb:
             mappings:
                 FOSUserBundle: ~
                 UserBundle:   ~
-
+doctrine:
+  dbal:
+    default_connection: default
+    connections:
+      default:
+        driver:   pdo_mysql
+        host:     localhost
+        dbname:   vespolina-dev
+        user:     root
+        password: root
+  orm:
+    auto_generate_proxy_classes: %kernel.debug%
+    auto_mapping: true
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
