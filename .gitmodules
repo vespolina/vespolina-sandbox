@@ -43,3 +43,6 @@
 [submodule "vendor/bundles/FOS/UserBundle"]
 	path = vendor/bundles/FOS/UserBundle
 	url = git://github.com/FriendsOfSymfony/UserBundle.git
+[submodule "vendor/doctrine-extensions/doctrine-workflow"]
+	path = vendor/doctrine-extensions/doctrine-workflow
+	url = git://github.com/beberlei/Doctrine-Workflow.git

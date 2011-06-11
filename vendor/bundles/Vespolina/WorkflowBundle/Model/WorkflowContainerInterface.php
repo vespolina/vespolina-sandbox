@@ -30,4 +30,11 @@ interface WorkflowContainerInterface
      * @return void
      */
     function set($key, $value);
+
+    /**
+     * Returns all container data as an associated array
+     * @abstract
+     * @return void
+     */
+    function getContainerData();
 }
