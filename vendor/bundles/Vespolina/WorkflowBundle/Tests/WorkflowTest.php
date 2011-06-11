@@ -7,6 +7,8 @@
  */
 namespace Vespolina\WorkflowBundle\Tests\Service;
 
+use DoctrineExtensions\Workflow\WorkflowOptions;
+use DoctrineExtensions\Workflow\SchemaBuilder;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Vespolina\WorkflowBundle\Model\Workflow;
 use Vespolina\WorkflowBundle\Model\WorkflowAgent;
@@ -31,6 +33,18 @@ class WorkflowTest extends WebTestCase
         return $this->kernel;
     }
 
+    public function testCreateWorkflowDBSchema()
+    {
+
+        $dbalConn = $this->getKernel()->getContainer()->get('database_connection');
+        $options = new WorkflowOptions($prefix = 'wf_');
+        $schemaBuilder = new SchemaBuilder($dbalConn);
+        $schemaBuilder->dropWorkflowSchema($options);
+        $schemaBuilder->createWorkflowSchema($options);
+
+    }
+
+    
     public function testCreateAgentAndTask()
     {
 
@@ -76,7 +90,6 @@ class WorkflowTest extends WebTestCase
         $workflowService->setDbalConnection($this->getKernel()->getContainer()->get('database_connection'));
 
         $workflowConfiguration = $workflowService->getWorkflowConfiguration('test_1');
-        //$workflowConfiguration->setBaseClass('Vespolina\WorkflowBundle\Model\WorkflowExecution');
         $workflowConfiguration->setBuilderClass('Vespolina\WorkflowBundle\Tests\Mockup\PHPTest1WorkflowBuilder');
 
         //Save the workflow configuration to the database
