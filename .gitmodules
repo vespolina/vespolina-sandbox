@@ -58,3 +58,6 @@
 [submodule "vendor/bundles/Symfony/Bundle/WebConfiguratorBundle"]
     path = vendor/bundles/Symfony/Bundle/WebConfiguratorBundle
     url = https://github.com/symfony/WebConfiguratorBundle.git
+[submodule "vendor/bundles/Vespolina/MonetaryBundle"]
+	path = vendor/bundles/Vespolina/MonetaryBundle
+	url = git@github.com:vespolina/MonetaryBundle.git
