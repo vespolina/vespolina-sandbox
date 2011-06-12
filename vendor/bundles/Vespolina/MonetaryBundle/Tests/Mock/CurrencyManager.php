@@ -20,7 +20,7 @@ class CurrencyManager extends \PHPUnit_Framework_TestCase implements CurrencyMan
 {
     protected $currencyExchanger;
 
-    public function __construct(CurrencyExchangerInterface $currencyExchanger, $currencyCacheDir, $options = null)
+    public function __construct(CurrencyExchangerInterface $currencyExchanger)
     {
         $this->currencyExchanger = $currencyExchanger;
     }
