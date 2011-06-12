@@ -26,7 +26,7 @@ class MonetaryManagerTest extends MonetaryTestBase
     {
         $baseCurrency = $this->getBaseCurrency();
         $currencyExchanger = new CurrencyExchanger();
-        $currencyManager = new CurrencyManager($currencyExchanger, '');
+        $currencyManager = new CurrencyManager($currencyExchanger);
 
         $monetaryMgr = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, $this->baseCurrency);
         $this->assertEquals($baseCurrency->getCurrencyCode(), $monetaryMgr->getBaseCurrency()->getCurrencyCode(), 'base currency set in construct with currency object');
@@ -199,7 +199,7 @@ class MonetaryManagerTest extends MonetaryTestBase
     {
         $this->baseCurrency = $this->getBaseCurrency();
 
-        $currencyManager = new CurrencyManager(new CurrencyExchanger(), '');
+        $currencyManager = new CurrencyManager(new CurrencyExchanger());
         $this->service = new MonetaryManager('Vespolina\MonetaryBundle\Model\Monetary', $currencyManager, $this->baseCurrency);
 
         $this->secondCurrency = $this->getCurrency('The codes assigned for transactions where no name is involve', 'XXX', 'X');
