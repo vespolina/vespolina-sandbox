@@ -61,3 +61,6 @@
 [submodule "vendor/bundles/Vespolina/MonetaryBundle"]
 	path = vendor/bundles/Vespolina/MonetaryBundle
 	url = git@github.com:vespolina/MonetaryBundle.git
+[submodule "vendor/bundles/Vespolina/WorkflowBundle"]
+	path = vendor/bundles/Vespolina/WorkflowBundle
+	url = git://github.com/vespolina/WorkflowBundle.git
