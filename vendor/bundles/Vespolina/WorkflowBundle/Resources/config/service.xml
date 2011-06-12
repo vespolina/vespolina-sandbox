@@ -6,11 +6,17 @@
     
     <parameters>
         <parameter key="vespolina.workflow.class">Vespolina\WorkflowBundle\Service\WorkflowService</parameter>
+        <parameter key="vespolina.workflow_task.class">Vespolina\WorkflowBundle\Service\WorkflowTaskService</parameter>
     </parameters>
 
 
     <services>
         <service id="vespolina.workflow" class="%vespolina.workflow.class%">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="vespolina.workflow_task" class="%vespolina.workflow_task.class%">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
