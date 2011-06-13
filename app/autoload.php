@@ -1,4 +1,5 @@
 <?php
+
 use Symfony\Component\ClassLoader\UniversalClassLoader;
 
 $loader = new UniversalClassLoader();
@@ -23,10 +24,13 @@ $loader->registerPrefixes(array(
     'Twig_'                             => __DIR__.'/../vendor/twig/lib',
     'Swift_'                            => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
-$loader->register();
-$loader->registerPrefixFallback(array(
+$loader->registerPrefixFallbacks(array(
     __DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs',
 ));
+$loader->registerNamespaceFallbacks(array(
+    __DIR__.'/../src',
+));
+$loader->register();
 
 require_once 'ezc/Base/base.php';
 spl_autoload_register( array( 'ezcBase', 'autoload' ) );
