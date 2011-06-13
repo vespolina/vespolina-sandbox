@@ -1,9 +1,6 @@
 [submodule "vendor/symfony"]
 	path = vendor/symfony
 	url = https://github.com/symfony/symfony.git
-[submodule "vendor/zend-log/Zend/Log"]
-	path = vendor/zend-log/Zend/Log
-	url = git://github.com/symfony/zend-log.git
 [submodule "vendor/swiftmailer"]
 	path = vendor/swiftmailer
 	url = git://github.com/swiftmailer/swiftmailer.git
@@ -64,3 +61,6 @@
 [submodule "vendor/bundles/Vespolina/WorkflowBundle"]
 	path = vendor/bundles/Vespolina/WorkflowBundle
 	url = git://github.com/vespolina/WorkflowBundle.git
+[submodule "vendor/metadata"]
+	path = vendor/metadata
+	url = http://github.com/schmittjoh/metadata.git

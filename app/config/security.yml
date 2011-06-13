@@ -21,10 +21,7 @@ fos_user:
         iterations: 1
         encode_as_base64: false
         algorithm: sha1
-    class:
-        model:
-            user: Application\UserBundle\Document\User
+    user_class: Application\UserBundle\Document\User
     group:
-        class:
-            model: FOS\UserBundle\Document\DefaultGroup
+        group_class: Application\UserBundle\Document\Group
 

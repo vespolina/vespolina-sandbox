@@ -3,11 +3,13 @@ assetic: ~
 
 framework:
     secret: xxxxxxxxxx
+    annotations:
+        cache: file
     charset:       UTF-8
     csrf_protection:
         enabled: true
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
-    validation:    { enabled: true, annotations: true }
+    validation:    { enabled: true}
     templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
     session:
         default_locale: en
