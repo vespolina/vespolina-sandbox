@@ -14,6 +14,7 @@ $loader->registerNamespaces(array(
     'Doctrine\\Common\\DataFixtures'    => __DIR__.'/../vendor/doctrine/data-fixtures/lib',
     'DoctrineExtensions\\Workflow'      => __DIR__.'/../vendor/doctrine/extensions/doctrine-workflow/lib',
     'FOS'                               => __DIR__.'/../vendor/bundles',
+    'Metadata'                          => __DIR__.'/../vendor/metadata/src',
     'Monolog'                           => __DIR__.'/../vendor/monolog/src',
     'Symfony'                           => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
     'vendor'                            => __DIR__.'/../src',
