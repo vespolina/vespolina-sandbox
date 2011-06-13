@@ -64,7 +64,7 @@ abstract class Kernel implements KernelInterface
     protected $name;
     protected $startTime;
     protected $classes;
-    const VERSION = '2.0.0-DEV';
+    const VERSION = '2.0.0-BETA5-DEV';
     public function __construct($environment, $debug)
     {
         $this->environment = $environment;
@@ -304,7 +304,7 @@ abstract class Kernel implements KernelInterface
         require_once $cache;
         $this->container = new $class();
         $this->container->set('kernel', $this);
-        if (!$fresh && 'cli' !== php_sapi_name()) {
+        if (!$fresh) {
             $this->container->get('cache_warmer')->warmUp($this->container->getParameter('kernel.cache_dir'));
         }
     }
@@ -508,6 +508,7 @@ class HttpCache implements HttpKernelInterface
         }
         $response->isNotModified($request);
         $this->restoreResponseBody($request, $response);
+        $response->setDate(new \DateTime(null, new \DateTimeZone('UTC')));
         if (HttpKernelInterface::MASTER_REQUEST === $type && $this->options['debug']) {
             $response->headers->set('X-Symfony-Cache', $this->getLog());
         }
@@ -572,10 +573,11 @@ class HttpCache implements HttpKernelInterface
         $subRequest = clone $request;
                 $subRequest->setMethod('get');
                 $subRequest->headers->set('if_modified_since', $entry->headers->get('Last-Modified'));
-                                $cachedEtags = array($entry->getEtag());
+                                $cachedEtags = $entry->getEtag() ? array($entry->getEtag()) : array();
         $requestEtags = $request->getEtags();
-        $etags = array_unique(array_merge($cachedEtags, $requestEtags));
-        $subRequest->headers->set('if_none_match', $etags ? implode(', ', $etags) : '');
+        if ($etags = array_unique(array_merge($cachedEtags, $requestEtags))) {
+            $subRequest->headers->set('if_none_match', implode(', ', $etags));
+        }
         $response = $this->forward($subRequest, $catch, $entry);
         if (304 == $response->getStatusCode()) {
             $this->record($request, 'valid');
@@ -665,7 +667,9 @@ class HttpCache implements HttpKernelInterface
                 $entry->setContent($new->getContent());
                 $entry->setStatusCode($new->getStatusCode());
                 $entry->setProtocolVersion($new->getProtocolVersion());
-                $entry->setCookies($new->getCookies());
+                foreach ($new->headers->getCookies() as $cookie) {
+                    $entry->headers->setCookie($cookie);
+                }
             } else {
                                 $entry->setStatusCode(503);
                 $entry->setContent('503 Service Unavailable');
@@ -1273,6 +1277,11 @@ class ServerBag extends ParameterBag
                 $headers[substr($key, 5)] = $value;
             }
         }
+                foreach (array('CONTENT_TYPE', 'CONTENT_LENGTH') as $key) {
+            if (isset($this->parameters[$key])) {
+                $headers[$key] = $this->parameters[$key];
+            }
+        }
         return $headers;
     }
 }
@@ -1292,6 +1301,24 @@ class HeaderBag
         foreach ($headers as $key => $values) {
             $this->set($key, $values);
         }
+    }
+    public function __toString()
+    {
+        if (!$this->headers) {
+            return '';
+        }
+        $beautifier = function ($name) {
+            return preg_replace('/\-(.)/e', "'-'.strtoupper('\\1')", ucfirst($name));
+        };
+        $max = max(array_map('strlen', array_keys($this->headers))) + 1;
+        $content = '';
+        ksort($this->headers);
+        foreach ($this->headers as $name => $values) {
+            foreach ($values as $value) {
+                $content .= sprintf("%-{$max}s %s\r\n", $beautifier($name).':', $value);
+            }
+        }
+        return $content;
     }
     public function all()
     {
@@ -1505,6 +1532,7 @@ class Request
             'REMOTE_ADDR'          => '127.0.0.1',
             'SCRIPT_NAME'          => '',
             'SCRIPT_FILENAME'      => '',
+            'SERVER_PROTOCOL'      => 'HTTP/1.1',
         );
         $components = parse_url($uri);
         if (isset($components['host'])) {
@@ -1552,23 +1580,23 @@ class Request
     {
         $dup = clone $this;
         if ($query !== null) {
-          $dup->query = new ParameterBag($query);
+            $dup->query = new ParameterBag($query);
         }
         if ($request !== null) {
-          $dup->request = new ParameterBag($request);
+            $dup->request = new ParameterBag($request);
         }
         if ($attributes !== null) {
-          $dup->attributes = new ParameterBag($attributes);
+            $dup->attributes = new ParameterBag($attributes);
         }
         if ($cookies !== null) {
-          $dup->cookies = new ParameterBag($cookies);
+            $dup->cookies = new ParameterBag($cookies);
         }
         if ($files !== null) {
-          $dup->files = new FileBag($files);
+            $dup->files = new FileBag($files);
         }
         if ($server !== null) {
-          $dup->server = new ServerBag($server);
-          $dup->headers = new HeaderBag($dup->server->getHeaders());
+            $dup->server = new ServerBag($server);
+            $dup->headers = new HeaderBag($dup->server->getHeaders());
         }
         $this->languages = null;
         $this->charsets = null;
@@ -1591,6 +1619,13 @@ class Request
         $this->server     = clone $this->server;
         $this->headers    = clone $this->headers;
     }
+    public function __toString()
+    {
+        return
+            sprintf('%s %s %s', $this->getMethod(), $this->getRequestUri(), $this->server->get('SERVER_PROTOCOL'))."\r\n".
+            $this->headers."\r\n".
+            $this->getContent();
+    }
     public function overrideGlobals()
     {
         $_GET = $this->query->all();
@@ -1598,7 +1633,12 @@ class Request
         $_SERVER = $this->server->all();
         $_COOKIE = $this->cookies->all();
         foreach ($this->headers->all() as $key => $value) {
-            $_SERVER['HTTP_'.strtoupper(str_replace('-', '_', $key))] = implode(', ', $value);
+            $key = strtoupper(str_replace('-', '_', $key));
+            if (in_array($key, array('CONTENT_TYPE', 'CONTENT_LENGTH'))) {
+                $_SERVER[$key] = implode(', ', $value);
+            } else {
+                $_SERVER['HTTP_'.$key] = implode(', ', $value);
+            }
         }
                         $_REQUEST = array_merge($_GET, $_POST);
     }
@@ -1668,17 +1708,12 @@ class Request
     }
     public function getHttpHost()
     {
-        $host = $this->headers->get('HOST');
-        if (!empty($host)) {
-            return $host;
-        }
         $scheme = $this->getScheme();
-        $name   = $this->server->get('SERVER_NAME');
         $port   = $this->getPort();
         if (('http' == $scheme && $port == 80) || ('https' == $scheme && $port == 443)) {
-            return $name;
+            return $this->getHost();
         }
-        return $name.':'.$port;
+        return $this->getHost().':'.$port;
     }
     public function getRequestUri()
     {
@@ -1754,7 +1789,7 @@ class Request
         if (null === $this->method) {
             $this->method = strtoupper($this->server->get('REQUEST_METHOD', 'GET'));
             if ('POST' === $this->method) {
-                $this->method = strtoupper($this->request->get('_method', 'POST'));
+                $this->method = strtoupper($this->server->get('X-HTTP-METHOD-OVERRIDE', $this->request->get('_method', 'POST')));
             }
         }
         return $this->method;
@@ -1768,6 +1803,9 @@ class Request
     }
     public function getFormat($mimeType)
     {
+        if (false !== $pos = strpos($mimeType, ';')) {
+            $mimeType = substr($mimeType, 0, $pos);
+        }
         if (null === static::$formats) {
             static::initializeFormats();
         }
@@ -1985,14 +2023,14 @@ class Request
     {
         $baseUrl = $this->getBaseUrl();
         if (null === ($requestUri = $this->getRequestUri())) {
-            return '';
+            return '/';
         }
-        $pathInfo = '';
+        $pathInfo = '/';
                 if ($pos = strpos($requestUri, '?')) {
             $requestUri = substr($requestUri, 0, $pos);
         }
         if ((null !== $baseUrl) && (false === ($pathInfo = substr($requestUri, strlen($baseUrl))))) {
-                        return '';
+                        return '/';
         } elseif (null === $baseUrl) {
             return $requestUri;
         }
@@ -2047,6 +2085,14 @@ class ResponseHeaderBag extends HeaderBag
             $this->set('cache-control', '');
         }
     }
+    public function __toString()
+    {
+        $cookies = '';
+        foreach ($this->cookies as $cookie) {
+            $cookies .= 'Set-Cookie: '.$cookie."\r\n";
+        }
+        return parent::__toString().$cookies;
+    }
     public function replace(array $headers = array())
     {
         parent::replace($headers);
@@ -2099,7 +2145,8 @@ class ResponseHeaderBag extends HeaderBag
         }
         return $header;
     }
-}}
+}
+}
 namespace Symfony\Component\HttpFoundation
 {
 class Response
@@ -2155,24 +2202,21 @@ class Response
     );
     public function __construct($content = '', $status = 200, $headers = array())
     {
+        $this->headers = new ResponseHeaderBag($headers);
         $this->setContent($content);
         $this->setStatusCode($status);
         $this->setProtocolVersion('1.0');
-        $this->headers = new ResponseHeaderBag($headers);
-        $this->charset = 'UTF-8';
+        if (!$this->headers->has('Date')) {
+            $this->setDate(new \DateTime(null, new \DateTimeZone('UTC')));
+        }
     }
     public function __toString()
     {
-        $content = '';
         $this->fixContentType();
-                $content .= sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText)."\r\n";
-                foreach ($this->headers->all() as $name => $values) {
-            foreach ($values as $value) {
-                $content .= "$name: $value\r\n";
-            }
-        }
-        $content .= "\r\n".$this->getContent();
-        return $content;
+        return
+            sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText)."\r\n".
+            $this->headers."\r\n".
+            $this->getContent();
     }
     public function __clone()
     {
@@ -2184,7 +2228,7 @@ class Response
                 header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText));
                 foreach ($this->headers->all() as $name => $values) {
             foreach ($values as $value) {
-                header($name.': '.$value);
+                header($name.': '.$value, false);
             }
         }
                 foreach ($this->headers->getCookies() as $cookie) {
@@ -2199,6 +2243,9 @@ class Response
     {
         $this->sendHeaders();
         $this->sendContent();
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+        }
     }
     public function setContent($content)
     {
@@ -2270,11 +2317,12 @@ class Response
     }
     public function getDate()
     {
-        if (null === $date = $this->headers->getDate('Date')) {
-            $date = new \DateTime(null, new \DateTimeZone('UTC'));
-            $this->headers->set('Date', $date->format('D, d M Y H:i:s').' GMT');
-        }
-        return $date;
+        return $this->headers->getDate('Date');
+    }
+    public function setDate(\DateTime $date)
+    {
+        $date->setTimezone(new \DateTimeZone('UTC'));
+        $this->headers->set('Date', $date->format('D, d M Y H:i:s').' GMT');
     }
     public function getAge()
     {
@@ -2474,24 +2522,21 @@ class Response
     {
         return 404 === $this->statusCode;
     }
-    public function isRedirect()
+    public function isRedirect($location = null)
     {
-        return in_array($this->statusCode, array(201, 301, 302, 303, 307));
+        return in_array($this->statusCode, array(201, 301, 302, 303, 307)) && (null === $location ?: $location == $this->headers->get('Location'));
     }
     public function isEmpty()
     {
         return in_array($this->statusCode, array(201, 204, 304));
     }
-    public function isRedirected($location)
-    {
-        return $this->isRedirect() && $location == $this->headers->get('Location');
-    }
     protected function fixContentType()
     {
+        $charset = $this->charset ?: 'UTF-8';
         if (!$this->headers->has('Content-Type')) {
-            $this->headers->set('Content-Type', 'text/html; charset='.$this->charset);
+            $this->headers->set('Content-Type', 'text/html; charset='.$charset);
         } elseif ('text/' === substr($this->headers->get('Content-Type'), 0, 5) && false === strpos($this->headers->get('Content-Type'), 'charset')) {
-                        $this->headers->set('Content-Type', $this->headers->get('Content-Type').'; charset='.$this->charset);
+                        $this->headers->set('Content-Type', $this->headers->get('Content-Type').'; charset='.$charset);
         }
     }
 }
@@ -2502,8 +2547,8 @@ class UniversalClassLoader
 {
     private $namespaces = array();
     private $prefixes = array();
-    private $namespaceFallback = array();
-    private $prefixFallback = array();
+    private $namespaceFallbacks = array();
+    private $prefixFallbacks = array();
     public function getNamespaces()
     {
         return $this->namespaces;
@@ -2512,21 +2557,21 @@ class UniversalClassLoader
     {
         return $this->prefixes;
     }
-    public function getNamespaceFallback()
+    public function getNamespaceFallbacks()
     {
-        return $this->namespaceFallback;
+        return $this->namespaceFallbacks;
     }
-    public function getPrefixFallback()
+    public function getPrefixFallbacks()
     {
-        return $this->prefixFallback;
+        return $this->prefixFallbacks;
     }
-    public function registerNamespaceFallback($dirs)
+    public function registerNamespaceFallbacks(array $dirs)
     {
-        $this->namespaceFallback = (array) $dirs;
+        $this->namespaceFallbacks = $dirs;
     }
-    public function registerPrefixFallback($dirs)
+    public function registerPrefixFallbacks(array $dirs)
     {
-        $this->prefixFallback = (array) $dirs;
+        $this->prefixFallbacks = $dirs;
     }
     public function registerNamespaces(array $namespaces)
     {
@@ -2576,7 +2621,7 @@ class UniversalClassLoader
                     }
                 }
             }
-            foreach ($this->namespaceFallback as $dir) {
+            foreach ($this->namespaceFallbacks as $dir) {
                 $file = $dir.DIRECTORY_SEPARATOR.str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
                 if (file_exists($file)) {
                     return $file;
@@ -2593,7 +2638,7 @@ class UniversalClassLoader
                     }
                 }
             }
-            foreach ($this->prefixFallback as $dir) {
+            foreach ($this->prefixFallbacks as $dir) {
                 $file = $dir.DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $class).'.php';
                 if (file_exists($file)) {
                     return $file;
