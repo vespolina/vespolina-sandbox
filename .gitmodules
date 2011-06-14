@@ -64,3 +64,9 @@
 [submodule "vendor/bundles/Vespolina/WorkflowBundle"]
 	path = vendor/bundles/Vespolina/WorkflowBundle
 	url = git://github.com/vespolina/WorkflowBundle.git
+[submodule "vendor/bundles/Vespolina/CartBundle"]
+	path = vendor/bundles/Vespolina/CartBundle
+	url = git://github.com/vespolina/CartBundle.git
+[submodule "vendor/bundles/Vespolina/EcommerceFlowsBundle"]
+	path = vendor/bundles/Vespolina/EcommerceFlowsBundle
+	url = git://github.com/inspiran/EcommerceFlowsBundle.git
