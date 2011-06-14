@@ -64,3 +64,9 @@
 [submodule "vendor/metadata"]
 	path = vendor/metadata
 	url = http://github.com/schmittjoh/metadata.git
+[submodule "vendor/bundles/Vespolina/CartBundle"]
+	path = vendor/bundles/Vespolina/CartBundle
+	url = git://github.com/vespolina/CartBundle.git
+[submodule "vendor/bundles/Vespolina/EcommerceFlowsBundle"]
+	path = vendor/bundles/Vespolina/EcommerceFlowsBundle
+	url = git://github.com/vespolina/EcommerceFlowsBundle.git
