@@ -48,8 +48,9 @@ class AppKernel extends Kernel
 
             DebugUniversalClassLoader::enable();
             ErrorHandler::register();
-            ExceptionHandler::register();
-        } else {
+            if ('cli' !== php_sapi_name()) {
+                ExceptionHandler::register();
+            }        } else {
             ini_set('display_errors', 0);
         }
     }
