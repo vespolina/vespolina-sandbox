@@ -39,16 +39,16 @@
 	url = http://github.com/doctrine/dbal.git
 [submodule "vendor/bundles/FOS/UserBundle"]
 	path = vendor/bundles/FOS/UserBundle
-	url = git://github.com/FriendsOfSymfony/UserBundle.git
+	url = git://github.com/FriendsOfSymfony/FOSUserBundle.git
 [submodule "vendor/doctrine/extensions/doctrine-workflow"]
 	path = vendor/doctrine/extensions/doctrine-workflow
 	url = https://github.com/beberlei/Doctrine-Workflow.git
 [submodule "vendor/bundles/JMS/DebuggingBundle"]
     path = vendor/bundles/JMS/DebuggingBundle
-    url = https://github.com/schmittjoh/DebuggingBundle.git
+    url = https://github.com/schmittjoh/JMSDebuggingBundle.git
 [submodule "vendor/bundles/JMS/SecurityExtraBundle"]
     path = vendor/bundles/JMS/SecurityExtraBundle
-    url = https://github.com/schmittjoh/SecurityExtraBundle.git
+    url = https://github.com/schmittjoh/JMSSecurityExtraBundle.git
 [submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
     path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
     url = https://github.com/sensio/SensioFrameworkExtraBundle.git
