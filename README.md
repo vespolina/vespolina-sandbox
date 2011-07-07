@@ -52,10 +52,11 @@ To run the automated test suite you must have [PHPUnit 3.5][phpunit]
 installed, which is available on [GitHub][phpunit_github]. Once installed, run
 the test suite using the `phpunit` command:
 
-    $ phpunit -c frontend
+    $ cd app/
+    $ phpunit
 
 To customize PHPUnit configuration for your environment, copy
-`frontend/phpunit.xml.dist` to `frontend/phpunit.xml` and add your
+`app/phpunit.xml.dist` to `app/phpunit.xml` and add your
 customization there.
 
 [phpunit]: http://www.phpunit.de
