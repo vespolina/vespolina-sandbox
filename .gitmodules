@@ -85,3 +85,6 @@
 [submodule "vendor/bundles/Vespolina/ProductBundle"]
 	path = vendor/bundles/Vespolina/ProductBundle
 	url = git://github.com/vespolina/ProductBundle.git
+[submodule "vendor/bundles/Vespolina/TaxationBundle"]
+	path = vendor/bundles/Vespolina/TaxationBundle
+	url = git://github.com/vespolina/TaxationBundle.git
