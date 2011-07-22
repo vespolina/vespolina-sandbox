@@ -10,4 +10,4 @@ fos_user_security:
 
 vespolina_product:
     resource: @VespolinaProductBundle/Resources/config/routing/admin.xml
-    prefix: /product
+    prefix: /admin/products
