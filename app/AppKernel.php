@@ -14,7 +14,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
-            
+
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\DocumentBundle\VespolinaDocumentBundle(),
@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\PartnerBundle\VespolinaPartnerBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
+            new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
             new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
 
