@@ -4,6 +4,10 @@ default:
 fos_user_security:
     resource: @FOSUserBundle/Resources/config/routing/security.xml
 
-fos_user_user:
-    resource: @FOSUserBundle/Resources/config/routing/user.xml
-    prefix: /user
+#fos_user_user:
+#    resource: @FOSUserBundle/Resources/config/routing/user.xml
+#    prefix: /user
+
+vespolina_product:
+    resource: @VespolinaProductBundle/Resources/config/routing/admin.xml
+    prefix: /product
