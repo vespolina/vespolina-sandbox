@@ -29,7 +29,9 @@ doctrine_mongodb:
         default:
             mappings:
                 FOSUserBundle: ~
+                VespolinaProductBundle: ~
                 UserBundle:   ~
+
 doctrine:
   dbal:
     default_connection: default
@@ -43,6 +45,7 @@ doctrine:
   orm:
     auto_generate_proxy_classes: %kernel.debug%
     auto_mapping: true
+
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
