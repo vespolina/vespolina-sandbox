@@ -16,12 +16,16 @@ class AppKernel extends Kernel
             new Application\DefaultBundle\DefaultBundle(),
 
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
+            new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\DocumentBundle\VespolinaDocumentBundle(),
+            new Vespolina\EcommerceFlowsBundle\VespolinaEcommerceFlowsBundle(),
+            new Vespolina\MerchandiseBundle\VespolinaMerchandiseBundle(),
             new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\PartnerBundle\VespolinaPartnerBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
+            new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
             new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
 
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
