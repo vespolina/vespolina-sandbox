@@ -1,0 +1,2 @@
+vespolina_product:
+    db_driver: mongodb
