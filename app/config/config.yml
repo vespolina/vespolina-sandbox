@@ -8,6 +8,7 @@ framework:
     charset:       UTF-8
     csrf_protection:
         enabled: true
+    form:            true
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
     validation:    { enabled: true}
     templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
