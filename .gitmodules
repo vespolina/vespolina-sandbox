@@ -16,9 +16,6 @@
 [submodule "vendor/doctrine/mongodb"]
 	path = vendor/doctrine/mongodb
 	url = https://github.com/doctrine/mongodb.git
-[submodule "vendor/doctrine/mongodb-odm"]
-	path = vendor/doctrine/mongodb-odm
-	url = https://github.com/doctrine/mongodb-odm.git
 [submodule "vendor/doctrine/common"]
 	path = vendor/doctrine/common
 	url = https://github.com/doctrine/common.git
@@ -74,14 +71,8 @@
 	path = vendor/bundles/Vespolina/MerchandiseBundle
 	url = git://github.com/vespolina/MerchandiseBundle.git
 [submodule "vendor/bundles/PricingBundle"]
-	path = vendor/bundles/PricingBundle
-	url = git://github.com/vespolina/PricingBundle.git
-[submodule "vendor/bundles/Vespolina/PricingBundle"]
 	path = vendor/bundles/Vespolina/PricingBundle
 	url = git://github.com/vespolina/PricingBundle.git
-[submodule "ProductBundle"]
-	path = ProductBundle
-	url = git://github.com/vespolina/ProductBundle.git
 [submodule "vendor/bundles/Vespolina/ProductBundle"]
 	path = vendor/bundles/Vespolina/ProductBundle
 	url = git://github.com/vespolina/ProductBundle.git
@@ -91,3 +82,6 @@
 [submodule "vendor/bundles/Vespolina/DocumentBundle"]
 	path = vendor/bundles/Vespolina/DocumentBundle
 	url = git@github.com:vespolina/DocumentBundle.git
+[submodule "vendor/doctrine/mongodb-odm"]
+	path = vendor/doctrine/mongodb-odm
+	url = git://github.com/IamPersistent/mongodb-odm.git
