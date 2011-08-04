@@ -1,2 +1,6 @@
 vespolina_product:
     db_driver: mongodb
+    product_manager:
+        primary_identifier: sku
+        identifiers:
+            sku: Vespolina\ProductBundle\Model\Identifier\SKUIdentifier
