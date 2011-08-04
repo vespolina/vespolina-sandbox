@@ -75,7 +75,7 @@
 	url = git://github.com/vespolina/PricingBundle.git
 [submodule "vendor/bundles/Vespolina/ProductBundle"]
 	path = vendor/bundles/Vespolina/ProductBundle
-	url = git://github.com/vespolina/ProductBundle.git
+	url = git@github.com:IamPersistent/ProductBundle.git
 [submodule "vendor/bundles/Vespolina/TaxationBundle"]
 	path = vendor/bundles/Vespolina/TaxationBundle
 	url = git://github.com/vespolina/TaxationBundle.git
@@ -85,3 +85,12 @@
 [submodule "vendor/doctrine/mongodb-odm"]
 	path = vendor/doctrine/mongodb-odm
 	url = git://github.com/IamPersistent/mongodb-odm.git
+[submodule "vendor/bundles/Sensio/Bundle/GeneratorBundle"]
+	path = vendor/bundles/Sensio/Bundle/GeneratorBundle
+	url = http://github.com/sensio/SensioGeneratorBundle.git
+[submodule "vendor/bundles/Symfony/Bundle/AsseticBundle"]
+	path = vendor/bundles/Symfony/Bundle/AsseticBundle
+	url = http://github.com/symfony/AsseticBundle.git
+[submodule "vendor/bundles/Sensio/Bundle/DistributionBundle"]
+	path = vendor/bundles/Sensio/Bundle/DistributionBundle
+	url = http://github.com/sensio/SensioDistributionBundle.git
