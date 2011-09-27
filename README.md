@@ -14,7 +14,6 @@ Vespolina is in very early stages.  We are currently in the design phase and are
 
 [vespolina_wiki]: https://github.com/vespolina/vespolina/wiki
 
-We have a chat meeting every Thursday at 20h UTC
 
 Contact
 -------
