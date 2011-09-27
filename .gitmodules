@@ -94,3 +94,6 @@
 [submodule "vendor/bundles/Sensio/Bundle/DistributionBundle"]
 	path = vendor/bundles/Sensio/Bundle/DistributionBundle
 	url = http://github.com/sensio/SensioDistributionBundle.git
+[submodule "vendor/bundles/Sonata/EasyExtendsBundle"]
+	path = vendor/bundles/Sonata/EasyExtendsBundle
+	url = git://github.com/sonata-project/SonataEasyExtendsBundle.git

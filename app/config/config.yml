@@ -30,6 +30,7 @@ doctrine_mongodb:
         default:
             mappings:
                 FOSUserBundle: ~
+                VespolinaDocumentBundle: ~
                 VespolinaProductBundle: ~
                 UserBundle:   ~
 
@@ -64,3 +65,5 @@ twig:
 imports:
     - { resource: security.yml }
     - { resource: vespolina.yml }
+
+sonata_easy_extends: ~

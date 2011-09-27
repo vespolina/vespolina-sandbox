@@ -3,4 +3,4 @@ vespolina_product:
     product_manager:
         primary_identifier: sku
         identifiers:
-            sku: Vespolina\ProductBundle\Model\Identifier\SKUIdentifier
+            sku: Vespolina\ProductBundle\Document\SKUIdentifier
