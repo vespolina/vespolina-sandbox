@@ -97,3 +97,6 @@
 [submodule "vendor/bundles/Sonata/EasyExtendsBundle"]
 	path = vendor/bundles/Sonata/EasyExtendsBundle
 	url = git://github.com/sonata-project/SonataEasyExtendsBundle.git
+[submodule "vendor/bundles/Vespolina/InventoryBundle"]
+	path = vendor/bundles/Vespolina/InventoryBundle
+	url = http://github.com/vespolina/InventoryBundle.git
