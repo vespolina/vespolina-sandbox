@@ -58,6 +58,76 @@
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
 
-[vespolina]
-    git=http://github.com/vespolina/vespolina.git
-    target=/bundles/Vespolina/Bundle/
+[doctrine-fixtures]
+    git=http://github.com/doctrine/data-fixtures.git
+
+[DoctrineFixturesBundle]
+    git=http://github.com/symfony/DoctrineFixturesBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[FOSUserBundle]
+    git=http://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=/bundles/FOS/UserBundle
+
+[doctrine-mongodb]
+    git=http://github.com/doctrine/mongodb.git
+
+[doctrine-mongodb-odm]
+    git=http://github.com/doctrine/mongodb-odm.git
+
+[DoctrineMongoDBBundle]
+    git=http://github.com/symfony/DoctrineMongoDBBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+
+[doctrine-workflow]
+    git=http://github.com/beberlei/Doctrine-Workflow.git
+
+[JMSDebuggingBundle]
+    git=https://github.com/schmittjoh/JMSDebuggingBundle.git
+    target=/bundles/JMS/DebuggingBundle
+
+[SonataEasyExtendsBundle]
+	git=http://github.com/sonata-project/SonataEasyExtendsBundle.git
+	target=/bundles/Sonata/EasyExtendsBundle
+
+[VespolinaMonetaryBundle]
+    git=http://github.com/vespolina/MonetaryBundle.git
+    target=/bundles/Vespolina/Bundle/MonetaryBundle
+
+[VespolinaWorkflowBundle]
+    git=http://github.com/vespolina/WorkflowBundle.git
+    target=/bundles/Vespolina/Bundle/WorkflowBundle
+
+[VespolinaCartBundle]
+    git=http://github.com/vespolina/CartBundle.git
+    target=/bundles/Vespolina/Bundle/CartBundle
+
+[VespolinaEcommerceFlowsBundle]
+    git=http://github.com/vespolina/EcommerceFlowsBundle.git
+    target=/bundles/Vespolina/Bundle/EcommerceFlowsBundle
+
+[VespolinaMerchandiseBundle]
+    git=http://github.com/vespolina/MerchandiseBundle.git
+    target=/bundles/Vespolina/Bundle/MerchandiseBundle
+
+[VespolinaPricingBundle]
+    git=http://github.com/vespolina/PricingBundle.git
+    target=/bundles/Vespolina/Bundle/PricingBundle
+
+[VespolinaProductBundle]
+    git=http://github.com/vespolina/ProductBundle.git
+    target=/bundles/Vespolina/Bundle/ProductBundle
+
+[VespolinaTaxationBundle]
+    git=http://github.com/vespolina/TaxationBundle.git
+    target=/bundles/Vespolina/Bundle/TaxationBundle
+
+[VespolinaDocumentBundle]
+    git=http://github.com/vespolina/DocumentBundle.git
+    target=/bundles/Vespolina/Bundle/DocumentBundle
+
+[VespolinaInventoryBundle]
+    git=http://github.com/vespolina/InventoryBundle.git
+    target=/bundles/Vespolina/Bundle/InventoryBundle
+
+
