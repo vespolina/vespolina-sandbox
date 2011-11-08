@@ -85,4 +85,3 @@ jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
 
-sonata_easy_extends: ~
