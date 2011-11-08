@@ -91,6 +91,10 @@
 	git=http://github.com/sonata-project/SonataEasyExtendsBundle.git
 	target=/bundles/Sonata/EasyExtendsBundle
 
+[VespolinaCoreBundle]
+    git=http://github.com/cordoval/VespolinaCoreBundle.git
+    target=/bundles/Vespolina/CoreBundle
+
 [VespolinaMonetaryBundle]
     git=http://github.com/vespolina/VespolinaMonetaryBundle.git
     target=/bundles/Vespolina/MonetaryBundle

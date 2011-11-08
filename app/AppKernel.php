@@ -23,12 +23,14 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
 
             new Application\UserBundle\UserBundle(),
-            #new Application\DefaultBundle\DefaultBundle(),
+            new Application\DefaultBundle\DefaultBundle(),
+            new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\DocumentBundle\VespolinaDocumentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new JMS\DebuggingBundle\JMSDebuggingBundle($this);
             $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
@@ -41,5 +43,14 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+    }
+
+    protected function getContainerBaseClass()
+    {
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            return '\JMS\DebuggingBundle\DependencyInjection\TraceableContainer';
+        }
+
+        return parent::getContainerBaseClass();
     }
 }

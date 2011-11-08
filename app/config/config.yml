@@ -85,3 +85,8 @@ jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
 
+jms_debugging:
+    # You can set this to true if you want to automatically retrieve help
+    # messages for public exceptions. If you leave this set to false, you have
+    # to click the "search" button manually each time.
+    auto_help: false
