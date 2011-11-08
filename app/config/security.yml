@@ -8,7 +8,6 @@ security:
 
     firewalls:
         main:
-            pattern:    ^/secure
             form_login:
                 provider:   fos_user_provider
                 check_path: /login_check

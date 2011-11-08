@@ -93,42 +93,42 @@
 
 [VespolinaMonetaryBundle]
     git=http://github.com/vespolina/VespolinaMonetaryBundle.git
-    target=/bundles/Vespolina/Bundle/MonetaryBundle
+    target=/bundles/Vespolina/MonetaryBundle
 
 [VespolinaWorkflowBundle]
     git=http://github.com/vespolina/VespolinaWorkflowBundle.git
-    target=/bundles/Vespolina/Bundle/WorkflowBundle
+    target=/bundles/Vespolina/WorkflowBundle
 
 [VespolinaCartBundle]
     git=http://github.com/vespolina/VespolinaCartBundle.git
-    target=/bundles/Vespolina/Bundle/CartBundle
+    target=/bundles/Vespolina/CartBundle
 
 [VespolinaEcommerceFlowsBundle]
     git=http://github.com/vespolina/VespolinaEcommerceFlowsBundle.git
-    target=/bundles/Vespolina/Bundle/EcommerceFlowsBundle
+    target=/bundles/Vespolina/EcommerceFlowsBundle
 
 [VespolinaMerchandiseBundle]
     git=http://github.com/vespolina/VespolinaMerchandiseBundle.git
-    target=/bundles/Vespolina/Bundle/MerchandiseBundle
+    target=/bundles/Vespolina/MerchandiseBundle
 
 [VespolinaPricingBundle]
     git=http://github.com/vespolina/VespolinaPricingBundle.git
-    target=/bundles/Vespolina/Bundle/PricingBundle
+    target=/bundles/Vespolina/PricingBundle
 
 [VespolinaProductBundle]
     git=http://github.com/vespolina/VespolinaProductBundle.git
-    target=/bundles/Vespolina/Bundle/ProductBundle
+    target=/bundles/Vespolina/ProductBundle
 
 [VespolinaTaxationBundle]
     git=http://github.com/vespolina/VespolinaTaxationBundle.git
-    target=/bundles/Vespolina/Bundle/TaxationBundle
+    target=/bundles/Vespolina/TaxationBundle
 
 [VespolinaDocumentBundle]
     git=http://github.com/vespolina/VespolinaDocumentBundle.git
-    target=/bundles/Vespolina/Bundle/DocumentBundle
+    target=/bundles/Vespolina/DocumentBundle
 
 [VespolinaInventoryBundle]
     git=http://github.com/vespolina/VespolinaInventoryBundle.git
-    target=/bundles/Vespolina/Bundle/InventoryBundle
+    target=/bundles/Vespolina/InventoryBundle
 
 
