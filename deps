@@ -57,3 +57,7 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[vespolina]
+    git=http://github.com/vespolina/vespolina.git
+    target=/bundles/Vespolina/Bundle/
