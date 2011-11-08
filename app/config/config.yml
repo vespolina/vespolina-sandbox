@@ -1,11 +1,14 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: vespolina.yml }
 
 framework:
     #esi:             ~
     #translator:      { fallback: %locale% }
     secret:          %secret%
+    annotations:
+        cache:          file
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
     form:            true
@@ -15,6 +18,8 @@ framework:
     default_locale:  %locale%
     session:
         auto_start:     true
+        lifetime:       3600
+        name:           symfony
 
 # Twig Configuration
 twig:
@@ -37,13 +42,16 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   %database_driver%
-        host:     %database_host%
-        port:     %database_port%
-        dbname:   %database_name%
-        user:     %database_user%
-        password: %database_password%
-        charset:  UTF8
+        default_connection: default
+        connections:
+            default:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
@@ -55,10 +63,16 @@ doctrine_mongodb:
             server: mongodb://localhost:27017
             options:
                 connect: true
-    default_database: test_database
+    default_document_manager: default
+    default_database: app_%kernel.environment%
     document_managers:
         default:
-            auto_mapping: true
+            #auto_mapping: true
+            mappings:
+                FOSUserBundle: ~
+                VespolinaDocumentBundle: ~
+                VespolinaProductBundle: ~
+                UserBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -70,3 +84,5 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+sonata_easy_extends: ~

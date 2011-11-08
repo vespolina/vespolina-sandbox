@@ -2,3 +2,17 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+
+default:
+    resource: @DefaultBundle/Resources/config/routing.yml
+
+fos_user_security:
+    resource: @FOSUserBundle/Resources/config/routing/security.xml
+
+#fos_user_user:
+#    resource: @FOSUserBundle/Resources/config/routing/user.xml
+#    prefix: /user
+
+vespolina_product:
+    resource: @VespolinaProductBundle/Resources/config/routing/admin.xml
+    prefix: /admin/products
