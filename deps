@@ -91,43 +91,43 @@
 	target=/bundles/Sonata/EasyExtendsBundle
 
 [VespolinaMonetaryBundle]
-    git=http://github.com/vespolina/MonetaryBundle.git
+    git=http://github.com/vespolina/VespolinaMonetaryBundle.git
     target=/bundles/Vespolina/Bundle/MonetaryBundle
 
 [VespolinaWorkflowBundle]
-    git=http://github.com/vespolina/WorkflowBundle.git
+    git=http://github.com/vespolina/VespolinaWorkflowBundle.git
     target=/bundles/Vespolina/Bundle/WorkflowBundle
 
 [VespolinaCartBundle]
-    git=http://github.com/vespolina/CartBundle.git
+    git=http://github.com/vespolina/VespolinaCartBundle.git
     target=/bundles/Vespolina/Bundle/CartBundle
 
 [VespolinaEcommerceFlowsBundle]
-    git=http://github.com/vespolina/EcommerceFlowsBundle.git
+    git=http://github.com/vespolina/VespolinaEcommerceFlowsBundle.git
     target=/bundles/Vespolina/Bundle/EcommerceFlowsBundle
 
 [VespolinaMerchandiseBundle]
-    git=http://github.com/vespolina/MerchandiseBundle.git
+    git=http://github.com/vespolina/VespolinaMerchandiseBundle.git
     target=/bundles/Vespolina/Bundle/MerchandiseBundle
 
 [VespolinaPricingBundle]
-    git=http://github.com/vespolina/PricingBundle.git
+    git=http://github.com/vespolina/VespolinaPricingBundle.git
     target=/bundles/Vespolina/Bundle/PricingBundle
 
 [VespolinaProductBundle]
-    git=http://github.com/vespolina/ProductBundle.git
+    git=http://github.com/vespolina/VespolinaProductBundle.git
     target=/bundles/Vespolina/Bundle/ProductBundle
 
 [VespolinaTaxationBundle]
-    git=http://github.com/vespolina/TaxationBundle.git
+    git=http://github.com/vespolina/VespolinaTaxationBundle.git
     target=/bundles/Vespolina/Bundle/TaxationBundle
 
 [VespolinaDocumentBundle]
-    git=http://github.com/vespolina/DocumentBundle.git
+    git=http://github.com/vespolina/VespolinaDocumentBundle.git
     target=/bundles/Vespolina/Bundle/DocumentBundle
 
 [VespolinaInventoryBundle]
-    git=http://github.com/vespolina/InventoryBundle.git
+    git=http://github.com/vespolina/VespolinaInventoryBundle.git
     target=/bundles/Vespolina/Bundle/InventoryBundle
 
 
