@@ -73,6 +73,7 @@ doctrine_mongodb:
                 VespolinaDocumentBundle: ~
                 VespolinaProductBundle: ~
                 UserBundle: ~
+                ApplicationVespolinaProductBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:

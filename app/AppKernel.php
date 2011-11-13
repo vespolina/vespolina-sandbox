@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
 
+            new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
+            
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
