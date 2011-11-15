@@ -4,6 +4,6 @@
                         xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
                         http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
 
-    <embedded-document name="Vespolina\DocumentBundle\Document\DocumentItem">
+    <embedded-document name="Vespolina\OrderBundle\Document\OrderDocumentItem">
     </embedded-document>
 </doctrine-mongo-mapping>

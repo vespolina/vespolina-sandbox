@@ -5,13 +5,13 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
-namespace Vespolina\DocumentBundle\Document;
+namespace Vespolina\OrderBundle\Document;
 
-use Vespolina\DocumentBundle\Document\BaseDocument;
+use Vespolina\OrderBundle\Document\BaseOrderDocument;
 /**
  * @author Daniel Kucharski <daniel@xerias.be>
  */
-class Document extends BaseDocument
+class OrderDocument extends BaseOrderDocument
 {
     public function __construct($documentConfigurationName)
     {

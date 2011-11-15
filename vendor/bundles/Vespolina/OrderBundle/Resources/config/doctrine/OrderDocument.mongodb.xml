@@ -4,14 +4,14 @@
                         xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
                         http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
 
-    <document name="Vespolina\OrderBundle\Document\OrderDocument">
-        <field name="id" id="true" />
-            <embed-many fieldName="items"
-                        field="items"
-                        targetDocument="Vespolina\OrderBundle\Document\OrderDocumentItem"
-                        strategy="set"/>
+    <mapped-superclass name="Vespolina\DocumentBundle\Document\BaseDocument" collection="vespolina_order_documents">
 
-        <!--<embed-many fieldName="items" targetDocument="DocumentItem" />-->
-        <!--<embed-many fieldName="items" targetDocument="Vespolina\DocumentBundle\Document\DocumentItem" /> -->
-    </document>
+
+        <embed-many fieldName="items"
+                    field="items"
+                    targetDocument="Vespolina\OrderBundle\Document\OrderDocumentItem"
+                    strategy="set"/>
+
+    </mapped-superclass>
+
 </doctrine-mongo-mapping>

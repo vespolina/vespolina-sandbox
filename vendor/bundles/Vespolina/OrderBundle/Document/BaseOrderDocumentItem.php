@@ -5,13 +5,13 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
-namespace Vespolina\DocumentBundle\Document;
+namespace Vespolina\OrderBundle\Document;
 
-use Vespolina\DocumentBundle\Model\DocumentItem as AbstractDocumentItem;
+use Vespolina\OrderBundle\Model\OrderDocumentItem as AbstractOrderDocumentItem;
 /**
  * @author Daniel Kucharski <daniel@xerias.be>
  */
-abstract class BaseDocumentItem extends AbstractDocumentItem
+abstract class BaseOrderDocumentItem extends AbstractOrderDocumentItem
 {
 
 }
