@@ -4,3 +4,8 @@ vespolina_product:
         primary_identifier: sku
         identifiers:
             sku: Vespolina\ProductBundle\Document\SKUIdentifier
+#    product:
+#        form:
+#            type:               vespolina.product.form.type
+#            handler_service:    vespolina.product.form.handler
+#            name:               vespolina_product_form
