@@ -135,4 +135,6 @@
     git=http://github.com/vespolina/VespolinaInventoryBundle.git
     target=/bundles/Vespolina/InventoryBundle
 
-
+[VespolinaFulfillmentBundle]
+    git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
+    target=/bundles/Vespolina/FulfillmentBundle
