@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\DocumentBundle\VespolinaDocumentBundle(),
+            new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
