@@ -20,6 +20,16 @@ $loader->registerNamespaces(array(
     'Sonata'                         => __DIR__.'/../vendor/bundles',
     'FOS' => __DIR__.'/../vendor/bundles',
     'Vespolina'                         => __DIR__.'/../vendor/bundles',
+                                
+    'Behat\Mink' => __DIR__.'/../vendor/behat/mink/src',
+    'Goutte'           => __DIR__.'/../vendor/goutte/src',
+    'Zend'             => __DIR__.'/../vendor/zend/library',
+    'Behat\MinkBundle' => __DIR__.'/../vendor/bundles',
+    'Behat\SahiClient' => __DIR__.'/../vendor/behat/sahi/src',
+    'Behat\BehatBundle' => __DIR__.'/../vendor/bundles',
+    'Behat\Behat'       => __DIR__.'/../vendor/behat/Behat/src',
+    'Behat\Gherkin'     => __DIR__.'/../vendor/behat/Gherkin/src',
+    'Buzz'             => __DIR__.'/../vendor/buzz/lib',
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',

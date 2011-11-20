@@ -35,6 +35,8 @@ class AppKernel extends Kernel
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new JMS\DebuggingBundle\JMSDebuggingBundle($this);
             $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+            $bundles[] = new Behat\MinkBundle\MinkBundle();
+            $bundles[] = new Behat\BehatBundle\BehatBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

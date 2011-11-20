@@ -2,8 +2,11 @@ imports:
     - { resource: config.yml }
 
 framework:
+    test: ~
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
+    session:
+        storage_id: session.storage.filesystem
 
 web_profiler:
     toolbar: true
@@ -21,3 +24,12 @@ monolog:
 
 assetic:
     use_controller: true
+
+mink:
+    base_url:   http://store.local/app_test.php
+    sahi:
+        host:     store.local
+    show_cmd:   google-chrome %%s
+    #default_session: sahi
+    default_session: symfony
+behat: ~

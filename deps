@@ -138,3 +138,36 @@
 [VespolinaFulfillmentBundle]
     git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
     target=/bundles/Vespolina/FulfillmentBundle
+
+
+[buzz]
+    git=https://github.com/kriswallsmith/Buzz.git
+    target=/buzz
+
+[SahiClient]
+    git=https://github.com/Behat/SahiClient
+    target=/behat/sahi
+
+[MinkBundle]
+    git=https://github.com/Behat/MinkBundle.git
+    target=/bundles/Behat/MinkBundle
+
+[Mink]
+    git=https://github.com/Behat/Mink.git
+    target=/behat/mink
+
+[BehatBundle]
+    git=https://github.com/Behat/BehatBundle.git
+    target=/bundles/Behat/BehatBundle
+
+[Gherkin]
+    git=https://github.com/Behat/Gherkin.git
+    target=/behat/Gherkin
+
+[Behat]
+    git=https://github.com/Behat/Behat.git
+    target=/behat/Behat
+
+[zend]
+    git=https://github.com/zendframework/zf2.git
+    target=/zend
