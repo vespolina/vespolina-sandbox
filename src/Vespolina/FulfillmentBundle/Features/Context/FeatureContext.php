@@ -35,52 +35,37 @@ class FeatureContext extends BehatContext //MinkContext if you want to test web
 //    }
 //
 
-    /**
-      * @Given /^I have an order on a product$/
-      */
-     public function iHaveAnOrderOnAProduct()
-     {
-         throw new PendingException();
-     }
+      /**
+        * @Given /^I create a fulfillment order on a product$/
+        */
+       public function iCreateAFulfillmentOrderOnAProduct()
+       {
+           
+       }
 
-     /**
-      * @When /^I configure the fulfillment of this product$/
-      */
-     public function iConfigureTheFulfillmentOfThisProduct()
-     {
-         throw new PendingException();
-     }
+       /**
+        * @Then /^I should see fulfillment order of this product initialized$/
+        */
+       public function iShouldSeeFulfillmentOrderOfThisProductInitialized()
+       {
+           throw new PendingException();
+       }
 
-     /**
-      * @Then /^I should see fulfillment of this product initialized$/
-      */
-     public function iShouldSeeFulfillmentOfThisProductInitialized()
-     {
-         throw new PendingException();
-     }
+       /**
+        * @When /^I set status of the fulfillment order to "([^"]*)"$/
+        */
+       public function iSetStatusOfTheFulfillmentOrderTo($argument1)
+       {
+           throw new PendingException();
+       }
 
-     /**
-      * @Given /^I set status to processing$/
-      */
-     public function iSetStatusToProcessing()
-     {
-         throw new PendingException();
-     }
+       /**
+        * @Then /^I should read back "([^"]*)" for status$/
+        */
+       public function iShouldReadBackForStatus($argument1)
+       {
+           throw new PendingException();
+       }
 
-     /**
-      * @Then /^I should read back "([^"]*)" for status$/
-      */
-     public function iShouldReadBackForStatus($argument1)
-     {
-         throw new PendingException();
-     }
-
-     /**
-      * @Given /^I set status to "([^"]*)"$/
-      */
-     public function iSetStatusTo($argument1)
-     {
-         throw new PendingException();
-     }
 
 }
