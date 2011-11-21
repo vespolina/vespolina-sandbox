@@ -139,7 +139,6 @@
     git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
     target=/bundles/Vespolina/FulfillmentBundle
 
-
 [buzz]
     git=https://github.com/kriswallsmith/Buzz.git
     target=/buzz

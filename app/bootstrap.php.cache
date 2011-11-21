@@ -456,7 +456,7 @@ abstract class Kernel implements KernelInterface
     protected $startTime;
     protected $classes;
 
-    const VERSION = '2.0.0';
+    const VERSION = '2.1.0-DEV';
 
     
     public function __construct($environment, $debug)
@@ -678,7 +678,7 @@ abstract class Kernel implements KernelInterface
     
     public function loadClassCache($name = 'classes', $extension = '.php')
     {
-        if (!$this->booted && file_exists($this->getCacheDir().'/classes.map')) {
+        if (!$this->booted && is_file($this->getCacheDir().'/classes.map')) {
             ClassCollectionLoader::load(include($this->getCacheDir().'/classes.map'), $this->getCacheDir(), $name, $this->debug, false, $extension);
         }
     }
@@ -787,7 +787,7 @@ abstract class Kernel implements KernelInterface
         $this->container = new $class();
         $this->container->set('kernel', $this);
 
-        if (!$fresh) {
+        if (!$fresh && $this->container->has('cache_warmer')) {
             $this->container->get('cache_warmer')->warmUp($this->container->getParameter('kernel.cache_dir'));
         }
     }
@@ -835,7 +835,7 @@ abstract class Kernel implements KernelInterface
         foreach (array('cache' => $this->getCacheDir(), 'logs' => $this->getLogDir()) as $name => $dir) {
             if (!is_dir($dir)) {
                 if (false === @mkdir($dir, 0777, true)) {
-                    throw new \RuntimeException(sprintf("Unable to create the %s directory (%s)\n", $name, dirname($dir)));
+                    throw new \RuntimeException(sprintf("Unable to create the %s directory (%s)\n", $name, $dir));
                 }
             } elseif (!is_writable($dir)) {
                 throw new \RuntimeException(sprintf("Unable to write in the %s directory (%s)\n", $name, $dir));
@@ -845,8 +845,6 @@ abstract class Kernel implements KernelInterface
         $container = new ContainerBuilder(new ParameterBag($this->getKernelParameters()));
         $extensions = array();
         foreach ($this->bundles as $bundle) {
-            $bundle->build($container);
-
             if ($extension = $bundle->getContainerExtension()) {
                 $container->registerExtension($extension);
                 $extensions[] = $extension->getAlias();
@@ -856,6 +854,10 @@ abstract class Kernel implements KernelInterface
                 $container->addObjectResource($bundle);
             }
         }
+        foreach ($this->bundles as $bundle) {
+            $bundle->build($container);
+        }
+
         $container->addObjectResource($this);
 
                 $container->getCompilerPassConfig()->setMergePass(new MergeExtensionConfigurationPass($extensions));
@@ -963,7 +965,7 @@ class ClassCollectionLoader
                 $reload = false;
         if ($autoReload) {
             $metadata = $cacheDir.'/'.$name.$extension.'.meta';
-            if (!file_exists($metadata) || !file_exists($cache)) {
+            if (!is_file($metadata) || !is_file($cache)) {
                 $reload = true;
             } else {
                 $time = filemtime($cache);
@@ -973,7 +975,7 @@ class ClassCollectionLoader
                     $reload = true;
                 } else {
                     foreach ($meta[0] as $resource) {
-                        if (!file_exists($resource) || filemtime($resource) > $time) {
+                        if (!is_file($resource) || filemtime($resource) > $time) {
                             $reload = true;
 
                             break;
@@ -983,7 +985,7 @@ class ClassCollectionLoader
             }
         }
 
-        if (!$reload && file_exists($cache)) {
+        if (!$reload && is_file($cache)) {
             require_once $cache;
 
             return;
@@ -992,7 +994,7 @@ class ClassCollectionLoader
         $files = array();
         $content = '';
         foreach ($classes as $class) {
-            if (!class_exists($class) && !interface_exists($class)) {
+            if (!class_exists($class) && !interface_exists($class) && (!function_exists('trait_exists') || !trait_exists($class))) {
                 throw new \InvalidArgumentException(sprintf('Unable to load class "%s"', $class));
             }
 
@@ -1115,6 +1117,19 @@ class UniversalClassLoader
     private $prefixes = array();
     private $namespaceFallbacks = array();
     private $prefixFallbacks = array();
+    private $useIncludePath = false;
+
+    
+    public function useIncludePath($useIncludePath)
+    {
+        $this->useIncludePath = $useIncludePath;
+    }
+
+    
+    public function getUseIncludePath()
+    {
+        return $this->useIncludePath;
+    }
 
     
     public function getNamespaces()
@@ -1203,42 +1218,53 @@ class UniversalClassLoader
 
         if (false !== $pos = strrpos($class, '\\')) {
                         $namespace = substr($class, 0, $pos);
+            $className = substr($class, $pos + 1);
+            $normalizedClass = str_replace('\\', DIRECTORY_SEPARATOR, $namespace).DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $className).'.php';
             foreach ($this->namespaces as $ns => $dirs) {
+                if (0 !== strpos($namespace, $ns)) {
+                    continue;
+                }
+
                 foreach ($dirs as $dir) {
-                    if (0 === strpos($namespace, $ns)) {
-                        $className = substr($class, $pos + 1);
-                        $file = $dir.DIRECTORY_SEPARATOR.str_replace('\\', DIRECTORY_SEPARATOR, $namespace).DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $className).'.php';
-                        if (file_exists($file)) {
-                            return $file;
-                        }
+                    $file = $dir.DIRECTORY_SEPARATOR.$normalizedClass;
+                    if (is_file($file)) {
+                        return $file;
                     }
                 }
             }
 
             foreach ($this->namespaceFallbacks as $dir) {
-                $file = $dir.DIRECTORY_SEPARATOR.str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
-                if (file_exists($file)) {
+                $file = $dir.DIRECTORY_SEPARATOR.$normalizedClass;
+                if (is_file($file)) {
                     return $file;
                 }
             }
+
         } else {
-                        foreach ($this->prefixes as $prefix => $dirs) {
+                        $normalizedClass = str_replace('_', DIRECTORY_SEPARATOR, $class).'.php';
+            foreach ($this->prefixes as $prefix => $dirs) {
+                if (0 !== strpos($class, $prefix)) {
+                    continue;
+                }
+
                 foreach ($dirs as $dir) {
-                    if (0 === strpos($class, $prefix)) {
-                        $file = $dir.DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $class).'.php';
-                        if (file_exists($file)) {
-                            return $file;
-                        }
+                    $file = $dir.DIRECTORY_SEPARATOR.$normalizedClass;
+                    if (is_file($file)) {
+                        return $file;
                     }
                 }
             }
 
             foreach ($this->prefixFallbacks as $dir) {
-                $file = $dir.DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $class).'.php';
-                if (file_exists($file)) {
+                $file = $dir.DIRECTORY_SEPARATOR.$normalizedClass;
+                if (is_file($file)) {
                     return $file;
                 }
             }
+        }
+
+        if ($this->useIncludePath && $file = stream_resolve_include_path($normalizedClass)) {
+            return $file;
         }
     }
 }
@@ -1438,7 +1464,7 @@ class ConfigCache
     
     public function isFresh()
     {
-        if (!file_exists($this->file)) {
+        if (!is_file($this->file)) {
             return false;
         }
 
@@ -1447,7 +1473,7 @@ class ConfigCache
         }
 
         $metadata = $this->file.'.meta';
-        if (!file_exists($metadata)) {
+        if (!is_file($metadata)) {
             return false;
         }
 
