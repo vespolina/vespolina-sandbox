@@ -1,46 +1,66 @@
 <?php
 
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use Symfony\Component\ClassLoader\UniversalClassLoader;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
-    'Application'                       => __DIR__.'/../src',
-    'Assetic'                           => __DIR__.'/../vendor/assetic/src',
-    'Doctrine\\Common\\DataFixtures'    => __DIR__.'/../vendor/doctrine/data-fixtures/lib', // must go before common
-    'Doctrine\\Common'                  => __DIR__.'/../vendor/doctrine/common/lib',
-    'Doctrine\\MongoDB'                 => __DIR__.'/../vendor/doctrine/mongodb/lib',
-    'Doctrine\\ODM\\MongoDB'            => __DIR__.'/../vendor/doctrine/mongodb-odm/lib',
-    'Doctrine\\DBAL'                    => __DIR__.'/../vendor/doctrine/dbal/lib',
-    'Doctrine'                          => __DIR__.'/../vendor/doctrine/orm/lib',
-    'DoctrineExtensions\\Workflow'      => __DIR__.'/../vendor/doctrine/extensions/doctrine-workflow/lib',
-    'FOS'                               => __DIR__.'/../vendor/bundles',
-    'Metadata'                          => __DIR__.'/../vendor/metadata/src',
-    'Monolog'                           => __DIR__.'/../vendor/monolog/src',
-    'Sonata'                            => __DIR__.'/../vendor/bundles',
-    'Symfony'                           => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
-    'vendor'                            => __DIR__.'/../src',
+    'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
+    'Sensio'           => __DIR__.'/../vendor/bundles',
+    'JMS'              => __DIR__.'/../vendor/bundles',
+    'Doctrine\\Common\\DataFixtures' => __DIR__.'/../vendor/doctrine-fixtures/lib',
+    'Doctrine\\Common' => __DIR__.'/../vendor/doctrine-common/lib',
+    'Doctrine\\DBAL'   => __DIR__.'/../vendor/doctrine-dbal/lib',
+    'Doctrine\\ODM\\MongoDB'    => __DIR__.'/../vendor/doctrine-mongodb-odm/lib',
+    'Doctrine\\MongoDB'         => __DIR__.'/../vendor/doctrine-mongodb/lib',
+    'Doctrine'         => __DIR__.'/../vendor/doctrine/lib',
+    'Monolog'          => __DIR__.'/../vendor/monolog/src',
+    'Assetic'          => __DIR__.'/../vendor/assetic/src',
+    'Metadata'         => __DIR__.'/../vendor/metadata/src',
+    'Sonata'                         => __DIR__.'/../vendor/bundles',
+    'FOS' => __DIR__.'/../vendor/bundles',
     'Vespolina'                         => __DIR__.'/../vendor/bundles',
+                                
+    'Behat\Mink' => __DIR__.'/../vendor/behat/mink/src',
+    'Goutte'           => __DIR__.'/../vendor/goutte/src',
+    'Zend'             => __DIR__.'/../vendor/zend/library',
+    'Behat\MinkBundle' => __DIR__.'/../vendor/bundles',
+    'Behat\SahiClient' => __DIR__.'/../vendor/behat/sahi/src',
+    'Behat\BehatBundle' => __DIR__.'/../vendor/bundles',
+    'Behat\Behat'       => __DIR__.'/../vendor/behat/Behat/src',
+    'Behat\Gherkin'     => __DIR__.'/../vendor/behat/Gherkin/src',
+    'Buzz'             => __DIR__.'/../vendor/buzz/lib',
 ));
 $loader->registerPrefixes(array(
-    'Twig_Extensions_'                  => __DIR__.'/../vendor/twig-extensions/lib',
-    'Twig_'                             => __DIR__.'/../vendor/twig/lib',
-    'Swift_'                            => __DIR__.'/../vendor/swiftmailer/lib/classes',
+    'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',
+    'Twig_'            => __DIR__.'/../vendor/twig/lib',
 ));
-$loader->registerPrefixFallbacks(array(
-    __DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs',
-));
+
+// intl
+if (!function_exists('intl_get_error_code')) {
+    require_once __DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs/functions.php';
+
+    $loader->registerPrefixFallbacks(array(__DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs'));
+}
+
 $loader->registerNamespaceFallbacks(array(
     __DIR__.'/../src',
 ));
 $loader->register();
 
-require_once 'ezc/Base/base.php';
-spl_autoload_register( array( 'ezcBase', 'autoload' ) );
-
 AnnotationRegistry::registerLoader(function($class) use ($loader) {
     $loader->loadClass($class);
     return class_exists($class, false);
 });
-Doctrine\Common\Annotations\AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/DoctrineAnnotations.php');
+AnnotationRegistry::registerFile(
+    __DIR__.'/../vendor/doctrine/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php'
+);
+AnnotationRegistry::registerFile(
+    __DIR__.'/../vendor/doctrine-mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/DoctrineAnnotations.php'
+);
+
+// Swiftmailer needs a special autoloader to allow
+// the lazy loading of the init file (which is expensive)
+require_once __DIR__.'/../vendor/swiftmailer/lib/classes/Swift.php';
+Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/lib/swift_init.php');
 
