@@ -35,9 +35,9 @@ Installation
         $ git clone git@github.com:vespolina/vespolina.git
         $ cd vespolina/
 
-  2. Initialize and update the submodules:
+  2. Initialize and install the vendors:
 
-        $ git submodule update --init
+        $ bin/vendors install
 
   3. Setup file permissions:
 
