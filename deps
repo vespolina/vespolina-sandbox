@@ -95,6 +95,10 @@
     git=http://github.com/cordoval/VespolinaCoreBundle.git
     target=/bundles/Vespolina/CoreBundle
 
+[VespolinaOrderBundle]
+    git=http://github.com/vespolina/VespolinaOrderBundle.git
+    target=/bundles/Vespolina/OrderBundle
+
 [VespolinaMonetaryBundle]
     git=http://github.com/vespolina/VespolinaMonetaryBundle.git
     target=/bundles/Vespolina/MonetaryBundle
@@ -127,9 +131,9 @@
     git=http://github.com/vespolina/VespolinaTaxationBundle.git
     target=/bundles/Vespolina/TaxationBundle
 
-[VespolinaDocumentBundle]
-    git=http://github.com/vespolina/VespolinaDocumentBundle.git
-    target=/bundles/Vespolina/DocumentBundle
+[VespolinaCustomerBundle]
+    git=http://github.com/vespolina/VespolinaCustomerBundle.git
+    target=/bundles/Vespolina/CustomerBundle
 
 [VespolinaInventoryBundle]
     git=http://github.com/vespolina/VespolinaInventoryBundle.git
