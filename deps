@@ -1,4 +1,4 @@
-[symfony]
+[symfony] 
     git=http://github.com/symfony/symfony.git
     version=origin/master
 
