@@ -1,6 +1,9 @@
+web/bundles/
+app/bootstrap.php.cache
 app/cache/*
-app/config/local_config.yml
+app/logs/*
+build/
+vendor/
+app/config/parameters.yml
 .idea
 nbproject/
-app/logs/
-app/cache/

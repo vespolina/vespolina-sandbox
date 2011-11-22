@@ -1,0 +1,172 @@
+[symfony]
+    git=http://github.com/symfony/symfony.git
+    version=origin/master
+
+[twig]
+    git=http://github.com/fabpot/Twig.git
+    version=origin/master
+
+[monolog]
+    git=http://github.com/Seldaek/monolog.git
+    version=1.0.2
+
+[doctrine-common]
+    git=http://github.com/doctrine/common.git
+    version=origin/master
+
+[doctrine-dbal]
+    git=http://github.com/doctrine/dbal.git
+    version=origin/master
+
+[doctrine]
+    git=http://github.com/doctrine/doctrine2.git
+    version=origin/master
+
+[swiftmailer]
+    git=http://github.com/swiftmailer/swiftmailer.git
+    version=v4.1.2
+
+[assetic]
+    git=http://github.com/kriswallsmith/assetic.git
+    version=v1.0.2
+
+[twig-extensions]
+    git=http://github.com/fabpot/Twig-extensions.git
+
+[metadata]
+    git=http://github.com/schmittjoh/metadata.git
+    version=1.1.0
+
+[SensioFrameworkExtraBundle]
+    git=http://github.com/sensio/SensioFrameworkExtraBundle.git
+    target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+
+[JMSSecurityExtraBundle]
+    git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
+    target=/bundles/JMS/SecurityExtraBundle
+    version=origin/1.0.x
+
+[SensioDistributionBundle]
+    git=http://github.com/sensio/SensioDistributionBundle.git
+    target=/bundles/Sensio/Bundle/DistributionBundle
+
+[SensioGeneratorBundle]
+    git=http://github.com/sensio/SensioGeneratorBundle.git
+    target=/bundles/Sensio/Bundle/GeneratorBundle
+
+[AsseticBundle]
+    git=http://github.com/symfony/AsseticBundle.git
+    target=/bundles/Symfony/Bundle/AsseticBundle
+    version=v1.0.1
+
+[doctrine-fixtures]
+    git=http://github.com/doctrine/data-fixtures.git
+
+[DoctrineFixturesBundle]
+    git=http://github.com/symfony/DoctrineFixturesBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[FOSUserBundle]
+    git=http://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=/bundles/FOS/UserBundle
+
+[doctrine-mongodb]
+    git=http://github.com/doctrine/mongodb.git
+
+[doctrine-mongodb-odm]
+    git=http://github.com/doctrine/mongodb-odm.git
+
+[DoctrineMongoDBBundle]
+    git=http://github.com/symfony/DoctrineMongoDBBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+
+[doctrine-workflow]
+    git=http://github.com/beberlei/Doctrine-Workflow.git
+
+[JMSDebuggingBundle]
+    git=https://github.com/schmittjoh/JMSDebuggingBundle.git
+    target=/bundles/JMS/DebuggingBundle
+
+[SonataEasyExtendsBundle]
+	git=http://github.com/sonata-project/SonataEasyExtendsBundle.git
+	target=/bundles/Sonata/EasyExtendsBundle
+
+[VespolinaCoreBundle]
+    git=http://github.com/cordoval/VespolinaCoreBundle.git
+    target=/bundles/Vespolina/CoreBundle
+
+[VespolinaMonetaryBundle]
+    git=http://github.com/vespolina/VespolinaMonetaryBundle.git
+    target=/bundles/Vespolina/MonetaryBundle
+
+[VespolinaWorkflowBundle]
+    git=http://github.com/vespolina/VespolinaWorkflowBundle.git
+    target=/bundles/Vespolina/WorkflowBundle
+
+[VespolinaCartBundle]
+    git=http://github.com/vespolina/VespolinaCartBundle.git
+    target=/bundles/Vespolina/CartBundle
+
+[VespolinaEcommerceFlowsBundle]
+    git=http://github.com/vespolina/VespolinaEcommerceFlowsBundle.git
+    target=/bundles/Vespolina/EcommerceFlowsBundle
+
+[VespolinaMerchandiseBundle]
+    git=http://github.com/vespolina/VespolinaMerchandiseBundle.git
+    target=/bundles/Vespolina/MerchandiseBundle
+
+[VespolinaPricingBundle]
+    git=http://github.com/vespolina/VespolinaPricingBundle.git
+    target=/bundles/Vespolina/PricingBundle
+
+[VespolinaProductBundle]
+    git=http://github.com/vespolina/VespolinaProductBundle.git
+    target=/bundles/Vespolina/ProductBundle
+
+[VespolinaTaxationBundle]
+    git=http://github.com/vespolina/VespolinaTaxationBundle.git
+    target=/bundles/Vespolina/TaxationBundle
+
+[VespolinaDocumentBundle]
+    git=http://github.com/vespolina/VespolinaDocumentBundle.git
+    target=/bundles/Vespolina/DocumentBundle
+
+[VespolinaInventoryBundle]
+    git=http://github.com/vespolina/VespolinaInventoryBundle.git
+    target=/bundles/Vespolina/InventoryBundle
+
+[VespolinaFulfillmentBundle]
+    git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
+    target=/bundles/Vespolina/FulfillmentBundle
+
+[buzz]
+    git=https://github.com/kriswallsmith/Buzz.git
+    target=/buzz
+
+[SahiClient]
+    git=https://github.com/Behat/SahiClient
+    target=/behat/sahi
+
+[MinkBundle]
+    git=https://github.com/Behat/MinkBundle.git
+    target=/bundles/Behat/MinkBundle
+
+[Mink]
+    git=https://github.com/Behat/Mink.git
+    target=/behat/mink
+
+[BehatBundle]
+    git=https://github.com/Behat/BehatBundle.git
+    target=/bundles/Behat/BehatBundle
+
+[Gherkin]
+    git=https://github.com/Behat/Gherkin.git
+    target=/behat/Gherkin
+
+[Behat]
+    git=https://github.com/Behat/Behat.git
+    target=/behat/Behat
+
+[zend]
+    git=https://github.com/zendframework/zf2.git
+    target=/zend

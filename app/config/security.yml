@@ -1,15 +1,20 @@
 security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
     providers:
         fos_user_provider:
             id: fos_user.user_manager
+
     firewalls:
         main:
             form_login:
-                provider:                       fos_user_provider
-                login_path:                     /login
-                check_path:                     /login-check
-            logout: true
-            anonymous: true
+                provider:   fos_user_provider
+                check_path: /login_check
+                login_path: /login
+            logout:     true
+            anonymous:  true
+
     access_control:
         - { path: "/dashboard.*", role: IS_AUTHENTICATED_FULLY }
         - { path: "/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
@@ -24,4 +29,3 @@ fos_user:
     user_class: Application\UserBundle\Document\User
     group:
         group_class: Application\UserBundle\Document\Group
-
