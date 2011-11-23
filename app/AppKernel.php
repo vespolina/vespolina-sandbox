@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
+            new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
