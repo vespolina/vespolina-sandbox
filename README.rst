@@ -35,14 +35,14 @@ Installation
         $ git clone git@github.com:vespolina/vespolina.git
         $ cd vespolina/
 
-  2. Initialize and install the vendors:
-
-        $ bin/vendors install
-
-  3. Setup file permissions:
+  2. Setup file permissions: see http://symfony.com/doc/current/book/installation.html#configuration-and-setup
 
         $ chmod a+w app/cache/ app/logs/
         $ chmod a+x app/console
+
+  3. Initialize and install the vendors:
+
+        $ bin/vendors install
 
 Automated Tests
 ---------------
