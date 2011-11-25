@@ -44,6 +44,10 @@ Installation
 
         $ bin/vendors install
 
+  4. Copy and adjust the configuration file
+   
+        $ cp app/config/parameters.yml.dist app/config/parameters.yml
+
 Automated Tests
 ---------------
 

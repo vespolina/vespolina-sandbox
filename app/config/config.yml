@@ -70,6 +70,7 @@ doctrine_mongodb:
             #auto_mapping: true
             mappings:
                 FOSUserBundle: ~
+                VespolinaCustomerBundle: ~
                 VespolinaOrderBundle: ~
                 VespolinaProductBundle: ~
                 UserBundle: ~
