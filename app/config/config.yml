@@ -35,8 +35,8 @@ assetic:
     filters:
         cssrewrite: ~
         less:
-            node: /home/cordoval/bin/node
-            node_paths: [/home/cordoval/bin/node_modules]
+            node: %nodepath%
+            node_paths: [%nodemodulearray%]
         yui_css:
              jar: %yui_compressor_jar%
         yui_js:
