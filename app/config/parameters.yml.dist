@@ -13,3 +13,9 @@ parameters:
 
   locale:            en
   secret:            ThisTokenIsNotSoSecretChangeIt
+
+  java_path:         "/usr/bin/java"
+  yui_compressor_jar: "/usr/share/yui-compressor/yui-compressor.jar"
+
+  nodepath:          "/home/user/bin/node"
+  nodemodulearray:   "/home/user/bin/node_modules"
