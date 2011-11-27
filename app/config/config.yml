@@ -25,9 +25,9 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    form:
-      resources:
-        - 'MopaBootstrapBundle:Form:fields.html.twig'
+#    form:
+#      resources:
+#        - 'MopaBootstrapBundle:Form:fields.html.twig'
         
 # Assetic Configuration
 assetic:
