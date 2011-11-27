@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
             

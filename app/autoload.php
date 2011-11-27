@@ -19,6 +19,7 @@ $loader->registerNamespaces(array(
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
     'Sonata'                         => __DIR__.'/../vendor/bundles',
     'FOS' => __DIR__.'/../vendor/bundles',
+    'Mopa'             => __DIR__.'/../vendor/bundles',
     'Vespolina'                         => __DIR__.'/../vendor/bundles',
                                 
     'Behat\Mink' => __DIR__.'/../vendor/behat/mink/src',
