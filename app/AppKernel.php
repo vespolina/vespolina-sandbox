@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
 
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
@@ -29,6 +30,7 @@ class AppKernel extends Kernel
             new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
+            new Vespolina\PricingBundle\VespolinaPricingBundle(),
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
         );
