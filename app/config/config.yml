@@ -31,13 +31,18 @@ assetic:
     debug:          %kernel.debug%
     use_controller: false
     bundles:        [ ]
-    # java: /usr/bin/java
+    java:           %java_path%
     filters:
         cssrewrite: ~
+        less:
+            node: /home/cordoval/bin/node
+            node_paths: [/home/cordoval/bin/node_modules]
+        yui_css:
+             jar: %yui_compressor_jar%
+        yui_js:
+             jar: %yui_compressor_jar%
         # closure:
         #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
 
 # Doctrine Configuration
 doctrine:

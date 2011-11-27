@@ -2,8 +2,25 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Vespolina Sandbox Store{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        {% stylesheets output='css/*.css' filter='less,cssrewrite,?yui_css' debug=false
+                '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+        {% endstylesheets %}
+        {#{% stylesheets output='css/main.css' filter='cssrewrite,?yui_css' debug=true
+           '@MopaBootstrapBundle/Resources/bootstrap/bootstrap.css'
+           '@CompanyPersonalBundle/Resources/public/css/collateral.css'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet"
+           media="screen" />
+        {% endstylesheets %}#}
+        {#{% javascripts output='js/main.js' filter='?yui_js' debug=true
+            'bundles/vespolinaetcbundle/js/jquery.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}#}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
