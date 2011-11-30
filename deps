@@ -151,6 +151,10 @@
     git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
     target=/bundles/Vespolina/FulfillmentBundle
 
+[VespolinaStoreBundle]
+    git=http://github.com/vespolina/VespolinaStoreBundle.git
+    target=/bundles/Vespolina/StoreBundle
+
 [buzz]
     git=https://github.com/kriswallsmith/Buzz.git
     target=/buzz
