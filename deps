@@ -46,6 +46,10 @@
     target=/bundles/JMS/SecurityExtraBundle
     version=origin/1.0.x
 
+[JMSSerializerBundle]
+    git=git://github.com/schmittjoh/JMSSerializerBundle.git
+    target=bundles/JMS/SerializerBundle
+
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
     target=/bundles/Sensio/Bundle/DistributionBundle
@@ -65,6 +69,10 @@
 [DoctrineFixturesBundle]
     git=http://github.com/symfony/DoctrineFixturesBundle.git
     target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[FOSRestBundle]
+    git=git://github.com/FriendsOfSymfony/FOSRestBundle.git
+    target=bundles/FOS/RestBundle
 
 [FOSUserBundle]
     git=http://github.com/FriendsOfSymfony/FOSUserBundle.git
@@ -142,6 +150,10 @@
 [VespolinaFulfillmentBundle]
     git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
     target=/bundles/Vespolina/FulfillmentBundle
+
+[VespolinaStoreBundle]
+    git=http://github.com/vespolina/VespolinaStoreBundle.git
+    target=/bundles/Vespolina/StoreBundle
 
 [buzz]
     git=https://github.com/kriswallsmith/Buzz.git

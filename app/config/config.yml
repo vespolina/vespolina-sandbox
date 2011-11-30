@@ -100,3 +100,7 @@ jms_debugging:
     # messages for public exceptions. If you leave this set to false, you have
     # to click the "search" button manually each time.
     auto_help: false
+
+fos_rest:
+    routing_loader:
+        default_format: json
