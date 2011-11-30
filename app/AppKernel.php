@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
@@ -33,7 +34,8 @@ class AppKernel extends Kernel
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
-        );
+            new Vespolina\StoreBundle\VespolinaStoreBundle(),
+            );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new JMS\DebuggingBundle\JMSDebuggingBundle($this);
