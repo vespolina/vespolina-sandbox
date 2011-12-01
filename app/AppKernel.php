@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
             
