@@ -17,7 +17,16 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
-    'Sonata'                         => __DIR__.'/../vendor/bundles',
+
+    'Sonata'           =>  array(__DIR__.'/../vendor/bundles', __DIR__),
+    'Application'   => __DIR__,
+    'Imagine'       => __DIR__.'/../vendor/imagine/lib',
+    'Gaufrette'     => __DIR__.'/../vendor/gaufrette/src',
+    'Knp'                             => array(
+        __DIR__.'/../vendor/bundles',
+        __DIR__.'/../vendor/knp/menu/src',
+    ),
+                                
     'FOS' => __DIR__.'/../vendor/bundles',
     'Mopa'             => __DIR__.'/../vendor/bundles',
     'Vespolina'                         => __DIR__.'/../vendor/bundles',

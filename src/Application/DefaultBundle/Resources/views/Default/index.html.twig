@@ -3,4 +3,9 @@
 {% block content %}
 <h1>Vespolina</h1>
 <h2>Symfony2 based ecommerce platform</h2>
+
+Catalogue with some products
+
+    {% render "DefaultBundle:Default:list" with {'max': 3} %}
+
 {% endblock %}

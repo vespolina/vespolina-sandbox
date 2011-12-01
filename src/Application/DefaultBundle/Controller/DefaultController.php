@@ -10,4 +10,11 @@ class DefaultController extends Controller
     {
         return $this->render('DefaultBundle:Default:index.html.twig');
     }
+
+    public function listAction()
+    {
+        $products = $this->get('vespolina.product_manager')->findBy(array());
+
+        return $this->render('DefaultBundle:Default:list.html.twig', array('products' => $products));
+    }
 }

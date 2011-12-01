@@ -190,3 +190,31 @@
 [MopaBootstrapBundle]
     git=http://github.com/phiamo/MopaBootstrapBundle.git
     target=/bundles/Mopa/BootstrapBundle
+
+[SonataMediaBundle]
+    git=http://github.com/sonata-project/SonataMediaBundle.git
+    target=/bundles/Sonata/MediaBundle
+
+[SonataAdminBundle]
+    git=http://github.com/sonata-project/SonataAdminBundle.git
+    target=/bundles/Sonata/AdminBundle
+
+[SonataDoctrineORMAdminBundle]
+    git=http://github.com/sonata-project/SonataDoctrineORMAdminBundle.git
+    target=/bundles/Sonata/DoctrineORMAdminBundle
+
+[Imagine]
+    git=http://github.com/avalanche123/Imagine.git
+    target=/imagine
+
+[Gaufrette]
+    git=http://github.com/knplabs/Gaufrette.git
+    target=/gaufrette
+
+[KnpMenu]
+    git=https://github.com/knplabs/KnpMenu.git
+    target=/knp/menu
+
+[MenuBundle]
+    git=http://github.com/knplabs/KnpMenuBundle.git
+    target=/bundles/Knp/Bundle/MenuBundle
