@@ -1,7 +1,7 @@
 <h4>List of Products</h4>
 <ul>
 {% for product in products %}
-    <li>{{ product.name }}<span class="price">{{ product.price }}</span></li>
+    <li>{{ product.name }}<span class="price">{{ product.price | currency_convert('EUR') }}</span></li>
 {% else %}
     No products loaded.
 {% endfor %}
