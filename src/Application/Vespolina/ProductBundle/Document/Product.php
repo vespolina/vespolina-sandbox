@@ -55,8 +55,6 @@ class Product extends BaseProduct
 
     /**
      * Set $price
-     *
-     * @arg string $price
      */
     public function setPrice($price)
     {
