@@ -1,0 +1,7 @@
+{#{% form_theme form form.getOption('theme') %}#}
+<form action="{{ path('vespolina_product_edit', {'id': id} ) }}" {{ form_enctype(form) }} method="POST" class="vespolina_product_product_edit">
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'product.update'|trans({}, 'VespolinaProductBundle') }}" />
+    </div>
+</form>

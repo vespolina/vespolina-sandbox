@@ -1,0 +1,10 @@
+<div class="vespolina_product_product_show">
+    <p>Product: {{ product.name }}</p>
+    <p>Description: {{ product.description }}</p>
+    
+    <p>Features: {% for feature in product.features %}
+         {{ feature.type }} - {{ feature.name }}<br />
+        {% endfor %}
+    </p>
+</div>
+<a href="{{ path('vespolina_product_list') }}">Back to Products</a>

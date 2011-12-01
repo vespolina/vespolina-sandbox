@@ -38,4 +38,28 @@ class Product extends BaseProduct
       return $this->id;
     }
 
+    /**
+     * @var string $id
+     */
+    protected $price;
+
+    /**
+     * Get $price
+     *
+     * @return string $price
+     */
+    public function getPrice()
+    {
+      return $this->price;
+    }
+
+    /**
+     * Set $price
+     *
+     * @arg string $price
+     */
+    public function setPrice($price)
+    {
+      $this->price = $price;
+    }
 }

@@ -1,0 +1,33 @@
+{# % form_theme form theme % #}
+
+<form action="{{ path('vespolina_product_create') }}" {{ form_enctype(form) }} method="POST" class="vespolina_product_product">
+    {{ form_errors(form) }}
+
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.features) }} <a href="#" class="addFieldLink" id="features_link">Add Feature</a>
+    {#{ form_row(form.productIdentifierSet) }#} <a href="#" class="addFieldLink" id="identifiers_identifiers_link" />Add Identifier</a>
+    {#{ form_row(form.optionSet) }#} <a href="#" class="addFieldLink" id="identifiers_options_options_link" />Add Options</a>
+    {#{ form_rest(form) }#}
+    {{ form_row(form._token) }}
+
+    <div>
+        <input type="submit" value="{{ 'product.submit'|trans({}, 'VespolinaProductBundle') }}" />
+    </div>
+</form>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script>
+    function add(collection) {
+        var collectionName = '#vespolina_product_form_' + collection;
+        var collectionHolder = $(collectionName);
+        var prototype = collectionHolder.attr('data-prototype');
+        form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length);
+        collectionHolder.append(form);
+    }
+
+    $('a.addFieldLink').live('click', function(event){
+        event.preventDefault();
+        add($(this).attr('id').slice(0, -5));
+    });
+</script>
