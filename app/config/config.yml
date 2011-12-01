@@ -67,8 +67,9 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    #    ApplicationSonataMediaBundle: ~
+                    ApplicationSonataMediaBundle: ~
                     SonataMediaBundle: ~
+
 
 doctrine_mongodb:
     connections:
