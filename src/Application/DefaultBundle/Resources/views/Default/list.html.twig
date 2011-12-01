@@ -1,0 +1,9 @@
+<h4>List of Products</h4>
+<ul>
+{% for product in products %}
+    <li>{{ product.name }}</li>
+{% else %}
+    No products loaded.
+{% endfor %}
+</ul>
+
