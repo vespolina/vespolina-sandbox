@@ -39,6 +39,8 @@ class AppKernel extends Kernel
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
+            new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
+            new Vespolina\TaxonomyBundle\VespolinaTaxonomyBundle(),
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
             new Vespolina\StoreBundle\VespolinaStoreBundle(),
