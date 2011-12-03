@@ -5,8 +5,8 @@
         <title>{% block title %}Vespolina Sandbox Store{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         {% stylesheets output='css/*.css' filter='less,cssrewrite,?yui_css' debug=false
-                '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
-        %}
+                '@DefaultBundle/Resources/public/less/collateral.less'
+        %}<!--'@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'-->
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
         {#{% stylesheets output='css/main.css' filter='cssrewrite,?yui_css' debug=true
