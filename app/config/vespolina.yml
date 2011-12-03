@@ -9,3 +9,6 @@ vespolina_product:
             type:               Application\Vespolina\ProductBundle\Form\Type\ProductFormExtendedType #vespolina.product.form.type
 #            handler_service:    vespolina.product.form.handler
 #            name:               vespolina_product_form
+vespolina_monetary:
+    currency:
+        base_currency:  EUR
