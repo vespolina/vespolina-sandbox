@@ -1,0 +1,37 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<div class="container">
+        <!-- Tray -->
+        <div style="display: none;" id="tray" class="box">
+                <p class="f-left box">
+                        <!-- Switcher -->
+                        <span class="f-left" id="switcher">
+                          <a href="#" rel="1col" class="styleswitch ico-col1" title="Display one column"><img src="{{ asset('bundles/cordovacrown/images/switcher-1col.gif') }}" alt="1 Column" /></a>
+                          <a href="#" rel="2col" class="styleswitch ico-col2" title="Display two columns"><img src="{{ asset('bundles/cordovacrown/images/switcher-2col.gif') }}" alt="2 Columns" /></a>
+                        </span>
+                        <strong></strong>
+                </p>
+                <p class="f-right">User: <strong>Administrator</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><a href="" id="logout">Log out</a></strong></p>
+        </div> <!--  /tray -->
+
+        <hr class="noscreen">
+
+    <div id="content" class="box">
+
+    {% block content %}
+        No content.
+    {% endblock %}
+
+    </div>
+
+    <hr class="noscreen" />
+
+    <!-- Footer -->
+    <div id="footer" class="box">
+        <p class="f-left">Developed by <a href="http://github.com/vespolina/vespolina-sandbox">vespolina team</a></p>
+        <p class="f-right">&copy; 2012 <a href="#">Vespolina</a>, All Rights Reserved &reg;</p>
+    </div> <!-- /footer -->
+</div>
+{% endblock %}
+
