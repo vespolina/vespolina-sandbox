@@ -1,9 +1,15 @@
-<h4>List of Products</h4>
-<ul>
-{% for product in products %}
-    <li>{{ product.name }}<span class="price">{{ product.price }}</span></li>
-{% else %}
-    No products loaded.
-{% endfor %}
-</ul>
-
+<div class="row">
+    <div class="span12 offset1">
+        <h4>List of Products</h4>
+        <div class="row">
+        {% for product in products %}
+            <div class="span4">
+                <img class="thumbs" src="">
+                <div>{{ product.name }}</div><div class="price">{{ product.price is not null ? product.price|currencyConvert('USD') : "free" }}</div>
+            </div>
+        {% else %}
+            No products loaded.
+        {% endfor %}
+        </div>
+    </div>
+</div>
