@@ -22,10 +22,8 @@ $loader->registerNamespaces(array(
     'Application'   => __DIR__,
     'Imagine'       => __DIR__.'/../vendor/imagine/lib',
     'Gaufrette'     => __DIR__.'/../vendor/gaufrette/src',
-    'Knp'                             => array(
-        __DIR__.'/../vendor/bundles',
-        __DIR__.'/../vendor/knp/menu/src',
-    ),
+    'Knp\\Bundle' => __DIR__.'/../vendor/bundles',
+    'Knp\\Menu'   => __DIR__.'/../vendor/KnpMenu/src',
                                 
     'FOS' => __DIR__.'/../vendor/bundles',
     'Mopa'             => __DIR__.'/../vendor/bundles',
