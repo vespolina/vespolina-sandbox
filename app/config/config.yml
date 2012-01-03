@@ -69,6 +69,7 @@ doctrine:
                 mappings:
                     ApplicationSonataMediaBundle: ~
                     SonataMediaBundle: ~
+                    VespolinaCartBundle: ~
 
 
 doctrine_mongodb:
@@ -84,9 +85,11 @@ doctrine_mongodb:
             #auto_mapping: true
             mappings:
                 FOSUserBundle: ~
+                VespolinaCartBundle: ~
                 VespolinaCustomerBundle: ~
                 VespolinaOrderBundle: ~
                 VespolinaProductBundle: ~
+                VespolinaTaxonomyBundle: ~
                 UserBundle: ~
                 ApplicationVespolinaProductBundle: ~
 

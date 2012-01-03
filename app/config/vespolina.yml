@@ -1,3 +1,5 @@
+vespolina_cart:
+    db_driver: mongodb
 vespolina_product:
     db_driver: mongodb
     product_manager:
