@@ -139,6 +139,10 @@
     git=http://github.com/vespolina/VespolinaTaxationBundle.git
     target=/bundles/Vespolina/TaxationBundle
 
+[VespolinaTaxonomyBundle]
+    git=http://github.com/vespolina/VespolinaTaxonomyBundle.git
+    target=/bundles/Vespolina/TaxonomyBundle
+
 [VespolinaCustomerBundle]
     git=http://github.com/vespolina/VespolinaCustomerBundle.git
     target=/bundles/Vespolina/CustomerBundle
