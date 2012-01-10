@@ -24,7 +24,7 @@ echo "** WARNING **\n";
 // mandatory
 echo_title("Mandatory requirements");
 check(version_compare(phpversion(), '5.3.2', '>='), sprintf('Checking that PHP version is at least 5.3.2 (%s installed)', phpversion()), 'Install PHP 5.3.2 or newer (current version is '.phpversion(), true);
-check(is_dir(__DIR__.'/../vendor/symfony'), 'Checking that vendor libraries are installed', 'Vendor libraries are missing; run "bin/vendors install" to them.', true);
+check(is_dir(__DIR__.'/../vendor/symfony'), 'Checking that vendor libraries are installed', 'Vendor libraries are missing; run "bin/vendors install" to install them', true);
 check(ini_get('date.timezone'), 'Checking that the "date.timezone" setting is set', 'Set the "date.timezone" setting in php.ini (like Europe/Paris)', true);
 check(is_writable(__DIR__.'/../app/cache'), sprintf('Checking that app/cache/ directory is writable'), 'Change the permissions of the app/cache/ directory so that the web server can write in it', true);
 check(is_writable(__DIR__.'/../app/logs'), sprintf('Checking that the app/logs/ directory is writable'), 'Change the permissions of the app/logs/ directory so that the web server can write in it', true);
@@ -32,12 +32,12 @@ check(function_exists('json_encode'), 'Checking that the json_encode() is availa
 check(function_exists('session_start'), 'Checking that the session_start() is available', 'Install and enable the session extension', true);
 check(function_exists('ctype_alpha'), 'Checking that the ctype_alpha() is available', 'Install and enable the ctype extension', true);
 check(function_exists('token_get_all'), 'Checking that the token_get_all() is available', 'Install and enable the tokenizer extension', true);
+check(function_exists('simplexml_import_dom'), 'Checking that the simplexml_import_dom() is available', 'Install and enable the simplexml extension', true);
 check(!(function_exists('apc_store') && ini_get('apc.enabled')) || version_compare(phpversion('apc'), '3.0.17', '>='), 'Checking that the APC version is at least 3.0.17', 'Upgrade your APC extension (3.0.17+)', true);
 
 // warnings
 echo_title("Optional checks");
 check(class_exists('DomDocument'), 'Checking that the PHP-XML module is installed', 'Install and enable the php-xml module', false);
-check(function_exists('token_get_all'), 'Checking that the token_get_all() function is available', 'Install and enable the Tokenizer extension (highly recommended)', false);
 check(function_exists('mb_strlen'), 'Checking that the mb_strlen() function is available', 'Install and enable the mbstring extension', false);
 check(function_exists('iconv'), 'Checking that the iconv() function is available', 'Install and enable the iconv extension', false);
 check(function_exists('utf8_decode'), 'Checking that the utf8_decode() is available', 'Install and enable the XML extension', false);

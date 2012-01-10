@@ -1,48 +1,22 @@
 <?php
 
-use Symfony\Component\ClassLoader\UniversalClassLoader;
+if (!$loader = include __DIR__.'/../vendor/.composer/autoload.php') {
+    $nl = PHP_SAPI === 'cli' ? PHP_EOL : '<br />';
+    echo "$nl$nl";
+    if (is_writable(dirname(__DIR__))) {
+        file_put_contents(dirname(__DIR__).'/composer.phar', file_get_contents('http://getcomposer.org/composer.phar'));
+        die("You must set up the project dependencies.$nl".
+            "Composer has been downloaded.$nl".
+            "Run the following command in ".dirname(__DIR__).":$nl$nl".
+            "php composer.phar install$nl");
+    }
+    die("You must set up the project dependencies.$nl".
+        "Run the following commands in ".dirname(__DIR__).":$nl$nl".
+        "wget http://getcomposer.org/composer.phar$nl".
+        "php composer.phar install$nl");
+}
+
 use Doctrine\Common\Annotations\AnnotationRegistry;
-
-$loader = new UniversalClassLoader();
-$loader->registerNamespaces(array(
-    'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
-    'Sensio'           => __DIR__.'/../vendor/bundles',
-    'JMS'              => __DIR__.'/../vendor/bundles',
-    'Doctrine\\Common\\DataFixtures' => __DIR__.'/../vendor/doctrine-fixtures/lib',
-    'Doctrine\\Common' => __DIR__.'/../vendor/doctrine-common/lib',
-    'Doctrine\\DBAL'   => __DIR__.'/../vendor/doctrine-dbal/lib',
-    'Doctrine\\ODM\\MongoDB'    => __DIR__.'/../vendor/doctrine-mongodb-odm/lib',
-    'Doctrine\\MongoDB'         => __DIR__.'/../vendor/doctrine-mongodb/lib',
-    'Doctrine'         => __DIR__.'/../vendor/doctrine/lib',
-    'Monolog'          => __DIR__.'/../vendor/monolog/src',
-    'Assetic'          => __DIR__.'/../vendor/assetic/src',
-    'Metadata'         => __DIR__.'/../vendor/metadata/src',
-
-    'Sonata'           =>  array(__DIR__.'/../vendor/bundles', __DIR__),
-    'Application'   => __DIR__,
-    'Imagine'       => __DIR__.'/../vendor/imagine/lib',
-    'Gaufrette'     => __DIR__.'/../vendor/gaufrette/src',
-    'Knp\\Bundle' => __DIR__.'/../vendor/bundles',
-    'Knp\\Menu'   => __DIR__.'/../vendor/Knp/menu/src',
-                                
-    'FOS' => __DIR__.'/../vendor/bundles',
-    'Mopa'             => __DIR__.'/../vendor/bundles',
-    'Vespolina'                         => __DIR__.'/../vendor/bundles',
-                                
-    'Behat\Mink' => __DIR__.'/../vendor/behat/mink/src',
-    'Goutte'           => __DIR__.'/../vendor/goutte/src',
-    'Zend'             => __DIR__.'/../vendor/zend/library',
-    'Behat\MinkBundle' => __DIR__.'/../vendor/bundles',
-    'Behat\SahiClient' => __DIR__.'/../vendor/behat/sahi/src',
-    'Behat\BehatBundle' => __DIR__.'/../vendor/bundles',
-    'Behat\Behat'       => __DIR__.'/../vendor/behat/Behat/src',
-    'Behat\Gherkin'     => __DIR__.'/../vendor/behat/Gherkin/src',
-    'Buzz'             => __DIR__.'/../vendor/buzz/lib',
-));
-$loader->registerPrefixes(array(
-    'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',
-    'Twig_'            => __DIR__.'/../vendor/twig/lib',
-));
 
 // intl
 if (!function_exists('intl_get_error_code')) {
@@ -69,6 +43,5 @@ AnnotationRegistry::registerFile(
 
 // Swiftmailer needs a special autoloader to allow
 // the lazy loading of the init file (which is expensive)
-require_once __DIR__.'/../vendor/swiftmailer/lib/classes/Swift.php';
-Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/lib/swift_init.php');
-
+require_once __DIR__.'/../vendor/swiftmailer/swiftmailer/lib/classes/Swift.php';
+Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/swiftmailer/lib/swift_init.php');

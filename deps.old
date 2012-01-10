@@ -1,6 +1,5 @@
-[symfony] 
+[symfony]
     git=http://github.com/symfony/symfony.git
-    version=origin/master
 
 [twig]
     git=http://github.com/fabpot/Twig.git
@@ -24,7 +23,7 @@
 
 [swiftmailer]
     git=http://github.com/swiftmailer/swiftmailer.git
-    version=v4.1.2
+    version=v4.1.5
 
 [assetic]
     git=http://github.com/kriswallsmith/assetic.git
@@ -40,29 +39,32 @@
 [SensioFrameworkExtraBundle]
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+    version=origin/master
 
 [JMSSecurityExtraBundle]
     git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
     target=/bundles/JMS/SecurityExtraBundle
     version=origin/1.0.x
 
-[JMSSerializerBundle]
-    git=git://github.com/schmittjoh/JMSSerializerBundle.git
-    target=bundles/JMS/SerializerBundle
-
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
     target=/bundles/Sensio/Bundle/DistributionBundle
+    version=origin/master
 
 [SensioGeneratorBundle]
     git=http://github.com/sensio/SensioGeneratorBundle.git
     target=/bundles/Sensio/Bundle/GeneratorBundle
+    version=origin/master
 
 [AsseticBundle]
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
 
+[JMSSerializerBundle]
+    git=git://github.com/schmittjoh/JMSSerializerBundle.git
+    target=bundles/JMS/SerializerBundle
+    
 [doctrine-fixtures]
     git=http://github.com/doctrine/data-fixtures.git
 
