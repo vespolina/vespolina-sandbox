@@ -8,6 +8,7 @@
         "twig/extensions": "master-dev",
         "doctrine/orm": "master-dev",
         "doctrine/data-fixtures": "master-dev",
+        "monolog/monolog": "master-dev",
         "doctrine/doctrine-bundle": "master-dev",
         "doctrine/doctrine-fixtures-bundle": "master-dev",
         "doctrine/mongodb-odm-bundle": "master-dev",
@@ -21,6 +22,7 @@
         "behat/sahi-client": "master-dev",
         "behat/behat-bundle": "master-dev",
         "behat/mink-bundle": "master-dev",
+        "behat/behat": "master-dev",
         "behat/gherkin": "master-dev",
         "knplabs/knp-menu-bundle": "master-dev",
         "knplabs/knp-gaufrette-bundle": "master-dev",
@@ -61,7 +63,8 @@
                 },
                 "autoload": {
                     "psr-0": { "DoctrineExtensions\\Workflow": "lib/" }
-                }
+                },
+                "target-dir": "DoctrineExtensions/Workflow"
             }
         },
         "jms-debugging-bundle": {
@@ -75,7 +78,8 @@
                 },
                 "autoload": {
                     "psr-0": { "JMS\\DebuggingBundle": "" }
-                }
+                },
+                "target-dir": "JMS/DebuggingBundle"
             }
         },
         "sonata-easy-extends": {
@@ -89,7 +93,8 @@
                 },
                 "autoload": {
                     "psr-0": { "Sonata\\EasyExtendsBundle": "" }
-                }
+                },
+                "target-dir": "Sonata/EasyExtendsBundle"
             }
         },
         "zend-framework-2": {
@@ -103,7 +108,8 @@
                 },
                 "autoload": {
                     "psr-0": { "Zend": "zend\\library" }
-                }
+                },
+                "target-dir": "zend"
             }
         }
     }

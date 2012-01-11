@@ -29,7 +29,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
-            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            //new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
             
             new Application\UserBundle\UserBundle(),
