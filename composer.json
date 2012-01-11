@@ -13,7 +13,7 @@
         "symfony/assetic-bundle": "master-dev",
         "sensio/distribution-bundle": "master-dev",
         "sensio/generator-bundle": "master-dev",
-        "jms/security-extra-bundle": "1.0.x-dev",
+        "jms/security-extra-bundle": "master-dev",
         "friendsofsymfony/rest-bundle": "master-dev",
         "friendsofsymfony/user-bundle": "master-dev",
         "behat/sahi-client": "master-dev",
@@ -23,21 +23,83 @@
         "knplabs/knp-menu-bundle": "master-dev",
         "knplabs/knp-gaufrette-bundle": "master-dev",
         "imagine/Imagine": "master-dev",
+        "mopa/bootstrap-bundle": "0.5",
+        "sonata/doctrine-orm-admin-bundle": "master-dev",
+        "vespolina/product-bundle": "master-dev",
+        "vespolina/taxation-bundle": "master-dev",
+        "vespolina/taxonomy-bundle": "master-dev",
+        "vespolina/customer-bundle": "master-dev",
+        "vespolina/inventory-bundle": "master-dev",
+        "vespolina/pricing-bundle": "master-dev",
+        "vespolina/fulfillment-bundle": "master-dev",
+        "vespolina/store-bundle": "master-dev",
+        "vespolina/merchandise-bundle": "master-dev",
+        "vespolina/ecommerce-flows-bundle": "master-dev",
+        "vespolina/core-bundle": "master-dev",
+        "vespolina/order-bundle": "master-dev",
+        "vespolina/monetary-bundle": "master-dev",
+        "vespolina/workflow-bundle": "master-dev",
+        "vespolina/cart-bundle": "master-dev"
     },
     "repositories": {
-        "security-extra-bundle": {
+        "doctrine-workflow": {
             "package": {
-                "name": "jms/security-extra-bundle",
-                "version": "1.0.1-dev",
+                "name": "doctrine/doctrine-workflow",
+                "version": "master-dev",
                 "source": {
                     "type": "git",
-                    "url": "http://github.com/schmittjoh/JMSSecurityExtraBundle.git",
-                    "reference": "1.0.x"
+                    "url": "http://github.com/beberlei/Doctrine-Workflow.git",
+                    "reference": "master"
                 },
                 "autoload": {
-                    "psr-0": { "JMS\\SecurityExtraBundle": "" }
+                    "psr-0": { "DoctrineExtensions\\Workflow": "lib/" }
                 },
-                "target-dir": "JMS/SecurityExtraBundle"
+                "target-dir": "DoctrineExtensions/Workflow"
+            }
+        },
+        "jms-debugging-bundle": {
+            "package": {
+                "name": "jms/debugging-bundle",
+                "version": "master-dev",
+                "source": {
+                    "type": "git",
+                    "url": "http://github.com/schmittjoh/JMSDebuggingBundle.git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "JMS\\DebuggingBundle": "" }
+                },
+                "target-dir": "JMS/DebuggingBundle"
+            }
+        },
+        "sonata-easy-extends": {
+            "package": {
+                "name": "sonata/easy-extends-bundle",
+                "version": "master-dev",
+                "source": {
+                    "type": "git",
+                    "url": "http://github.com/sonata-project/SonataEasyExtendsBundle.git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "Sonata\\EasyExtendsBundle": "" }
+                },
+                "target-dir": "Sonata/EasyExtendsBundle"
+            }
+        },
+        "zend-framework-2": {
+            "package": {
+                "name": "zend/zf2",
+                "version": "master-dev",
+                "source": {
+                    "type": "git",
+                    "url": "http://github.com/zendframework/zf2.git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "Zend": "zend/library/" }
+                },
+                "target-dir": "zend"
             }
         }
     }
