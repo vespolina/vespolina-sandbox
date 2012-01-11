@@ -27,6 +27,7 @@
         "behat/behat": "master-dev",
         "behat/gherkin": "master-dev",
         "knplabs/knp-menu-bundle": "master-dev",
+        "knplabs/knp-menu": "master-dev",
         "knplabs/knp-gaufrette-bundle": "master-dev",
         "imagine/Imagine": "master-dev",
         "mopa/bootstrap-bundle": "0.5",
