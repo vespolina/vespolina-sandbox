@@ -65,8 +65,7 @@
                 },
                 "autoload": {
                     "psr-0": { "DoctrineExtensions\\Workflow": "lib/" }
-                },
-                "target-dir": "DoctrineExtensions/Workflow"
+                }
             }
         },
         "jms-debugging-bundle": {
@@ -109,9 +108,8 @@
                     "reference": "master"
                 },
                 "autoload": {
-                    "psr-0": { "Zend": "zend\\library" }
-                },
-                "target-dir": "zend"
+                    "psr-0": { "Zend\\": "library/" }
+                }
             }
         },
         "behat-mink": {
@@ -125,8 +123,7 @@
                 },
                 "autoload": {
                     "psr-0": { "Behat\\Mink": "src/" }
-                },
-                "target-dir": "Behat/Mink"
+                }
             }
         }
     }
