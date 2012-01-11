@@ -91,8 +91,7 @@
                 },
                 "autoload": {
                     "psr-0": { "Sonata\\EasyExtendsBundle": "" }
-                },
-                "target-dir": "Sonata/EasyExtendsBundle"
+                }
             }
         },
         "zend-framework-2": {
@@ -105,9 +104,8 @@
                     "reference": "master"
                 },
                 "autoload": {
-                    "psr-0": { "Zend": "zend/library/" }
-                },
-                "target-dir": "zend"
+                    "psr-0": { "Zend": "zend\\library" }
+                }
             }
         }
     }
