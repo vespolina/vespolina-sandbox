@@ -67,8 +67,8 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    ApplicationSonataMediaBundle: ~
-                    SonataMediaBundle: ~
+                    #ApplicationSonataMediaBundle: ~
+                    #SonataMediaBundle: ~
                     VespolinaCartBundle: ~
 
 
@@ -102,7 +102,6 @@ swiftmailer:
     spool:     { type: memory }
 
 jms_security_extra:
-    secure_controllers:  true
     secure_all_services: false
 
 jms_debugging:
@@ -137,3 +136,6 @@ fos_rest:
 #        sonata.media.adapter.filesystem.local:
 #            directory:  %kernel.root_dir%/../web/uploads/media
 #            create:     true
+
+jms_aop:
+    cache_dir: %kernel.cache_dir%/jms_aop

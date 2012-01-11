@@ -1,6 +1,11 @@
 security:
+    #encoders:
+    #    Symfony\Component\Security\Core\User\User: plaintext
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        "FOS\UserBundle\Model\UserInterface":
+            iterations: 1
+            encode_as_base64: false
+            algorithm: sha1
 
     providers:
         fos_user_provider:
@@ -22,10 +27,6 @@ security:
 fos_user:
     db_driver: mongodb
     firewall_name: main
-    encoder:
-        iterations: 1
-        encode_as_base64: false
-        algorithm: sha1
     user_class: Application\UserBundle\Document\User
     group:
         group_class: Application\UserBundle\Document\Group
