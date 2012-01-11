@@ -22,7 +22,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
@@ -35,7 +34,6 @@ class AppKernel extends Kernel
             
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
-            new Vespolina\CoreBundle\VespolinaCoreBundle(),
             new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
