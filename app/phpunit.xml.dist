@@ -17,7 +17,7 @@
         <testsuite name="Vespolina Test Suite">
             <!--<directory>../src/*/*Bundle/Tests</directory>-->
             <!--<directory>../src/*/Bundle/*Bundle/Tests</directory>-->
-            <directory>../vendor/vespolina/monetary-bundle/Vespolina/VespolinaMonetaryBundle/Tests</directory>
+            <directory>../vendor/vespolina/monetary-bundle/Vespolina/MonetaryBundle/Tests</directory>
             <!--<directory>../vendor/bundles/Vespolina/ProductBundle/Tests</directory>-->
         </testsuite>
     </testsuites>
