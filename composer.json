@@ -113,6 +113,21 @@
                 },
                 "target-dir": "zend"
             }
+        },
+        "behat-mink": {
+            "package": {
+                "name": "behat/mink",
+                "version": "master-dev",
+                "source": {
+                    "type": "git",
+                    "url": "http://github.com/Behat/Mink.git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "Behat\\Mink": "src/" }
+                },
+                "target-dir": "Behat/Mink"
+            }
         }
     }
 }
