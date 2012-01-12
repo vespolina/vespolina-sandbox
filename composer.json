@@ -4,41 +4,27 @@
     },
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": "2.1.0-dev",
-        "twig/extensions": "master-dev",
-        "twig/twig": "master-dev",
-        "doctrine/orm": "master-dev",
-        "doctrine/data-fixtures": "master-dev",
-        "monolog/monolog": "master-dev",
+        "symfony/symfony": ">=2.0.9,<2.1.0-dev",
+        "twig/extensions": "*",
+        "doctrine/orm": ">=2.1.0,<2.3.0-dev",
+        "doctrine/doctrine-fixtures-bundle": "2.0-dev",
         "doctrine/doctrine-bundle": "master-dev",
-        "doctrine/doctrine-fixtures-bundle": "master-dev",
         "doctrine/mongodb-odm-bundle": "master-dev",
-        "symfony/assetic-bundle": "master-dev",
-        "sensio/framework-extra-bundle": "master-dev",
+        "symfony/assetic-bundle": "2.0-dev",
+        "sensio/framework-extra-bundle": "2.0-dev",
         "sensio/distribution-bundle": "master-dev",
-        "sensio/generator-bundle": "master-dev",
-        "jms/security-extra-bundle": "master-dev",
-        "jms/aop-bundle": "master-dev",
-        "friendsofsymfony/rest-bundle": "master-dev",
-        "friendsofsymfony/user-bundle": "master-dev",
-        "behat/sahi-client": "master-dev",
+        "sensio/generator-bundle": "2.0-dev",
+        "jms/security-extra-bundle": "1.1.0",
+        "friendsofsymfony/rest-bundle": "2.0-dev",
+        "friendsofsymfony/user-bundle": "1.1.0",
+        "behat/sahi-client": "v1.0.1",
         "behat/behat-bundle": "master-dev",
-        "behat/mink": "master-dev",
         "behat/mink-bundle": "master-dev",
-        "behat/behat": "master-dev",
-        "behat/gherkin": "master-dev",
-        "knplabs/knp-menu-bundle": "master-dev",
-        "knplabs/knp-menu": "master-dev",
+        "knplabs/knp-menu-bundle": "*",
         "knplabs/knp-gaufrette-bundle": "master-dev",
-        "imagine/Imagine": "master-dev",
-        "mopa/bootstrap-bundle": "0.5",
+        "imagine/Imagine": "v0.2.8",
+        "mopa/bootstrap-bundle": "master-dev",
         "sonata/doctrine-orm-admin-bundle": "master-dev",
-        "zend/zf2": "master-dev",
-        "swiftmailer/swiftmailer": "4.1.6-dev",
-        "symfony/swiftmailer-bundle": "2.1.0-dev",
-        "doctrine/doctrine-workflow": "master-dev",
-        "jms/debugging-bundle": "master-dev",
-        "sonata/easy-extends-bundle": "master-dev",
         "vespolina/pricing-bundle": "master-dev",
         "vespolina/store-bundle": "master-dev",
         "vespolina/checkout-bundle": "master-dev",
@@ -53,7 +39,11 @@
         "vespolina/taxation-bundle": "master-dev",
         "vespolina/workflow-bundle": "master-dev",
         "vespolina/ecommerce-flows-bundle": "master-dev",
-        "vespolina/monetary-bundle": "master-dev"
+        "vespolina/monetary-bundle": "master-dev",
+        "zend/zf2": "master-dev",
+        "doctrine/doctrine-workflow": "master-dev",
+        "jms/debugging-bundle": "master-dev",
+        "sonata/easy-extends-bundle": "master-dev"
     },
     "repositories": {
         "doctrine-workflow": {
@@ -111,20 +101,6 @@
                 },
                 "autoload": {
                     "psr-0": { "Zend\\": "library/" }
-                }
-            }
-        },
-        "behat-mink": {
-            "package": {
-                "name": "behat/mink",
-                "version": "master-dev",
-                "source": {
-                    "type": "git",
-                    "url": "http://github.com/Behat/Mink.git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-0": { "Behat\\Mink": "src/" }
                 }
             }
         }
