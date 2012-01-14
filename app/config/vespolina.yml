@@ -14,3 +14,9 @@ vespolina_product:
 vespolina_monetary:
     currency:
         base_currency:  EUR
+
+services:
+    vespolina.cart.cart_manager:
+        tag: vespolina.cart
+    payment.plugin.paypal_direct_payment:
+        tag: jms.processing.service

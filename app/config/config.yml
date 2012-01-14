@@ -136,3 +136,10 @@ sonata_media:
         sonata.media.adapter.filesystem.local:
             directory:  %kernel.root_dir%/../web/uploads/media
             create:     true
+
+parameters:
+    acme_mailer.transport_chain.class: Acme\MailerBundle\TransportChain
+
+services:
+    vespolina.cart.cart_manager:
+        class: %acme_mailer.transport_chain.class%
