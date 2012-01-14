@@ -6,4 +6,5 @@ build/
 vendor/
 app/config/parameters.yml
 .idea
+app/phpunit.xml
 nbproject/

@@ -1,16 +1,36 @@
 vespolina_cart:
     db_driver: mongodb
+vespolina_pricing:
+    db_driver: mongodb
 vespolina_product:
     db_driver: mongodb
-    product_manager:
-        primary_identifier: sku
-        identifiers:
-            sku: Vespolina\ProductBundle\Document\SKUIdentifier
-    product:
-        form:
-            type:               Application\Vespolina\ProductBundle\Form\Type\ProductFormExtendedType #vespolina.product.form.type
+vespolina_inventory:
+    db_driver: mongodb
+#    product_manager:
+#        primary_identifier: sku
+#        identifiers:
+#            sku: Vespolina\ProductBundle\Document\SKUIdentifier
+#    product:
+#        form:
+#           type:               Application\Vespolina\ProductBundle\Form\Type\ProductFormExtendedType #vespolina.product.form.type
 #            handler_service:    vespolina.product.form.handler
 #            name:               vespolina_product_form
 vespolina_monetary:
     currency:
         base_currency:  EUR
+
+services:
+#    vespolina.cart:
+#        alias: vespolina.cart.cart_manager
+    payment.plugin.paypal_direct_payment:
+        alias: payment.plugin.paypal_express_checkout
+    vespolina.pricing:
+        alias: vespolina.pricing.pricing_manager
+
+jms_payment_core:
+    secret: 1234
+
+jms_payment_paypal:
+    username: admin
+    password: admin
+    signature: 2324

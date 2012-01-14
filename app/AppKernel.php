@@ -22,7 +22,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\MediaBundle\SonataMediaBundle(),
+            //new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
@@ -30,12 +30,14 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
-            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
-            
+
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
-            new Vespolina\CoreBundle\VespolinaCoreBundle(),
+
+            new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
+            new JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle(),
+
             new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
@@ -46,6 +48,11 @@ class AppKernel extends Kernel
             new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
             new Vespolina\StoreBundle\VespolinaStoreBundle(),
             new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
+            new Vespolina\CheckoutBundle\VespolinaCheckoutBundle(),
+            new Vespolina\MerchandiseBundle\VespolinaMerchandiseBundle(),
+            new Vespolina\EcommerceFlowsBundle\VespolinaEcommerceFlowsBundle(),
+            new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
+            new Vespolina\InventoryBundle\VespolinaInventoryBundle(),
             );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
