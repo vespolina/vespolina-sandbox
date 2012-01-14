@@ -20,8 +20,8 @@ vespolina_monetary:
         base_currency:  EUR
 
 services:
-    vespolina.cart:
-        alias: vespolina.cart.cart_manager
+#    vespolina.cart:
+#        alias: vespolina.cart.cart_manager
     payment.plugin.paypal_direct_payment:
         alias: payment.plugin.paypal_express_checkout
 
