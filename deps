@@ -102,62 +102,77 @@
 [VespolinaOrderBundle]
     git=http://github.com/vespolina/VespolinaOrderBundle.git
     target=/bundles/Vespolina/OrderBundle
+    version=origin/master
 
 [VespolinaMonetaryBundle]
     git=http://github.com/vespolina/VespolinaMonetaryBundle.git
     target=/bundles/Vespolina/MonetaryBundle
+    version=origin/master
 
 [VespolinaWorkflowBundle]
     git=http://github.com/vespolina/VespolinaWorkflowBundle.git
     target=/bundles/Vespolina/WorkflowBundle
+    version=origin/master
 
 [VespolinaCartBundle]
     git=http://github.com/vespolina/VespolinaCartBundle.git
     target=/bundles/Vespolina/CartBundle
+    version=origin/master
 
 [VespolinaEcommerceFlowsBundle]
     git=http://github.com/vespolina/VespolinaEcommerceFlowsBundle.git
     target=/bundles/Vespolina/EcommerceFlowsBundle
+    version=origin/master
 
 [VespolinaMerchandiseBundle]
     git=http://github.com/vespolina/VespolinaMerchandiseBundle.git
     target=/bundles/Vespolina/MerchandiseBundle
+    version=origin/master
 
 [VespolinaPricingBundle]
     git=http://github.com/vespolina/VespolinaPricingBundle.git
     target=/bundles/Vespolina/PricingBundle
+    version=origin/master
 
 [VespolinaProductBundle]
     git=http://github.com/vespolina/VespolinaProductBundle.git
     target=/bundles/Vespolina/ProductBundle
+    version=origin/master
 
 [VespolinaTaxationBundle]
     git=http://github.com/vespolina/VespolinaTaxationBundle.git
     target=/bundles/Vespolina/TaxationBundle
+    version=origin/master
 
 [VespolinaTaxonomyBundle]
     git=http://github.com/vespolina/VespolinaTaxonomyBundle.git
     target=/bundles/Vespolina/TaxonomyBundle
+    version=origin/master
 
 [VespolinaCustomerBundle]
     git=http://github.com/vespolina/VespolinaCustomerBundle.git
     target=/bundles/Vespolina/CustomerBundle
+    version=origin/master
 
 [VespolinaInventoryBundle]
     git=http://github.com/vespolina/VespolinaInventoryBundle.git
     target=/bundles/Vespolina/InventoryBundle
+    version=origin/master
 
 [VespolinaFulfillmentBundle]
     git=http://github.com/vespolina/VespolinaFulfillmentBundle.git
     target=/bundles/Vespolina/FulfillmentBundle
+    version=origin/master
 
 [VespolinaStoreBundle]
     git=http://github.com/vespolina/VespolinaStoreBundle.git
     target=/bundles/Vespolina/StoreBundle
+    version=origin/master
 
 [VespolinaCheckoutBundle]
     git=http://github.com/vespolina/VespolinaCheckoutBundle.git
     target=/bundles/Vespolina/CheckoutBundle
+    version=origin/master
 
 [JMSPaymentCoreBundle]
     git=http://github.com/schmittjoh/JMSPaymentCoreBundle.git

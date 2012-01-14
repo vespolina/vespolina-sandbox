@@ -51,6 +51,9 @@ class AppKernel extends Kernel
             new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
             new Vespolina\CheckoutBundle\VespolinaCheckoutBundle(),
             new Vespolina\MerchandiseBundle\VespolinaMerchandiseBundle(),
+            new Vespolina\EcommerceFlowsBundle\VespolinaEcommerceFlowsBundle(),
+            new Vespolina\WorkflowBundle\VespolinaWorkflowBundle(),
+            new Vespolina\InventoryBundle\VespolinaInventoryBundle(),
             );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
