@@ -218,9 +218,9 @@
     git=http://github.com/phiamo/MopaBootstrapBundle.git
     target=/bundles/Mopa/BootstrapBundle
 
-[SonataMediaBundle]
-    git=http://github.com/sonata-project/SonataMediaBundle.git
-    target=/bundles/Sonata/MediaBundle
+;###[SonataMediaBundle]
+;###    git=http://github.com/sonata-project/SonataMediaBundle.git
+;###    target=/bundles/Sonata/MediaBundle
 
 [SonataAdminBundle]
     git=http://github.com/sonata-project/SonataAdminBundle.git
