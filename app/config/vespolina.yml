@@ -3,7 +3,7 @@ vespolina_cart:
 vespolina_product:
     db_driver: mongodb
     product_manager:
-        primary_identifier: sku
+#        primary_identifier: sku
         identifiers:
             sku: Vespolina\ProductBundle\Document\SKUIdentifier
     product:
@@ -16,10 +16,10 @@ vespolina_monetary:
         base_currency:  EUR
 
 services:
-    vespolina.cart.cart_manager:
-        tag: vespolina.cart
+    vespolina.cart:
+        alias: vespolina.cart.cart_manager
     payment.plugin.paypal_direct_payment:
-        tag: jms.processing.service
+        alias: payment.plugin.paypal_express_checkout
 
 jms_payment_core:
     secret: 1234
