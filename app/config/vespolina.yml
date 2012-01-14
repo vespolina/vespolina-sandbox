@@ -20,3 +20,11 @@ services:
         tag: vespolina.cart
     payment.plugin.paypal_direct_payment:
         tag: jms.processing.service
+
+jms_payment_core:
+    secret: 1234
+
+jms_payment_paypal:
+    username: admin
+    password: admin
+    signature: 2324

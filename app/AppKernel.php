@@ -32,9 +32,12 @@ class AppKernel extends Kernel
 
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
-            
+
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
+
+            new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
+            new JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle(),
 
             new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),

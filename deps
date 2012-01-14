@@ -159,6 +159,14 @@
     git=http://github.com/vespolina/VespolinaCheckoutBundle.git
     target=/bundles/Vespolina/CheckoutBundle
 
+[JMSPaymentCoreBundle]
+    git=http://github.com/schmittjoh/JMSPaymentCoreBundle.git
+    target=/bundles/JMS/Payment/CoreBundle
+
+[JMSPaymentPaypalBundle]
+    git=http://github.com/schmittjoh/JMSPaymentPaypalBundle.git
+    target=/bundles/JMS/Payment/PaypalBundle
+
 [buzz]
     git=https://github.com/kriswallsmith/Buzz.git
     target=/buzz
@@ -222,3 +230,4 @@
 [MenuBundle]
     git=http://github.com/KnpLabs/KnpMenuBundle.git
     target=/bundles/Knp/Bundle/MenuBundle
+
