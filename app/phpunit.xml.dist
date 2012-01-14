@@ -15,10 +15,23 @@
 
     <testsuites>
         <testsuite name="Vespolina Test Suite">
-            <!--<directory>../src/*/*Bundle/Tests</directory>-->
-            <!--<directory>../src/*/Bundle/*Bundle/Tests</directory>-->
-            <directory>../vendor/bundles/Vespolina/MonetaryBundle/Tests</directory>
-            <!--<directory>../vendor/bundles/Vespolina/ProductBundle/Tests</directory>-->
+             <!--<directory>../src/*/*Bundle/Tests</directory>-->
+             <!--<directory>../src/*/Bundle/*Bundle/Tests</directory>-->
+             <directory>../vendor/bundles/Vespolina/MerchandiseBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/PricingBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/OrderBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/StoreBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/TaxonomyBundle/Tests</directory>
+             <!--<directory>../vendor/bundles/Vespolina/WorkflowBundle/Tests</directory>-->
+             <directory>../vendor/bundles/Vespolina/CustomerBundle/Tests</directory>
+             <!--<directory>../vendor/bundles/Vespolina/MonetaryBundle/Tests</directory>-->
+             <directory>../vendor/bundles/Vespolina/CheckoutBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/EcommerceFlowsBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/FulfillmentBundle/Tests</directory>
+             <!--<directory>../vendor/bundles/Vespolina/InventoryBundle/Tests</directory>-->
+             <!--<directory>../vendor/bundles/Vespolina/CartBundle/Tests</directory>
+             <directory>../vendor/bundles/Vespolina/TaxationBundle/Tests</directory>-->
+             <!--<directory>../vendor/bundles/Vespolina/ProductBundle/Tests</directory>-->
         </testsuite>
     </testsuites>
 
