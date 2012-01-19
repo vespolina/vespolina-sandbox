@@ -101,18 +101,11 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
-jms_security_extra:
-    secure_all_services: false
-
-jms_debugging:
-    # You can set this to true if you want to automatically retrieve help
-    # messages for public exceptions. If you leave this set to false, you have
-    # to click the "search" button manually each time.
-    auto_help: false
-
 fos_rest:
     routing_loader:
         default_format: json
+
+mopa_bootstrap:
 
 #sonata_media:
 #    db_driver: doctrine_orm # or doctrine_mongodb
@@ -136,6 +129,3 @@ fos_rest:
 #        sonata.media.adapter.filesystem.local:
 #            directory:  %kernel.root_dir%/../web/uploads/media
 #            create:     true
-
-jms_aop:
-    cache_dir: %kernel.cache_dir%/jms_aop

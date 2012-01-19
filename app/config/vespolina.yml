@@ -5,7 +5,7 @@ vespolina_pricing:
 vespolina_product:
     db_driver: mongodb
     product_manager:
-        primary_identifier: sku
+#        primary_identifier: sku
         identifiers:
             sku: Vespolina\ProductBundle\Document\SKUIdentifier
     product:
