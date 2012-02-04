@@ -88,7 +88,9 @@ doctrine_mongodb:
                 VespolinaCartBundle: ~
                 VespolinaCustomerBundle: ~
                 VespolinaOrderBundle: ~
+                VespolinaPricingBundle: ~
                 VespolinaProductBundle: ~
+                VespolinaStoreBundle: ~
                 VespolinaTaxonomyBundle: ~
                 UserBundle: ~
                 ApplicationVespolinaProductBundle: ~
