@@ -1,4 +1,8 @@
-VespolinaFulfillmentBundle:
+vespolina_store:
+    resource: "@VespolinaStoreBundle/Resources/config/routing/store.xml"
+    prefix:   /
+
+vespolina_fulfillment:
     resource: "@VespolinaFulfillmentBundle/Resources/config/routing.xml"
     prefix:   /
 
