@@ -1,3 +1,7 @@
+vespolina_store:
+    db_driver: mongodb
+    default_store: default_store
+    multi_store: false
 vespolina_cart:
     db_driver: mongodb
 vespolina_pricing:
