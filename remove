@@ -1,3 +1,0 @@
-rm -rf vendor/*
-rm -rf vendor/.composer
-rm composer.lock
