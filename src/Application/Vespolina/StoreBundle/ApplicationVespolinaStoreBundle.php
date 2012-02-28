@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Application\Vespolina\ProductBundle;
+namespace Application\Vespolina\StoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -21,13 +21,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author <yourname> <youremail>
  */
-class ApplicationVespolinaProductBundle extends Bundle
+class ApplicationVespolinaStoreBundle extends Bundle
 {
     /**
      * {@inheritdoc}
      */
     public function getParent()
     {
-        return 'VespolinaProductBundle';
+        return 'VespolinaStoreBundle';
     }
 }
