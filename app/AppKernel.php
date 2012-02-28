@@ -19,9 +19,9 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            //new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
-            new FOS\RestBundle\FOSRestBundle(),
+            //new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
