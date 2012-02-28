@@ -21,16 +21,16 @@ class SetupCommand extends ContainerAwareCommand
         $this
             ->setName('vespolina:setup1')
             ->setDescription('Setup a Vespolina demo store')
-            ->addOption('country', null, InputOption::VALUE_OPTIONAL, 'Country')
-            ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Store type')
+            ->addOption('country', null, InputOption::VALUE_OPTIONAL, 'Country', 'us')
+            ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Store type', 'pdfreports')
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
 
-        $this->country = $input->getOption('country', 'us');
-        $this->type = $input->getOption('type', 'pdfreports');
+        $this->country = $input->getOption('country');
+        $this->type = $input->getOption('type');
 
         $store = $this->setupStore($input, $output);
         $customerTaxonomy = $this->setupCustomerTaxonomy($input, $output);
@@ -63,7 +63,7 @@ class SetupCommand extends ContainerAwareCommand
 
     protected function setupProducts($input, $output)
     {
-        $productCount = 10;
+        $productCount = 2;
 
         $productManager = $this->getContainer()->get('vespolina.product_manager');
 
@@ -92,14 +92,13 @@ class SetupCommand extends ContainerAwareCommand
         $termFixtures = array();
 
         switch($this->type) {
-
             case 'pdfreports':
                 $termFixtures[] = array('path' => 'downloadable-reports', 'name' => 'Downloadable reports');
                 break;
             default:
                 return;
-
         }
+
         foreach($termFixtures as $termFixture) {
 
             $aTerm = $taxonomyManager->createTerm($termFixture['path'], $termFixture['name']);
