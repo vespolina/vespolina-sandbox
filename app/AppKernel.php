@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
             new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
+            new Application\Vespolina\StoreBundle\ApplicationVespolinaStoreBundle(),
             
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
