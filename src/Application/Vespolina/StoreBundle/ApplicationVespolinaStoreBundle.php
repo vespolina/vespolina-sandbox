@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Application\Sonata\MediaBundle;
+namespace Application\Vespolina\ProductBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -21,13 +21,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author <yourname> <youremail>
  */
-class ApplicationSonataMediaBundle extends Bundle
+class ApplicationVespolinaProductBundle extends Bundle
 {
     /**
      * {@inheritdoc}
      */
     public function getParent()
     {
-        return 'SonataMediaBundle';
+        return 'VespolinaProductBundle';
     }
 }
