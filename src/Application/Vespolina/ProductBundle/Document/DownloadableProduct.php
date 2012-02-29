@@ -18,15 +18,20 @@ use Vespolina\ProductBundle\Document\BaseProduct as BaseProduct;
  * References :
  *   working with object : http://www.doctrine-project.org/docs/mongodb_odm/1.0/en/reference/working-with-objects.html
  *
- * @author <yourname> <youremail>
+ * @author Luis Cordova <cordoval@gmail.com>
  */
-class Product extends BaseProduct
+class DownloadableProduct extends BaseProduct
 {
 
     /**
      * @var integer $id
      */
     protected $id;
+
+    /**
+     * @var string $pdfFilePath
+     */
+    protected $pdfFilePath;
 
     /**
      * Get id
@@ -36,6 +41,26 @@ class Product extends BaseProduct
     public function getId()
     {
       return $this->id;
+    }
+
+    /**
+     * Get $pdfFilePath
+     *
+     * @return string $pdfFilePath
+     */
+    public function getPdfFilePath()
+    {
+       return $this->pdfFilePath;
+    }
+
+    /**
+     * Set $pdfFilePath
+     *
+     * @param string $pdfFilePath
+     */
+    public function setPdfFilePath($pdfFilePath)
+    {
+       $this->pdfFilePath = $pdfFilePath;
     }
 
     /**
@@ -60,4 +85,6 @@ class Product extends BaseProduct
     {
       $this->price = $price;
     }
+
+
 }

@@ -4,58 +4,36 @@
     },
     "require": {
         "php": ">=5.3.2",
-        "kriswallsmith/assetic": "master-dev",
-	"symfony/symfony": "2.1.0-dev",
-        "symfony/doctrine-bridge": "2.1.0-dev",
-        "twig/extensions": "*",
-        "doctrine/doctrine-fixtures-bundle": "master-dev",
-        "doctrine/doctrine-bundle": "master-dev",
-        "doctrine/common": "master-dev",
-        "doctrine/orm": "master-dev",
-        "doctrine/data-fixtures": "master-dev",
-        "doctrine/dbal": "2.1.5",
-        "doctrine/mongodb": "master-dev",
-        "doctrine/mongodb-odm": "master-dev",
-        "doctrine/mongodb-odm-bundle": "master-dev",
-        "symfony/assetic-bundle": "2.0-dev",
-        "sensio/framework-extra-bundle": "master-dev",
-        "sensio/distribution-bundle": "master-dev",
-        "sensio/generator-bundle": "master-dev",
- 	"jms/metadata": "1.1.1",
-        "jms/security-extra-bundle": "1.1.0",
-        "jms/serializer-bundle": "master-dev",
-        "friendsofsymfony/rest-bundle": "master-dev",
+        "symfony/symfony": "2.1.*",
+        "doctrine/orm": "2.2.0",
+        "doctrine/doctrine-bundle": "dev-master",
+        "twig/extensions": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "doctrine/data-fixtures": "dev-master",
+        "doctrine/mongodb": "dev-master",
+        "doctrine/mongodb-odm": "dev-master",
+        "doctrine/mongodb-odm-bundle": "dev-master",
+        "symfony/assetic-bundle": "dev-master",
+        "symfony/swiftmailer-bundle": "dev-master",
+        "symfony/monolog-bundle": "dev-master",
+        "sensio/distribution-bundle": "dev-master",
+        "sensio/framework-extra-bundle": "dev-master",
+        "sensio/generator-bundle": "dev-master",
+        "jms/security-extra-bundle": "dev-master",
+        "jms/serializer-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "1.1.0",
-        "knplabs/knp-menu": "master-dev",
-        "knplabs/knp-menu-bundle": "*",
-        "knplabs/knp-gaufrette-bundle": "master-dev",
-        "imagine/Imagine": "v0.2.8",
-        "monolog/monolog": "master-dev",
-        "mopa/bootstrap-bundle": "0.5",
-        "swiftmailer/swiftmailer": "v4.1.5",
-        "twig/twig": "v1.5.1",
-        "vespolina/pricing-bundle": "master-dev",
-        "vespolina/store-bundle": "master-dev",
-        "vespolina/checkout-bundle": "master-dev",
-        "vespolina/product-bundle": "master-dev",
-        "vespolina/cart-bundle": "master-dev",
-        "vespolina/inventory-bundle": "master-dev",
-        "vespolina/taxonomy-bundle": "master-dev",
-        "vespolina/order-bundle": "master-dev",
-        "vespolina/customer-bundle": "master-dev",
-        "vespolina/fulfillment-bundle": "master-dev",
-        "vespolina/taxation-bundle": "master-dev",
-        "vespolina/workflow-bundle": "master-dev",
-        "vespolina/ecommerce-flows-bundle": "master-dev",
-        "vespolina/monetary-bundle": "master-dev",
-        "doctrine/doctrine-workflow": "master-dev",
-        "twitter/bootstrap": "master-dev"
+        "imagine/Imagine": "dev-master",
+        "mopa/bootstrap-bundle": "dev-master",
+        "vespolina/vespolina-sandbox-composer": "dev-master",
+        "doctrine/doctrine-workflow": "dev-master",
+        "twitter/bootstrap": "dev-master"
     },
     "repositories": {
         "doctrine-workflow": {
+            "type": "package",
             "package": {
                 "name": "doctrine/doctrine-workflow",
-                "version": "master-dev",
+                "version": "dev-master",
                 "source": {
                     "type": "git",
                     "url": "http://github.com/beberlei/Doctrine-Workflow.git",
@@ -67,9 +45,10 @@
             }
         },
         "twitter-bootstrap": {
+            "type": "package",
             "package": {
                 "name": "twitter/bootstrap",
-                "version": "master-dev",
+                "version": "dev-master",
                 "source": {
                     "type": "git",
                     "url": "http://github.com/twitter/bootstrap.git",
@@ -78,5 +57,24 @@
                 "target-dir": "mopa/boostrap-bundle/Mopa/BootstrapBundle/Resources/bootstrap"
             }
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web"
     }
 }

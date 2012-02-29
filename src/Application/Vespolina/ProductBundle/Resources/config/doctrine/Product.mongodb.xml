@@ -4,10 +4,9 @@
                         xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
                         http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
 
-    <document name="Application\Vespolina\ProductBundle\Document\Product" collection="vespolinaProduct">
+    <document name="Application\Vespolina\ProductBundle\Document\DownloadableProduct" collection="vespolinaProduct">
         <field name="id" id="true" />
         <field name="price" fieldName="price" type="string" />
-        <embed-many target-document="Vespolina\ProductBundle\Document\OptionSet" field="options" fieldName="options" strategy="set" />
-        <embed-one target-document="Vespolina\ProductBundle\Document\ProductIdentifierSet" field="primaryIdentifierSet" fieldName="primaryIdentifierSet" />
+        <field name="pdfFilePath" fieldName="pdfFilePath" type="string" />
     </document>
 </doctrine-mongo-mapping>
