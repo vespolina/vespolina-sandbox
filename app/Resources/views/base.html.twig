@@ -4,8 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Vespolina Sandbox Store{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        {% stylesheets output='css/all.css'
-           '@MopaBootstrapBundle/Resources/bootstrap/bootstrap.css'
+        {% stylesheets filter='less,cssrewrite,?yui_css' output='css/all.css'
+           '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
         %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
