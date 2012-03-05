@@ -21,6 +21,8 @@
         "sensio/generator-bundle": "dev-master",
         "jms/security-extra-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",
+        "friendsofsymfony/rest": "dev-master",
+        "friendsofsymfony/rest-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "1.1.0",
         "imagine/Imagine": "dev-master",
         "mopa/bootstrap-bundle": "dev-master",
