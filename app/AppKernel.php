@@ -21,12 +21,12 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             //new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
-            //new FOS\RestBundle\FOSRestBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
 
-            new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
-            new Application\Vespolina\StoreBundle\ApplicationVespolinaStoreBundle(),
+            //new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
+            //new Application\Vespolina\StoreBundle\ApplicationVespolinaStoreBundle(),
             
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
