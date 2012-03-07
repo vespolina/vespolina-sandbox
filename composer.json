@@ -4,31 +4,30 @@
     },
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": "2.1.*",
-        "doctrine/orm": "2.2.0",
-        "doctrine/doctrine-bundle": "dev-master",
-        "twig/extensions": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
+        "doctrine/doctrine-bundle": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "doctrine/doctrine-workflow": "dev-master",
         "doctrine/mongodb": "dev-master",
         "doctrine/mongodb-odm": "dev-master",
         "doctrine/mongodb-odm-bundle": "dev-master",
-        "symfony/assetic-bundle": "dev-master",
-        "symfony/swiftmailer-bundle": "dev-master",
-        "symfony/monolog-bundle": "dev-master",
-        "sensio/distribution-bundle": "dev-master",
-        "sensio/framework-extra-bundle": "dev-master",
-        "sensio/generator-bundle": "dev-master",
-        "jms/security-extra-bundle": "dev-master",
-        "jms/serializer-bundle": "dev-master",
+        "doctrine/orm": "2.2.0",
         "friendsofsymfony/rest": "dev-master",
         "friendsofsymfony/rest-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "1.1.0",
         "imagine/Imagine": "dev-master",
+        "jms/security-extra-bundle": "dev-master",
+        "jms/serializer-bundle": "dev-master",
         "mopa/bootstrap-bundle": "dev-master",
-        "vespolina/vespolina-sandbox-composer": "dev-master",
-        "doctrine/doctrine-workflow": "dev-master",
-        "twitter/bootstrap": "dev-master"
+        "sensio/distribution-bundle": "dev-master",
+        "sensio/framework-extra-bundle": "dev-master",
+        "sensio/generator-bundle": "dev-master",
+        "symfony/assetic-bundle": "dev-master",
+        "symfony/monolog-bundle": "dev-master",
+        "symfony/swiftmailer-bundle": "dev-master",
+        "symfony/symfony": "2.1.*",
+        "twig/extensions": "dev-master",
+        "vespolina/vespolina-sandbox-composer": "dev-master"
     },
     "repositories": {
         "doctrine-workflow": {
@@ -44,19 +43,6 @@
                 "autoload": {
                     "psr-0": { "DoctrineExtensions\\Workflow": "lib/" }
                 }
-            }
-        },
-        "twitter-bootstrap": {
-            "type": "package",
-            "package": {
-                "name": "twitter/bootstrap",
-                "version": "dev-master",
-                "source": {
-                    "type": "git",
-                    "url": "http://github.com/twitter/bootstrap.git",
-                    "reference": "master"
-                },
-                "target-dir": "mopa/boostrap-bundle/Mopa/BootstrapBundle/Resources/bootstrap"
             }
         }
     },
