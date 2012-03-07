@@ -1,9 +1,9 @@
 {
-    "hash": "e4017d3c21b6b7a6f6c972e8903f981c",
+    "hash": "50c3d3d98e0d670e44748dc1aaafef54",
     "packages": [
         {
             "package": "doctrine/common",
-            "version": "2.2.0"
+            "version": "2.2.1"
         },
         {
             "package": "doctrine/data-fixtures",
@@ -17,7 +17,7 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "caecd032878c45c05a962d6ddfac4f45a7a39fb1"
+            "source-reference": "cd4848f323da7ab66bed79562a23bf9f291c703e"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
@@ -37,16 +37,26 @@
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "57e7b2d247bdd12ff25307840951313f9fe15e41"
+            "source-reference": "4e4c3e6ffb40fbeee0011640a22a8b0fa818e6f8"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
             "version": "dev-master",
-            "source-reference": "027379a8e2ed24b81a234590b91d572565eaeba1"
+            "source-reference": "8bd687596140b737f5df53be3ec150237103d7d9"
         },
         {
             "package": "doctrine/orm",
             "version": "2.2.0"
+        },
+        {
+            "package": "friendsofsymfony/rest",
+            "version": "dev-master",
+            "source-reference": "2487cf81657ec0dcd939d18196b0cc193168fb95"
+        },
+        {
+            "package": "friendsofsymfony/rest-bundle",
+            "version": "dev-master",
+            "source-reference": "f88434a9ed60f444a51a5b81556631b24b9fff60"
         },
         {
             "package": "friendsofsymfony/user-bundle",
@@ -82,7 +92,7 @@
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "source-reference": "58e9c45aa27be35d16add0394e1e254b82f3f914"
+            "source-reference": "2634d29cc193981761e3daf28e1afc6358bb43b1"
         },
         {
             "package": "monolog/monolog",
@@ -91,7 +101,7 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "83c1ced657fa776121c9487cc575d49ce3cc7044"
+            "source-reference": "050974ff093e91f74d40cbc1b5283a771f822daf"
         },
         {
             "package": "sensio/distribution-bundle",
@@ -101,12 +111,12 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "1b0ca00361050760f14f70be6f3a31f125211f3d"
+            "source-reference": "d371c21a464b9f1ac6bfebf643e14a4d88acd2d8"
         },
         {
             "package": "sensio/generator-bundle",
             "version": "dev-master",
-            "source-reference": "fe924497677ea41d0d09f0c011e55142bda12cd7"
+            "source-reference": "43c5c95e42e451ac7250d6a863f0540c7f266e1d"
         },
         {
             "package": "swiftmailer/swiftmailer",
@@ -115,7 +125,7 @@
         {
             "package": "symfony/assetic-bundle",
             "version": "dev-master",
-            "source-reference": "da4a46ce37557dcf3068b8493b12bdbbe47455e2"
+            "source-reference": "52cf0eaa7160cbe33bcf1ed7224c7619ceeebbdc"
         },
         {
             "package": "symfony/monolog-bundle",
@@ -135,7 +145,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "3de31c62d6d695477803d797177fbfe2a2fa3ef5",
+            "source-reference": "35d63b66910ae2107fe17f0095495c7d37f491f5",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
@@ -145,17 +155,12 @@
         },
         {
             "package": "twig/twig",
-            "version": "1.6.0"
-        },
-        {
-            "package": "twitter/bootstrap",
-            "version": "dev-master",
-            "source-reference": "master"
+            "version": "1.6.1"
         },
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "37171a338ccf2709ae555d85854ca1ae01940e91"
+            "source-reference": "285bfab23c1e87d12fd133a208a16d982edaabe8"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -210,7 +215,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "c8fef9801470be6d4d3a58e4ba6fe775136062d5"
+            "source-reference": "cd8b074b53550fcb60f3da003e54e2ea6359c180"
         },
         {
             "package": "vespolina/taxation-bundle",
