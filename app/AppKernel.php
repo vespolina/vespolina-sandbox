@@ -2,45 +2,45 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
- 
+
 class AppKernel extends Kernel
 {
     public function registerBundles()
     {
         $bundles = array(
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\MonologBundle\MonologBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            //new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            //new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
             new Mopa\BootstrapBundle\MopaBootstrapBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Symfony\Bundle\TwigBundle\TwigBundle(),
 
-            //new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
-            //new Application\Vespolina\StoreBundle\ApplicationVespolinaStoreBundle(),
-            
             new Application\UserBundle\UserBundle(),
             new Application\DefaultBundle\DefaultBundle(),
+            new Application\Vespolina\ProductBundle\ApplicationVespolinaProductBundle(),
+            //new Application\Vespolina\StoreBundle\ApplicationVespolinaStoreBundle(),
+
             new Vespolina\CartBundle\VespolinaCartBundle(),
             new Vespolina\CustomerBundle\VespolinaCustomerBundle(),
+            new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
+            new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
+            new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
+            new Vespolina\ProductSubscriptionBundle\VespolinaProductSubscriptionBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
+            new Vespolina\StoreBundle\VespolinaStoreBundle(),
             new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
             new Vespolina\TaxonomyBundle\VespolinaTaxonomyBundle(),
-            new Vespolina\OrderBundle\VespolinaOrderBundle(),
-            new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
-            new Vespolina\StoreBundle\VespolinaStoreBundle(),
-            new Vespolina\MonetaryBundle\VespolinaMonetaryBundle(),
-            );
+        );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
