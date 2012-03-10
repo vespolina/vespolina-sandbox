@@ -82,7 +82,7 @@
         {
             "package": "jms/security-extra-bundle",
             "version": "dev-master",
-            "source-reference": "e43b9a5b5456bb8dd5b07bed7f776a7c233e2091"
+            "source-reference": "c26bd5ddfa83876ba4c88e62227d09e7f3429dc8"
         },
         {
             "package": "jms/serializer-bundle",
@@ -145,7 +145,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "35d63b66910ae2107fe17f0095495c7d37f491f5",
+            "source-reference": "f6353b8c7d6c737a15ecdc1f3c0f7ca547880326",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
@@ -210,7 +210,7 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "9ca6eaef307cf59c1268a8fba79b51ebcde42e82"
+            "source-reference": "459d2c601fb1bff1e7b997aa58b169fc117c7154"
         },
         {
             "package": "vespolina/store-bundle",
@@ -225,7 +225,7 @@
         {
             "package": "vespolina/taxonomy-bundle",
             "version": "dev-master",
-            "source-reference": "4fd3e53650690666eae9841fed74b094f690e868"
+            "source-reference": "070bdc98f5c7bb4deb5a629e96aca533dbab5778"
         },
         {
             "package": "vespolina/vespolina-sandbox-composer",
