@@ -40,13 +40,15 @@ Installation
         $ chmod a+w app/cache/ app/logs/
         $ chmod a+x app/console
 
-  3. Initialize and install the vendors:
-
-        $ bin/vendors install
-
-  4. Copy and adjust the configuration file
+  3. Copy and adjust the configuration file
    
         $ cp app/config/parameters.yml.dist app/config/parameters.yml
+
+  4. Initialize and install the vendors:
+
+        $ curl -s http://getcomposer.org/installer | php
+        $ php composer.phar install
+
 
 Automated Tests
 ---------------
