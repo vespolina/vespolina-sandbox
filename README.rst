@@ -33,11 +33,13 @@ Installation
   1. Clone the git repository and move into that directory:
 
         $ git clone git://github.com/vespolina/vespolina-sandbox.git
+
         $ cd vespolina/
 
   2. Setup file permissions: see http://symfony.com/doc/current/book/installation.html#configuration-and-setup
 
         $ chmod a+w app/cache/ app/logs/
+
         $ chmod a+x app/console
 
   3. Copy and adjust the configuration file
@@ -47,6 +49,7 @@ Installation
   4. Initialize and install the vendors:
 
         $ curl -s http://getcomposer.org/installer | php
+
         $ php composer.phar install
 
   5. Set up the store
