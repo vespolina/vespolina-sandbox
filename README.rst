@@ -49,6 +49,8 @@ Installation
         $ curl -s http://getcomposer.org/installer | php
         $ php composer.phar install
 
+  5. Set up the store
+        $ php app/console vespolina:setup [--country="xx"] [--type="fashion"]
 
 Automated Tests
 ---------------
