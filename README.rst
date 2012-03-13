@@ -32,7 +32,7 @@ Installation
 
   1. Clone the git repository and move into that directory:
 
-        $ git clone git@github.com:vespolina/vespolina.git
+        $ git clone git://github.com/vespolina/vespolina-sandbox.git
         $ cd vespolina/
 
   2. Setup file permissions: see http://symfony.com/doc/current/book/installation.html#configuration-and-setup
