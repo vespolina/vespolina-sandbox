@@ -210,7 +210,7 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "459d2c601fb1bff1e7b997aa58b169fc117c7154"
+            "source-reference": "6d02473f78e09685a367695fc49b90fb34cb3e08"
         },
         {
             "package": "vespolina/store-bundle",
