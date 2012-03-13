@@ -38,6 +38,10 @@ Installation
 
   2. Setup file permissions: see http://symfony.com/doc/current/book/installation.html#configuration-and-setup
 
+        $ mkdir app/cache
+
+        $ mkdir app/logs
+
         $ chmod a+w app/cache/ app/logs/
 
         $ chmod a+x app/console
