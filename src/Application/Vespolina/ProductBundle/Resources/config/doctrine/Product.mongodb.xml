@@ -7,6 +7,6 @@
     <document name="Application\Vespolina\ProductBundle\Document\Product" collection="vespolinaProduct">
         <field name="id" id="true" />
         <field name="cartableName" fieldName="cartableName" type="string" />
-        <field name="pricing" fieldName="pricing" />
+        <field name="pricing" fieldName="pricing" type="hash" />
     </document>
 </doctrine-mongo-mapping>
