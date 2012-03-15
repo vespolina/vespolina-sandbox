@@ -160,7 +160,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "55135efae21ceae78924f2b1e12dff3b453bb0a0"
+            "source-reference": "6d41d675eebbd363ef32b903ea9b743985932f68"
         },
         {
             "package": "vespolina/checkout-bundle",
