@@ -1,4 +1,16 @@
 {
+    "name": "vespolina/vespolina-sandbox",
+    "type": "symfony-bundle",
+    "description": "Vespolina sandbox.",
+    "keywords": ["shop", "ecommerce", "cart", "item"],
+    "homepage": "http://vespolina-project.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vespolina Team",
+            "homepage": "http://vespolina-project.org"
+        }
+    ],
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -7,7 +19,6 @@
         "doctrine/data-fixtures": "dev-master",
         "doctrine/doctrine-bundle": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "doctrine/doctrine-workflow": "dev-master",
         "doctrine/mongodb": "dev-master",
         "doctrine/mongodb-odm": "dev-master",
         "doctrine/mongodb-odm-bundle": "dev-master",
@@ -28,23 +39,6 @@
         "symfony/symfony": "2.1.*",
         "twig/extensions": "dev-master",
         "vespolina/vespolina-sandbox-composer": "dev-master"
-    },
-    "repositories": {
-        "doctrine-workflow": {
-            "type": "package",
-            "package": {
-                "name": "doctrine/doctrine-workflow",
-                "version": "dev-master",
-                "source": {
-                    "type": "git",
-                    "url": "http://github.com/beberlei/Doctrine-Workflow.git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-0": { "DoctrineExtensions\\Workflow": "lib/" }
-                }
-            }
-        }
     },
     "scripts": {
         "post-install-cmd": [

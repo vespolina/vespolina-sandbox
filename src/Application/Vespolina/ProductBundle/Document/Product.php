@@ -10,11 +10,18 @@ namespace Application\Vespolina\ProductBundle\Document;
 
 use Vespolina\ProductBundle\Document\BaseProduct as BaseProduct;
 use Vespolina\CartBundle\Model\CartableItemInterface;
+use Vespolina\TaxonomyBundle\Model\TermInterface;
 
 class Product extends BaseProduct implements CartableItemInterface
 {
     protected $id;
     protected $pricing;
+
+    public function addTerm(TermInterface $term)
+    {
+
+        $this->terms[$term->getPath()] = $term->getName();
+    }
 
     /**
      * Get id
@@ -39,6 +46,11 @@ class Product extends BaseProduct implements CartableItemInterface
     public function getPricing()
     {
       return $this->pricing;
+    }
+
+    public function getTerms()
+    {
+        return $this->terms;
     }
 
     /**
