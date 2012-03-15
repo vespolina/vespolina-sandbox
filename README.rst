@@ -9,10 +9,11 @@ The purpose of this project is to create an expandable Symfony2 based ecommerce 
 State of the Project
 --------------------
 
-Vespolina is in very early stages.  We are currently in the design phase and are gathering functional needs which you can find on the
+Vespolina is in early stages.  We are currently in the progress of developing a sandbox which uses several Vespolina bundles.
+Some of the bundles are already been used in production.  Information about basic functionality can be found on the
 [wiki][vespolina_wiki] .  We love to hear your comments on our current understanding of different ecommerce scenarios.  You can find more information on the wiki such as use cases and process flow diagrams.
 
-[vespolina_wiki]: https://github.com/vespolina/vespolina/wiki
+[vespolina_wiki]: https://github.com/vespolina/vespolina-sandbox/wiki
 
 
 Contact
