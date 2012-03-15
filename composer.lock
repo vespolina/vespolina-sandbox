@@ -160,12 +160,12 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "285bfab23c1e87d12fd133a208a16d982edaabe8"
+            "source-reference": "6d41d675eebbd363ef32b903ea9b743985932f68"
         },
         {
             "package": "vespolina/checkout-bundle",
             "version": "dev-master",
-            "source-reference": "cc6854261db1c5224979f37b192e0abd6d80813a"
+            "source-reference": "ceca6e76e9e54c76f7034176c5583a94cbd50e89"
         },
         {
             "package": "vespolina/customer-bundle",
@@ -210,7 +210,7 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "6d02473f78e09685a367695fc49b90fb34cb3e08"
+            "source-reference": "8f4825699b084102c6c9e7daf8f6b1987df8bbef"
         },
         {
             "package": "vespolina/store-bundle",
