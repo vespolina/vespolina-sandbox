@@ -58,7 +58,7 @@ Installation
         $ php composer.phar install
 
   5. Set up the store
-        $ php app/console vespolina:setup [--country="xx"] [--type="fashion"]
+        $ php app/console vespolina:store-setup [--country="xx"] [--type="fashion"]
 
 Automated Tests
 ---------------
