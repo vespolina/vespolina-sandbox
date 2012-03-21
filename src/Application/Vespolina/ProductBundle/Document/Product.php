@@ -14,6 +14,7 @@ use Vespolina\TaxonomyBundle\Model\TermInterface;
 
 class Product extends BaseProduct implements CartableItemInterface
 {
+    protected $cartableName;
     protected $id;
     protected $pricing;
 

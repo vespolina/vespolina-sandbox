@@ -70,6 +70,7 @@ doctrine:
                     #ApplicationSonataMediaBundle: ~
                     #SonataMediaBundle: ~
                     VespolinaCartBundle: ~
+                    VespolinaTaxationBundle: ~
 
 
 doctrine_mongodb:
@@ -91,6 +92,7 @@ doctrine_mongodb:
                 VespolinaPricingBundle: ~
                 VespolinaProductBundle: ~
                 VespolinaStoreBundle: ~
+                VespolinaTaxationBundle: ~
                 VespolinaTaxonomyBundle: ~
                 UserBundle: ~
                 ApplicationVespolinaProductBundle: ~
