@@ -6,6 +6,7 @@
         {% block stylesheets %}{% endblock %}
         {% stylesheets filter='cssrewrite,?yui_css' output='css/all.css'
            'bootstrap/css/bootstrap.css'
+           '@VespolinaStoreBundle/Resources/public/store.css'
         %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
