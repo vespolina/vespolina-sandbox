@@ -35,7 +35,7 @@ Installation
 
         $ git clone git://github.com/vespolina/vespolina-sandbox.git
 
-        $ cd vespolina/
+        $ cd vespolina-sandbox/
 
   2. Setup file permissions: see http://symfony.com/doc/current/book/installation.html#configuration-and-setup
 

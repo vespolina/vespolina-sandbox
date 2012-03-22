@@ -18,7 +18,7 @@ vespolina_product:
 #            handler_service:    vespolina.product.form.handler
 #            name:               vespolina_product_form
 vespolina_taxation:
-    db_driver: orm
+    db_driver: mongodb
 #    tax_mode: default_tax_rate   #flat_tax_rate, default_tax_rate, mixed_tax_rates
 vespolina_monetary:
     currency:
