@@ -28,7 +28,7 @@ twig:
 #    form:
 #      resources:
 #        - 'MopaBootstrapBundle:Form:fields.html.twig'
-        
+
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
@@ -85,6 +85,8 @@ doctrine_mongodb:
         default:
             #auto_mapping: true
             mappings:
+                ApplicationVespolinaCartBundle: ~
+                ApplicationVespolinaProductBundle: ~
                 FOSUserBundle: ~
                 VespolinaCartBundle: ~
                 VespolinaCustomerBundle: ~
@@ -95,7 +97,6 @@ doctrine_mongodb:
                 VespolinaTaxationBundle: ~
                 VespolinaTaxonomyBundle: ~
                 UserBundle: ~
-                ApplicationVespolinaProductBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
