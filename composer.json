@@ -38,8 +38,22 @@
         "symfony/swiftmailer-bundle": "dev-master",
         "symfony/symfony": "2.1.*",
         "twig/extensions": "dev-master",
-        "vespolina/vespolina-sandbox-composer": "dev-master"
+        "vespolina/vespolina-sandbox-composer": "dev-master",
+        "twitter/bootstrap": "master"
     },
+     "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "version": "master",
+                "name": "twitter/bootstrap",
+                "source": {
+                    "url": "https://github.com/twitter/bootstrap.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        } ], 
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
