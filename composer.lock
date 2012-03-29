@@ -1,5 +1,5 @@
 {
-    "hash": "6e77b6818c8db1e9e66bc726727eb617",
+    "hash": "346166311f75a534d9d692aa3c67ccf9",
     "packages": [
         {
             "package": "doctrine/common",
@@ -17,7 +17,7 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "08f1764e860b684d7574448a6840b08804a516d9"
+            "source-reference": "50ee2c81bc7d0f413f402de46ecedfd98b79b4f3"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
@@ -46,12 +46,12 @@
         {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
-            "source-reference": "5eb800bd63ba84e5fc7028386cb66373bc3efafc"
+            "source-reference": "a08b96b01e1ce26a7c43f993bf54aac756c0f6cb"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
             "version": "dev-master",
-            "source-reference": "e9e8edb60c963c4d3867ce52de963556a75aa6bc"
+            "source-reference": "d2e9aaca8128bfcbd7cd0cb8a80ae34ab71b0c7e"
         },
         {
             "package": "friendsofsymfony/user-bundle",
@@ -82,7 +82,7 @@
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "d3d0852e11dfbb395d9dc87165bd795f683dfb59"
+            "source-reference": "490efa42ec0940b07cb98e7152d7a2374ba747ff"
         },
         {
             "package": "kriswallsmith/assetic",
@@ -96,7 +96,7 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "25bb9e38949d9200413533d6a7fadf0bfc6309ac"
+            "source-reference": "fcae1762a3cba35fe03a0756ed9c7819fc054efd"
         },
         {
             "package": "sensio/distribution-bundle",
@@ -140,7 +140,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "3e9512643704cda42934e27b9c1f82631f45ebba",
+            "source-reference": "a7a696fc5a28e12871073fb0f5ecb163b450e86a",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
@@ -203,6 +203,11 @@
             "source-reference": "6be2e7f0f61aa28ee04594d743ffacc7212d337f"
         },
         {
+            "package": "vespolina/partner-bundle",
+            "version": "dev-master",
+            "source-reference": "ff72c25926d0a5f0f9f18a4f839bde9f409c48e2"
+        },
+        {
             "package": "vespolina/pricing-bundle",
             "version": "dev-master",
             "source-reference": "d77462ef6b42eeb1c7619007254bd03dc771b627"
@@ -226,16 +231,6 @@
             "package": "vespolina/taxonomy-bundle",
             "version": "dev-master",
             "source-reference": "070bdc98f5c7bb4deb5a629e96aca533dbab5778"
-        },
-        {
-            "package": "vespolina/vespolina-sandbox-composer",
-            "version": "dev-master",
-            "source-reference": "4be81b0a7b1c2f85d4d425f520967b5007769207"
-        },
-        {
-            "package": "vespolina/workflow-bundle",
-            "version": "dev-master",
-            "source-reference": "65392a84fae2c987b7e51ad5f7c259f9126fa2cc"
         }
     ],
     "aliases": []

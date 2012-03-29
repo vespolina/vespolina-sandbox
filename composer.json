@@ -38,8 +38,22 @@
         "symfony/swiftmailer-bundle": "dev-master",
         "symfony/symfony": "2.1.*",
         "twig/extensions": "dev-master",
-        "vespolina/vespolina-sandbox-composer": "dev-master",
-        "twitter/bootstrap": "master"
+        "twitter/bootstrap": "master",
+        "vespolina/cart-bundle": "*",
+        "vespolina/checkout-bundle": "*",
+        "vespolina/customer-bundle": "*",
+        "vespolina/ecommerce-flows-bundle": "*",
+        "vespolina/fulfillment-bundle": "*",
+        "vespolina/inventory-bundle": "*",
+        "vespolina/order-bundle": "*",
+        "vespolina/merchandise-bundle": "*",
+        "vespolina/monetary-bundle": "*",
+        "vespolina/partner-bundle": "*",
+        "vespolina/pricing-bundle": "*",
+        "vespolina/product-bundle": "*",
+        "vespolina/store-bundle": "*",
+        "vespolina/taxation-bundle": "*",
+        "vespolina/taxonomy-bundle": "*"
     },
      "repositories": [
         {
