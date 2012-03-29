@@ -96,7 +96,7 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "caeb4fe71a7b02b7dfb11c5c375b96fe3cf96c8a"
+            "source-reference": "25bb9e38949d9200413533d6a7fadf0bfc6309ac"
         },
         {
             "package": "sensio/distribution-bundle",
