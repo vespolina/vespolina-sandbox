@@ -168,11 +168,6 @@
             "source-reference": "a600b20776186bd98cb48a777aa30aab7558ae4b"
         },
         {
-            "package": "vespolina/customer-bundle",
-            "version": "dev-master",
-            "source-reference": "410532f2d960f7797d63c973cc8166b4bbc9085c"
-        },
-        {
             "package": "vespolina/ecommerce-flows-bundle",
             "version": "dev-master",
             "source-reference": "7b4fc8b128dd821efef7df2a4565ed83286dad73"
