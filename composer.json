@@ -41,7 +41,6 @@
         "twitter/bootstrap": "master",
         "vespolina/cart-bundle": "*",
         "vespolina/checkout-bundle": "*",
-        "vespolina/customer-bundle": "*",
         "vespolina/ecommerce-flows-bundle": "*",
         "vespolina/fulfillment-bundle": "*",
         "vespolina/inventory-bundle": "*",
