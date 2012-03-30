@@ -89,7 +89,7 @@ doctrine_mongodb:
                 ApplicationVespolinaProductBundle: ~
                 FOSUserBundle: ~
                 VespolinaCartBundle: ~
-                VespolinaCustomerBundle: ~
+                VespolinaPartnerBundle: ~
                 VespolinaOrderBundle: ~
                 VespolinaPricingBundle: ~
                 VespolinaProductBundle: ~
