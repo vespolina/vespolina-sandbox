@@ -6,6 +6,10 @@ vespolina_fulfillment:
     resource: "@VespolinaFulfillmentBundle/Resources/config/routing.xml"
     prefix:   /
 
+vespolina_cart:
+    resource: "@VespolinaCartBundle/Resources/config/routing/cart.xml"
+    prefix:   /cart/
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
