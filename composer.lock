@@ -1,5 +1,5 @@
 {
-    "hash": "c891e4c9c38d4d4e912ba76dfa470321",
+    "hash": "346166311f75a534d9d692aa3c67ccf9",
     "packages": [
         {
             "package": "doctrine/common",
@@ -17,17 +17,12 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "90e39fb7ff5b4c13577602dab7e08c90067160b4"
+            "source-reference": "50ee2c81bc7d0f413f402de46ecedfd98b79b4f3"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
             "version": "dev-master",
             "source-reference": "0e4e56b1da7981bcc7729e0f301a75195d34df18"
-        },
-        {
-            "package": "doctrine/doctrine-workflow",
-            "version": "dev-master",
-            "source-reference": "master"
         },
         {
             "package": "doctrine/mongodb",
@@ -37,7 +32,7 @@
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "fcff6211db59760426f08fb4a5c2942d09017561"
+            "source-reference": "bba938ee566f9942bb0adf6fb07f77e94671df2b"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
@@ -51,12 +46,12 @@
         {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
-            "source-reference": "5eb800bd63ba84e5fc7028386cb66373bc3efafc"
+            "source-reference": "a08b96b01e1ce26a7c43f993bf54aac756c0f6cb"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
             "version": "dev-master",
-            "source-reference": "c11ab9d990a1e0e979b1c8ab72cc9793b4b2dcb5"
+            "source-reference": "d2e9aaca8128bfcbd7cd0cb8a80ae34ab71b0c7e"
         },
         {
             "package": "friendsofsymfony/user-bundle",
@@ -82,12 +77,12 @@
         {
             "package": "jms/security-extra-bundle",
             "version": "dev-master",
-            "source-reference": "7c8b7e7833c949fa09dcddff48cc03c0893d6250"
+            "source-reference": "a636402a8cb1893202f6f67231923cd36ef96e60"
         },
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "83e4c902e0d66b76413df52cc66b17908827085d"
+            "source-reference": "490efa42ec0940b07cb98e7152d7a2374ba747ff"
         },
         {
             "package": "kriswallsmith/assetic",
@@ -101,26 +96,26 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "8fd2356a3cacc0e4e71ec2f5ef4d04909ec6a15b"
+            "source-reference": "fcae1762a3cba35fe03a0756ed9c7819fc054efd"
         },
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "12882a093af81f89ac13078904e81c308784e883"
+            "source-reference": "e78f65f36b27ba07b1e44241b4cf5443e80d7bd5"
         },
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "6e3cccb66d3577fdbd5b6935a5d6b8bed8d47768"
+            "source-reference": "7e1e52a241558264253179bb790f4c5d25544fb4"
         },
         {
             "package": "sensio/generator-bundle",
             "version": "dev-master",
-            "source-reference": "43c5c95e42e451ac7250d6a863f0540c7f266e1d"
+            "source-reference": "3d16db1631a3648d1b6662efe6de32735118b1da"
         },
         {
             "package": "swiftmailer/swiftmailer",
-            "version": "4.1.5"
+            "version": "4.1.6"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -145,7 +140,8 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "54ce7c75e8a0780236ba2999dba8ba9823de058c"
+            "source-reference": "a7a696fc5a28e12871073fb0f5ecb163b450e86a",
+            "alias": "2.1.9999999.9999999-dev"
         },
         {
             "package": "twig/extensions",
@@ -157,9 +153,14 @@
             "version": "1.6.3"
         },
         {
+            "package": "twitter/bootstrap",
+            "version": "master",
+            "source-reference": "master"
+        },
+        {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "af3137d63f6d0cd0425c29ac67ed387cfc31bdf9"
+            "source-reference": "6a37e7e06f2106fbd7c4d4f14c4e96e890b10762"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -202,6 +203,11 @@
             "source-reference": "6be2e7f0f61aa28ee04594d743ffacc7212d337f"
         },
         {
+            "package": "vespolina/partner-bundle",
+            "version": "dev-master",
+            "source-reference": "ff72c25926d0a5f0f9f18a4f839bde9f409c48e2"
+        },
+        {
             "package": "vespolina/pricing-bundle",
             "version": "dev-master",
             "source-reference": "d77462ef6b42eeb1c7619007254bd03dc771b627"
@@ -214,27 +220,17 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "44d4fe00a6a53db36d42d3bd8568fcd5db99a704"
+            "source-reference": "8ae00a5639da87207fa4fd8972d238040a18df76"
         },
         {
             "package": "vespolina/taxation-bundle",
             "version": "dev-master",
-            "source-reference": "dd947ba82306a953871e8bd15e1ff69c87a0c6f8"
+            "source-reference": "fc43841663cb400868f0e7323f77a75cd7e13222"
         },
         {
             "package": "vespolina/taxonomy-bundle",
             "version": "dev-master",
             "source-reference": "070bdc98f5c7bb4deb5a629e96aca533dbab5778"
-        },
-        {
-            "package": "vespolina/vespolina-sandbox-composer",
-            "version": "dev-master",
-            "source-reference": "4be81b0a7b1c2f85d4d425f520967b5007769207"
-        },
-        {
-            "package": "vespolina/workflow-bundle",
-            "version": "dev-master",
-            "source-reference": "65392a84fae2c987b7e51ad5f7c259f9126fa2cc"
         }
     ],
     "aliases": []
