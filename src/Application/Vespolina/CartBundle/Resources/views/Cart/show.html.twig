@@ -1,0 +1,13 @@
+{% extends "VespolinaStoreBundle::layout.html.twig" %}
+
+{% block navigation %}
+    <ul class="breadcrumb">
+      <li><a href="{{ path('homepage') }}">Home</a> <span class="divider">/</span></li>
+      <li class="active">My Cart</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+{% include "VespolinaCartBundle:Partials:cart.html.twig" with {'cart': cart} %}
+{% endblock %}
+
