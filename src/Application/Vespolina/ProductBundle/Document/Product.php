@@ -7,7 +7,7 @@
  */
 
 namespace Application\Vespolina\ProductBundle\Document;
-
+use Doctrine\Common\Collections\ArrayCollection;
 use Vespolina\ProductBundle\Document\BaseProduct as BaseProduct;
 use Vespolina\CartBundle\Model\CartableItemInterface;
 use Vespolina\TaxonomyBundle\Model\TermInterface;
@@ -17,11 +17,17 @@ class Product extends BaseProduct implements CartableItemInterface
     protected $cartableName;
     protected $id;
     protected $pricing;
+    protected $terms;
 
+    public function __construct($identifierSetClass)
+    {
+        parent::__construct($identifierSetClass);
+        $this->terms = array();
+    }
     public function addTerm(TermInterface $term)
     {
 
-        $this->terms[$term->getPath()] = $term->getName();
+        $this->terms['slug'] = $term->getName();    //TODO
     }
 
     /**
