@@ -5,7 +5,7 @@
         <title>{% block title %}{{ store ? store.name : "Undefined store" }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         {% stylesheets filter='cssrewrite,?yui_css' output='css/all.css'
-           'bootstrap/css/bootstrap.css'
+           'bootstrap/css/bootstrap-cerulean.css'
            '@VespolinaStoreBundle/Resources/public/store.css'
         %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
