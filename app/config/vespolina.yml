@@ -1,7 +1,39 @@
 vespolina_store:
     db_driver: mongodb
-    default_store: default_store
-    multi_store: false
+    stores:
+        default_store:
+
+#           Technical identification of this store
+            id: default_store
+
+#           Determine if this store is used back as default and in case of a fallback in a multi store context
+#           where the store could not be resolved
+            default: true
+
+#           The name of the store used for visually identifying the store.  Note, that the legal name can be different
+            display_name: Vespolina Store
+
+#           Legal name of the store (if different from the display name).
+#           I is typically the name how the store it's identified by the tax administration)
+            legal_name: Dr. Evil. Corp
+
+#           Name of the sales channel associated to this store.
+#           It's passed on to the sales order to later to identify where the order was originally placed
+            sales_channel: default_store_web
+
+#           Define global operational mode, options are:
+#           - standard: A standard web store with multiple products
+#           - daily_deal: Deal of the day mode (aka. Groupon)
+#           - campaign:  A selected list products available for a limited time (eg. Snap Store / Vente Exclusive)
+            operational_mode: standard
+
+#           Which view should be displayed, possible values are:
+#           - tiled: view optimized for display products in a tile
+#           - daily_deal: view optimized for showing one deal of the day
+#           - small_list: view optimized for small product lists (eg. up to 20 products)
+#           - big_list:  view optimized for lots of entries (eg. list of spare parts, up to 100 products)
+            default_product_view: tiled # tiled / small_list / big_list
+
 vespolina_cart:
     db_driver: mongodb
 vespolina_pricing:
