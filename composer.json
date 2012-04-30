@@ -16,6 +16,7 @@
     },
     "require": {
         "php": ">=5.3.2",
+      	"doctrine/common": ">=2.2.0,<2.2.99",
         "doctrine/data-fixtures": "dev-master",
         "doctrine/doctrine-bundle": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
@@ -39,6 +40,7 @@
         "symfony/symfony": "2.1.*",
         "twig/extensions": "dev-master",
         "twitter/bootstrap": "master",
+        "knplabs/knp-paginator-bundle": "*",
         "vespolina/cart-bundle": "*",
         "vespolina/checkout-bundle": "*",
         "vespolina/ecommerce-flows-bundle": "*",
