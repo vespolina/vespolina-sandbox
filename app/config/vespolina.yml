@@ -11,7 +11,7 @@ vespolina_store:
             default: true
 
 #           The name of the store used for visually identifying the store.  Note, that the legal name can be different
-            display_name: Vespolina Store
+            display_name: Vespolina StoreZ
 
 #           Legal name of the store (if different from the display name).
 #           I is typically the name how the store it's identified by the tax administration)
@@ -23,17 +23,26 @@ vespolina_store:
 
 #           Define global operational mode, options are:
 #           - standard: A standard web store with multiple products
-#           - daily_deal: Deal of the day mode (aka. Groupon)
-#           - campaign:  A selected list products available for a limited time (eg. Snap Store / Vente Exclusive)
-            operational_mode: standard
+#           - dailyDeal: Deal of the day mode (aka. Groupon)
+#           - campaign:  A group of products available for a limited time (eg. Snap Store / Vente Exclusive)
+            operational_mode: dailyDeal
 
 #           Which view should be displayed, possible values are:
 #           - tiled: view optimized for display products in a tile
-#           - daily_deal: view optimized for showing one deal of the day
-#           - small_list: view optimized for small product lists (eg. up to 20 products)
-#           - big_list:  view optimized for lots of entries (eg. list of spare parts, up to 100 products)
-            default_product_view: tiled # tiled / small_list / big_list
-
+#           - dailyDeal: view optimized for showing one deal of the day
+#           - small: view optimized for small product lists (eg. up to 20 products)
+#           - large:  view optimized for lots of entries (eg. list of spare parts) up to 200 products
+            default_product_view: dailyDeal
+#    store_handler:
+#        daily_deal_store_handler:
+#            operational_mode: dailyDeal
+#            class: Vespolina\StoreBundle\Handler\DailyDealStoreHandler
+#        campaign_store_handler:
+#            operational_mode: campaign
+#            class: Vespolina\StoreBundle\Handler\CampaignStoreHandler
+#        standard_store_handler:
+#            operational_mode: standard
+#            class: Vespolina\StoreBundle\Handler\StandardStoreHandler
 vespolina_cart:
     db_driver: mongodb
 vespolina_pricing:
