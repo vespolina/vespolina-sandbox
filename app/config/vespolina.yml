@@ -11,7 +11,7 @@ vespolina_store:
             default: true
 
 #           The name of the store used for visually identifying the store.  Note, that the legal name can be different
-            display_name: Vespolina StoreZ
+            display_name: Vespolina Store
 
 #           Legal name of the store (if different from the display name).
 #           I is typically the name how the store it's identified by the tax administration)
@@ -25,14 +25,19 @@ vespolina_store:
 #           - standard: A standard web store with multiple products
 #           - dailyDeal: Deal of the day mode (aka. Groupon)
 #           - campaign:  A group of products available for a limited time (eg. Snap Store / Vente Exclusive)
-            operational_mode: dailyDeal
+            operational_mode: standard
 
 #           Which view should be displayed, possible values are:
 #           - tiled: view optimized for display products in a tile
 #           - dailyDeal: view optimized for showing one deal of the day
 #           - small: view optimized for small product lists (eg. up to 20 products)
 #           - large:  view optimized for lots of entries (eg. list of spare parts) up to 200 products
-            default_product_view: dailyDeal
+            default_product_view: small
+
+#           How should the taxonomy be visualized, possible values are:
+#           - top: display terms next to each other
+#           - side: display terms
+#            default_taxonomy_view:
 #    store_handler:
 #        daily_deal_store_handler:
 #            operational_mode: dailyDeal
