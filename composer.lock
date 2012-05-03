@@ -82,7 +82,7 @@
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "6bf2f092449c7104e6d9327de029cc3f5d2e3385"
+            "source-reference": "4ce47e7ce898d6a431433c33e194d3fed7244bd1"
         },
         {
             "package": "knplabs/knp-components",
@@ -106,7 +106,12 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "f8f94ee33988819a18606aabebb76a90e49a9199"
+            "source-reference": "22df8a3b2cf9a9307b7395904c2bfc230badb8c4"
+        },
+        {
+            "package": "mopa/composer-bridge",
+            "version": "dev-master",
+            "source-reference": "633f5092baf75f5bb2854968364da2466aca1e36"
         },
         {
             "package": "sensio/distribution-bundle",
@@ -116,17 +121,17 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "225f05344d5332cac5b1606bc82c34486f532c8b"
+            "source-reference": "ab3130462a01437f4f748a778100e010c6d91ed3"
         },
         {
             "package": "sensio/generator-bundle",
             "version": "dev-master",
-            "source-reference": "5b59f6c5f52cc4fc8719640d7dadf2d6ddcc7ed2"
+            "source-reference": "d570af6edd06f546f4f301300396c543aedc7f26"
         },
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "fb3e0b49df4ee888ee1a89b6e0b8b2a466c497cc",
+            "source-reference": "57789082d1d53529dcf8cd3ca132d9787a59afee",
             "alias": "4.1.9999999.9999999-dev"
         },
         {
@@ -137,12 +142,12 @@
         {
             "package": "symfony/monolog-bundle",
             "version": "dev-master",
-            "source-reference": "85a4eb48727891a7161aa3dfd0d5e4fb7a62ab59"
+            "source-reference": "4420d3a740ed35a0de1feab771bb6f7386cf2e33"
         },
         {
             "package": "symfony/swiftmailer-bridge",
             "version": "dev-master",
-            "source-reference": "b3002fcb105910336ce9b76886ea6678a14ed91c"
+            "source-reference": "463536de4b149e1560bd764582cbf50dc9936ebd"
         },
         {
             "package": "symfony/swiftmailer-bundle",
@@ -151,8 +156,9 @@
         },
         {
             "package": "symfony/symfony",
-            "version": "2.1.x-dev",
-            "source-reference": "a01dec00f4e8de357cce5fdf121ac98729f7f8ff"
+            "version": "dev-master",
+            "source-reference": "b49d611eca0c7fe3e38dc13b0b41a64eab135ea2",
+            "alias": "2.1.9999999.9999999-dev"
         },
         {
             "package": "twig/extensions",
@@ -173,7 +179,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "935aeca273c16a3f514f4c4c5173170822a8dcca"
+            "source-reference": "b58a335c7e18995a862050257120fca973b36f9a"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -228,7 +234,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "86b18f0877ccbf0cf2d24ff043bdf299e084d6a9"
+            "source-reference": "8ffbbc6844788613c61779c50969ce9a377f67ae"
         },
         {
             "package": "vespolina/taxation-bundle",
