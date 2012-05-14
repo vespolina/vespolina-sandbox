@@ -32,7 +32,7 @@ vespolina_store:
 #           - dailyDeal: view optimized for showing one deal of the day
 #           - small: view optimized for small product lists (eg. up to 20 products)
 #           - large:  view optimized for lots of entries (eg. list of spare parts) up to 200 products
-            default_product_view: tiled
+            default_product_view: small
 
 #           How should the taxonomy be visualized, possible values are:
 #           - top: display terms next to each other
