@@ -80,7 +80,7 @@ doctrine_mongodb:
             options:
                 connect: true
     default_document_manager: default
-    default_database: app_%kernel.environment%
+    default_database: vespolina_%kernel.environment%
     document_managers:
         default:
             #auto_mapping: true
