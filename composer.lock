@@ -194,7 +194,7 @@
         {
             "package": "vespolina/fulfillment-bundle",
             "version": "dev-master",
-            "source-reference": "00d2b64f75a97e39e01695656a7aadcb712c8af9"
+            "source-reference": "e1110a7ab50103ef64cb8bfc464df2ec15c3630a"
         },
         {
             "package": "vespolina/inventory-bundle",
@@ -234,7 +234,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "0e3b7705c3f21a4fb0b346f13c83f4fbe2cc8a7d"
+            "source-reference": "cb04101b832a36b9fa80010d4101070fe9154c7c"
         },
         {
             "package": "vespolina/taxation-bundle",

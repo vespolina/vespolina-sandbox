@@ -1,5 +1,6 @@
 vespolina_store:
     db_driver: mongodb
+#    show_store_zones_in_menu: true
     stores:
         default_store:
 
@@ -50,6 +51,16 @@ vespolina_store:
 #            class: Vespolina\StoreBundle\Handler\StandardStoreHandler
 vespolina_cart:
     db_driver: mongodb
+
+vespolina_fulfillment:
+   db_driver: mongodb
+   fulfillment_methods:
+       shipment:
+          ups_ground_service:
+             class: Vespolina\FulfillmentBundle\Model\FulfillmentMethod\Extra\UPS\UPSGroundService
+          ups_next_day:
+             class: Vespolina\FulfillmentBundle\Model\FulfillmentMethod\Extra\UPS\UPSNextDay
+
 vespolina_pricing:
     db_driver: mongodb
 vespolina_product:
