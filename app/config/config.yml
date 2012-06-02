@@ -71,6 +71,7 @@ doctrine:
                     #SonataMediaBundle: ~
                     VespolinaCartBundle: ~
                     VespolinaTaxationBundle: ~
+                    VespolinaStoreBundle: ~
 
 
 doctrine_mongodb:
