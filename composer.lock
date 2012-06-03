@@ -179,7 +179,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "b58a335c7e18995a862050257120fca973b36f9a"
+            "source-reference": "9b0adbededcf59b7d0fac0e7a50b53a021817860"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -214,12 +214,12 @@
         {
             "package": "vespolina/order-bundle",
             "version": "dev-master",
-            "source-reference": "26f2c631f19a5fb4095e79fa123debe8885285d5"
+            "source-reference": "04b4ea2815e7f46b922fb9ed2a25e28baa7a3c75"
         },
         {
             "package": "vespolina/partner-bundle",
             "version": "dev-master",
-            "source-reference": "b71420fb67535b4bcde1efd9d1dd1367b2bb7a47"
+            "source-reference": "50eab65f5d2a478ded144494f0d3720540df1dba"
         },
         {
             "package": "vespolina/pricing-bundle",
@@ -234,12 +234,12 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "cb04101b832a36b9fa80010d4101070fe9154c7c"
+            "source-reference": "9d0a405c6ffdd27d8f5b224d4c35fba638957ed4"
         },
         {
             "package": "vespolina/taxation-bundle",
             "version": "dev-master",
-            "source-reference": "fc43841663cb400868f0e7323f77a75cd7e13222"
+            "source-reference": "48918d9d93b3bf9d74d090c8a7392403a2bc1679"
         },
         {
             "package": "vespolina/taxonomy-bundle",
