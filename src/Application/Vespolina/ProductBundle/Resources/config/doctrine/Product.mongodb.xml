@@ -7,6 +7,7 @@
     <document name="Application\Vespolina\ProductBundle\Document\Product" collection="vespolinaProduct">
         <field name="id" id="true" />
         <field name="cartableName" fieldName="cartableName" type="string" />
+        <field name="mediaItems" fieldName="mediaItems" type="hash" />
         <field name="pricing" fieldName="pricing" type="hash" />
         <field name="terms" fieldName="terms" type="hash" />
     </document>

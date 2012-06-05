@@ -14,16 +14,24 @@ use Vespolina\TaxonomyBundle\Model\TermInterface;
 
 class Product extends BaseProduct implements CartableItemInterface
 {
-    protected $cartableName;
     protected $id;
+    protected $cartableName;
+    protected $mediaItems;
     protected $pricing;
     protected $terms;
 
     public function __construct($identifierSetClass)
     {
         parent::__construct($identifierSetClass);
+        $this->media = array();
         $this->terms = array();
     }
+
+    public function addMediaItem($mediaItem)
+    {
+        $this->mediaItems[] = $mediaItem;
+    }
+
     public function addTerm(TermInterface $term)
     {
 
@@ -43,6 +51,11 @@ class Product extends BaseProduct implements CartableItemInterface
     public function getCartableName()
     {
         return $this->cartableName ? $this->cartableName : $this->getName();
+    }
+
+    public function getMediaItems()
+    {
+        return $this->mediaItems;
     }
 
     /**

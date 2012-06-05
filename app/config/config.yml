@@ -137,6 +137,7 @@ mopa_bootstrap:
 #            directory:  %kernel.root_dir%/../web/uploads/media
 #            create:     true
 
+
 sensio_framework_extra:
     view:
         annotations: false

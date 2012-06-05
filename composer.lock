@@ -234,7 +234,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "03edd8df89075cd040551ec69bf6e83e2b8324eb"
+            "source-reference": "fe35681f6cbf474aac612c659c0190440cde5795"
         },
         {
             "package": "vespolina/taxation-bundle",
