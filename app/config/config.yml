@@ -81,7 +81,7 @@ doctrine_mongodb:
             options:
                 connect: true
     default_document_manager: default
-    default_database: vespolina_%kernel.environment%
+    default_database: %mongodb_database_name%_%kernel.environment%
     document_managers:
         default:
             #auto_mapping: true

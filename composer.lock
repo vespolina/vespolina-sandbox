@@ -219,7 +219,7 @@
         {
             "package": "vespolina/partner-bundle",
             "version": "dev-master",
-            "source-reference": "50eab65f5d2a478ded144494f0d3720540df1dba"
+            "source-reference": "68d46fbc31bf35bc5080d1a139f7c61699ea205f"
         },
         {
             "package": "vespolina/pricing-bundle",

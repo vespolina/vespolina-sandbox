@@ -19,3 +19,4 @@ parameters:
 
   nodepath:          "/home/user/bin/node"
   nodemodulearray:   "/home/user/bin/node_modules"
+  mongodb_database_name: vespolina
