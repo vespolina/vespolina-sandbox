@@ -212,7 +212,7 @@
         {
             "package": "vespolina/admin-bundle",
             "version": "dev-master",
-            "source-reference": "13c4ac18ffda079cf6cf07b9ca242e6a693880dd"
+            "source-reference": "d24a60fd9d515094bf15edaaaff7d7360ecb42e3"
         },
         {
             "package": "vespolina/cart-bundle",
