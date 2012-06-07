@@ -8,7 +8,7 @@
         {
             "package": "doctrine/data-fixtures",
             "version": "dev-master",
-            "source-reference": "8fb90c55c0bfbf4e090adb8c0281f9a3c81735e7"
+            "source-reference": "d233d05437c1a10034867f22069b4bb0f7dc96b6"
         },
         {
             "package": "doctrine/dbal",
@@ -17,7 +17,7 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "b6f9a57c60a0acaaf931a77e833ffeb24a3bdbf1"
+            "source-reference": "f100a7727b89ab5519ed68a72d29e75eb2c85d8b"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
@@ -27,17 +27,17 @@
         {
             "package": "doctrine/mongodb",
             "version": "dev-master",
-            "source-reference": "727a12d25ba12d18aa293bc6eb61f203a9545912"
+            "source-reference": "996bdb9d4e4ca4fd4954772b194d2c3336a1fcb9"
         },
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "47c185fff56dea5ad1c2d1ebaad6ff0639d33ce4"
+            "source-reference": "20e7318514a6570afe25738820bbd387c05a5c7c"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
             "version": "dev-master",
-            "source-reference": "57cc02068dad7d9f82c71a50ac32fb1cce4ee8f6"
+            "source-reference": "b535106bc76c44f0fc1e6428c09f02ba1c2c7ae3"
         },
         {
             "package": "doctrine/orm",
@@ -46,12 +46,12 @@
         {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
-            "source-reference": "a08b96b01e1ce26a7c43f993bf54aac756c0f6cb"
+            "source-reference": "d9f772ddb9bb4fd0d952fa45cf0e5e76510b111c"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
             "version": "dev-master",
-            "source-reference": "d9a876803df61858ce3e8d3f0c934727638ad874"
+            "source-reference": "1fd512952a31f6db90be63636fab73369994737a"
         },
         {
             "package": "friendsofsymfony/user-bundle",
@@ -82,22 +82,22 @@
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "4ce47e7ce898d6a431433c33e194d3fed7244bd1"
+            "source-reference": "71643cb9c0fc977bf0b1118b8bd5ad2e76db844c"
         },
         {
             "package": "knplabs/knp-components",
             "version": "dev-master",
-            "source-reference": "9fa22749e8bb337071d5bf7759f7feecc9baf597"
+            "source-reference": "4fb9bc439351cfe32af05cd127bfabf725f11966"
         },
         {
             "package": "knplabs/knp-paginator-bundle",
             "version": "dev-master",
-            "source-reference": "203d7e041088f6a62c453158aeb643909a7e5121"
+            "source-reference": "2d1ac3afcb811f950ed4a1c804b0e0b67ea42c5c"
         },
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "source-reference": "3acfb6afa50dd1dca387a8dfb641cd3b98a8584d"
+            "source-reference": "8c76115503d23340e19b5cf6aa95f86663f7185f"
         },
         {
             "package": "monolog/monolog",
@@ -106,70 +106,85 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "22df8a3b2cf9a9307b7395904c2bfc230badb8c4"
+            "source-reference": "7b1decbe849e47c5d716d0f1efa7e2cc26f21371"
         },
         {
             "package": "mopa/composer-bridge",
             "version": "dev-master",
-            "source-reference": "633f5092baf75f5bb2854968364da2466aca1e36"
+            "source-reference": "84b8bf537163b4470f14d02554a0e9eb5d300172"
         },
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "77b7e8fabfb47ab81014759e59dd82f56f6c62f9"
+            "source-reference": "7d75b222c8e4ead64ff82e5c9b2fa3ba71c70cf0"
         },
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "ab3130462a01437f4f748a778100e010c6d91ed3"
+            "source-reference": "e00b525b14784ea4f21c14945e58b4a76a530a6a"
         },
         {
             "package": "sensio/generator-bundle",
             "version": "dev-master",
-            "source-reference": "d570af6edd06f546f4f301300396c543aedc7f26"
+            "source-reference": "0813379920dcaa4b06361501f654379383d75f16"
         },
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "57789082d1d53529dcf8cd3ca132d9787a59afee",
-            "alias": "4.1.9999999.9999999-dev"
+            "source-reference": "d33d54cc8a081b0b85734744936ede1ba230dd64"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "alias-pretty-version": "4.1.x-dev",
+            "alias-version": "4.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/assetic-bundle",
             "version": "dev-master",
-            "source-reference": "d370e914e86518e88aa00ab266796ee032b8262e"
+            "source-reference": "61c9f363e73b4ecbb72f81eb62675260a1132048"
         },
         {
             "package": "symfony/monolog-bundle",
             "version": "dev-master",
-            "source-reference": "4420d3a740ed35a0de1feab771bb6f7386cf2e33"
+            "source-reference": "1231105826078c117e07e57d7f658141d6147d35"
         },
         {
             "package": "symfony/swiftmailer-bridge",
             "version": "dev-master",
-            "source-reference": "463536de4b149e1560bd764582cbf50dc9936ebd"
+            "source-reference": "408eb09f5799d393ddc3d916ec3667857fb3a20d"
         },
         {
             "package": "symfony/swiftmailer-bundle",
             "version": "dev-master",
-            "source-reference": "1c6b57fe57210e9dcb5b4586d6572f47d17a25d7"
+            "source-reference": "71e1789868665cf94dc7831f645625fd0f70aac6"
         },
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "b49d611eca0c7fe3e38dc13b0b41a64eab135ea2",
-            "alias": "2.1.9999999.9999999-dev"
+            "source-reference": "1541fe26e4d78135ab24ae2edfb1dbc2a9b2fa40"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "twig/extensions",
             "version": "dev-master",
-            "source-reference": "446d870272cd87a720e95242eade38a2acf56eaa"
+            "source-reference": "feb6d3f10c411e2631997c0a905aa581c80305c1"
         },
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "f3491b5cbfd03a31538b6e8c82d65cd54996e870",
-            "alias": "1.8.9999999.9999999-dev"
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
         },
         {
             "package": "twitter/bootstrap",
@@ -179,7 +194,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "9b0adbededcf59b7d0fac0e7a50b53a021817860"
+            "source-reference": "abbe954a2b7dd3a5856199a673f7ab32a7797f9b"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -234,7 +249,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "fe35681f6cbf474aac612c659c0190440cde5795"
+            "source-reference": "485137ea0314c379d987f92ebc3c058789b848be"
         },
         {
             "package": "vespolina/taxation-bundle",
@@ -250,5 +265,27 @@
     "packages-dev": null,
     "aliases": [
 
-    ]
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "doctrine/data-fixtures": 20,
+        "doctrine/doctrine-bundle": 20,
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "doctrine/mongodb": 20,
+        "doctrine/mongodb-odm": 20,
+        "doctrine/mongodb-odm-bundle": 20,
+        "friendsofsymfony/rest": 20,
+        "friendsofsymfony/rest-bundle": 20,
+        "imagine/imagine": 20,
+        "jms/security-extra-bundle": 20,
+        "jms/serializer-bundle": 20,
+        "mopa/bootstrap-bundle": 20,
+        "sensio/distribution-bundle": 20,
+        "sensio/framework-extra-bundle": 20,
+        "sensio/generator-bundle": 20,
+        "symfony/assetic-bundle": 20,
+        "symfony/monolog-bundle": 20,
+        "symfony/swiftmailer-bundle": 20,
+        "twig/extensions": 20
+    }
 }
