@@ -41,6 +41,7 @@
         "twig/extensions": "dev-master",
         "twitter/bootstrap": "master",
         "knplabs/knp-paginator-bundle": "*",
+        "vespolina/admin-bundle": "*",
         "vespolina/cart-bundle": "*",
         "vespolina/checkout-bundle": "*",
         "vespolina/ecommerce-flows-bundle": "*",

@@ -1,5 +1,5 @@
 {
-    "hash": "0cb101a992fbf41ae099cfabb4b3d7ed",
+    "hash": "d797b5c004ef5a4e750bc4d81fd73d65",
     "packages": [
         {
             "package": "doctrine/common",
@@ -97,13 +97,13 @@
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "alias-pretty-version": "1.1.x-dev",
-            "alias-version": "1.1.9999999.9999999-dev"
+            "source-reference": "8c76115503d23340e19b5cf6aa95f86663f7185f"
         },
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "source-reference": "8c76115503d23340e19b5cf6aa95f86663f7185f"
+            "alias-pretty-version": "1.1.x-dev",
+            "alias-version": "1.1.9999999.9999999-dev"
         },
         {
             "package": "monolog/monolog",
@@ -196,18 +196,23 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "alias-pretty-version": "1.8.x-dev",
-            "alias-version": "1.8.9999999.9999999-dev"
+            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
         },
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
         },
         {
             "package": "twitter/bootstrap",
             "version": "master",
             "source-reference": "master"
+        },
+        {
+            "package": "vespolina/admin-bundle",
+            "version": "dev-master",
+            "source-reference": "13c4ac18ffda079cf6cf07b9ca242e6a693880dd"
         },
         {
             "package": "vespolina/cart-bundle",
@@ -267,7 +272,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "3a8491add647c9b26bed903edcd4933daf5874ac"
+            "source-reference": "3420b917d384e59cc255eafe7657b023222a72b7"
         },
         {
             "package": "vespolina/taxation-bundle",
