@@ -100,6 +100,12 @@
             "source-reference": "8c76115503d23340e19b5cf6aa95f86663f7185f"
         },
         {
+            "package": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "alias-pretty-version": "1.1.x-dev",
+            "alias-version": "1.1.9999999.9999999-dev"
+        },
+        {
             "package": "monolog/monolog",
             "version": "1.1.0"
         },
@@ -107,6 +113,12 @@
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
             "source-reference": "7b1decbe849e47c5d716d0f1efa7e2cc26f21371"
+        },
+        {
+            "package": "mopa/bootstrap-bundle",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "mopa/composer-bridge",
@@ -131,13 +143,13 @@
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "d33d54cc8a081b0b85734744936ede1ba230dd64"
+            "alias-pretty-version": "4.1.x-dev",
+            "alias-version": "4.1.9999999.9999999-dev"
         },
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "alias-pretty-version": "4.1.x-dev",
-            "alias-version": "4.1.9999999.9999999-dev"
+            "source-reference": "d33d54cc8a081b0b85734744936ede1ba230dd64"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -153,6 +165,12 @@
             "package": "symfony/swiftmailer-bridge",
             "version": "dev-master",
             "source-reference": "408eb09f5799d393ddc3d916ec3667857fb3a20d"
+        },
+        {
+            "package": "symfony/swiftmailer-bridge",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/swiftmailer-bundle",
@@ -178,13 +196,13 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "alias-pretty-version": "1.8.x-dev",
-            "alias-version": "1.8.9999999.9999999-dev"
+            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
         },
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
         },
         {
             "package": "twitter/bootstrap",
@@ -249,7 +267,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "485137ea0314c379d987f92ebc3c058789b848be"
+            "source-reference": "657e26feb22a3207660d058efee7c303774d86ec"
         },
         {
             "package": "vespolina/taxation-bundle",
