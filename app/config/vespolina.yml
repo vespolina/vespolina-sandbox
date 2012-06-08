@@ -52,6 +52,9 @@ vespolina_store:
 vespolina_cart:
     db_driver: mongodb
 
+vespolina_checkout:
+    db_driver: orm
+
 vespolina_fulfillment:
    db_driver: mongodb
    fulfillment_methods:
