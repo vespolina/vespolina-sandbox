@@ -17,7 +17,7 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "f100a7727b89ab5519ed68a72d29e75eb2c85d8b"
+            "source-reference": "3f5149e09d423a42365d59b9b9df4281262c5ce2"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
@@ -27,17 +27,17 @@
         {
             "package": "doctrine/mongodb",
             "version": "dev-master",
-            "source-reference": "996bdb9d4e4ca4fd4954772b194d2c3336a1fcb9"
+            "source-reference": "1f667269e06f592fc593e2865b0cddbb4bbbe15b"
         },
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "20e7318514a6570afe25738820bbd387c05a5c7c"
+            "source-reference": "09a74c0f30a8c597ffe7b7bad07787704385764d"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
             "version": "dev-master",
-            "source-reference": "b535106bc76c44f0fc1e6428c09f02ba1c2c7ae3"
+            "source-reference": "5996d29b4faf4f0bc416d1e8432bc92f655dff93"
         },
         {
             "package": "doctrine/orm",
@@ -82,7 +82,7 @@
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "71643cb9c0fc977bf0b1118b8bd5ad2e76db844c"
+            "source-reference": "231ac2a01b108b66d76c334b602765f7d879f473"
         },
         {
             "package": "knplabs/knp-components",
@@ -92,12 +92,18 @@
         {
             "package": "knplabs/knp-paginator-bundle",
             "version": "dev-master",
-            "source-reference": "2d1ac3afcb811f950ed4a1c804b0e0b67ea42c5c"
+            "source-reference": "427db8350ae57659645ba35480bbe1194c1c695f"
         },
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "source-reference": "8c76115503d23340e19b5cf6aa95f86663f7185f"
+            "source-reference": "d6f89a3170c5280ad554347dc113eb25fdf00ad7"
+        },
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "alias-pretty-version": "1.1.x-dev",
+            "alias-version": "1.1.9999999.9999999-dev"
         },
         {
             "package": "kriswallsmith/assetic",
@@ -112,13 +118,13 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
+            "source-reference": "94d1673ec662ac2547beca662ef6f2b4988dbe39"
         },
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "7b1decbe849e47c5d716d0f1efa7e2cc26f21371"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "mopa/composer-bridge",
@@ -138,7 +144,7 @@
         {
             "package": "sensio/generator-bundle",
             "version": "dev-master",
-            "source-reference": "0813379920dcaa4b06361501f654379383d75f16"
+            "source-reference": "55ad81e65a1023ae07c67075ca49c55556e047bf"
         },
         {
             "package": "swiftmailer/swiftmailer",
@@ -164,13 +170,13 @@
         {
             "package": "symfony/swiftmailer-bridge",
             "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
+            "source-reference": "408eb09f5799d393ddc3d916ec3667857fb3a20d"
         },
         {
             "package": "symfony/swiftmailer-bridge",
             "version": "dev-master",
-            "source-reference": "408eb09f5799d393ddc3d916ec3667857fb3a20d"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/swiftmailer-bundle",
@@ -180,13 +186,19 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
+            "source-reference": "37550d23c65b15f1455cda91cc6d2efc66a7dbd8"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
             "alias-pretty-version": "2.1.x-dev",
             "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "1541fe26e4d78135ab24ae2edfb1dbc2a9b2fa40"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "twig/extensions",
@@ -196,7 +208,7 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "6d072640c44f1781049afd2d96060c72da80662a"
+            "source-reference": "d4511d02b45725a56c8cc49127244bca640c9d13"
         },
         {
             "package": "twig/twig",
@@ -217,12 +229,12 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "3f0f6d3c47324e3cf0d9bd39c348edb75753f787"
+            "source-reference": "62ce57163dc2c115e8cced46f13b0280659fb128"
         },
         {
             "package": "vespolina/checkout-bundle",
             "version": "dev-master",
-            "source-reference": "a600b20776186bd98cb48a777aa30aab7558ae4b"
+            "source-reference": "63fe3bab2b7d74a121a3ca17ba593c8967bb168d"
         },
         {
             "package": "vespolina/ecommerce-flows-bundle",
@@ -267,12 +279,12 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "aef1462b043446de5e7085c9a6b1eb38713f578d"
+            "source-reference": "619f298a5acc4bbe671ff19ee8163bce8009e469"
         },
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "33055cdb5a69ae6b132b9417581b2914160ee13a"
+            "source-reference": "51d14e4d31bb76fce7ca7a29a3e7d0b370302728"
         },
         {
             "package": "vespolina/taxation-bundle",
