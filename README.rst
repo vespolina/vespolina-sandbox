@@ -10,7 +10,7 @@ State of the Project
 --------------------
 
 Vespolina is in early stages.  We are currently in the progress of developing a sandbox which uses several Vespolina bundles.
-A demo is available on [try.vespolina.org]: http://try.vespolina.org with several deployed use cases.
+A demo is available on http://try.vespolina.org with several deployed use cases.
 
 Some of the bundles are already been used in production.  Information about basic functionality can be found on the
 [wiki][vespolina_wiki] .  We love to hear your comments on our current understanding of different ecommerce scenarios.  You can find more information on the wiki such as use cases and process flow diagrams.
