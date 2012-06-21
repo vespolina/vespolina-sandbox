@@ -1,5 +1,4 @@
 <?php
-
 if (!$loader = include __DIR__.'/../vendor/autoload.php') {
     $nl = PHP_SAPI === 'cli' ? PHP_EOL : '<br />';
     echo "$nl$nl";

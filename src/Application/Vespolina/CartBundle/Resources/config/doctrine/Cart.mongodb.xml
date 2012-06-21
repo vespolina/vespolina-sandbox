@@ -4,7 +4,7 @@
                         xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
                         http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
 
-    <document name="Application\Vespolina\CartBundle\Document\Cart">
+    <document name="Application\Vespolina\CartBundle\Document\Cart" collection="vespolina_cart">
         <field name="id" id="true" />
 
         <embed-many fieldName="items"

@@ -26,7 +26,7 @@
         "doctrine/orm": "2.2.0",
         "friendsofsymfony/rest": "dev-master",
         "friendsofsymfony/rest-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "1.1.0",
+        "friendsofsymfony/user-bundle": "dev-master",
         "imagine/Imagine": "dev-master",
         "jms/security-extra-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",

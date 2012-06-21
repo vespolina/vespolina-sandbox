@@ -35,6 +35,9 @@ vespolina_store:
 #           - large:  view optimized for lots of entries (eg. list of spare parts) up to 200 products
             default_product_view: tiled
 
+#           Enable taxation for this store?
+            taxation_enabled: true
+
 #           How should the taxonomy be visualized, possible values are:
 #           - top: display terms next to each other
 #           - side: display terms
