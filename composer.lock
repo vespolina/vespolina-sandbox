@@ -8,8 +8,8 @@
         {
             "package": "doctrine/data-fixtures",
             "version": "dev-master",
-            "source-reference": "d233d05437c1a10034867f22069b4bb0f7dc96b6",
-            "commit-date": "1338071483"
+            "source-reference": "1f0b8be5db0b53681f80c99324c94e21e1efe39a",
+            "commit-date": "1340392920"
         },
         {
             "package": "doctrine/dbal",
@@ -36,8 +36,8 @@
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "774e6b5631cca44c982f6c08c2fd97d92925c177",
-            "commit-date": "1340207422"
+            "source-reference": "f7a4f4d4a8a9c476db9de0e3df64a8edad5d8db3",
+            "commit-date": "1340382388"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
@@ -140,8 +140,8 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "28e9ccc85f79a6f68f412be9d93ce9b63732d7eb",
-            "commit-date": "1340213512"
+            "source-reference": "e2ce3bf11df1dad1b44e334d696b6760b15c9ba2",
+            "commit-date": "1340359160"
         },
         {
             "package": "mopa/composer-bridge",
@@ -182,8 +182,8 @@
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "d57ffdeed664d6061cef0047e1f5d3fc3ee3fb99",
-            "commit-date": "1340275580"
+            "source-reference": "0173abd7bb539bc5dd0b823b06b46636121384e9",
+            "commit-date": "1340373948"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -296,8 +296,8 @@
         {
             "package": "vespolina/partner-bundle",
             "version": "dev-master",
-            "source-reference": "eba95cd6e577b4f5ad94410c60365335718d478a",
-            "commit-date": "1339031611"
+            "source-reference": "009fb42747cd84910c232194b80ae82a49ae768e",
+            "commit-date": "1340400647"
         },
         {
             "package": "vespolina/pricing-bundle",
@@ -314,14 +314,14 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "31cf94a74d21b3aa4dcda92dd2fa97571f68ec33",
-            "commit-date": "1340310466"
+            "source-reference": "4b661d376cda5a945218dcb3ce3b29b01da5eb34",
+            "commit-date": "1340400774"
         },
         {
             "package": "vespolina/taxation-bundle",
             "version": "dev-master",
-            "source-reference": "8efa1645bd089c6c3e78d67752199d0d17ae392e",
-            "commit-date": "1339966969"
+            "source-reference": "5bf8e19d9b03ee06b529b2daa20fdcd646fed714",
+            "commit-date": "1340403907"
         },
         {
             "package": "vespolina/taxonomy-bundle",
