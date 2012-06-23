@@ -6,7 +6,8 @@
 
     <embedded-document name="Application\Vespolina\CartBundle\Document\CartItem">
 
-       <reference-one fieldName="cartableItem" field="cartableItem" />
+    <!--   <reference-one fieldName="product" field="product" target-document="Application\Vespolina\ProductBundle\Document\Product"/> -->
+       <reference-one fieldName="product" field="product" target-document="Application\Vespolina\ProductBundle\Document\Product"/>
 
     </embedded-document>
 </doctrine-mongo-mapping>
