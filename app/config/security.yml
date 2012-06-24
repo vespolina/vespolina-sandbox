@@ -21,7 +21,7 @@ security:
             anonymous:  true
 
     access_control:
-        - { path: "/dashboard.*", role: IS_AUTHENTICATED_FULLY }
+        - { path: "/admin/*", role: IS_AUTHENTICATED_FULLY }
         - { path: "/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
 
 fos_user:
