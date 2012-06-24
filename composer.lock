@@ -64,8 +64,14 @@
         {
             "package": "friendsofsymfony/rest-bundle",
             "version": "dev-master",
-            "source-reference": "e1844029a597136841900c10e8a5a9c5c325de9d",
-            "commit-date": "1339756640"
+            "alias-pretty-version": "0.7.x-dev",
+            "alias-version": "0.7.9999999.9999999-dev"
+        },
+        {
+            "package": "friendsofsymfony/rest-bundle",
+            "version": "dev-master",
+            "source-reference": "f279c12d1e375fc3a63255589b5959015238607b",
+            "commit-date": "1340563368"
         },
         {
             "package": "friendsofsymfony/user-bundle",
@@ -296,8 +302,8 @@
         {
             "package": "vespolina/partner-bundle",
             "version": "dev-master",
-            "source-reference": "009fb42747cd84910c232194b80ae82a49ae768e",
-            "commit-date": "1340400647"
+            "source-reference": "4bc50147e707f1fb5d637fe2e60412ac01775124",
+            "commit-date": "1340573049"
         },
         {
             "package": "vespolina/pricing-bundle",
@@ -314,8 +320,8 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "4b661d376cda5a945218dcb3ce3b29b01da5eb34",
-            "commit-date": "1340400774"
+            "source-reference": "e7e08a4e6a1bc772077e55a0b260ee1fabc662be",
+            "commit-date": "1340573467"
         },
         {
             "package": "vespolina/taxation-bundle",

@@ -1,3 +1,5 @@
+vespolina_admin:
+    db_driver: mongodb
 vespolina_store:
     db_driver: mongodb
 #    show_store_zones_in_menu: true
@@ -38,6 +40,11 @@ vespolina_store:
 #           Enable taxation for this store?
             taxation_enabled: true
 
+#           Which languages (languages) is the user be allowed to choose from
+#            available_languages:
+#                - en  #first one is default
+#                - nl
+#                - fr
 #           How should the taxonomy be visualized, possible values are:
 #           - top: display terms next to each other
 #           - side: display terms
