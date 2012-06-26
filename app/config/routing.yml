@@ -1,3 +1,6 @@
+vespolina_admin:
+    resource: "@VespolinaAdminBundle/Resources/config/routing/admin.xml"
+    prefix:   /admin/
 vespolina_store:
     resource: "@VespolinaStoreBundle/Resources/config/routing/store.xml"
     prefix:   /

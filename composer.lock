@@ -36,8 +36,8 @@
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "f7a4f4d4a8a9c476db9de0e3df64a8edad5d8db3",
-            "commit-date": "1340382388"
+            "source-reference": "61fe79e074c8cf9d5bf2f072263f081038b406ee",
+            "commit-date": "1340641457"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
@@ -60,12 +60,6 @@
             "version": "dev-master",
             "source-reference": "5ea703f5a3f5c7110cadeccb91b212c0eb7ea2d0",
             "commit-date": "1339701893"
-        },
-        {
-            "package": "friendsofsymfony/rest-bundle",
-            "version": "dev-master",
-            "alias-pretty-version": "0.7.x-dev",
-            "alias-version": "0.7.9999999.9999999-dev"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
@@ -170,8 +164,14 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "62e41b85947034b0f1dfe31bb8e76920e1488571",
-            "commit-date": "1340116878"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "sensio/framework-extra-bundle",
+            "version": "dev-master",
+            "source-reference": "ba7c2d872d609d972d43254bb9d1fdead25f7758",
+            "commit-date": "1340725130"
         },
         {
             "package": "sensio/generator-bundle",
@@ -200,13 +200,25 @@
         {
             "package": "symfony/monolog-bundle",
             "version": "dev-master",
-            "source-reference": "0b5046d3d1ef93cd59ceabfa37de2665f5118c7f",
-            "commit-date": "1339708477"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/monolog-bundle",
+            "version": "dev-master",
+            "source-reference": "660a1aeaf93e8ffdc34c27b3a82dc47195ad1d8d",
+            "commit-date": "1340609637"
         },
         {
             "package": "symfony/swiftmailer-bundle",
             "version": "dev-master",
-            "source-reference": "d05c9c514a631ee688c53c4cc5505da757bd50d3",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/swiftmailer-bundle",
+            "version": "dev-master",
+            "source-reference": "v2.1.0-BETA1",
             "commit-date": "1340144744"
         },
         {
@@ -218,8 +230,14 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "v2.1.0-BETA1",
-            "commit-date": "1340300540"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
+            "source-reference": "d0e154725c85a3ec5bc6760a59cc2769b8a17ae5",
+            "commit-date": "1340724924"
         },
         {
             "package": "twig/extensions",
@@ -236,8 +254,14 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "4679ad51c5390648b7ea4c8f0ecd2c0c344145ba",
-            "commit-date": "1339959143"
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "source-reference": "cd049dac38dda63bd0fb264bbd939a547c7c4b1a",
+            "commit-date": "1340727866"
         },
         {
             "package": "twitter/bootstrap",
@@ -248,8 +272,8 @@
         {
             "package": "vespolina/admin-bundle",
             "version": "dev-master",
-            "source-reference": "d24a60fd9d515094bf15edaaaff7d7360ecb42e3",
-            "commit-date": "1339104615"
+            "source-reference": "e9be0d228545450124bfc96667ce004b6a9565f0",
+            "commit-date": "1340732422"
         },
         {
             "package": "vespolina/cart-bundle",
