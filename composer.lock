@@ -197,13 +197,13 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "73da773aaad0f97f2e967ec8241b8adf7b1e03d2"
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
         },
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "alias-pretty-version": "1.8.x-dev",
-            "alias-version": "1.8.9999999.9999999-dev"
+            "source-reference": "73da773aaad0f97f2e967ec8241b8adf7b1e03d2"
         },
         {
             "package": "twitter/bootstrap",
@@ -218,7 +218,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "2f9ca8655ebf31ea6d774aaac616da4d34731f72"
+            "source-reference": "85a02a793307aeb2dfe8b85575ab466573916256"
         },
         {
             "package": "vespolina/checkout-bundle",
@@ -228,7 +228,7 @@
         {
             "package": "vespolina/core",
             "version": "dev-master",
-            "source-reference": "5b05e3493381d135cc55c56f5571c5bd84940fa1"
+            "source-reference": "34834e0dedc32bd17f2d6de4a2cb683676a3b170"
         },
         {
             "package": "vespolina/ecommerce-flows-bundle",
@@ -278,7 +278,7 @@
         {
             "package": "vespolina/store-bundle",
             "version": "dev-master",
-            "source-reference": "ece90c9928a7ca76ba99a6241af9177dae4431e4"
+            "source-reference": "a9ae37716654658209c98d562b979fa673648939"
         },
         {
             "package": "vespolina/taxation-bundle",
