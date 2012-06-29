@@ -248,7 +248,7 @@
         {
             "package": "vespolina/merchandise-bundle",
             "version": "dev-master",
-            "source-reference": "c57fd12338ace82c4b6cf2bc8607d72410a11d3e"
+            "source-reference": "7085c514830bfe0b766687659d909f6a6cc9b726"
         },
         {
             "package": "vespolina/monetary-bundle",
@@ -273,7 +273,7 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "00fedf511690b404ddc9e408b391b8d3a1e6f19b"
+            "source-reference": "240bbaf248fb19b0d86e0042db132ff7450101e8"
         },
         {
             "package": "vespolina/store-bundle",
