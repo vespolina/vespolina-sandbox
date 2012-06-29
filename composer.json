@@ -44,6 +44,7 @@
         "vespolina/admin-bundle": "*",
         "vespolina/cart-bundle": "*",
         "vespolina/checkout-bundle": "*",
+        "vespolina/core": "*",
         "vespolina/ecommerce-flows-bundle": "*",
         "vespolina/fulfillment-bundle": "*",
         "vespolina/inventory-bundle": "*",

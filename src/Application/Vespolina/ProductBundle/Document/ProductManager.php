@@ -10,7 +10,7 @@ namespace Vespolina\ProductBundle\Document;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Symfony\Component\DependencyInjection\Container;
 
-use Vespolina\ProductBundle\Model\ProductInterface;
+use Vespolina\Entity\ProductInterface;
 use Vespolina\ProductBundle\Model\ProductManager as BaseProductManager;
 /**
  * @author Richard Shank <develop@zestic.com>

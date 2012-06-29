@@ -8,11 +8,11 @@
 
 namespace Application\Vespolina\ProductBundle\Document;
 use Doctrine\Common\Collections\ArrayCollection;
+use Vespolina\Entity\ProductInterface;
 use Vespolina\ProductBundle\Document\BaseProduct as BaseProduct;
-use Vespolina\CartBundle\Model\CartableItemInterface;
 use Vespolina\TaxonomyBundle\Model\TermInterface;
 
-class Product extends BaseProduct implements CartableItemInterface
+class Product extends BaseProduct implements ProductInterface
 {
     protected $id;
     protected $cartableName;
