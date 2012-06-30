@@ -218,7 +218,7 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "85a02a793307aeb2dfe8b85575ab466573916256"
+            "source-reference": "2e9dc7c490145d47cc69faa45ab839ebc66ad3a2"
         },
         {
             "package": "vespolina/checkout-bundle",
