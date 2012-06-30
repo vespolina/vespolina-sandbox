@@ -258,7 +258,7 @@
         {
             "package": "vespolina/order-bundle",
             "version": "dev-master",
-            "source-reference": "c7ad6b54f0d5b12eac0de115b64ddd42ce61a2f3"
+            "source-reference": "b96b2068461c00aa492198b1c4ae067e5d418ed7"
         },
         {
             "package": "vespolina/partner-bundle",
