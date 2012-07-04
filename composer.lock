@@ -38,7 +38,7 @@
         {
             "package": "doctrine/mongodb-odm",
             "version": "dev-master",
-            "source-reference": "0c5dbf6d4846940f9d87e33349045d5bb7f3bc62"
+            "source-reference": "38035d71d59cda0251e76046d59ef5d5445104e4"
         },
         {
             "package": "doctrine/mongodb-odm-bundle",
@@ -52,13 +52,13 @@
         {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
-            "alias-pretty-version": "0.7.x-dev",
-            "alias-version": "0.7.9999999.9999999-dev"
+            "source-reference": "5ea703f5a3f5c7110cadeccb91b212c0eb7ea2d0"
         },
         {
             "package": "friendsofsymfony/rest",
             "version": "dev-master",
-            "source-reference": "5ea703f5a3f5c7110cadeccb91b212c0eb7ea2d0"
+            "alias-pretty-version": "0.7.x-dev",
+            "alias-version": "0.7.9999999.9999999-dev"
         },
         {
             "package": "friendsofsymfony/rest-bundle",
@@ -95,13 +95,13 @@
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "b2567bd93fdbd9f2902cbb7fcdfd8f432c46d28a"
+            "alias-pretty-version": "0.9.x-dev",
+            "alias-version": "0.9.9999999.9999999-dev"
         },
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "alias-pretty-version": "0.9.x-dev",
-            "alias-version": "0.9.9999999.9999999-dev"
+            "source-reference": "b2567bd93fdbd9f2902cbb7fcdfd8f432c46d28a"
         },
         {
             "package": "knplabs/knp-components",
@@ -146,13 +146,13 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
+            "source-reference": "4f54e5d5fb3b54fb107892684018f3704934c48d"
         },
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "4f54e5d5fb3b54fb107892684018f3704934c48d"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "sensio/generator-bundle",
@@ -162,7 +162,7 @@
         {
             "package": "swiftmailer/swiftmailer",
             "version": "dev-master",
-            "source-reference": "05b497ee28355a33eb521dcaf7526824e0dda3b2"
+            "source-reference": "f34ff8a49dc611e8171f041b529671b3e460cfe1"
         },
         {
             "package": "swiftmailer/swiftmailer",
@@ -188,13 +188,13 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "af57fe0f3a1896269f5c3928159d5448f2e6fd96"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
+            "source-reference": "e71149b4d94f5a63c2053db123ab8384bcc2be71"
         },
         {
             "package": "twig/extensions",
@@ -280,7 +280,7 @@
         {
             "package": "vespolina/product-bundle",
             "version": "dev-master",
-            "source-reference": "b7f8f6a91c1264f75c0599d1a59ada6ee07c4baa"
+            "source-reference": "061dc18c7af8722879076bbdda1913d10737f215"
         },
         {
             "package": "vespolina/store-bundle",
