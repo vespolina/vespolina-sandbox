@@ -29,6 +29,6 @@ vespolina_admin:
     resource: @VespolinaAdminBundle/Resources/config/routing/admin.xml
     prefix:   /admin/
 
-vespolina_product_admin:
+_vespolina_product_admin:
     resource: @VespolinaProductBundle/Resources/config/routing/admin.xml
     prefix:   /admin/product
