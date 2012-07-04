@@ -8,7 +8,7 @@
 namespace Application\Vespolina\ProductBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
 use Vespolina\ProductBundle\Form\Type\FeatureFormType;
 use Vespolina\ProductBundle\Form\Type\ProductFormType;
 /**
@@ -17,13 +17,13 @@ use Vespolina\ProductBundle\Form\Type\ProductFormType;
  */
 class ProductFormExtendedType extends ProductFormType
 {
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
         $builder->add('price');
     }
 
-    public function getDefaultOptions(array $options)
+    public function getDefaultOptions()
     {
         return array(
             'data_class' => 'Application\Vespolina\ProductBundle\Document\Product',
