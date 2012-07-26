@@ -290,8 +290,8 @@
         {
             "package": "vespolina/cart-bundle",
             "version": "dev-master",
-            "source-reference": "cf32b4cce6b63f02ebe27e6e89b3dfbc30859635",
-            "commit-date": "1343071315"
+            "source-reference": "e42b9b403b6dd96365acffc34f897708271cfc78",
+            "commit-date": "1343256195"
         },
         {
             "package": "vespolina/checkout-bundle",
