@@ -28,7 +28,8 @@ Requirements
 
 Symfony is only supported on PHP 5.3.2 and up. To check the compatibility of
 your environment with Symfony, you can run the `web/check.php` script, bundled
-with this sandbox.
+with this sandbox. Also, you will need the mongodb driver for php, provided by
+the mongo php extension.
 
 Installation
 ------------
