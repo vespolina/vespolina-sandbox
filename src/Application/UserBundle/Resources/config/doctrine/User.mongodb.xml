@@ -5,6 +5,7 @@
                         http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
 
     <document name="Application\UserBundle\Document\User" collection="fos_user_user">
+        <field name="id" id="true" />
         <reference-one fieldName="partner" field="partner" />
     </document>
 
