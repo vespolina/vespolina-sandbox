@@ -40,7 +40,6 @@ class AppKernel extends Kernel
             new Vespolina\OrderBundle\VespolinaOrderBundle(),
             new Vespolina\ProductBundle\VespolinaProductBundle(),
             new Vespolina\CheckoutBundle\VespolinaCheckoutBundle(),
-            //new Vespolina\ProductSubscriptionBundle\VespolinaProductSubscriptionBundle(),
             new Vespolina\PricingBundle\VespolinaPricingBundle(),
             new Vespolina\StoreBundle\VespolinaStoreBundle(),
             new Vespolina\Symfony2Bundle\VespolinaSymfony2Bundle(),
