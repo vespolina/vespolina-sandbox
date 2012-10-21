@@ -7,8 +7,9 @@
  */
 
 namespace Application\Vespolina\ProductBundle\Document;
+
 use Doctrine\Common\Collections\ArrayCollection;
-use Vespolina\Entity\ProductInterface;
+use Vespolina\Entity\Product\ProductInterface;
 use Vespolina\ProductBundle\Document\BaseProduct as BaseProduct;
 use Vespolina\TaxonomyBundle\Model\TermInterface;
 
@@ -27,7 +28,6 @@ class Product extends BaseProduct implements ProductInterface
 
     public function addTerm(TermInterface $term)
     {
-
         $this->terms['slug'] = $term->getName();    //TODO
     }
 

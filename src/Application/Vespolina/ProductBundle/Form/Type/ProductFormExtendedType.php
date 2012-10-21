@@ -9,7 +9,7 @@ namespace Application\Vespolina\ProductBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Vespolina\ProductBundle\Form\Type\FeatureFormType;
+use Vespolina\ProductBundle\Form\Type\AttributeFormType;
 use Vespolina\ProductBundle\Form\Type\ProductFormType;
 /**
  * @author Richard Shank <develop@zestic.com>
