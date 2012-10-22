@@ -56,10 +56,12 @@
         "vespolina/monetary-bundle": "*",
         "vespolina/partner-bundle": "*",
         "vespolina/pricing-bundle": "*",
+        "vespolina/product": "*",
         "vespolina/product-bundle": "*",
         "vespolina/store-bundle": "*",
         "vespolina/symfony2-bundle": "*",
         "vespolina/taxation-bundle": "*",
+        "vespolina/taxonomy": "*",
         "vespolina/taxonomy-bundle": "*"
     },
     "minimum-stability": "dev",
