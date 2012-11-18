@@ -191,6 +191,22 @@
             "type": "package",
             "package":{
                 "version": "dev-master",
+                "name": "vespolina/taxonomy-bundle",
+                "source":{
+                    "url": "git://github.com/iampersistent/VespolinaTaxonomyBundle.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "Vespolina\\TaxonomyBundle": "" }
+                },
+                "target-dir": "Vespolina/TaxonomyBundle"
+            }
+        },
+        {
+            "type": "package",
+            "package":{
+                "version": "dev-master",
                 "name": "vespolina/symfony2-bundle",
                 "source":{
                     "url": "git://github.com/iampersistent/VespolinaSymfony2Bundle.git",
