@@ -18,7 +18,7 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-08-29 08:04:14",
+            "time": "2012-08-29 01:04:14",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -33,26 +33,20 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": null
+                    "homepage": "http://www.jwage.com/"
                 },
                 {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com",
-                    "homepage": null,
-                    "role": null
+                    "homepage": "http://www.instaclick.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "email": "roman@code-factory.org",
-                    "homepage": null,
-                    "role": null
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de",
-                    "homepage": null,
-                    "role": null
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Johannes Schmitt",
@@ -77,18 +71,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "a95d7839a7794c7c9b22d64e859ee70658d977fe"
+                "reference": "a28b6bde290b0a908d32938e3393244086c2d89d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/data-fixtures/archive/a95d7839a7794c7c9b22d64e859ee70658d977fe.zip",
-                "reference": "a95d7839a7794c7c9b22d64e859ee70658d977fe",
+                "url": "https://github.com/doctrine/data-fixtures/archive/a28b6bde290b0a908d32938e3393244086c2d89d.zip",
+                "reference": "a28b6bde290b0a908d32938e3393244086c2d89d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "1351735543",
+            "time": "1353557065",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -130,7 +124,7 @@
                 "php": ">=5.3.2",
                 "doctrine/common": ">=2.2.0,<=2.2.99"
             },
-            "time": "2012-04-13 07:56:12",
+            "time": "2012-04-13 00:56:12",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -145,26 +139,20 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": null
+                    "homepage": "http://www.jwage.com/"
                 },
                 {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com",
-                    "homepage": null,
-                    "role": null
+                    "homepage": "http://www.instaclick.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "email": "roman@code-factory.org",
-                    "homepage": null,
-                    "role": null
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de",
-                    "homepage": null,
-                    "role": null
+                    "email": "kontakt@beberlei.de"
                 }
             ],
             "description": "Database Abstraction Layer",
@@ -183,12 +171,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/DoctrineBundle.git",
-                "reference": "47df202dfb4ad38e15d6aed8a53e722b30c9f9fd"
+                "reference": "ac854d9452272d43b80a9043e0f33c2b9dd2cdd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineBundle/archive/47df202dfb4ad38e15d6aed8a53e722b30c9f9fd.zip",
-                "reference": "47df202dfb4ad38e15d6aed8a53e722b30c9f9fd",
+                "url": "https://github.com/doctrine/DoctrineBundle/archive/ac854d9452272d43b80a9043e0f33c2b9dd2cdd5.zip",
+                "reference": "ac854d9452272d43b80a9043e0f33c2b9dd2cdd5",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +184,7 @@
                 "doctrine/dbal": ">=2.2,<2.4-dev",
                 "symfony/framework-bundle": ">=2.1,<2.3-dev",
                 "symfony/doctrine-bridge": ">=2.1,<2.3-dev",
-                "jdorn/sql-formatter": "v1.0.1"
+                "jdorn/sql-formatter": ">=1.1,<2.0"
             },
             "require-dev": {
                 "doctrine/orm": ">=2.2,<2.4-dev",
@@ -206,7 +194,7 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "1353074073",
+            "time": "1353489818",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -256,7 +244,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineFixturesBundle/zipball/9edc67af16e736a31605e7fa9c9e3edbd9db6427",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle/archive/9edc67af16e736a31605e7fa9c9e3edbd9db6427.zip",
                 "reference": "9edc67af16e736a31605e7fa9c9e3edbd9db6427",
                 "shasum": ""
             },
@@ -508,7 +496,7 @@
                 "doctrine/common": ">=2.2.0,<2.2.99",
                 "doctrine/dbal": ">=2.2.1,<2.2.99"
             },
-            "time": "2012-01-29 16:04:23",
+            "time": "2012-01-29 08:04:23",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -523,26 +511,20 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": null
+                    "homepage": "http://www.jwage.com/"
                 },
                 {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com",
-                    "homepage": null,
-                    "role": null
+                    "homepage": "http://www.instaclick.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "email": "roman@code-factory.org",
-                    "homepage": null,
-                    "role": null
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de",
-                    "homepage": null,
-                    "role": null
+                    "email": "kontakt@beberlei.de"
                 }
             ],
             "description": "Object-Relational-Mapper for PHP",
@@ -563,7 +545,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSRest/zipball/b48857315c39715245303fb5bbc1bab98026209e",
+                "url": "https://github.com/FriendsOfSymfony/FOSRest/archive/b48857315c39715245303fb5bbc1bab98026209e.zip",
                 "reference": "b48857315c39715245303fb5bbc1bab98026209e",
                 "shasum": ""
             },
@@ -610,12 +592,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle",
-                "reference": "39f1b79bd0d75c9d566baaf7a90f25756a4786e9"
+                "reference": "4f219c0c8c4ad1e661b9c849dedecf46070a596a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSRestBundle/archive/39f1b79bd0d75c9d566baaf7a90f25756a4786e9.zip",
-                "reference": "39f1b79bd0d75c9d566baaf7a90f25756a4786e9",
+                "url": "https://github.com/FriendsOfSymfony/FOSRestBundle/archive/4f219c0c8c4ad1e661b9c849dedecf46070a596a.zip",
+                "reference": "4f219c0c8c4ad1e661b9c849dedecf46070a596a",
                 "shasum": ""
             },
             "require": {
@@ -633,7 +615,7 @@
             "suggest": {
                 "sensio/framework-extra-bundle": "Add support for route annotations"
             },
-            "time": "1353159722",
+            "time": "1353503919",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -677,12 +659,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "809734e26fa68023f27e3752d370092fb1160e59"
+                "reference": "89cdcced645ba672bbfedb420957f1409a560a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/archive/809734e26fa68023f27e3752d370092fb1160e59.zip",
-                "reference": "809734e26fa68023f27e3752d370092fb1160e59",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/archive/89cdcced645ba672bbfedb420957f1409a560a56.zip",
+                "reference": "89cdcced645ba672bbfedb420957f1409a560a56",
                 "shasum": ""
             },
             "require": {
@@ -703,7 +685,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "1352986811",
+            "time": "1353464442",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -750,7 +732,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/avalanche123/Imagine/zipball/v0.3.0",
+                "url": "https://github.com/avalanche123/Imagine/archive/v0.3.0.zip",
                 "reference": "v0.3.0",
                 "shasum": ""
             },
@@ -775,8 +757,7 @@
                 {
                     "name": "Bulat Shakirzyanov",
                     "email": "mallluhuct@gmail.com",
-                    "homepage": "http://avalanche123.com",
-                    "role": null
+                    "homepage": "http://avalanche123.com"
                 }
             ],
             "description": "Image processing for PHP 5.3",
@@ -842,19 +823,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSAopBundle",
-                "reference": "10d792414676c68545d9280b0fd2f01e79b4ce7f"
+                "reference": "70ee8edbcf840b20445e3e42e57a249be4373a34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/JMSAopBundle/archive/10d792414676c68545d9280b0fd2f01e79b4ce7f.zip",
-                "reference": "10d792414676c68545d9280b0fd2f01e79b4ce7f",
+                "url": "https://github.com/schmittjoh/JMSAopBundle/archive/70ee8edbcf840b20445e3e42e57a249be4373a34.zip",
+                "reference": "70ee8edbcf840b20445e3e42e57a249be4373a34",
                 "shasum": ""
             },
             "require": {
                 "symfony/framework-bundle": "2.*",
-                "jms/cg": "1.0.0"
+                "jms/cg": "1.*"
             },
-            "time": "1350385016",
+            "time": "1353494571",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -901,7 +882,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-02 20:40:52",
+            "time": "2012-01-02 12:40:52",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -916,7 +897,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -932,12 +913,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSDiExtraBundle",
-                "reference": "1ca32bce0b3e10c3b673213913355c5bc58b9dd5"
+                "reference": "2f5d21d897fa4be9b58f13e312412efa5e36457a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/JMSDiExtraBundle/zipball/1ca32bce0b3e10c3b673213913355c5bc58b9dd5",
-                "reference": "1ca32bce0b3e10c3b673213913355c5bc58b9dd5",
+                "url": "https://github.com/schmittjoh/JMSDiExtraBundle/archive/2f5d21d897fa4be9b58f13e312412efa5e36457a.zip",
+                "reference": "2f5d21d897fa4be9b58f13e312412efa5e36457a",
                 "shasum": ""
             },
             "require": {
@@ -960,11 +941,11 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/orm": "*"
             },
-            "time": "1350226042",
+            "time": "1353408252",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "installation-source": "source",
@@ -1008,7 +989,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-02 21:32:49",
+            "time": "2012-01-02 13:32:49",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1041,22 +1022,22 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/schmittjoh/parser-lib",
-                "reference": "6e36d33444835982e324f259f202ec8e0f0bd94f"
+                "reference": "1321c02e6c804852c26effd7663f10d01f3a2500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/parser-lib/archive/6e36d33444835982e324f259f202ec8e0f0bd94f.zip",
-                "reference": "6e36d33444835982e324f259f202ec8e0f0bd94f",
+                "url": "https://github.com/schmittjoh/parser-lib/archive/1321c02e6c804852c26effd7663f10d01f3a2500.zip",
+                "reference": "1321c02e6c804852c26effd7663f10d01f3a2500",
                 "shasum": ""
             },
             "require": {
                 "phpoption/phpoption": ">=0.9,<2.0-dev"
             },
-            "time": "1353229174",
+            "time": "1353408010",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "installation-source": "source",
@@ -1077,21 +1058,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle",
-                "reference": "175191d174fab1881b632f9700706afc1807bb9d"
+                "reference": "f649070a61390e1148a68fe48ea2a64f17171772"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle/archive/175191d174fab1881b632f9700706afc1807bb9d.zip",
-                "reference": "175191d174fab1881b632f9700706afc1807bb9d",
+                "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle/archive/f649070a61390e1148a68fe48ea2a64f17171772.zip",
+                "reference": "f649070a61390e1148a68fe48ea2a64f17171772",
                 "shasum": ""
             },
             "require": {
                 "jms/metadata": "1.1.*",
                 "symfony/security-bundle": "*",
-                "jms/di-extra-bundle": "1.2.*",
                 "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
                 "jms/aop-bundle": ">=1.0.0,<1.2-dev",
-                "jms/parser-lib": "1.*"
+                "jms/parser-lib": "1.*",
+                "jms/di-extra-bundle": "1.3.*"
             },
             "require-dev": {
                 "sensio/framework-extra-bundle": "*",
@@ -1107,11 +1088,11 @@
                 "symfony/form": "*",
                 "symfony/validator": "*"
             },
-            "time": "1353165233",
+            "time": "1353408299",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "installation-source": "source",
@@ -1127,7 +1108,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1630,7 +1611,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/phiamo/MopaComposerBridge/zipball/e07e6f3a3c922c70892590048b7ded72f525e547",
+                "url": "https://github.com/phiamo/MopaComposerBridge/archive/e07e6f3a3c922c70892590048b7ded72f525e547.zip",
                 "reference": "e07e6f3a3c922c70892590048b7ded72f525e547",
                 "shasum": ""
             },
@@ -1672,18 +1653,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/schmittjoh/php-option",
-                "reference": "5add66f558c6d6d1f6a5ff298ba650b710882fad"
+                "reference": "b9c60ebf8242cf409d8734b6a757ba0ce1691493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/php-option/archive/5add66f558c6d6d1f6a5ff298ba650b710882fad.zip",
-                "reference": "5add66f558c6d6d1f6a5ff298ba650b710882fad",
+                "url": "https://github.com/schmittjoh/php-option/archive/b9c60ebf8242cf409d8734b6a757ba0ce1691493.zip",
+                "reference": "b9c60ebf8242cf409d8734b6a757ba0ce1691493",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "1353021234",
+            "time": "1353248052",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1703,7 +1684,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1722,18 +1703,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioDistributionBundle",
-                "reference": "v2.1.3"
+                "reference": "25dcc74a7f31eaacf53a407f024183345c6c4804"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioDistributionBundle/archive/v2.1.3.zip",
-                "reference": "v2.1.3",
+                "url": "https://github.com/sensio/SensioDistributionBundle/archive/25dcc74a7f31eaacf53a407f024183345c6c4804.zip",
+                "reference": "25dcc74a7f31eaacf53a407f024183345c6c4804",
                 "shasum": ""
             },
             "require": {
                 "symfony/framework-bundle": "2.1.*"
             },
-            "time": "1347340208",
+            "time": "1353323932",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1815,12 +1796,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioGeneratorBundle",
-                "reference": "56c2029d1f3f41b39dd0df40009cb448df010bf1"
+                "reference": "7efe50d35818a2ba72a7a05e40155b4789e5c3d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioGeneratorBundle/archive/56c2029d1f3f41b39dd0df40009cb448df010bf1.zip",
-                "reference": "56c2029d1f3f41b39dd0df40009cb448df010bf1",
+                "url": "https://github.com/sensio/SensioGeneratorBundle/archive/7efe50d35818a2ba72a7a05e40155b4789e5c3d9.zip",
+                "reference": "7efe50d35818a2ba72a7a05e40155b4789e5c3d9",
                 "shasum": ""
             },
             "require": {
@@ -1832,7 +1813,7 @@
                 "doctrine/orm": ">=2.1,<2.4-dev",
                 "twig/twig": ">=1.8,<2.0-dev"
             },
-            "time": "1352464423",
+            "time": "1353341457",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1880,7 +1861,7 @@
                     "dev-master": "4.2-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "lib/swift_required.php"
@@ -1979,7 +1960,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/MonologBundle/zipball/51517152a608926ee6b40ed8cfbba1a708f0a14f",
+                "url": "https://github.com/symfony/MonologBundle/archive/51517152a608926ee6b40ed8cfbba1a708f0a14f.zip",
                 "reference": "51517152a608926ee6b40ed8cfbba1a708f0a14f",
                 "shasum": ""
             },
@@ -2034,7 +2015,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/SwiftmailerBundle/zipball/2393ba6d4f1b544349123e24a16bbc749bef9e55",
+                "url": "https://github.com/symfony/SwiftmailerBundle/archive/2393ba6d4f1b544349123e24a16bbc749bef9e55.zip",
                 "reference": "2393ba6d4f1b544349123e24a16bbc749bef9e55",
                 "shasum": ""
             },
@@ -2084,12 +2065,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "461db28d3305b74a2514c7a88373398db7d5e71e"
+                "reference": "aa124288676648f727370876ccdf6dd7f208dc46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/461db28d3305b74a2514c7a88373398db7d5e71e.zip",
-                "reference": "461db28d3305b74a2514c7a88373398db7d5e71e",
+                "url": "https://github.com/symfony/symfony/archive/aa124288676648f727370876ccdf6dd7f208dc46.zip",
+                "reference": "aa124288676648f727370876ccdf6dd7f208dc46",
                 "shasum": ""
             },
             "require": {
@@ -2138,7 +2119,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1353172006",
+            "time": "1353512263",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2181,7 +2162,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig-extensions/zipball/dcdff02fbac1282e6b8f4d0558cc7e9580105688",
+                "url": "https://github.com/fabpot/Twig-extensions/archive/dcdff02fbac1282e6b8f4d0558cc7e9580105688.zip",
                 "reference": "dcdff02fbac1282e6b8f4d0558cc7e9580105688",
                 "shasum": ""
             },
@@ -2224,18 +2205,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "11368e7e08bc1c9626317fe28e3fdd1855e17198"
+                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/11368e7e08bc1c9626317fe28e3fdd1855e17198.zip",
-                "reference": "11368e7e08bc1c9626317fe28e3fdd1855e17198",
+                "url": "https://github.com/fabpot/Twig/archive/9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6.zip",
+                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1353099404",
+            "time": "1353308798",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2277,7 +2258,7 @@
             },
             "type": "library",
             "installation-source": "source",
-            "time": "1345529623"
+            "time": "1351659596"
         },
         {
             "name": "vespolina/admin-bundle",
@@ -2290,7 +2271,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaAdminBundle/zipball/e9be0d228545450124bfc96667ce004b6a9565f0",
+                "url": "https://github.com/vespolina/VespolinaAdminBundle/archive/e9be0d228545450124bfc96667ce004b6a9565f0.zip",
                 "reference": "e9be0d228545450124bfc96667ce004b6a9565f0",
                 "shasum": ""
             },
@@ -2318,9 +2299,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaAdminBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaAdminBundle/contributors"
                 }
             ],
             "description": "Vespolina Admin bundle. Admin management and more.",
@@ -2365,7 +2344,7 @@
                     "Vespolina\\CartBundle": ""
                 }
             },
-            "time": "1346544272"
+            "time": "1351901163"
         },
         {
             "name": "vespolina/checkout-bundle",
@@ -2378,7 +2357,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaCheckoutBundle/zipball/16e70f34916d7d133c41328424a52d8c9f9123b7",
+                "url": "https://github.com/vespolina/VespolinaCheckoutBundle/archive/16e70f34916d7d133c41328424a52d8c9f9123b7.zip",
                 "reference": "16e70f34916d7d133c41328424a52d8c9f9123b7",
                 "shasum": ""
             },
@@ -2406,9 +2385,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaCheckoutBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaCheckoutBundle/contributors"
                 }
             ],
             "description": "Vespolina Checkout bundle. Checkout management and more.",
@@ -2435,7 +2412,7 @@
                     "Vespolina": "lib/"
                 }
             },
-            "time": "1353226437"
+            "time": "1353306240"
         },
         {
             "name": "vespolina/ecommerce-flows-bundle",
@@ -2448,7 +2425,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaEcommerceFlowsBundle/zipball/7b4fc8b128dd821efef7df2a4565ed83286dad73",
+                "url": "https://github.com/vespolina/VespolinaEcommerceFlowsBundle/archive/7b4fc8b128dd821efef7df2a4565ed83286dad73.zip",
                 "reference": "7b4fc8b128dd821efef7df2a4565ed83286dad73",
                 "shasum": ""
             },
@@ -2476,9 +2453,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaEcommerceFlowsBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaEcommerceFlowsBundle/contributors"
                 }
             ],
             "description": "Vespolina EcommerceFlows bundle. EcommerceFlows management and more.",
@@ -2501,7 +2476,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaFulfillmentBundle/zipball/8c87609c8e5f733aa714f049aedc23f795aa1a59",
+                "url": "https://github.com/vespolina/VespolinaFulfillmentBundle/archive/8c87609c8e5f733aa714f049aedc23f795aa1a59.zip",
                 "reference": "8c87609c8e5f733aa714f049aedc23f795aa1a59",
                 "shasum": ""
             },
@@ -2529,9 +2504,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaFulfillmentBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaFulfillmentBundle/contributors"
                 }
             ],
             "description": "Vespolina Fulfillment bundle. Fulfillment management and more.",
@@ -2554,7 +2527,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaInventoryBundle/zipball/f256dd85226eda6ebadfdd841ab36e3dadb5519c",
+                "url": "https://github.com/vespolina/VespolinaInventoryBundle/archive/f256dd85226eda6ebadfdd841ab36e3dadb5519c.zip",
                 "reference": "f256dd85226eda6ebadfdd841ab36e3dadb5519c",
                 "shasum": ""
             },
@@ -2582,9 +2555,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaInventoryBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaInventoryBundle/contributors"
                 }
             ],
             "description": "Vespolina Inventory bundle. Inventory management and more.",
@@ -2607,7 +2578,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaMonetaryBundle/zipball/22d2b9933eb9cbfb27df1fd86b95eac648eb2716",
+                "url": "https://github.com/vespolina/VespolinaMonetaryBundle/archive/22d2b9933eb9cbfb27df1fd86b95eac648eb2716.zip",
                 "reference": "22d2b9933eb9cbfb27df1fd86b95eac648eb2716",
                 "shasum": ""
             },
@@ -2663,7 +2634,7 @@
                     "Vespolina\\OrderBundle": ""
                 }
             },
-            "time": "1349895507"
+            "time": "1352835316"
         },
         {
             "name": "vespolina/partner-bundle",
@@ -2676,7 +2647,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaPartnerBundle/zipball/7f7c92439515c4068c42d58ba9143a1a5ca4613e",
+                "url": "https://github.com/vespolina/VespolinaPartnerBundle/archive/7f7c92439515c4068c42d58ba9143a1a5ca4613e.zip",
                 "reference": "7f7c92439515c4068c42d58ba9143a1a5ca4613e",
                 "shasum": ""
             },
@@ -2703,9 +2674,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaPartnerBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaPartnerBundle/contributors"
                 }
             ],
             "description": "Vespolina Partner Bundle, Customer Relation Management ( CRM ) and more to come.",
@@ -2729,7 +2698,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaPricingBundle/zipball/64f3ef637c7e13ebc84492c8b19bb178e7450a53",
+                "url": "https://github.com/vespolina/VespolinaPricingBundle/archive/64f3ef637c7e13ebc84492c8b19bb178e7450a53.zip",
                 "reference": "64f3ef637c7e13ebc84492c8b19bb178e7450a53",
                 "shasum": ""
             },
@@ -2757,9 +2726,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaPricingBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaPricingBundle/contributors"
                 }
             ],
             "description": "Vespolina Pricing bundle. Pricing management and more.",
@@ -2786,7 +2753,7 @@
                     "Vespolina": "lib/"
                 }
             },
-            "time": "1350850975"
+            "time": "1350975540"
         },
         {
             "name": "vespolina/product-bundle",
@@ -2804,7 +2771,7 @@
                     "Vespolina\\ProductBundle": ""
                 }
             },
-            "time": "1350940589"
+            "time": "1353447179"
         },
         {
             "name": "vespolina/store-bundle",
@@ -2822,7 +2789,7 @@
                     "Vespolina\\StoreBundle": ""
                 }
             },
-            "time": "1353228606"
+            "time": "1353306394"
         },
         {
             "name": "vespolina/symfony2-bundle",
@@ -2853,7 +2820,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaTaxationBundle/zipball/07571bdb9d8b556e7fa85618f1c5f3524e593acf",
+                "url": "https://github.com/vespolina/VespolinaTaxationBundle/archive/07571bdb9d8b556e7fa85618f1c5f3524e593acf.zip",
                 "reference": "07571bdb9d8b556e7fa85618f1c5f3524e593acf",
                 "shasum": ""
             },
@@ -2881,9 +2848,7 @@
             "authors": [
                 {
                     "name": "Vespolina Team",
-                    "email": null,
-                    "homepage": "https://github.com/vespolina/VespolinaTaxationBundle/contributors",
-                    "role": null
+                    "homepage": "https://github.com/vespolina/VespolinaTaxationBundle/contributors"
                 }
             ],
             "description": "Vespolina Taxation bundle. Taxation management and more.",
