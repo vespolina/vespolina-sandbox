@@ -48,6 +48,7 @@
         "vespolina/fulfillment-bundle": "*",
         "vespolina/inventory-bundle": "*",
         "vespolina/partner-bundle": "*",
+        "vespolina/pricing": "*",
         "vespolina/pricing-bundle": "*",
         "vespolina/product-bundle": "*",
         "vespolina/store-bundle": "*",

@@ -1,5 +1,5 @@
 {
-    "hash": "03779a81ab39e52b4420f40047bd64d0",
+    "hash": "867875470942ae4baa086ef9bfd2f024",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2969,6 +2969,52 @@
                 "vespolina",
                 "crm",
                 "partner"
+            ]
+        },
+        {
+            "name": "vespolina/pricing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vespolina/VespolinaPricing.git",
+                "reference": "e2c0d0250dab719eda9be320f17a50803f1c327d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vespolina/VespolinaPricing/zipball/e2c0d0250dab719eda9be320f17a50803f1c327d",
+                "reference": "e2c0d0250dab719eda9be320f17a50803f1c327d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "vespolina/core": "*",
+                "pablodip/molino": "*"
+            },
+            "time": "2013-02-08 21:41:50",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Vespolina": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vespolina Team",
+                    "homepage": "https://github.com/vespolina/VespolinaProduct/contributors"
+                }
+            ],
+            "description": "Vespolina Pricing. Handle product, cart and order pricing",
+            "homepage": "http://vespolina-project.org",
+            "keywords": [
+                "shop",
+                "ecommerce",
+                "item",
+                "cart",
+                "order"
             ]
         },
         {
