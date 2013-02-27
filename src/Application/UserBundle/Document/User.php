@@ -4,7 +4,7 @@ namespace Application\UserBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use FOS\UserBundle\Document\User as BaseUser;
-use Vespolina\PartnerBundle\Model\PartnerInterface as PartnerInterface;
+use Vespolina\Entity\Partner\PartnerInterface;
 
 /**
  * @MongoDB\Document

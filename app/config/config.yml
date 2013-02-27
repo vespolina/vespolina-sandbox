@@ -65,9 +65,7 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    #ApplicationSonataMediaBundle: ~
                     #SonataMediaBundle: ~
-                    VespolinaCartBundle: ~
                     VespolinaTaxationBundle: ~
                     VespolinaStoreBundle: ~
 
@@ -84,11 +82,7 @@ doctrine_mongodb:
         default:
             #auto_mapping: true
             mappings:
-                ApplicationVespolinaCartBundle: ~
-                ApplicationVespolinaProductBundle: ~
-                ApplicationVespolinaOrderBundle: ~
                 FOSUserBundle: ~
-                VespolinaCartBundle: ~
                 VespolinaPartnerBundle: ~
                 VespolinaOrderBundle: ~
                 VespolinaPricingBundle: ~

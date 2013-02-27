@@ -11,14 +11,6 @@ vespolina_fulfillment:
     resource: "@VespolinaFulfillmentBundle/Resources/config/routing.xml"
     prefix:   /
 
-vespolina_cart:
-    resource: "@VespolinaCartBundle/Resources/config/routing/cart.xml"
-    prefix:   /cart/
-
-vespolina_checkout:
-    resource: "@VespolinaCheckoutBundle/Resources/config/routing/checkout.xml"
-    prefix:   /checkout/
-
 default:
     resource: @DefaultBundle/Resources/config/routing.yml
 
