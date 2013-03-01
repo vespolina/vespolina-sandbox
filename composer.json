@@ -26,7 +26,6 @@
         "friendsofsymfony/rest-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
-        "knplabs/knp-paginator-bundle": "*",
         "imagine/Imagine": "dev-master",
         "jms/security-extra-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",
@@ -53,7 +52,8 @@
         "vespolina/product-bundle": "*",
         "vespolina/store-bundle": "*",
         "vespolina/taxation-bundle": "dev-refactor",
-        "vespolina/taxonomy-bundle": "*"
+        "vespolina/taxonomy-bundle": "*",
+        "white-october/pagerfanta-bundle": "dev-master"
     },
     "minimum-stability": "dev",
      "repositories": [

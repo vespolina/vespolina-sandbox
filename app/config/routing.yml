@@ -2,6 +2,9 @@
 vespolina_store:
     resource: "@VespolinaStoreBundle/Resources/config/routing/store.xml"
     prefix:   /
+vespolina_order_cart:
+    resource: "@VespolinaOrderBundle/Resources/config/routing/cart.xml"
+    prefix:   /cart/
 
 vespolina_product:
     resource: "@VespolinaProductBundle/Resources/config/routing/product.xml"

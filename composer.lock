@@ -1,5 +1,5 @@
 {
-    "hash": "867875470942ae4baa086ef9bfd2f024",
+    "hash": "f3bc3dbd162aee0a58f0495749745b04",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -16,13 +16,12 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "doctrine/lexer": "1.*"
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
             },
             "require-dev": {
                 "doctrine/cache": "1.*"
             },
-            "time": "2013-01-12 19:23:32",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -63,9 +62,10 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "annotations",
-                "parser",
-                "docblock"
-            ]
+                "docblock",
+                "parser"
+            ],
+            "time": "2013-01-12 19:23:32"
         },
         {
             "name": "doctrine/common",
@@ -84,7 +84,6 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-08-29 01:04:14",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -124,12 +123,13 @@
             "description": "Common Library for Doctrine projects",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
-                "collections",
-                "spl",
-                "eventmanager",
                 "annotations",
-                "persistence"
-            ]
+                "collections",
+                "eventmanager",
+                "persistence",
+                "spl"
+            ],
+            "time": "2012-08-29 01:04:14"
         },
         {
             "name": "doctrine/dbal",
@@ -146,10 +146,9 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "doctrine/common": ">=2.2.0,<=2.2.99"
+                "doctrine/common": ">=2.2.0,<=2.2.99",
+                "php": ">=5.3.2"
             },
-            "time": "2012-04-13 00:56:12",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -167,7 +166,7 @@
                     "homepage": "http://www.jwage.com/"
                 },
                 {
-                    "name": "Christoph Dorn",
+                    "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com",
                     "homepage": "http://www.instaclick.com"
                 },
@@ -184,10 +183,11 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database",
-                "persistence",
                 "dbal",
+                "persistence",
                 "queryobject"
-            ]
+            ],
+            "time": "2012-04-13 00:56:12"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -205,20 +205,19 @@
                 "shasum": ""
             },
             "require": {
+                "doctrine/dbal": ">=2.2,<2.4-dev",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.1.*",
                 "symfony/doctrine-bridge": "2.1.*",
-                "doctrine/dbal": ">=2.2,<2.4-dev"
+                "symfony/framework-bundle": "2.1.*"
             },
             "require-dev": {
                 "doctrine/orm": ">=2.2,<2.4-dev",
-                "symfony/yaml": "2.1.*",
-                "symfony/validator": "2.1.*"
+                "symfony/validator": "2.1.*",
+                "symfony/yaml": "2.1.*"
             },
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "2012-09-07 14:18:21",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -252,10 +251,11 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database",
+                "dbal",
                 "orm",
-                "persistence",
-                "dbal"
-            ]
+                "persistence"
+            ],
+            "time": "2012-09-07 14:18:21"
         },
         {
             "name": "doctrine/lexer",
@@ -274,7 +274,6 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2013-01-12 18:59:04",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -305,9 +304,10 @@
             "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
-                "parser",
-                "lexer"
-            ]
+                "lexer",
+                "parser"
+            ],
+            "time": "2013-01-12 18:59:04"
         },
         {
             "name": "doctrine/mongodb",
@@ -324,11 +324,10 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
+                "doctrine/common": ">=2.1.0,<2.5-dev",
                 "ext-mongo": ">=1.2.12,<1.4-dev",
-                "doctrine/common": ">=2.1.0,<2.5-dev"
+                "php": ">=5.3.2"
             },
-            "time": "2013-01-10 20:57:52",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -365,9 +364,10 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database",
-                "persistence",
-                "mongodb"
-            ]
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2013-01-10 20:57:52"
         },
         {
             "name": "doctrine/mongodb-odm",
@@ -384,10 +384,10 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
                 "doctrine/common": ">=2.2.0,<2.5-dev",
-                "symfony/console": ">=2.0-dev,<2.3-dev",
-                "doctrine/mongodb": "1.0.*"
+                "doctrine/mongodb": "1.0.*",
+                "php": ">=5.3.2",
+                "symfony/console": ">=2.0-dev,<2.3-dev"
             },
             "require-dev": {
                 "symfony/yaml": ">=2.0-dev,<2.3-dev"
@@ -395,7 +395,6 @@
             "suggest": {
                 "symfony/yaml": "Enables the YAML metadata mapping driver"
             },
-            "time": "2013-02-26 22:19:21",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -437,10 +436,11 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database",
-                "persistence",
                 "mongodb",
-                "odm"
-            ]
+                "odm",
+                "persistence"
+            ],
+            "time": "2013-02-26 22:19:21"
         },
         {
             "name": "doctrine/mongodb-odm-bundle",
@@ -458,11 +458,11 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
                 "doctrine/mongodb-odm": ">=1.0.0-beta5,<1.1-dev",
-                "symfony/options-resolver": ">=2.1,<2.3-dev",
+                "php": ">=5.3.2",
                 "symfony/doctrine-bridge": ">=2.1,<2.3-dev",
-                "symfony/framework-bundle": ">=2.1,<2.3-dev"
+                "symfony/framework-bundle": ">=2.1,<2.3-dev",
+                "symfony/options-resolver": ">=2.1,<2.3-dev"
             },
             "require-dev": {
                 "doctrine/data-fixtures": "@dev",
@@ -472,7 +472,6 @@
             "suggest": {
                 "doctrine/data-fixtures": "Load data fixtures"
             },
-            "time": "2013-02-13 17:45:55",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -507,10 +506,11 @@
             "description": "Symfony2 Doctrine MongoDB Bundle",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
+                "mongodb",
                 "persistence",
-                "symfony",
-                "mongodb"
-            ]
+                "symfony"
+            ],
+            "time": "2013-02-13 17:45:55"
         },
         {
             "name": "doctrine/orm",
@@ -527,12 +527,11 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "ext-pdo": "*",
                 "doctrine/common": ">=2.2.0,<2.2.99",
-                "doctrine/dbal": ">=2.2.1,<2.2.99"
+                "doctrine/dbal": ">=2.2.1,<2.2.99",
+                "ext-pdo": "*",
+                "php": ">=5.3.2"
             },
-            "time": "2012-01-29 08:04:23",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -568,7 +567,8 @@
             "keywords": [
                 "database",
                 "orm"
-            ]
+            ],
+            "time": "2012-01-29 08:04:23"
         },
         {
             "name": "friendsofsymfony/rest",
@@ -589,7 +589,6 @@
                 "php": ">=5.3.2",
                 "symfony/http-foundation": ">=2.0,<2.3-dev"
             },
-            "time": "2013-01-18 10:39:23",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -619,7 +618,8 @@
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
                 "rest"
-            ]
+            ],
+            "time": "2013-01-18 10:39:23"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -637,26 +637,25 @@
                 "shasum": ""
             },
             "require": {
+                "friendsofsymfony/rest": ">=0.7.0,<0.9.0-dev",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.0,<2.3-dev",
-                "friendsofsymfony/rest": ">=0.7.0,<0.9.0-dev"
+                "symfony/framework-bundle": ">=2.0,<2.3-dev"
             },
             "conflict": {
                 "jms/serializer-bundle": "<0.11-dev"
             },
             "require-dev": {
+                "jms/serializer-bundle": "0.11.*",
                 "sensio/framework-extra-bundle": ">=2.1,<2.3-dev",
                 "symfony/form": ">=2.1,<2.3-dev",
-                "symfony/yaml": ">=2.1,<2.3-dev",
                 "symfony/security": ">=2.1,<2.3-dev",
-                "jms/serializer-bundle": "0.11.*"
+                "symfony/yaml": ">=2.1,<2.3-dev"
             },
             "suggest": {
-                "symfony/serializer": "Add support for basic serialization capabilities, requires >=2.0,<2.3-dev",
+                "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires 0.11.*",
                 "sensio/framework-extra-bundle": "Add support for route annotations and the view response listener",
-                "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires 0.11.*"
+                "symfony/serializer": "Add support for basic serialization capabilities, requires >=2.0,<2.3-dev"
             },
-            "time": "2013-02-21 17:31:35",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -691,7 +690,8 @@
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
                 "rest"
-            ]
+            ],
+            "time": "2013-02-21 17:31:35"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -714,14 +714,13 @@
                 "symfony/security-bundle": ">=2.1,<2.3-dev"
             },
             "require-dev": {
-                "twig/twig": "*",
                 "doctrine/doctrine-bundle": "*",
                 "swiftmailer/swiftmailer": "*",
-                "willdurand/propel-typehintable-behavior": "dev-master",
                 "symfony/validator": "2.1.*",
-                "symfony/yaml": "2.1.*"
+                "symfony/yaml": "2.1.*",
+                "twig/twig": "*",
+                "willdurand/propel-typehintable-behavior": "dev-master"
             },
-            "time": "2013-02-20 08:35:53",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -756,19 +755,20 @@
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
                 "User management"
-            ]
+            ],
+            "time": "2013-02-20 08:35:53"
         },
         {
             "name": "imagine/Imagine",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/avalanche123/Imagine.git",
+                "url": "https://github.com/avalanche123/Imagine",
                 "reference": "v0.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/v0.4.1",
+                "url": "https://github.com/avalanche123/Imagine/archive/v0.4.1.zip",
                 "reference": "v0.4.1",
                 "shasum": ""
             },
@@ -778,7 +778,6 @@
             "require-dev": {
                 "sami/sami": "dev-master"
             },
-            "time": "2012-12-13 18:31:18",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -799,11 +798,12 @@
             "description": "Image processing for PHP 5.3",
             "homepage": "http://imagine.readthedocs.org/",
             "keywords": [
-                "image manipulation",
-                "image processing",
                 "drawing",
-                "graphics"
-            ]
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2012-12-13 18:31:18"
         },
         {
             "name": "jms/aop-bundle",
@@ -821,10 +821,9 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "2.*",
-                "jms/cg": "1.*"
+                "jms/cg": "1.*",
+                "symfony/framework-bundle": "2.*"
             },
-            "time": "2013-01-09 08:03:40",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -852,7 +851,8 @@
             "keywords": [
                 "annotations",
                 "aop"
-            ]
+            ],
+            "time": "2013-01-09 08:03:40"
         },
         {
             "name": "jms/cg",
@@ -871,7 +871,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2013-02-17 22:10:19",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -898,7 +897,8 @@
             "description": "Toolset for generating PHP code",
             "keywords": [
                 "code generation"
-            ]
+            ],
+            "time": "2013-02-17 22:10:19"
         },
         {
             "name": "jms/di-extra-bundle",
@@ -916,27 +916,26 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
-                "symfony/process": ">=2.1.0,<2.3-dev",
-                "symfony/finder": ">=2.1.0,<2.3-dev",
                 "jms/aop-bundle": ">=1.0.0,<1.2-dev",
-                "jms/metadata": "1.*"
+                "jms/metadata": "1.*",
+                "symfony/finder": ">=2.1.0,<2.3-dev",
+                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
+                "symfony/process": ">=2.1.0,<2.3-dev"
             },
             "require-dev": {
-                "jms/security-extra-bundle": "1.*",
-                "symfony/validator": "*",
-                "symfony/form": "*",
-                "symfony/class-loader": "*",
-                "symfony/yaml": "*",
-                "symfony/browser-kit": "*",
-                "symfony/security-bundle": "*",
-                "symfony/twig-bundle": "*",
-                "sensio/framework-extra-bundle": "*",
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/orm": "*",
-                "phpcollection/phpcollection": ">=0.1,<0.3-dev"
+                "jms/security-extra-bundle": "1.*",
+                "phpcollection/phpcollection": ">=0.1,<0.3-dev",
+                "sensio/framework-extra-bundle": "*",
+                "symfony/browser-kit": "*",
+                "symfony/class-loader": "*",
+                "symfony/form": "*",
+                "symfony/security-bundle": "*",
+                "symfony/twig-bundle": "*",
+                "symfony/validator": "*",
+                "symfony/yaml": "*"
             },
-            "time": "2013-02-22 19:24:48",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -963,9 +962,10 @@
             "description": "Allows to configure dependency injection using annotations",
             "homepage": "http://jmsyst.com/bundles/JMSDiExtraBundle",
             "keywords": [
-                "dependency injection",
-                "annotations"
-            ]
+                "annotations",
+                "dependency injection"
+            ],
+            "time": "2013-02-22 19:24:48"
         },
         {
             "name": "jms/metadata",
@@ -987,7 +987,6 @@
             "require-dev": {
                 "doctrine/common": ">=2.0,<2.4-dev"
             },
-            "time": "2012-08-21 05:40:10",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1014,29 +1013,29 @@
             "description": "Class/method/property metadata management in PHP",
             "keywords": [
                 "annotations",
-                "yaml",
+                "metadata",
                 "xml",
-                "metadata"
-            ]
+                "yaml"
+            ],
+            "time": "2012-08-21 05:40:10"
         },
         {
             "name": "jms/parser-lib",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/schmittjoh/parser-lib.git",
+                "url": "git://github.com/schmittjoh/parser-lib",
                 "reference": "4d469a70c6dd03f921cbdeadafbcb261bb23e8b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/parser-lib/zipball/4d469a70c6dd03f921cbdeadafbcb261bb23e8b0",
+                "url": "https://github.com/schmittjoh/parser-lib/archive/4d469a70c6dd03f921cbdeadafbcb261bb23e8b0.zip",
                 "reference": "4d469a70c6dd03f921cbdeadafbcb261bb23e8b0",
                 "shasum": ""
             },
             "require": {
                 "phpoption/phpoption": ">=0.9,<2.0-dev"
             },
-            "time": "2012-11-30 08:11:04",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1052,7 +1051,8 @@
             "license": [
                 "Apache2"
             ],
-            "description": "A library for easily creating recursive-descent parsers."
+            "description": "A library for easily creating recursive-descent parsers.",
+            "time": "2012-11-30 08:11:04"
         },
         {
             "name": "jms/security-extra-bundle",
@@ -1070,28 +1070,27 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/security-bundle": "*",
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
                 "jms/aop-bundle": ">=1.0.0,<1.2-dev",
-                "jms/parser-lib": "1.*",
                 "jms/di-extra-bundle": "1.3.*",
-                "jms/metadata": "1.*"
+                "jms/metadata": "1.*",
+                "jms/parser-lib": "1.*",
+                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
+                "symfony/security-bundle": "*"
             },
             "require-dev": {
-                "sensio/framework-extra-bundle": "*",
-                "symfony/class-loader": "*",
-                "symfony/yaml": "*",
-                "symfony/browser-kit": "*",
-                "symfony/finder": "*",
-                "symfony/css-selector": "*",
-                "symfony/process": "*",
                 "doctrine/doctrine-bundle": "*",
-                "symfony/twig-bundle": "*",
                 "doctrine/orm": "*",
+                "sensio/framework-extra-bundle": "*",
+                "symfony/browser-kit": "*",
+                "symfony/class-loader": "*",
+                "symfony/css-selector": "*",
+                "symfony/finder": "*",
                 "symfony/form": "*",
-                "symfony/validator": "*"
+                "symfony/process": "*",
+                "symfony/twig-bundle": "*",
+                "symfony/validator": "*",
+                "symfony/yaml": "*"
             },
-            "time": "2013-02-18 08:46:41",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1120,10 +1119,11 @@
             "keywords": [
                 "annotations",
                 "authorization",
-                "security",
+                "expression",
                 "secure",
-                "expression"
-            ]
+                "security"
+            ],
+            "time": "2013-02-18 08:46:41"
         },
         {
             "name": "jms/serializer",
@@ -1140,25 +1140,24 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
+                "doctrine/annotations": "1.*",
                 "jms/metadata": ">=1.1.0,<1.3-dev",
                 "jms/parser-lib": "1.*",
-                "phpcollection/phpcollection": ">=0.1,<0.3-dev",
-                "doctrine/annotations": "1.*"
+                "php": ">=5.3.2",
+                "phpcollection/phpcollection": ">=0.1,<0.3-dev"
             },
             "require-dev": {
-                "twig/twig": ">=1.8,<2.0-dev",
                 "doctrine/orm": ">=2.1,<2.4-dev",
-                "symfony/yaml": "2.*",
+                "symfony/filesystem": "2.*",
+                "symfony/form": ">=2.1,<2.2-dev",
                 "symfony/translation": ">=2.0,<2.2-dev",
                 "symfony/validator": ">=2.0,<2.2-dev",
-                "symfony/filesystem": "2.*",
-                "symfony/form": ">=2.1,<2.2-dev"
+                "symfony/yaml": "2.*",
+                "twig/twig": ">=1.8,<2.0-dev"
             },
             "suggest": {
                 "symfony/yaml": "Required if you'd like to serialize data to YAML format."
             },
-            "time": "2013-02-26 13:57:58",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1185,12 +1184,13 @@
             "description": "Library for (de-)serializing data of any complexity; supports XML, JSON, and YAML.",
             "homepage": "http://jmsyst.com/libs/serializer",
             "keywords": [
-                "json",
-                "xml",
-                "serialization",
                 "deserialization",
-                "jaxb"
-            ]
+                "jaxb",
+                "json",
+                "serialization",
+                "xml"
+            ],
+            "time": "2013-02-26 13:57:58"
         },
         {
             "name": "jms/serializer-bundle",
@@ -1208,25 +1208,24 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1,<3.0-dev",
                 "jms/di-extra-bundle": ">=1.3,<2.0",
-                "jms/serializer": ">=0.11.0,<0.13-dev"
+                "jms/serializer": ">=0.11.0,<0.13-dev",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.1,<3.0-dev"
             },
             "require-dev": {
-                "symfony/yaml": "*",
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/orm": "*",
                 "symfony/browser-kit": "*",
                 "symfony/class-loader": "*",
-                "symfony/finder": "*",
                 "symfony/css-selector": "*",
-                "symfony/process": "*",
-                "doctrine/doctrine-bundle": "*",
-                "symfony/twig-bundle": "*",
-                "doctrine/orm": "*",
+                "symfony/finder": "*",
                 "symfony/form": "*",
-                "symfony/validator": "*"
+                "symfony/process": "*",
+                "symfony/twig-bundle": "*",
+                "symfony/validator": "*",
+                "symfony/yaml": "*"
             },
-            "time": "2013-02-23 13:35:57",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1253,85 +1252,25 @@
             "description": "Allows you to easily serialize, and deserialize data of any complexity",
             "homepage": "http://jmsyst.com/bundles/JMSSerializerBundle",
             "keywords": [
-                "json",
-                "xml",
-                "serialization",
                 "deserialization",
-                "jaxb"
-            ]
-        },
-        {
-            "name": "knplabs/knp-components",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/KnpLabs/knp-components.git",
-                "reference": "1.2.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/1.2.2",
-                "reference": "1.2.2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "suggest": {
-                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
-                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
-                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
-                "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
-                "propel/propel1": "to allow usage pagination with Propel ORM",
-                "solarium/solarium": "to allow usage pagination with Solarium Client"
-            },
-            "time": "2013-02-20 12:05:07",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Knp\\Component": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
+                "jaxb",
+                "json",
+                "serialization",
+                "xml"
             ],
-            "authors": [
-                {
-                    "name": "KnpLabs Team",
-                    "homepage": "http://knplabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
-                }
-            ],
-            "description": "Knplabs component library",
-            "homepage": "http://github.com/KnpLabs/knp-components",
-            "keywords": [
-                "pager",
-                "components",
-                "knp",
-                "knplabs",
-                "paginator"
-            ]
+            "time": "2013-02-23 13:35:57"
         },
         {
             "name": "knplabs/knp-menu",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/KnpLabs/KnpMenu.git",
+                "url": "http://github.com/KnpLabs/KnpMenu.git",
                 "reference": "730bc37232f5f813822acf80edfbd89381ea5971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/730bc37232f5f813822acf80edfbd89381ea5971",
+                "url": "https://github.com/KnpLabs/KnpMenu/archive/730bc37232f5f813822acf80edfbd89381ea5971.zip",
                 "reference": "730bc37232f5f813822acf80edfbd89381ea5971",
                 "shasum": ""
             },
@@ -1339,16 +1278,15 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
+                "pimple/pimple": "1.0.*",
                 "silex/silex": "1.0.*",
-                "twig/twig": ">=1.2,<2.0-dev",
-                "pimple/pimple": "1.0.*"
+                "twig/twig": ">=1.2,<2.0-dev"
             },
             "suggest": {
                 "pimple/pimple": "for the built-in implementations of the menu provider and renderer provider",
                 "silex/silex": "for the integration with your silex application",
                 "twig/twig": "for the TwigRenderer and the integration with your templates"
             },
-            "time": "2012-12-27 13:04:16",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1370,7 +1308,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -1383,7 +1321,8 @@
             "keywords": [
                 "menu",
                 "tree"
-            ]
+            ],
+            "time": "2012-12-27 13:04:16"
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -1391,12 +1330,12 @@
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "url": "http://github.com/KnpLabs/KnpMenuBundle.git",
                 "reference": "bfaa9f1a74ee590c5e6460a3139b268fce1f1885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/bfaa9f1a74ee590c5e6460a3139b268fce1f1885",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle/archive/bfaa9f1a74ee590c5e6460a3139b268fce1f1885.zip",
                 "reference": "bfaa9f1a74ee590c5e6460a3139b268fce1f1885",
                 "shasum": ""
             },
@@ -1404,7 +1343,6 @@
                 "knplabs/knp-menu": "2.0.*",
                 "symfony/framework-bundle": ">=2.0,<2.3-dev"
             },
-            "time": "2012-12-29 08:47:58",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1437,66 +1375,8 @@
             "description": "This bundle provides an integration of the KnpMenu library",
             "keywords": [
                 "menu"
-            ]
-        },
-        {
-            "name": "knplabs/knp-paginator-bundle",
-            "version": "dev-master",
-            "target-dir": "Knp/Bundle/PaginatorBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
-                "reference": "v2.3.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/v2.3.2",
-                "reference": "v2.3.2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": ">=2.0,<3.0",
-                "knplabs/knp-components": ">=1.1,<2.0",
-                "twig/twig": ">=1.5,<2.0"
-            },
-            "time": "2013-02-18 17:29:20",
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Knp\\Bundle\\PaginatorBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
             ],
-            "authors": [
-                {
-                    "name": "KnpLabs Team",
-                    "homepage": "http://knplabs.com"
-                },
-                {
-                    "name": "Symfony2 Community",
-                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
-                }
-            ],
-            "description": "Paginator bundle for Symfony2 to automate pagination and simplify sorting and other features",
-            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
-            "keywords": [
-                "Symfony2",
-                "pager",
-                "knp",
-                "knplabs",
-                "paginator",
-                "pagination",
-                "bundle"
-            ]
+            "time": "2012-12-29 08:47:58"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1513,29 +1393,28 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/process": ">=2.1.0,<2.3-dev",
-                "php": ">=5.3.1"
+                "php": ">=5.3.1",
+                "symfony/process": ">=2.1.0,<2.3-dev"
             },
             "require-dev": {
-                "twig/twig": ">=1.6.0,<2.0",
+                "cssmin/cssmin": "*",
+                "joliclic/javascript-packer": "*",
+                "kamicane/packager": "*",
                 "leafo/lessphp": "*",
                 "leafo/scssphp": "*",
-                "ptachoire/cssembed": "*",
                 "leafo/scssphp-compass": "*",
-                "cssmin/cssmin": "*",
                 "mrclay/minify": "*",
-                "kamicane/packager": "*",
-                "joliclic/javascript-packer": "*",
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "3.7.*",
+                "ptachoire/cssembed": "*",
+                "twig/twig": ">=1.6.0,<2.0"
             },
             "suggest": {
-                "twig/twig": "Assetic provides the integration with the Twig templating engine",
                 "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
                 "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
-                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
+                "twig/twig": "Assetic provides the integration with the Twig templating engine"
             },
-            "time": "2013-02-24 17:22:20",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1567,7 +1446,8 @@
                 "assets",
                 "compression",
                 "minification"
-            ]
+            ],
+            "time": "2013-02-24 17:22:20"
         },
         {
             "name": "monolog/monolog",
@@ -1590,11 +1470,10 @@
                 "mlehner/gelf-php": "1.0.*"
             },
             "suggest": {
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server"
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server"
             },
-            "time": "2012-08-29 11:53:20",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1623,7 +1502,8 @@
             "keywords": [
                 "log",
                 "logging"
-            ]
+            ],
+            "time": "2012-08-29 11:53:20"
         },
         {
             "name": "mopa/bootstrap-bundle",
@@ -1641,17 +1521,16 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/symfony": ">=2.1,<2.3-dev",
-                "mopa/composer-bridge": "v1.0.0"
+                "mopa/composer-bridge": "v1.0.0",
+                "symfony/symfony": ">=2.1,<2.3-dev"
             },
             "suggest": {
-                "knplabs/knp-paginator-bundle": "dev-master",
                 "craue/formflow-bundle": "dev-master",
-                "twitter/bootstrap": "2.0.*",
+                "jlong/sass-twitter-bootstrap": "dev-master",
                 "knplabs/knp-menu-bundle": "1.1.*",
-                "jlong/sass-twitter-bootstrap": "dev-master"
+                "knplabs/knp-paginator-bundle": "dev-master",
+                "twitter/bootstrap": "2.0.*"
             },
-            "time": "2013-02-24 11:24:04",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1680,12 +1559,13 @@
             ],
             "description": "Easy integration of twitters bootstrap into symfony2",
             "keywords": [
-                "form",
-                "extra form",
                 "bootstrap",
                 "bootstrap form",
+                "extra form",
+                "form",
                 "template"
-            ]
+            ],
+            "time": "2013-02-24 11:24:04"
         },
         {
             "name": "mopa/composer-bridge",
@@ -1704,7 +1584,6 @@
             "require": {
                 "symfony/console": "2.*"
             },
-            "time": "2012-10-11 18:29:49",
             "type": "symfony-bridge",
             "autoload": {
                 "psr-0": {
@@ -1731,7 +1610,8 @@
             "keywords": [
                 "Symfony2",
                 "composer"
-            ]
+            ],
+            "time": "2012-10-11 18:29:49"
         },
         {
             "name": "pablodip/molino",
@@ -1750,7 +1630,6 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-07-10 14:48:52",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -1772,7 +1651,68 @@
             "homepage": "https://github.com/pablodip/molino",
             "keywords": [
                 "backend"
-            ]
+            ],
+            "time": "2012-07-10 14:48:52"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/Pagerfanta.git",
+                "reference": "878aee5e274ca75fbdf74262efd05d1207c31669"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/878aee5e274ca75fbdf74262efd05d1207c31669",
+                "reference": "878aee5e274ca75fbdf74262efd05d1207c31669",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "*",
+                "doctrine/orm": "2.*",
+                "mandango/mandango": "*",
+                "propel/propel1": ">=1.6,<2.0",
+                "solarium/solarium": "3.*"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
+                "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "mandango/mandango": "To use the MandangoAdapter.",
+                "propel/propel1": "To use the PropelAdapter",
+                "solarium/solarium": "To use the SolariumAdapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pagerfanta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Pagination for PHP 5.3",
+            "keywords": [
+                "page",
+                "paging"
+            ],
+            "time": "2013-02-19 13:51:25"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -1791,7 +1731,6 @@
             "require": {
                 "phpoption/phpoption": "1.*"
             },
-            "time": "2013-02-25 13:15:41",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1817,12 +1756,13 @@
             ],
             "description": "General-Purpose Collection Library for PHP",
             "keywords": [
-                "map",
-                "set",
+                "collection",
                 "list",
+                "map",
                 "sequence",
-                "collection"
-            ]
+                "set"
+            ],
+            "time": "2013-02-25 13:15:41"
         },
         {
             "name": "phpoption/phpoption",
@@ -1841,7 +1781,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2013-01-21 09:59:49",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1867,11 +1806,12 @@
             ],
             "description": "Option Type for PHP",
             "keywords": [
-                "php",
                 "language",
-                "type",
-                "option"
-            ]
+                "option",
+                "php",
+                "type"
+            ],
+            "time": "2013-01-21 09:59:49"
         },
         {
             "name": "pimple/pimple",
@@ -1890,7 +1830,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2013-02-09 15:33:26",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1915,9 +1854,10 @@
             "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
             "homepage": "http://pimple.sensiolabs.org",
             "keywords": [
-                "dependency injection",
-                "container"
-            ]
+                "container",
+                "dependency injection"
+            ],
+            "time": "2013-02-09 15:33:26"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1937,7 +1877,6 @@
             "require": {
                 "symfony/framework-bundle": "2.1.*"
             },
-            "time": "2013-02-04 19:54:42",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1961,9 +1900,10 @@
             ],
             "description": "The base bundle for the Symfony Distributions",
             "keywords": [
-                "distribution",
-                "configuration"
-            ]
+                "configuration",
+                "distribution"
+            ],
+            "time": "2013-02-04 19:54:42"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1981,10 +1921,9 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "2.1.*",
-                "doctrine/common": ">=2.1,<2.5-dev"
+                "doctrine/common": ">=2.1,<2.5-dev",
+                "symfony/framework-bundle": "2.1.*"
             },
-            "time": "2013-02-22 17:57:31",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2010,7 +1949,8 @@
             "keywords": [
                 "annotations",
                 "controllers"
-            ]
+            ],
+            "time": "2013-02-22 17:57:31"
         },
         {
             "name": "sensio/generator-bundle",
@@ -2028,15 +1968,14 @@
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "2.1.*",
-                "symfony/console": "2.1.*"
+                "symfony/console": "2.1.*",
+                "symfony/framework-bundle": "2.1.*"
             },
             "require-dev": {
-                "symfony/doctrine-bridge": "2.1.*",
                 "doctrine/orm": ">=2.1,<2.4-dev",
+                "symfony/doctrine-bridge": "2.1.*",
                 "twig/twig": ">=1.8,<2.0-dev"
             },
-            "time": "2013-01-04 17:09:08",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2058,7 +1997,8 @@
                     "email": "fabien@symfony.com"
                 }
             ],
-            "description": "This bundle generates code for you"
+            "description": "This bundle generates code for you",
+            "time": "2013-01-04 17:09:08"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2077,7 +2017,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-10-25 01:30:40",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2107,7 +2046,8 @@
             "keywords": [
                 "mail",
                 "mailer"
-            ]
+            ],
+            "time": "2012-10-25 01:30:40"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -2125,23 +2065,22 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
                 "kriswallsmith/assetic": "1.1.*",
+                "php": ">=5.3.0",
                 "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
             },
             "require-dev": {
-                "symfony/twig-bundle": ">=2.1.0,<2.3-dev",
-                "symfony/console": ">=2.1.0,<2.3-dev",
                 "symfony/class-loader": ">=2.1.0,<2.3-dev",
-                "symfony/yaml": ">=2.1.0,<2.3-dev",
-                "symfony/form": ">=2.1.0,<2.3-dev",
+                "symfony/console": ">=2.1.0,<2.3-dev",
+                "symfony/css-selector": ">=2.1.0,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1.0,<2.3-dev",
-                "symfony/css-selector": ">=2.1.0,<2.3-dev"
+                "symfony/form": ">=2.1.0,<2.3-dev",
+                "symfony/twig-bundle": ">=2.1.0,<2.3-dev",
+                "symfony/yaml": ">=2.1.0,<2.3-dev"
             },
             "suggest": {
                 "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
             },
-            "time": "2013-02-24 18:21:16",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2170,7 +2109,8 @@
                 "assets",
                 "compression",
                 "minification"
-            ]
+            ],
+            "time": "2013-02-24 18:21:16"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2188,17 +2128,16 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "symfony/dependency-injection": ">=2.1.0,<2.3-dev",
-                "symfony/config": ">=2.1.0,<2.3-dev",
                 "monolog/monolog": ">=1.0,<1.3-dev",
+                "php": ">=5.3.2",
+                "symfony/config": ">=2.1.0,<2.3-dev",
+                "symfony/dependency-injection": ">=2.1.0,<2.3-dev",
                 "symfony/monolog-bridge": "2.1.*"
             },
             "require-dev": {
-                "symfony/yaml": ">=2.1.0,<2.3-dev",
-                "symfony/config": ">=2.1.0,<2.3-dev"
+                "symfony/config": ">=2.1.0,<2.3-dev",
+                "symfony/yaml": ">=2.1.0,<2.3-dev"
             },
-            "time": "2013-01-28 10:06:42",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2229,7 +2168,8 @@
             "keywords": [
                 "log",
                 "logging"
-            ]
+            ],
+            "time": "2013-01-28 10:06:42"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -2252,12 +2192,11 @@
                 "symfony/swiftmailer-bridge": ">=2.1.0,<2.3-dev"
             },
             "require-dev": {
+                "symfony/config": ">=2.1.0,<2.3-dev",
                 "symfony/dependency-injection": ">=2.1.0,<2.3-dev",
                 "symfony/http-kernel": ">=2.1.0,<2.3-dev",
-                "symfony/config": ">=2.1.0,<2.3-dev",
                 "symfony/yaml": ">=2.1.0,<2.3-dev"
             },
-            "time": "2013-01-04 17:04:29",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2284,7 +2223,8 @@
                 }
             ],
             "description": "Symfony SwiftmailerBundle",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-01-04 17:04:29"
         },
         {
             "name": "symfony/symfony",
@@ -2301,52 +2241,51 @@
                 "shasum": ""
             },
             "require": {
+                "doctrine/common": ">=2.2,<3.0",
                 "php": ">=5.3.3",
-                "twig/twig": ">=1.9.1,<2.0-dev",
-                "doctrine/common": ">=2.2,<3.0"
+                "twig/twig": ">=1.9.1,<2.0-dev"
             },
             "replace": {
-                "symfony/doctrine-bridge": "self.version",
-                "symfony/monolog-bridge": "self.version",
-                "symfony/propel1-bridge": "self.version",
-                "symfony/swiftmailer-bridge": "self.version",
-                "symfony/twig-bridge": "self.version",
-                "symfony/framework-bundle": "self.version",
-                "symfony/security-bundle": "self.version",
-                "symfony/twig-bundle": "self.version",
-                "symfony/web-profiler-bundle": "self.version",
                 "symfony/browser-kit": "self.version",
                 "symfony/class-loader": "self.version",
                 "symfony/config": "self.version",
                 "symfony/console": "self.version",
                 "symfony/css-selector": "self.version",
                 "symfony/dependency-injection": "self.version",
+                "symfony/doctrine-bridge": "self.version",
                 "symfony/dom-crawler": "self.version",
                 "symfony/event-dispatcher": "self.version",
                 "symfony/filesystem": "self.version",
                 "symfony/finder": "self.version",
                 "symfony/form": "self.version",
+                "symfony/framework-bundle": "self.version",
                 "symfony/http-foundation": "self.version",
                 "symfony/http-kernel": "self.version",
                 "symfony/locale": "self.version",
+                "symfony/monolog-bridge": "self.version",
                 "symfony/options-resolver": "self.version",
                 "symfony/process": "self.version",
+                "symfony/propel1-bridge": "self.version",
                 "symfony/routing": "self.version",
                 "symfony/security": "self.version",
+                "symfony/security-bundle": "self.version",
                 "symfony/serializer": "self.version",
+                "symfony/swiftmailer-bridge": "self.version",
                 "symfony/templating": "self.version",
                 "symfony/translation": "self.version",
+                "symfony/twig-bridge": "self.version",
+                "symfony/twig-bundle": "self.version",
                 "symfony/validator": "self.version",
+                "symfony/web-profiler-bundle": "self.version",
                 "symfony/yaml": "self.version"
             },
             "require-dev": {
+                "doctrine/data-fixtures": "1.0.*",
                 "doctrine/dbal": ">=2.2,<2.4-dev",
                 "doctrine/orm": ">=2.2.3,<2.4-dev",
-                "doctrine/data-fixtures": "1.0.*",
-                "propel/propel1": "dev-master",
-                "monolog/monolog": ">=1.0,<1.3-dev"
+                "monolog/monolog": ">=1.0,<1.3-dev",
+                "propel/propel1": "dev-master"
             },
-            "time": "2013-02-27 07:36:53",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -2372,7 +2311,8 @@
             "homepage": "http://symfony.com",
             "keywords": [
                 "framework"
-            ]
+            ],
+            "time": "2013-02-27 07:36:53"
         },
         {
             "name": "twig/extensions",
@@ -2391,7 +2331,6 @@
             "require": {
                 "twig/twig": "1.*"
             },
-            "time": "2013-01-04 16:55:05",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2419,7 +2358,8 @@
                 "debug",
                 "i18n",
                 "text"
-            ]
+            ],
+            "time": "2013-01-04 16:55:05"
         },
         {
             "name": "twig/twig",
@@ -2438,7 +2378,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-02-26 13:03:39",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2468,7 +2407,8 @@
             "homepage": "http://twig.sensiolabs.org",
             "keywords": [
                 "templating"
-            ]
+            ],
+            "time": "2013-02-26 13:03:39"
         },
         {
             "name": "twitter/bootstrap",
@@ -2479,7 +2419,7 @@
                 "reference": "master"
             },
             "type": "library",
-            "time": "2013-02-21 21:10:21"
+            "time": "2012-12-22 02:54:36"
         },
         {
             "name": "vespolina/admin-bundle",
@@ -2487,12 +2427,12 @@
             "target-dir": "Vespolina/AdminBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaAdminBundle.git",
+                "url": "git://github.com/vespolina/VespolinaAdminBundle.git",
                 "reference": "e9be0d228545450124bfc96667ce004b6a9565f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaAdminBundle/zipball/e9be0d228545450124bfc96667ce004b6a9565f0",
+                "url": "https://github.com/vespolina/VespolinaAdminBundle/archive/e9be0d228545450124bfc96667ce004b6a9565f0.zip",
                 "reference": "e9be0d228545450124bfc96667ce004b6a9565f0",
                 "shasum": ""
             },
@@ -2502,11 +2442,10 @@
                 "symfony/security-bundle": "2.*"
             },
             "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2012-06-26 17:40:22",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2527,10 +2466,11 @@
             "homepage": "http://vespolina-project.org",
             "keywords": [
                 "admin",
-                "shop",
                 "ecommerce",
-                "item"
-            ]
+                "item",
+                "shop"
+            ],
+            "time": "2012-06-26 17:40:22"
         },
         {
             "name": "vespolina/checkout-bundle",
@@ -2538,12 +2478,12 @@
             "target-dir": "Vespolina/CheckoutBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaCheckoutBundle.git",
+                "url": "https://github.com/vespolina/VespolinaCheckoutBundle",
                 "reference": "16e70f34916d7d133c41328424a52d8c9f9123b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCheckoutBundle/zipball/16e70f34916d7d133c41328424a52d8c9f9123b7",
+                "url": "https://github.com/vespolina/VespolinaCheckoutBundle/archive/16e70f34916d7d133c41328424a52d8c9f9123b7.zip",
                 "reference": "16e70f34916d7d133c41328424a52d8c9f9123b7",
                 "shasum": ""
             },
@@ -2553,11 +2493,10 @@
                 "symfony/security-bundle": "2.*"
             },
             "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2012-08-29 11:06:44",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2577,11 +2516,12 @@
             "description": "Vespolina Checkout bundle. Checkout management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
+                "checkout",
                 "ecommerce",
                 "item",
-                "checkout"
-            ]
+                "shop"
+            ],
+            "time": "2012-08-29 11:06:44"
         },
         {
             "name": "vespolina/core",
@@ -2598,11 +2538,10 @@
                 "shasum": ""
             },
             "require": {
+                "doctrine/common": "*",
                 "php": ">=5.3.2",
-                "pimple/pimple": "*",
-                "doctrine/common": "*"
+                "pimple/pimple": "*"
             },
-            "time": "2013-02-23 21:59:30",
             "type": "entities",
             "autoload": {
                 "psr-0": {
@@ -2616,9 +2555,10 @@
             "description": "Core entities for the Vespolina Project",
             "homepage": "https://github.com/vespolina/VespolinaCore",
             "keywords": [
-                "shop",
-                "ecommerce"
-            ]
+                "ecommerce",
+                "shop"
+            ],
+            "time": "2013-02-23 21:59:30"
         },
         {
             "name": "vespolina/fulfillment-bundle",
@@ -2626,12 +2566,12 @@
             "target-dir": "Vespolina/FulfillmentBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaFulfillmentBundle.git",
+                "url": "https://github.com/vespolina/VespolinaFulfillmentBundle",
                 "reference": "8c87609c8e5f733aa714f049aedc23f795aa1a59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaFulfillmentBundle/zipball/8c87609c8e5f733aa714f049aedc23f795aa1a59",
+                "url": "https://github.com/vespolina/VespolinaFulfillmentBundle/archive/8c87609c8e5f733aa714f049aedc23f795aa1a59.zip",
                 "reference": "8c87609c8e5f733aa714f049aedc23f795aa1a59",
                 "shasum": ""
             },
@@ -2641,11 +2581,10 @@
                 "symfony/security-bundle": "2.*"
             },
             "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2012-06-07 07:22:36",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2665,11 +2604,12 @@
             "description": "Vespolina Fulfillment bundle. Fulfillment management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
+                "fulfillment",
                 "item",
-                "fulfillment"
-            ]
+                "shop"
+            ],
+            "time": "2012-06-07 07:22:36"
         },
         {
             "name": "vespolina/inventory-bundle",
@@ -2677,12 +2617,12 @@
             "target-dir": "Vespolina/InventoryBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaInventoryBundle.git",
+                "url": "https://github.com/vespolina/VespolinaInventoryBundle",
                 "reference": "f256dd85226eda6ebadfdd841ab36e3dadb5519c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaInventoryBundle/zipball/f256dd85226eda6ebadfdd841ab36e3dadb5519c",
+                "url": "https://github.com/vespolina/VespolinaInventoryBundle/archive/f256dd85226eda6ebadfdd841ab36e3dadb5519c.zip",
                 "reference": "f256dd85226eda6ebadfdd841ab36e3dadb5519c",
                 "shasum": ""
             },
@@ -2692,11 +2632,10 @@
                 "symfony/security-bundle": "2.*"
             },
             "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2012-01-17 23:23:23",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2716,11 +2655,12 @@
             "description": "Vespolina Inventory bundle. Inventory management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
+                "inventory",
                 "item",
-                "inventory"
-            ]
+                "shop"
+            ],
+            "time": "2012-01-17 23:23:23"
         },
         {
             "name": "vespolina/molino",
@@ -2745,7 +2685,6 @@
                 "mandango/mandango": "dev-master",
                 "pagerfanta/pagerfanta": "dev-master"
             },
-            "time": "2013-02-23 21:55:15",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -2771,7 +2710,8 @@
             "homepage": "https://github.com/vespolina/molino",
             "keywords": [
                 "backend"
-            ]
+            ],
+            "time": "2013-02-23 21:55:15"
         },
         {
             "name": "vespolina/order",
@@ -2788,11 +2728,10 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
                 "pablodip/molino": "*",
+                "php": ">=5.3.2",
                 "vespolina/core": "dev-refactor"
             },
-            "time": "2013-02-23 22:47:11",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -2812,12 +2751,13 @@
             "description": "Vespolina Order. Order and cart management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
+                "cart",
                 "ecommerce",
                 "item",
-                "cart",
-                "order"
-            ]
+                "order",
+                "shop"
+            ],
+            "time": "2013-02-23 22:47:11"
         },
         {
             "name": "vespolina/order-bundle",
@@ -2845,7 +2785,6 @@
                 "symfony/doctrine-bundle": "*",
                 "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2013-02-27 11:54:39",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2865,11 +2804,12 @@
             "description": "Vespolina Order bundle. Order management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
                 "item",
-                "order"
-            ]
+                "order",
+                "shop"
+            ],
+            "time": "2013-02-27 11:54:39"
         },
         {
             "name": "vespolina/partner",
@@ -2892,7 +2832,6 @@
             "require-dev": {
                 "doctrine/mongodb-odm-bundle": "2.2.*"
             },
-            "time": "2013-02-23 22:19:10",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -2912,12 +2851,13 @@
             "description": "Vespolina Partner, Customer Relation Management ( CRM ) and more to come.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "ecommerce",
-                "customer",
-                "vespolina",
                 "crm",
-                "partner"
-            ]
+                "customer",
+                "ecommerce",
+                "partner",
+                "vespolina"
+            ],
+            "time": "2013-02-23 22:19:10"
         },
         {
             "name": "vespolina/partner-bundle",
@@ -2944,7 +2884,6 @@
                 "symfony/doctrine-bundle": "*",
                 "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2013-02-27 11:55:13",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -2964,12 +2903,13 @@
             "description": "Vespolina Partner Bundle, Customer Relation Management ( CRM ) and more to come.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "ecommerce",
-                "customer",
-                "vespolina",
                 "crm",
-                "partner"
-            ]
+                "customer",
+                "ecommerce",
+                "partner",
+                "vespolina"
+            ],
+            "time": "2013-02-27 11:55:13"
         },
         {
             "name": "vespolina/pricing",
@@ -2986,11 +2926,10 @@
                 "shasum": ""
             },
             "require": {
+                "pablodip/molino": "*",
                 "php": ">=5.3.2",
-                "vespolina/core": "*",
-                "pablodip/molino": "*"
+                "vespolina/core": "*"
             },
-            "time": "2013-02-08 21:41:50",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -3010,12 +2949,13 @@
             "description": "Vespolina Pricing. Handle product, cart and order pricing",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
+                "cart",
                 "ecommerce",
                 "item",
-                "cart",
-                "order"
-            ]
+                "order",
+                "shop"
+            ],
+            "time": "2013-02-08 21:41:50"
         },
         {
             "name": "vespolina/pricing-bundle",
@@ -3023,12 +2963,12 @@
             "target-dir": "Vespolina/PricingBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaPricingBundle.git",
+                "url": "https://github.com/vespolina/VespolinaPricingBundle",
                 "reference": "64f3ef637c7e13ebc84492c8b19bb178e7450a53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaPricingBundle/zipball/64f3ef637c7e13ebc84492c8b19bb178e7450a53",
+                "url": "https://github.com/vespolina/VespolinaPricingBundle/archive/64f3ef637c7e13ebc84492c8b19bb178e7450a53.zip",
                 "reference": "64f3ef637c7e13ebc84492c8b19bb178e7450a53",
                 "shasum": ""
             },
@@ -3038,11 +2978,10 @@
                 "symfony/security-bundle": "2.*"
             },
             "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2012-08-28 04:15:03",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3062,11 +3001,12 @@
             "description": "Vespolina Pricing bundle. Pricing management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
                 "item",
-                "pricing"
-            ]
+                "pricing",
+                "shop"
+            ],
+            "time": "2012-08-28 04:15:03"
         },
         {
             "name": "vespolina/product",
@@ -3086,7 +3026,6 @@
                 "php": ">=5.3.0",
                 "vespolina/core": "dev-refactor"
             },
-            "time": "2013-02-08 22:00:36",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -3109,7 +3048,8 @@
                 "ecommerce",
                 "product",
                 "vespolina"
-            ]
+            ],
+            "time": "2013-02-08 22:00:36"
         },
         {
             "name": "vespolina/product-bundle",
@@ -3133,10 +3073,9 @@
                 "vespolina/taxonomy": "dev-master"
             },
             "suggest": {
-                "symfony/mongodb-odm-bundle": "*",
-                "doctrine/couchdb-odm-bundle": "*"
+                "doctrine/couchdb-odm-bundle": "*",
+                "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2013-02-27 11:55:37",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3156,11 +3095,12 @@
             "description": "Vespolina product bundle. Product management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
+                "item",
                 "product",
-                "item"
-            ]
+                "shop"
+            ],
+            "time": "2013-02-27 11:55:37"
         },
         {
             "name": "vespolina/store-bundle",
@@ -3187,7 +3127,6 @@
                 "symfony/doctrine-bundle": "*",
                 "symfony/mongodb-odm-bundle": "*"
             },
-            "time": "2013-02-14 21:13:06",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3207,11 +3146,12 @@
             "description": "Vespolina Store bundle. Store management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
                 "item",
+                "shop",
                 "store"
-            ]
+            ],
+            "time": "2013-02-14 21:13:06"
         },
         {
             "name": "vespolina/symfony2-bundle",
@@ -3220,19 +3160,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaSymfony2Bundle.git",
-                "reference": "85297aec4c3895e19d9d08da72b3bee267634af3"
+                "reference": "f7802d159bc39dd30b49b0fda1332dc4c96c2808"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaSymfony2Bundle/zipball/85297aec4c3895e19d9d08da72b3bee267634af3",
-                "reference": "85297aec4c3895e19d9d08da72b3bee267634af3",
+                "url": "https://api.github.com/repos/vespolina/VespolinaSymfony2Bundle/zipball/f7802d159bc39dd30b49b0fda1332dc4c96c2808",
+                "reference": "f7802d159bc39dd30b49b0fda1332dc4c96c2808",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "vespolina/core": "*"
             },
-            "time": "2013-01-19 22:20:27",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3252,9 +3191,10 @@
             "description": "Vespolina Symfony2 bundle. Symfony2 implementations of vespolina core.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
-                "ecommerce"
-            ]
+                "ecommerce",
+                "shop"
+            ],
+            "time": "2013-02-27 11:55:58"
         },
         {
             "name": "vespolina/taxation-bundle",
@@ -3272,12 +3212,11 @@
                 "shasum": ""
             },
             "require": {
+                "doctrine/mongodb-odm-bundle": "dev-master",
                 "php": ">=5.3.2",
                 "symfony/symfony": "2.1.*",
-                "doctrine/mongodb-odm-bundle": "dev-master",
                 "vespolina/core": "dev-refactor"
             },
-            "time": "2013-02-27 09:44:46",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3297,30 +3236,30 @@
             "description": "Vespolina Taxation bundle. Taxation management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
                 "item",
+                "shop",
                 "taxation"
-            ]
+            ],
+            "time": "2013-02-27 09:44:46"
         },
         {
             "name": "vespolina/taxonomy",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaTaxonomy.git",
+                "url": "git://github.com/vespolina/VespolinaTaxonomy.git",
                 "reference": "4c98743784635c06d27c0e6052a9313b290b3362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaTaxonomy/zipball/4c98743784635c06d27c0e6052a9313b290b3362",
+                "url": "https://github.com/vespolina/VespolinaTaxonomy/archive/4c98743784635c06d27c0e6052a9313b290b3362.zip",
                 "reference": "4c98743784635c06d27c0e6052a9313b290b3362",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-11-18 08:59:50",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -3339,12 +3278,13 @@
             ],
             "description": "Vespolina library for Taxonomy",
             "keywords": [
-                "taxonomy",
-                "vespolina",
+                "hierarchy",
                 "tags",
+                "taxonomy",
                 "terms",
-                "hierarchy"
-            ]
+                "vespolina"
+            ],
+            "time": "2012-11-18 08:59:50"
         },
         {
             "name": "vespolina/taxonomy-bundle",
@@ -3369,7 +3309,6 @@
             "suggest": {
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "2013-01-14 17:04:14",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -3389,11 +3328,60 @@
             "description": "Vespolina Taxonomy bundle. Taxonomy management and more.",
             "homepage": "http://vespolina-project.org",
             "keywords": [
-                "shop",
                 "ecommerce",
                 "item",
+                "shop",
                 "taxonomy"
-            ]
+            ],
+            "time": "2013-01-14 17:04:14"
+        },
+        {
+            "name": "white-october/pagerfanta-bundle",
+            "version": "dev-master",
+            "target-dir": "WhiteOctober/PagerfantaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
+                "reference": "f664b66bc9351c6dd24026b3cf4c897705e51b26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/f664b66bc9351c6dd24026b3cf4c897705e51b26",
+                "reference": "f664b66bc9351c6dd24026b3cf4c897705e51b26",
+                "shasum": ""
+            },
+            "require": {
+                "pagerfanta/pagerfanta": "1.0.*",
+                "symfony/framework-bundle": ">=2.1,<3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\PagerfantaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Bundle to use Pagerfanta with Symfony2",
+            "keywords": [
+                "page",
+                "paging"
+            ],
+            "time": "2013-02-18 10:43:20"
         }
     ],
     "packages-dev": null,
@@ -3415,6 +3403,7 @@
         "twig/extensions": 20,
         "vespolina/order-bundle": 20,
         "vespolina/core": 20,
-        "vespolina/taxation-bundle": 20
+        "vespolina/taxation-bundle": 20,
+        "white-october/pagerfanta-bundle": 20
     }
 }
