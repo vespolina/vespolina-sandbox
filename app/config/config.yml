@@ -23,6 +23,8 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    globals:
+        vespolina_layout_template: VespolinaStoreBundle::layout.html.twig
 #    form:
 #      resources:
 #        - 'MopaBootstrapBundle:Form:fields.html.twig'
@@ -73,9 +75,7 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    #ApplicationSonataMediaBundle: ~
                     #SonataMediaBundle: ~
-                    VespolinaCartBundle: ~
                     VespolinaTaxationBundle: ~
                     VespolinaStoreBundle: ~
 
@@ -92,19 +92,39 @@ doctrine_mongodb:
         default:
             #auto_mapping: true
             mappings:
-                ApplicationVespolinaCartBundle: ~
-                ApplicationVespolinaProductBundle: ~
-                ApplicationVespolinaOrderBundle: ~
                 FOSUserBundle: ~
-                VespolinaCartBundle: ~
-                VespolinaPartnerBundle: ~
-                VespolinaOrderBundle: ~
-                VespolinaPricingBundle: ~
-                VespolinaProductBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
                 VespolinaTaxonomyBundle: ~
                 UserBundle: ~
+                VespolinaProduct:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/product/lib/Vespolina/Product/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Product
+                    is_bundle:            false
+                VespolinaOrder:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/order/lib/Vespolina/Order/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Order
+                    is_bundle:            false
+                VespolinaPartner:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/partner/lib/Vespolina/Partner/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Partner
+                    is_bundle:            false
+                VespolinaPricing:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/pricing/lib/Vespolina/Pricing/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Pricing
+                    is_bundle:            false
 
 # Swiftmailer Configuration
 swiftmailer:
