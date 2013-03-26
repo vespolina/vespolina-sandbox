@@ -1,18 +1,18 @@
 {
-    "hash": "f3bc3dbd162aee0a58f0495749745b04",
+    "hash": "9f36b00211e4db6c835fc4485c197c94",
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "v1.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "v1.0"
+                "reference": "v1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/annotations/archive/v1.0.zip",
-                "reference": "v1.0",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/v1.1",
+                "reference": "v1.1",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -65,7 +65,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2013-01-12 19:23:32"
+            "time": "2013-03-17 14:03:10"
         },
         {
             "name": "doctrine/common",
@@ -258,23 +258,96 @@
             "time": "2012-09-07 14:18:21"
         },
         {
-            "name": "doctrine/lexer",
-            "version": "v1.0",
+            "name": "doctrine/inflector",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "v1.0"
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "7314da6f9141705f0528c8b72546cb8aeea54ae8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/lexer/archive/v1.0.zip",
-                "reference": "v1.0",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/7314da6f9141705f0528c8b72546cb8aeea54ae8",
+                "reference": "7314da6f9141705f0528c8b72546cb8aeea54ae8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Inflector\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "inflection",
+                "pluralize",
+                "singularize",
+                "string"
+            ],
+            "time": "2013-03-09 20:00:29"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "bc0e1f0cc285127a38c6c8ea88bc5dba2fd53e94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/bc0e1f0cc285127a38c6c8ea88bc5dba2fd53e94",
+                "reference": "bc0e1f0cc285127a38c6c8ea88bc5dba2fd53e94",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Common\\Lexer\\": "lib/"
@@ -307,7 +380,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2013-01-12 18:59:04"
+            "time": "2013-03-07 12:15:25"
         },
         {
             "name": "doctrine/mongodb",
@@ -375,12 +448,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb-odm.git",
-                "reference": "2e45d398fa68f89e9b8a439f796f0955d6461f5a"
+                "reference": "7283d3540208504b6976e8e6777ff3a055ea98cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/2e45d398fa68f89e9b8a439f796f0955d6461f5a",
-                "reference": "2e45d398fa68f89e9b8a439f796f0955d6461f5a",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/7283d3540208504b6976e8e6777ff3a055ea98cc",
+                "reference": "7283d3540208504b6976e8e6777ff3a055ea98cc",
                 "shasum": ""
             },
             "require": {
@@ -440,7 +513,7 @@
                 "odm",
                 "persistence"
             ],
-            "time": "2013-02-26 22:19:21"
+            "time": "2013-03-25 22:01:43"
         },
         {
             "name": "doctrine/mongodb-odm-bundle",
@@ -449,16 +522,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMongoDBBundle.git",
-                "reference": "191f93335c4923db2bd8afbc2538b8d850c01e4d"
+                "reference": "b7b9ff90d826b69fa1592aaf461c75c38387c99f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMongoDBBundle/zipball/191f93335c4923db2bd8afbc2538b8d850c01e4d",
-                "reference": "191f93335c4923db2bd8afbc2538b8d850c01e4d",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMongoDBBundle/zipball/b7b9ff90d826b69fa1592aaf461c75c38387c99f",
+                "reference": "b7b9ff90d826b69fa1592aaf461c75c38387c99f",
                 "shasum": ""
             },
             "require": {
-                "doctrine/mongodb-odm": ">=1.0.0-beta5,<1.1-dev",
+                "doctrine/mongodb-odm": ">=1.0-beta5,<1.1",
                 "php": ">=5.3.2",
                 "symfony/doctrine-bridge": ">=2.1,<2.3-dev",
                 "symfony/framework-bundle": ">=2.1,<2.3-dev",
@@ -494,7 +567,7 @@
                     "homepage": "http://avalanche123.com"
                 },
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/"
                 },
@@ -510,7 +583,7 @@
                 "persistence",
                 "symfony"
             ],
-            "time": "2013-02-13 17:45:55"
+            "time": "2013-03-18 20:29:08"
         },
         {
             "name": "doctrine/orm",
@@ -577,17 +650,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRest.git",
-                "reference": "33c35fa3f8e7c3dd08085d849ebaa5bda54dfba4"
+                "reference": "0.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRest/zipball/33c35fa3f8e7c3dd08085d849ebaa5bda54dfba4",
-                "reference": "33c35fa3f8e7c3dd08085d849ebaa5bda54dfba4",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRest/zipball/0.8.0",
+                "reference": "0.8.0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/http-foundation": ">=2.0,<2.3-dev"
+                "symfony/http-foundation": ">=2.0,<3.0"
             },
             "type": "library",
             "extra": {
@@ -619,7 +692,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2013-01-18 10:39:23"
+            "time": "2013-03-02 20:35:05"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -628,28 +701,29 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "3b8d0a0683e6326673fa6c695d29de13471c5440"
+                "reference": "255c87812fd7a6d15226b04b2859a58abf135543"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/3b8d0a0683e6326673fa6c695d29de13471c5440",
-                "reference": "3b8d0a0683e6326673fa6c695d29de13471c5440",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/255c87812fd7a6d15226b04b2859a58abf135543",
+                "reference": "255c87812fd7a6d15226b04b2859a58abf135543",
                 "shasum": ""
             },
             "require": {
+                "doctrine/inflector": "1.0.*",
                 "friendsofsymfony/rest": ">=0.7.0,<0.9.0-dev",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.0,<2.3-dev"
+                "symfony/framework-bundle": ">=2.1,<2.3-dev"
             },
             "conflict": {
-                "jms/serializer-bundle": "<0.11-dev"
+                "jms/serializer-bundle": "<0.12-dev"
             },
             "require-dev": {
-                "jms/serializer-bundle": "0.11.*",
-                "sensio/framework-extra-bundle": ">=2.1,<2.3-dev",
-                "symfony/form": ">=2.1,<2.3-dev",
-                "symfony/security": ">=2.1,<2.3-dev",
-                "symfony/yaml": ">=2.1,<2.3-dev"
+                "jms/serializer-bundle": "0.12.*",
+                "sensio/framework-extra-bundle": ">=2.1,<2.4-dev",
+                "symfony/form": ">=2.1,<2.4-dev",
+                "symfony/security": ">=2.1,<2.4-dev",
+                "symfony/yaml": ">=2.1,<2.4-dev"
             },
             "suggest": {
                 "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires 0.11.*",
@@ -659,7 +733,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.11.x-dev"
+                    "dev-master": "0.12.x-dev"
                 }
             },
             "autoload": {
@@ -691,7 +765,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2013-02-21 17:31:35"
+            "time": "2013-03-21 12:43:49"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -700,16 +774,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "993eebfb836a548b9120469ef48543bac10916b6"
+                "reference": "ec05bec2307c4b63e0d63dc0de7c89942853cabc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/993eebfb836a548b9120469ef48543bac10916b6",
-                "reference": "993eebfb836a548b9120469ef48543bac10916b6",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/ec05bec2307c4b63e0d63dc0de7c89942853cabc",
+                "reference": "ec05bec2307c4b63e0d63dc0de7c89942853cabc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
+                "symfony/form": ">=2.1,<2.3-dev",
                 "symfony/framework-bundle": ">=2.1,<2.3-dev",
                 "symfony/security-bundle": ">=2.1,<2.3-dev"
             },
@@ -756,7 +831,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-02-20 08:35:53"
+            "time": "2013-03-18 15:41:00"
         },
         {
             "name": "imagine/Imagine",
@@ -860,12 +935,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/cg-library.git",
-                "reference": "fb8a054a061d92ae963a984d34846ed34c012d31"
+                "reference": "75a519d83a33f6b893a25aef835a1e5fc166a6d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/fb8a054a061d92ae963a984d34846ed34c012d31",
-                "reference": "fb8a054a061d92ae963a984d34846ed34c012d31",
+                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/75a519d83a33f6b893a25aef835a1e5fc166a6d7",
+                "reference": "75a519d83a33f6b893a25aef835a1e5fc166a6d7",
                 "shasum": ""
             },
             "require": {
@@ -890,7 +965,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -898,7 +973,7 @@
             "keywords": [
                 "code generation"
             ],
-            "time": "2013-02-17 22:10:19"
+            "time": "2013-03-23 08:03:00"
         },
         {
             "name": "jms/di-extra-bundle",
@@ -907,20 +982,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "bc4f3280e472d48dec2c410c853f8188897ccec4"
+                "reference": "a15367768d8bbf0b5eac135adf31880ed99cc12d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/bc4f3280e472d48dec2c410c853f8188897ccec4",
-                "reference": "bc4f3280e472d48dec2c410c853f8188897ccec4",
+                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/a15367768d8bbf0b5eac135adf31880ed99cc12d",
+                "reference": "a15367768d8bbf0b5eac135adf31880ed99cc12d",
                 "shasum": ""
             },
             "require": {
                 "jms/aop-bundle": ">=1.0.0,<1.2-dev",
                 "jms/metadata": "1.*",
-                "symfony/finder": ">=2.1.0,<2.3-dev",
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
-                "symfony/process": ">=2.1.0,<2.3-dev"
+                "symfony/finder": ">=2.1,<3.0",
+                "symfony/framework-bundle": ">=2.1,<3.0",
+                "symfony/process": ">=2.1,<3.0"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "*",
@@ -955,7 +1030,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -965,7 +1040,7 @@
                 "annotations",
                 "dependency injection"
             ],
-            "time": "2013-02-22 19:24:48"
+            "time": "2013-03-21 16:34:41"
         },
         {
             "name": "jms/metadata",
@@ -1061,12 +1136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle.git",
-                "reference": "1.4.0"
+                "reference": "f2a345dc468eb0ba9ce50211b289422c82082db0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSecurityExtraBundle/zipball/1.4.0",
-                "reference": "1.4.0",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSecurityExtraBundle/zipball/f2a345dc468eb0ba9ce50211b289422c82082db0",
+                "reference": "f2a345dc468eb0ba9ce50211b289422c82082db0",
                 "shasum": ""
             },
             "require": {
@@ -1074,7 +1149,7 @@
                 "jms/di-extra-bundle": "1.3.*",
                 "jms/metadata": "1.*",
                 "jms/parser-lib": "1.*",
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
+                "symfony/framework-bundle": ">=2.1,<3.0",
                 "symfony/security-bundle": "*"
             },
             "require-dev": {
@@ -1110,7 +1185,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1123,7 +1198,7 @@
                 "secure",
                 "security"
             ],
-            "time": "2013-02-18 08:46:41"
+            "time": "2013-03-21 13:05:31"
         },
         {
             "name": "jms/serializer",
@@ -1199,12 +1274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSerializerBundle.git",
-                "reference": "fa2447f4e225307e340b07e9fb97ade896291cc7"
+                "reference": "ab2ca253c3e2fb12dfbe3f1048224661ebf25494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/fa2447f4e225307e340b07e9fb97ade896291cc7",
-                "reference": "fa2447f4e225307e340b07e9fb97ade896291cc7",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/ab2ca253c3e2fb12dfbe3f1048224661ebf25494",
+                "reference": "ab2ca253c3e2fb12dfbe3f1048224661ebf25494",
                 "shasum": ""
             },
             "require": {
@@ -1245,7 +1320,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1258,7 +1333,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-02-23 13:35:57"
+            "time": "2013-03-14 09:30:30"
         },
         {
             "name": "knplabs/knp-menu",
@@ -1330,13 +1405,13 @@
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
-                "url": "http://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "bfaa9f1a74ee590c5e6460a3139b268fce1f1885"
+                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "reference": "8f84c396927809e885f7a17ef3737358c001d78f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle/archive/bfaa9f1a74ee590c5e6460a3139b268fce1f1885.zip",
-                "reference": "bfaa9f1a74ee590c5e6460a3139b268fce1f1885",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/8f84c396927809e885f7a17ef3737358c001d78f",
+                "reference": "8f84c396927809e885f7a17ef3737358c001d78f",
                 "shasum": ""
             },
             "require": {
@@ -1376,7 +1451,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2012-12-29 08:47:58"
+            "time": "2013-03-18 17:08:00"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1384,17 +1459,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "df03baa337ae1c87803a7b1a76a393f8a59813f3"
+                "reference": "50a24301b40cd7df29a7da4efd5573a9ef4622f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/df03baa337ae1c87803a7b1a76a393f8a59813f3",
-                "reference": "df03baa337ae1c87803a7b1a76a393f8a59813f3",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/50a24301b40cd7df29a7da4efd5573a9ef4622f8",
+                "reference": "50a24301b40cd7df29a7da4efd5573a9ef4622f8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "symfony/process": ">=2.1.0,<2.3-dev"
+                "symfony/process": ">=2.1,<3.0"
             },
             "require-dev": {
                 "cssmin/cssmin": "*",
@@ -1447,7 +1522,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-02-24 17:22:20"
+            "time": "2013-03-25 20:14:55"
         },
         {
             "name": "monolog/monolog",
@@ -1512,16 +1587,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "65f27149f2baac59029d84a2ea2aba9c4f629fec"
+                "reference": "679ec4e2c639646f81d3236f8ed3341205f83786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/65f27149f2baac59029d84a2ea2aba9c4f629fec",
-                "reference": "65f27149f2baac59029d84a2ea2aba9c4f629fec",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/679ec4e2c639646f81d3236f8ed3341205f83786",
+                "reference": "679ec4e2c639646f81d3236f8ed3341205f83786",
                 "shasum": ""
             },
             "require": {
-                "mopa/composer-bridge": "v1.0.0",
+                "mopa/composer-bridge": "1.*",
                 "symfony/symfony": ">=2.1,<2.3-dev"
             },
             "suggest": {
@@ -1565,26 +1640,31 @@
                 "form",
                 "template"
             ],
-            "time": "2013-02-24 11:24:04"
+            "time": "2013-03-25 20:52:28"
         },
         {
             "name": "mopa/composer-bridge",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git://github.com/phiamo/MopaComposerBridge.git",
-                "reference": "v1.0.0"
+                "url": "https://github.com/phiamo/MopaComposerBridge.git",
+                "reference": "be2f32119e96648252b7a4001a463a7ac17052ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/phiamo/MopaComposerBridge/archive/v1.0.0.zip",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/phiamo/MopaComposerBridge/zipball/be2f32119e96648252b7a4001a463a7ac17052ba",
+                "reference": "be2f32119e96648252b7a4001a463a7ac17052ba",
                 "shasum": ""
             },
             "require": {
                 "symfony/console": "2.*"
             },
             "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Mopa\\Bridge\\Composer": "src/"
@@ -1611,48 +1691,7 @@
                 "Symfony2",
                 "composer"
             ],
-            "time": "2012-10-11 18:29:49"
-        },
-        {
-            "name": "pablodip/molino",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pablodip/molino.git",
-                "reference": "d3d4c552403a9b1542f785af59b5683ee7df2a51"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pablodip/molino/zipball/d3d4c552403a9b1542f785af59b5683ee7df2a51",
-                "reference": "d3d4c552403a9b1542f785af59b5683ee7df2a51",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Molino": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pablo Díez",
-                    "email": "pablodip@gmail.com",
-                    "homepage": "http://github.com/pablodip"
-                }
-            ],
-            "description": "Small and fast library to make reusable tools persistence backend agnostic.",
-            "homepage": "https://github.com/pablodip/molino",
-            "keywords": [
-                "backend"
-            ],
-            "time": "2012-07-10 14:48:52"
+            "time": "2013-03-05 22:59:36"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -1660,12 +1699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/Pagerfanta.git",
-                "reference": "878aee5e274ca75fbdf74262efd05d1207c31669"
+                "reference": "ae0ff215b3be2c3bd0b131a8b8daa9b15568c6db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/878aee5e274ca75fbdf74262efd05d1207c31669",
-                "reference": "878aee5e274ca75fbdf74262efd05d1207c31669",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/ae0ff215b3be2c3bd0b131a8b8daa9b15568c6db",
+                "reference": "ae0ff215b3be2c3bd0b131a8b8daa9b15568c6db",
                 "shasum": ""
             },
             "require": {
@@ -1712,7 +1751,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2013-02-19 13:51:25"
+            "time": "2013-03-12 22:52:44"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -1770,12 +1809,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "c899903cbc4cadc2b6fb7ab74a1470d59e4c2d27"
+                "reference": "24e55357ced5bb041da1416711737b9e144505b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/c899903cbc4cadc2b6fb7ab74a1470d59e4c2d27",
-                "reference": "c899903cbc4cadc2b6fb7ab74a1470d59e4c2d27",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/24e55357ced5bb041da1416711737b9e144505b4",
+                "reference": "24e55357ced5bb041da1416711737b9e144505b4",
                 "shasum": ""
             },
             "require": {
@@ -1800,7 +1839,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1811,7 +1850,7 @@
                 "php",
                 "type"
             ],
-            "time": "2013-01-21 09:59:49"
+            "time": "2013-03-25 02:51:40"
         },
         {
             "name": "pimple/pimple",
@@ -1819,12 +1858,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "5a8936d9d31eb613f1a33753e5f22bffebe0bbc3"
+                "reference": "v1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/5a8936d9d31eb613f1a33753e5f22bffebe0bbc3",
-                "reference": "5a8936d9d31eb613f1a33753e5f22bffebe0bbc3",
+                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/v1.0.2",
+                "reference": "v1.0.2",
                 "shasum": ""
             },
             "require": {
@@ -1857,7 +1896,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-02-09 15:33:26"
+            "time": "2013-03-08 08:21:40"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -2056,30 +2095,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/AsseticBundle.git",
-                "reference": "6985b26ba44f12a3804af8beb53f6b6e49da5b04"
+                "reference": "90d3e238743a5c8def765079ad8084151d4e4fee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/6985b26ba44f12a3804af8beb53f6b6e49da5b04",
-                "reference": "6985b26ba44f12a3804af8beb53f6b6e49da5b04",
+                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/90d3e238743a5c8def765079ad8084151d4e4fee",
+                "reference": "90d3e238743a5c8def765079ad8084151d4e4fee",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "1.1.*",
+                "kriswallsmith/assetic": ">=1.1.0-alpha4,<1.2-dev",
                 "php": ">=5.3.0",
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+                "symfony/framework-bundle": ">=2.1,<3.0"
             },
             "require-dev": {
-                "symfony/class-loader": ">=2.1.0,<2.3-dev",
-                "symfony/console": ">=2.1.0,<2.3-dev",
-                "symfony/css-selector": ">=2.1.0,<2.3-dev",
-                "symfony/dom-crawler": ">=2.1.0,<2.3-dev",
-                "symfony/form": ">=2.1.0,<2.3-dev",
-                "symfony/twig-bundle": ">=2.1.0,<2.3-dev",
-                "symfony/yaml": ">=2.1.0,<2.3-dev"
+                "symfony/class-loader": ">=2.1,<3.0",
+                "symfony/console": ">=2.1,<3.0",
+                "symfony/css-selector": ">=2.1,<3.0",
+                "symfony/dom-crawler": ">=2.1,<3.0",
+                "symfony/form": ">=2.1,<3.0",
+                "symfony/twig-bundle": ">=2.1,<3.0",
+                "symfony/yaml": ">=2.1,<3.0"
             },
             "suggest": {
-                "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
+                "symfony/twig-bundle": "~2.1"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -2110,7 +2149,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-02-24 18:21:16"
+            "time": "2013-03-25 20:16:21"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2232,12 +2271,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "83382bc7986ffe6322f8078af816f226d65737c0"
+                "reference": "d9009cb3c6d87335e62416097267531b4d0f4a21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/83382bc7986ffe6322f8078af816f226d65737c0",
-                "reference": "83382bc7986ffe6322f8078af816f226d65737c0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/d9009cb3c6d87335e62416097267531b4d0f4a21",
+                "reference": "d9009cb3c6d87335e62416097267531b4d0f4a21",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2351,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-02-27 07:36:53"
+            "time": "2013-03-24 07:11:17"
         },
         {
             "name": "twig/extensions",
@@ -2320,12 +2359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig-extensions.git",
-                "reference": "5c2d515d4624bdd588226d688173cf0399a4d8cf"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/5c2d515d4624bdd588226d688173cf0399a4d8cf",
-                "reference": "5c2d515d4624bdd588226d688173cf0399a4d8cf",
+                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/v1.0.0",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "require": {
@@ -2359,7 +2398,7 @@
                 "i18n",
                 "text"
             ],
-            "time": "2013-01-04 16:55:05"
+            "time": "2013-02-28 14:21:30"
         },
         {
             "name": "twig/twig",
@@ -2367,12 +2406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "bc30d9b7e24b0cd2f02078064b2d9fe1c20aa1aa"
+                "reference": "e8991cc2f9c84b2b5c782203904898717d46e56a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/bc30d9b7e24b0cd2f02078064b2d9fe1c20aa1aa",
-                "reference": "bc30d9b7e24b0cd2f02078064b2d9fe1c20aa1aa",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/e8991cc2f9c84b2b5c782203904898717d46e56a",
+                "reference": "e8991cc2f9c84b2b5c782203904898717d46e56a",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2447,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-02-26 13:03:39"
+            "time": "2013-03-25 07:43:31"
         },
         {
             "name": "twitter/bootstrap",
@@ -2525,16 +2564,16 @@
         },
         {
             "name": "vespolina/core",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCore.git",
-                "reference": "c7a1e2e7f536ae91077c38e739f6f0248b2bf04d"
+                "reference": "4b0d2a245a4a0c6b70405f3eb6274ab47d68e567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/c7a1e2e7f536ae91077c38e739f6f0248b2bf04d",
-                "reference": "c7a1e2e7f536ae91077c38e739f6f0248b2bf04d",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/4b0d2a245a4a0c6b70405f3eb6274ab47d68e567",
+                "reference": "4b0d2a245a4a0c6b70405f3eb6274ab47d68e567",
                 "shasum": ""
             },
             "require": {
@@ -2542,7 +2581,15 @@
                 "php": ">=5.3.2",
                 "pimple/pimple": "*"
             },
+            "require-dev": {
+                "merk/dough": "*"
+            },
             "type": "entities",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Vespolina": "lib/"
@@ -2558,7 +2605,7 @@
                 "ecommerce",
                 "shop"
             ],
-            "time": "2013-02-23 21:59:30"
+            "time": "2013-03-25 03:42:34"
         },
         {
             "name": "vespolina/fulfillment-bundle",
@@ -2719,18 +2766,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaOrder.git",
-                "reference": "d988f268b3e03ffcde3b563160cc03e5b0255335"
+                "reference": "6e275426d06413a577d84245a364beb79a4e3607"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaOrder/zipball/d988f268b3e03ffcde3b563160cc03e5b0255335",
-                "reference": "d988f268b3e03ffcde3b563160cc03e5b0255335",
+                "url": "https://api.github.com/repos/vespolina/VespolinaOrder/zipball/6e275426d06413a577d84245a364beb79a4e3607",
+                "reference": "6e275426d06413a577d84245a364beb79a4e3607",
                 "shasum": ""
             },
             "require": {
-                "pablodip/molino": "*",
                 "php": ">=5.3.2",
-                "vespolina/core": "dev-refactor"
+                "vespolina/core": "*",
+                "vespolina/molino": "*"
             },
             "type": "library",
             "autoload": {
@@ -2757,27 +2804,26 @@
                 "order",
                 "shop"
             ],
-            "time": "2013-02-23 22:47:11"
+            "time": "2013-03-17 10:44:59"
         },
         {
             "name": "vespolina/order-bundle",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "target-dir": "Vespolina/OrderBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaOrderBundle.git",
-                "reference": "e243d9e297a2089264fdb8a75986134ae7ce81cd"
+                "reference": "dad073f282fe2bacb3596ae1c9803467a22e6334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaOrderBundle/zipball/e243d9e297a2089264fdb8a75986134ae7ce81cd",
-                "reference": "e243d9e297a2089264fdb8a75986134ae7ce81cd",
+                "url": "https://api.github.com/repos/vespolina/VespolinaOrderBundle/zipball/dad073f282fe2bacb3596ae1c9803467a22e6334",
+                "reference": "dad073f282fe2bacb3596ae1c9803467a22e6334",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "symfony/symfony": "2.1.*",
-                "vespolina/core": "dev-refactor",
                 "vespolina/order": "master",
                 "vespolina/symfony2-bundle": "*"
             },
@@ -2809,7 +2855,7 @@
                 "order",
                 "shop"
             ],
-            "time": "2013-02-27 11:54:39"
+            "time": "2013-03-25 22:10:56"
         },
         {
             "name": "vespolina/partner",
@@ -2817,12 +2863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaPartner.git",
-                "reference": "75cbdefaf0730ab6de76bd792f5c67315096bb0e"
+                "reference": "e101db3f7068846dde7dda6da0703651fac9af99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaPartner/zipball/75cbdefaf0730ab6de76bd792f5c67315096bb0e",
-                "reference": "75cbdefaf0730ab6de76bd792f5c67315096bb0e",
+                "url": "https://api.github.com/repos/vespolina/VespolinaPartner/zipball/e101db3f7068846dde7dda6da0703651fac9af99",
+                "reference": "e101db3f7068846dde7dda6da0703651fac9af99",
                 "shasum": ""
             },
             "require": {
@@ -2857,28 +2903,29 @@
                 "partner",
                 "vespolina"
             ],
-            "time": "2013-02-23 22:19:10"
+            "time": "2013-03-22 01:40:30"
         },
         {
             "name": "vespolina/partner-bundle",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "target-dir": "Vespolina/PartnerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaPartnerBundle.git",
-                "reference": "1098b3f47c43e382ec4af70c55fa07d8b85b290c"
+                "reference": "03fce2ab0b20a5a21982eaa6d7355dbbf0d8d0c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaPartnerBundle/zipball/1098b3f47c43e382ec4af70c55fa07d8b85b290c",
-                "reference": "1098b3f47c43e382ec4af70c55fa07d8b85b290c",
+                "url": "https://api.github.com/repos/vespolina/VespolinaPartnerBundle/zipball/03fce2ab0b20a5a21982eaa6d7355dbbf0d8d0c6",
+                "reference": "03fce2ab0b20a5a21982eaa6d7355dbbf0d8d0c6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/symfony": "2.1.*",
-                "vespolina/core": "dev-refactor",
-                "vespolina/partner": "master"
+                "symfony/symfony": ">=2.1.1",
+                "vespolina/core": "*",
+                "vespolina/partner": "master",
+                "vespolina/symfony2-bundle": "*"
             },
             "suggest": {
                 "symfony/doctrine-bundle": "*",
@@ -2909,7 +2956,7 @@
                 "partner",
                 "vespolina"
             ],
-            "time": "2013-02-27 11:55:13"
+            "time": "2013-03-25 21:33:56"
         },
         {
             "name": "vespolina/pricing",
@@ -2917,18 +2964,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaPricing.git",
-                "reference": "e2c0d0250dab719eda9be320f17a50803f1c327d"
+                "reference": "b94d8598bf1b9aa0758600137fc642ad1760cedd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaPricing/zipball/e2c0d0250dab719eda9be320f17a50803f1c327d",
-                "reference": "e2c0d0250dab719eda9be320f17a50803f1c327d",
+                "url": "https://api.github.com/repos/vespolina/VespolinaPricing/zipball/b94d8598bf1b9aa0758600137fc642ad1760cedd",
+                "reference": "b94d8598bf1b9aa0758600137fc642ad1760cedd",
                 "shasum": ""
             },
             "require": {
-                "pablodip/molino": "*",
                 "php": ">=5.3.2",
-                "vespolina/core": "*"
+                "vespolina/core": "*",
+                "vespolina/molino": "dev-master"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "merk/dough": "*"
             },
             "type": "library",
             "autoload": {
@@ -2955,76 +3006,25 @@
                 "order",
                 "shop"
             ],
-            "time": "2013-02-08 21:41:50"
-        },
-        {
-            "name": "vespolina/pricing-bundle",
-            "version": "dev-master",
-            "target-dir": "Vespolina/PricingBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vespolina/VespolinaPricingBundle",
-                "reference": "64f3ef637c7e13ebc84492c8b19bb178e7450a53"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaPricingBundle/archive/64f3ef637c7e13ebc84492c8b19bb178e7450a53.zip",
-                "reference": "64f3ef637c7e13ebc84492c8b19bb178e7450a53",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.*",
-                "symfony/security-bundle": "2.*"
-            },
-            "suggest": {
-                "doctrine/couchdb-odm-bundle": "*",
-                "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Vespolina\\PricingBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vespolina Team",
-                    "homepage": "https://github.com/vespolina/VespolinaPricingBundle/contributors"
-                }
-            ],
-            "description": "Vespolina Pricing bundle. Pricing management and more.",
-            "homepage": "http://vespolina-project.org",
-            "keywords": [
-                "ecommerce",
-                "item",
-                "pricing",
-                "shop"
-            ],
-            "time": "2012-08-28 04:15:03"
+            "time": "2013-03-19 10:02:49"
         },
         {
             "name": "vespolina/product",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaProduct.git",
-                "reference": "62430034a66045dc932e4fe93df7e48f451ed455"
+                "reference": "ba634ff866c0d5cfa9ce1e605203a3240bf13901"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaProduct/zipball/62430034a66045dc932e4fe93df7e48f451ed455",
-                "reference": "62430034a66045dc932e4fe93df7e48f451ed455",
+                "url": "https://api.github.com/repos/vespolina/VespolinaProduct/zipball/ba634ff866c0d5cfa9ce1e605203a3240bf13901",
+                "reference": "ba634ff866c0d5cfa9ce1e605203a3240bf13901",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "vespolina/core": "dev-refactor"
+                "vespolina/core": "*"
             },
             "type": "library",
             "autoload": {
@@ -3049,31 +3049,29 @@
                 "product",
                 "vespolina"
             ],
-            "time": "2013-02-08 22:00:36"
+            "time": "2013-03-25 22:36:41"
         },
         {
             "name": "vespolina/product-bundle",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "target-dir": "Vespolina/ProductBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaProductBundle.git",
-                "reference": "ce467811b771b6da1ff79654d877a1e34b11d9d2"
+                "reference": "315438f77b2366c48a1c1cd134374fde331138d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaProductBundle/zipball/ce467811b771b6da1ff79654d877a1e34b11d9d2",
-                "reference": "ce467811b771b6da1ff79654d877a1e34b11d9d2",
+                "url": "https://api.github.com/repos/vespolina/VespolinaProductBundle/zipball/315438f77b2366c48a1c1cd134374fde331138d8",
+                "reference": "315438f77b2366c48a1c1cd134374fde331138d8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "vespolina/core": "dev-refactor",
-                "vespolina/product": "dev-refactor",
+                "vespolina/product": "dev-master",
                 "vespolina/taxonomy": "dev-master"
             },
             "suggest": {
-                "doctrine/couchdb-odm-bundle": "*",
                 "symfony/mongodb-odm-bundle": "*"
             },
             "type": "symfony-bundle",
@@ -3100,28 +3098,30 @@
                 "product",
                 "shop"
             ],
-            "time": "2013-02-27 11:55:37"
+            "time": "2013-03-26 00:22:10"
         },
         {
             "name": "vespolina/store-bundle",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "target-dir": "Vespolina/StoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaStoreBundle.git",
-                "reference": "57cf785cf4842b2e5f99e4b2bc9af0a9ea0a3813"
+                "reference": "1a8c67c7812a5e57025d6425838b9750cdb76561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaStoreBundle/zipball/57cf785cf4842b2e5f99e4b2bc9af0a9ea0a3813",
-                "reference": "57cf785cf4842b2e5f99e4b2bc9af0a9ea0a3813",
+                "url": "https://api.github.com/repos/vespolina/VespolinaStoreBundle/zipball/1a8c67c7812a5e57025d6425838b9750cdb76561",
+                "reference": "1a8c67c7812a5e57025d6425838b9750cdb76561",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "symfony/symfony": "2.1.*",
-                "vespolina/order-bundle": "dev-refactor",
-                "vespolina/product-bundle": "dev-refactor"
+                "vespolina/order-bundle": "dev-master",
+                "vespolina/partner-bundle": "dev-master",
+                "vespolina/product-bundle": "dev-master",
+                "vespolina/taxation-bundle": "dev-master"
             },
             "suggest": {
                 "symfony/doctrine-bundle": "*",
@@ -3151,7 +3151,7 @@
                 "shop",
                 "store"
             ],
-            "time": "2013-02-14 21:13:06"
+            "time": "2013-03-26 00:13:40"
         },
         {
             "name": "vespolina/symfony2-bundle",
@@ -3160,12 +3160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaSymfony2Bundle.git",
-                "reference": "f7802d159bc39dd30b49b0fda1332dc4c96c2808"
+                "reference": "69c510fc0c95880fb7e0e3e18c0a973951d33391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaSymfony2Bundle/zipball/f7802d159bc39dd30b49b0fda1332dc4c96c2808",
-                "reference": "f7802d159bc39dd30b49b0fda1332dc4c96c2808",
+                "url": "https://api.github.com/repos/vespolina/VespolinaSymfony2Bundle/zipball/69c510fc0c95880fb7e0e3e18c0a973951d33391",
+                "reference": "69c510fc0c95880fb7e0e3e18c0a973951d33391",
                 "shasum": ""
             },
             "require": {
@@ -3194,28 +3194,28 @@
                 "ecommerce",
                 "shop"
             ],
-            "time": "2013-02-27 11:55:58"
+            "time": "2013-03-19 04:27:49"
         },
         {
             "name": "vespolina/taxation-bundle",
-            "version": "dev-refactor",
+            "version": "dev-master",
             "target-dir": "Vespolina/TaxationBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaTaxationBundle.git",
-                "reference": "f6f44faf87c7ded677e15bc1740e826580fb49e1"
+                "reference": "de3ec947e74bd40b85faa1d2d60377f9368ef796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaTaxationBundle/zipball/f6f44faf87c7ded677e15bc1740e826580fb49e1",
-                "reference": "f6f44faf87c7ded677e15bc1740e826580fb49e1",
+                "url": "https://api.github.com/repos/vespolina/VespolinaTaxationBundle/zipball/de3ec947e74bd40b85faa1d2d60377f9368ef796",
+                "reference": "de3ec947e74bd40b85faa1d2d60377f9368ef796",
                 "shasum": ""
             },
             "require": {
                 "doctrine/mongodb-odm-bundle": "dev-master",
                 "php": ">=5.3.2",
                 "symfony/symfony": "2.1.*",
-                "vespolina/core": "dev-refactor"
+                "vespolina/core": "dev-master"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -3241,19 +3241,19 @@
                 "shop",
                 "taxation"
             ],
-            "time": "2013-02-27 09:44:46"
+            "time": "2013-01-25 16:39:59"
         },
         {
             "name": "vespolina/taxonomy",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git://github.com/vespolina/VespolinaTaxonomy.git",
+                "url": "https://github.com/vespolina/VespolinaTaxonomy.git",
                 "reference": "4c98743784635c06d27c0e6052a9313b290b3362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vespolina/VespolinaTaxonomy/archive/4c98743784635c06d27c0e6052a9313b290b3362.zip",
+                "url": "https://api.github.com/repos/vespolina/VespolinaTaxonomy/zipball/4c98743784635c06d27c0e6052a9313b290b3362",
                 "reference": "4c98743784635c06d27c0e6052a9313b290b3362",
                 "shasum": ""
             },
@@ -3342,12 +3342,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "f664b66bc9351c6dd24026b3cf4c897705e51b26"
+                "reference": "9cce71a2cfffa4e3d08a41b6ddd31ef0249a0aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/f664b66bc9351c6dd24026b3cf4c897705e51b26",
-                "reference": "f664b66bc9351c6dd24026b3cf4c897705e51b26",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/9cce71a2cfffa4e3d08a41b6ddd31ef0249a0aea",
+                "reference": "9cce71a2cfffa4e3d08a41b6ddd31ef0249a0aea",
                 "shasum": ""
             },
             "require": {
@@ -3381,10 +3381,12 @@
                 "page",
                 "paging"
             ],
-            "time": "2013-02-18 10:43:20"
+            "time": "2013-03-14 08:58:21"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
@@ -3401,9 +3403,12 @@
         "jms/serializer-bundle": 20,
         "mopa/bootstrap-bundle": 20,
         "twig/extensions": 20,
-        "vespolina/order-bundle": 20,
-        "vespolina/core": 20,
-        "vespolina/taxation-bundle": 20,
         "white-october/pagerfanta-bundle": 20
-    }
+    },
+    "platform": {
+        "php": ">=5.3.2"
+    },
+    "platform-dev": [
+
+    ]
 }

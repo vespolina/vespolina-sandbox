@@ -77,8 +77,11 @@ vespolina_fulfillment:
 
 vespolina_order:
    db_driver: mongodb
-vespolina_pricing:
-    db_driver: mongodb
+   rest_api: true
+
+#vespolina_pricing:
+#    db_driver: mongodb
+
 vespolina_product:
     db_driver: mongodb
     product_manager:
@@ -90,6 +93,7 @@ vespolina_product:
             type:               Vespolina\ProductBundle\Form\Type\ProductFormExtendedType #vespolina.product.form.type
 #            handler_service:    vespolina.product.form.handler
 #            name:               vespolina_product_form
+
 vespolina_taxation:
     db_driver: mongodb
 #    tax_mode: default_tax_rate   #flat_tax_rate, default_tax_rate, mixed_tax_rates

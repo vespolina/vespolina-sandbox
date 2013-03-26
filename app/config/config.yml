@@ -85,7 +85,6 @@ doctrine_mongodb:
             #auto_mapping: true
             mappings:
                 FOSUserBundle: ~
-                VespolinaPricingBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
                 VespolinaTaxonomyBundle: ~
