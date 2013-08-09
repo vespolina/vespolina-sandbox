@@ -11,11 +11,11 @@
     processIsolation            = "false"
     stopOnFailure               = "false"
     syntaxCheck                 = "false"
-    bootstrap                   = "autoload.php" >
+    bootstrap                   = "bootstrap.php.cache" >
 
     <testsuites>
         <testsuite name="Vespolina Test Suite">
-            <directory>../vendor/vespolina/*bundle/Vespolina/*Bundle/Tests</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
@@ -23,7 +23,6 @@
     <php>
         <server name="KERNEL_DIR" value="/path/to/your/app/" />
     </php>
-    -->
 
     <filter>
         <whitelist>
@@ -36,5 +35,6 @@
             </exclude>
         </whitelist>
     </filter>
+ -->
 
 </phpunit>

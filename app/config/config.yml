@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ VespolinaStoreBundle]
+    bundles:        [ VespolinaStoreBundle, VespolinaAdminBundle]
     java:           %java_path%
     filters:
         cssrewrite: ~
@@ -57,27 +57,27 @@ assetic:
 
 # Doctrine Configuration
 doctrine:
-    dbal:
-        default_connection: default
-        connections:
-            default:
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                user:     %database_user%
-                password: %database_password%
-                charset:  UTF8
+#    dbal:
+#        default_connection: default
+#        connections:
+#            default:
+#                driver:   %database_driver%
+#                host:     %database_host%
+#                port:     %database_port%
+#                dbname:   %database_name%
+#                user:     %database_user%
+#                password: %database_password%
+#                charset:  UTF8
 
-    orm:
-        auto_generate_proxy_classes: %kernel.debug%
-        #auto_mapping: true
-        entity_managers:
-            default:
-                mappings:
-                    #SonataMediaBundle: ~
-                    VespolinaTaxationBundle: ~
-                    VespolinaStoreBundle: ~
+#    orm:
+#        auto_generate_proxy_classes: %kernel.debug%
+#        #auto_mapping: true
+#        entity_managers:
+#            default:
+#                mappings:
+#                    #SonataMediaBundle: ~
+#                    VespolinaTaxationBundle: ~
+#                    VespolinaStoreBundle: ~
 
 
 doctrine_mongodb:
@@ -90,13 +90,12 @@ doctrine_mongodb:
     default_database: %mongodb_database_name%_%kernel.environment%
     document_managers:
         default:
-            #auto_mapping: true
+            connection: 'default'
+            auto_mapping: true
             mappings:
                 FOSUserBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
-                VespolinaTaxonomyBundle: ~
-                UserBundle: ~
                 VespolinaProduct:
                     mapping:              true
                     type:                 xml
@@ -125,6 +124,31 @@ doctrine_mongodb:
                     alias:                ~
                     prefix:               Vespolina\Entity\Pricing
                     is_bundle:            false
+                VespolinaTaxonomy:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/taxonomy/lib/Vespolina/Taxonomy/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Taxonomy
+                    is_bundle:            false
+                gedmo_translatable:
+                    type:                 annotation
+                    prefix:               Gedmo\Translatable\Entity
+                    dir:                  "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                    alias:                GedmoTranslatable
+                    is_bundle:            false
+                gedmo_translator:
+                    type:                 annotation
+                    prefix:               Gedmo\Translator\Entity
+                    dir:                  "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity"
+                    alias:                GedmoTranslator
+                    is_bundle:            false
+                gedmo_tree:
+                    type:                 annotation
+                    prefix:               Gedmo\Tree\Entity
+                    dir:                  "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
+                    alias:                GedmoTree
+                    is_bundle:            false
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -137,8 +161,6 @@ swiftmailer:
 #fos_rest:
 #    routing_loader:
 #        default_format: json
-
-mopa_bootstrap:
 
 #sonata_media:
 #    db_driver: doctrine_orm # or doctrine_mongodb
@@ -167,3 +189,12 @@ mopa_bootstrap:
 sensio_framework_extra:
     view:
         annotations: false
+services:
+ # Doctrine Extension listeners to handle behaviors
+    gedmo.listener.tree:
+        class: Gedmo\Tree\TreeListener
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+            - { name: doctrine_mongodb.odm.event_subscriber }
+        calls:
+            - [ setAnnotationReader, [ @annotation_reader ] ]

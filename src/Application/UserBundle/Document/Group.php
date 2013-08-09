@@ -3,7 +3,7 @@
 namespace Application\UserBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
-use FOS\UserBundle\Document\Group as BaseGroup;
+use FOS\UserBundle\Model\Group as BaseGroup;
 
 /**
  * @MongoDB\Document

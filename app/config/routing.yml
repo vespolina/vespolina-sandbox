@@ -1,33 +1,20 @@
-vespolina_store:
-    resource: "@VespolinaStoreBundle/Resources/config/routing/store.xml"
-    prefix:   /
-
-vespolina_order_cart:
-    resource: "@VespolinaOrderBundle/Resources/config/routing/cart.xml"
-    prefix:   /cart/
-
-vespolina_order_rest:
-    resource: "@VespolinaOrderBundle/Resources/config/routing/rest.yml"
-    prefix:   /api/
-
-vespolina_product:
-    resource: "@VespolinaProductBundle/Resources/config/routing/product.xml"
-    prefix:   /product/
-
-vespolina_fulfillment:
-    resource: "@VespolinaFulfillmentBundle/Resources/config/routing.xml"
-    prefix:   /
-
-default:
-    resource: @DefaultBundle/Resources/config/routing.yml
-
 fos_user_security:
     resource: @FOSUserBundle/Resources/config/routing/security.xml
-
 vespolina_admin:
     resource: @VespolinaAdminBundle/Resources/config/routing/admin.xml
     prefix:   /admin/
-
-_vespolina_product_admin:
-    resource: @VespolinaProductBundle/Resources/config/routing/admin.xml
-    prefix:   /admin/product
+vespolina_commerce_checkout:
+    resource: "@VespolinaCommerceBundle/Resources/config/routing/checkout.xml"
+    prefix:   /
+vespolina_commerce_cart:
+    resource: "@VespolinaCommerceBundle/Resources/config/routing/cart.xml"
+    prefix:   /
+vespolina_commerce_product:
+    resource: "@VespolinaCommerceBundle/Resources/config/routing/product.xml"
+    prefix:   /
+vespolina_taxonomy:
+    resource: "@VespolinaCommerceBundle/Resources/config/routing/taxonomy.xml"
+    prefix:   /
+vespolina_store:
+    resource: "@VespolinaStoreBundle/Resources/config/routing/store.xml"
+    prefix:   /

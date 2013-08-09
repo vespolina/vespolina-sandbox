@@ -10,11 +10,11 @@ class AppKernel extends Kernel
         $bundles = array(
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            new FOS\RestBundle\FOSRestBundle(),
+
+            //new FOS\RestBundle\FOSRestBundle(),
+            //new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new merk\DoughBundle\merkDoughBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
@@ -26,17 +26,12 @@ class AppKernel extends Kernel
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
 
             new Application\UserBundle\UserBundle(),
-            new Application\DefaultBundle\DefaultBundle(),
+
             new Vespolina\AdminBundle\VespolinaAdminBundle(),
-            new Vespolina\PartnerBundle\VespolinaPartnerBundle(),
-            new Vespolina\FulfillmentBundle\VespolinaFulfillmentBundle(),
-            new Vespolina\OrderBundle\VespolinaOrderBundle(),
-            new Vespolina\ProductBundle\VespolinaProductBundle(),
-            new Vespolina\CheckoutBundle\VespolinaCheckoutBundle(),
+            new Vespolina\CommerceBundle\VespolinaCommerceBundle(),
+            new Vespolina\SandboxBundle\VespolinaSandboxBundle(),
             new Vespolina\StoreBundle\VespolinaStoreBundle(),
-            new Vespolina\Symfony2Bundle\VespolinaSymfony2Bundle(),
             new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
-            new Vespolina\TaxonomyBundle\VespolinaTaxonomyBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
