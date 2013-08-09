@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "65113f32d1a7e1342e3ab06050396f43",
+    "hash": "561ee01cdcb2a272dcebd2a17638f2fb",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2849,6 +2849,33 @@
             "time": "2013-08-07 15:40:17"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "7f0b487477bc63bef488dff14a0c28ea2106286b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/7f0b487477bc63bef488dff14a0c28ea2106286b",
+                "reference": "7f0b487477bc63bef488dff14a0c28ea2106286b",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "http://twbs.github.com/bootstrap/",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-07-31 19:36:59"
+        },
+        {
             "name": "twig/extensions",
             "version": "dev-master",
             "source": {
@@ -2943,17 +2970,6 @@
                 "templating"
             ],
             "time": "2013-08-07 12:53:34"
-        },
-        {
-            "name": "twitter/bootstrap",
-            "version": "master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twitter/bootstrap.git",
-                "reference": "master"
-            },
-            "type": "library",
-            "time": "2013-03-15 05:21:06"
         },
         {
             "name": "vespolina/admin-bundle",
@@ -3611,6 +3627,8 @@
         "jms/serializer-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "twig/extensions": 20,
+        "twbs/bootstrap": 20,
+        "vespolina/commerce-bundle": 20,
         "white-october/pagerfanta-bundle": 20
     },
     "platform": {

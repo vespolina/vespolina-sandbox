@@ -8,3 +8,4 @@ app/config/parameters.yml
 .idea
 nbproject/
 composer.phar
+bin
