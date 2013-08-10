@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ VespolinaStoreBundle, VespolinaAdminBundle]
+    bundles:        [VespolinaStoreBundle, VespolinaAdminBundle]
     java:           %java_path%
     filters:
         cssrewrite: ~

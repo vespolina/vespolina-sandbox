@@ -1,6 +1,6 @@
 {
     "name": "vespolina/vespolina-sandbox",
-    "type": "symfony-bundle",
+    "type": "project",
     "description": "Vespolina sandbox.",
     "keywords": ["shop", "ecommerce", "cart", "item"],
     "homepage": "http://vespolina-project.org",
@@ -35,29 +35,16 @@
         "symfony/swiftmailer-bundle": "2.1.*",
         "symfony/symfony": "2.1.*",
         "twig/extensions": "dev-master",
-        "twitter/bootstrap": "master",
+        "twbs/bootstrap": "dev-master",
 
         "vespolina/admin-bundle": "*",
-        "vespolina/commerce-bundle": "*",
+        "vespolina/commerce-bundle": "dev-master",
         "vespolina/pricing": "*",
         "vespolina/taxation-bundle": "*",
         "vespolina/store-bundle": "*",
         "white-october/pagerfanta-bundle": "dev-master"
     },
     "minimum-stability": "dev",
-     "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "version": "master",
-                "name": "twitter/bootstrap",
-                "source": {
-                    "url": "https://github.com/twitter/bootstrap.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        } ], 
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",

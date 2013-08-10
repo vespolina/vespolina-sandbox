@@ -9,7 +9,7 @@ security:
 
     providers:
         fos_user_provider:
-            id: fos_user.user_manager
+            id: fos_user.user_provider.username
 
     firewalls:
         main:

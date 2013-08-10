@@ -1,10 +1,13 @@
 web/bundles/
+web/assetic
+web/js
+web/css
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
 build/
 vendor/
 app/config/parameters.yml
-.idea
 nbproject/
 composer.phar
+bin
