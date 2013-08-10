@@ -3029,21 +3029,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCommerceBundle.git",
-                "reference": "2156b1ca2d4c08736e6c8a3403e30bd4bded9a0f"
+                "reference": "34d54fb4dcb74c75596cd92b2ff62396cb1b17e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/2156b1ca2d4c08736e6c8a3403e30bd4bded9a0f",
-                "reference": "2156b1ca2d4c08736e6c8a3403e30bd4bded9a0f",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/34d54fb4dcb74c75596cd92b2ff62396cb1b17e8",
+                "reference": "34d54fb4dcb74c75596cd92b2ff62396cb1b17e8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "symfony/symfony": "2.1.*",
+                "php": ">=5.3.3",
+                "symfony/symfony": ">=2.1",
                 "vespolina/order": "dev-master",
                 "vespolina/partner": "dev-master",
                 "vespolina/product": "dev-master",
                 "vespolina/taxonomy": "dev-master"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "dev-master",
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -3070,7 +3074,7 @@
                 "store",
                 "vespolina"
             ],
-            "time": "2013-08-09 09:57:59"
+            "time": "2013-08-10 10:16:59"
         },
         {
             "name": "vespolina/core",
@@ -3078,12 +3082,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCore.git",
-                "reference": "e70fef3ff3be86e8b7fe0d574b1d666f663f3c7f"
+                "reference": "f6f0ad8fe38270888e799f3c3078cb2eec846875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/e70fef3ff3be86e8b7fe0d574b1d666f663f3c7f",
-                "reference": "e70fef3ff3be86e8b7fe0d574b1d666f663f3c7f",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/f6f0ad8fe38270888e799f3c3078cb2eec846875",
+                "reference": "f6f0ad8fe38270888e799f3c3078cb2eec846875",
                 "shasum": ""
             },
             "require": {
@@ -3117,7 +3121,7 @@
                 "ecommerce",
                 "shop"
             ],
-            "time": "2013-08-09 20:32:56"
+            "time": "2013-08-10 09:07:09"
         },
         {
             "name": "vespolina/molino",
@@ -3176,18 +3180,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaOrder.git",
-                "reference": "6e275426d06413a577d84245a364beb79a4e3607"
+                "reference": "a677f276b2c3fbb575f9fbc13415a56c22cf7b42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaOrder/zipball/6e275426d06413a577d84245a364beb79a4e3607",
-                "reference": "6e275426d06413a577d84245a364beb79a4e3607",
+                "url": "https://api.github.com/repos/vespolina/VespolinaOrder/zipball/a677f276b2c3fbb575f9fbc13415a56c22cf7b42",
+                "reference": "a677f276b2c3fbb575f9fbc13415a56c22cf7b42",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "vespolina/core": "*",
-                "vespolina/molino": "*"
+                "vespolina/core": "1.0.*",
+                "vespolina/molino": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -3214,7 +3218,7 @@
                 "order",
                 "shop"
             ],
-            "time": "2013-03-17 10:44:59"
+            "time": "2013-08-09 23:37:52"
         },
         {
             "name": "vespolina/partner",
