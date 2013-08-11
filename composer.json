@@ -37,12 +37,13 @@
         "twig/extensions": "dev-master",
         "twbs/bootstrap": "dev-master",
 
-        "vespolina/admin-bundle": "*",
+        "vespolina/admin-bundle": "dev-master",
         "vespolina/commerce-bundle": "dev-master",
-        "vespolina/pricing": "*",
-        "vespolina/taxation-bundle": "*",
-        "vespolina/store-bundle": "*",
-        "white-october/pagerfanta-bundle": "dev-master"
+        "vespolina/pricing": "dev-master",
+        "vespolina/taxation-bundle": "dev-master",
+        "vespolina/store-bundle": "dev-master",
+        "white-october/pagerfanta-bundle": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master"
     },
     "minimum-stability": "dev",
     "scripts": {
