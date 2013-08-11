@@ -42,7 +42,8 @@
         "vespolina/pricing": "dev-master",
         "vespolina/taxation-bundle": "dev-master",
         "vespolina/store-bundle": "dev-master",
-        "white-october/pagerfanta-bundle": "dev-master"
+        "white-october/pagerfanta-bundle": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master"
     },
     "minimum-stability": "dev",
     "scripts": {
