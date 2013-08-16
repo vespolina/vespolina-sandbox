@@ -99,28 +99,28 @@ doctrine_mongodb:
                 VespolinaProduct:
                     mapping:              true
                     type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/vespolina/product/lib/Vespolina/Product/Mapping"
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Product/Mapping"
                     alias:                ~
                     prefix:               Vespolina\Entity\Product
                     is_bundle:            false
                 VespolinaOrder:
                     mapping:              true
                     type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/vespolina/order/lib/Vespolina/Order/Mapping"
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Order/Mapping"
                     alias:                ~
                     prefix:               Vespolina\Entity\Order
                     is_bundle:            false
                 VespolinaPartner:
                     mapping:              true
                     type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/vespolina/partner/lib/Vespolina/Partner/Mapping"
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Partner/Mapping"
                     alias:                ~
                     prefix:               Vespolina\Entity\Partner
                     is_bundle:            false
                 VespolinaPricing:
                     mapping:              true
                     type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/vespolina/pricing/lib/Vespolina/Pricing/Mapping"
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Pricing/Mapping"
                     alias:                ~
                     prefix:               Vespolina\Entity\Pricing
                     is_bundle:            false
