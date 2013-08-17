@@ -39,7 +39,6 @@
 
         "vespolina/admin-bundle": "*",
         "vespolina/commerce-bundle": "dev-master",
-        "vespolina/pricing": "*",
         "vespolina/taxation-bundle": "*",
         "vespolina/store-bundle": "*",
         "white-october/pagerfanta-bundle": "dev-master"
