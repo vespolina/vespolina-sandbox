@@ -17,9 +17,6 @@ class AppKernel extends Kernel
         $bundles = array(
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-
-            //new FOS\RestBundle\FOSRestBundle(),
-            //new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new merk\DoughBundle\merkDoughBundle(),
@@ -31,14 +28,16 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-
             new Application\UserBundle\UserBundle(),
 
-            new Vespolina\AdminBundle\VespolinaAdminBundle(),
+            //Basic bundles for an ecommerce store
             new Vespolina\CommerceBundle\VespolinaCommerceBundle(),
             new Vespolina\StoreBundle\VespolinaStoreBundle(),
-            new Vespolina\DefaultStoreBundle\VespolinaDefaultStoreBundle(),
             new Vespolina\TaxationBundle\VespolinaTaxationBundle(),
+            //An optional back office application
+            new Vespolina\AdminBundle\VespolinaAdminBundle(),
+            //The sandbox bundle
+            new Vespolina\DefaultStoreBundle\VespolinaDefaultStoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
