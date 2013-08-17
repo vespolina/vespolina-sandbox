@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "561ee01cdcb2a272dcebd2a17638f2fb",
+    "hash": "b416ab9a264325a545c145dda0bd4563",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3084,12 +3084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCommerceBundle.git",
-                "reference": "ff311fdce2190b2bd3f28a825817fc2fd2906f20"
+                "reference": "5de4fb29e99d412d97dc97c291c6865c7244696a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/ff311fdce2190b2bd3f28a825817fc2fd2906f20",
-                "reference": "ff311fdce2190b2bd3f28a825817fc2fd2906f20",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/5de4fb29e99d412d97dc97c291c6865c7244696a",
+                "reference": "5de4fb29e99d412d97dc97c291c6865c7244696a",
                 "shasum": ""
             },
             "require": {
@@ -3132,7 +3132,7 @@
                 "store",
                 "vespolina"
             ],
-            "time": "2013-08-16 11:08:31"
+            "time": "2013-08-17 06:14:30"
         },
         {
             "name": "vespolina/core",
@@ -3234,68 +3234,18 @@
             "time": "2013-08-11 11:05:46"
         },
         {
-            "name": "vespolina/pricing",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vespolina/VespolinaPricing.git",
-                "reference": "ef7382c9992b3d37745f44435c39894c82f5deae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaPricing/zipball/ef7382c9992b3d37745f44435c39894c82f5deae",
-                "reference": "ef7382c9992b3d37745f44435c39894c82f5deae",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "vespolina/core": "*"
-            },
-            "require-dev": {
-                "doctrine/mongodb-odm": "1.0.*@dev",
-                "merk/dough": "*",
-                "vespolina/molino": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Vespolina": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vespolina Team",
-                    "homepage": "https://github.com/vespolina/VespolinaProduct/contributors"
-                }
-            ],
-            "description": "Vespolina Pricing. Handles pricing of products, orders, cart and order pricing",
-            "homepage": "http://vespolina-project.org",
-            "keywords": [
-                "cart",
-                "ecommerce",
-                "item",
-                "order",
-                "shop"
-            ],
-            "time": "2013-08-10 22:36:03"
-        },
-        {
             "name": "vespolina/store-bundle",
             "version": "dev-master",
             "target-dir": "Vespolina/StoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaStoreBundle.git",
-                "reference": "2c76f2a270a7c738f63ab394c9541776714414ac"
+                "reference": "28ce2ffe27476f6c1bf6b7baede0839d3da5af91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaStoreBundle/zipball/2c76f2a270a7c738f63ab394c9541776714414ac",
-                "reference": "2c76f2a270a7c738f63ab394c9541776714414ac",
+                "url": "https://api.github.com/repos/vespolina/VespolinaStoreBundle/zipball/28ce2ffe27476f6c1bf6b7baede0839d3da5af91",
+                "reference": "28ce2ffe27476f6c1bf6b7baede0839d3da5af91",
                 "shasum": ""
             },
             "require": {
@@ -3333,7 +3283,7 @@
                 "store",
                 "vespolina"
             ],
-            "time": "2013-08-12 19:25:06"
+            "time": "2013-08-17 07:14:52"
         },
         {
             "name": "vespolina/taxation-bundle",

@@ -1,18 +1,18 @@
-Vespolina - Symfony2 ecommerce
-==============================
+Vespolina - Symfony2 ecommerce platform
+=======================================
 
 General Info
 ------------
 
-The purpose of this project is to create an expandable Symfony2 based ecommerce platform, built on interchangeable bundles that can be used independently of Vespolina, all managed by configurable processes and whenever possible, using established standards.
+The purpose of this project is to create an expandable ecommerce platform, built on interchangeable libraries that can be used independently of Vespolina, all managed by configurable processes and whenever possible, using established standards.
 
 State of the Project
 --------------------
 
-Vespolina is in early stages.  We are currently in the progress of developing a sandbox which uses several Vespolina bundles.
+Vespolina is in early stages.  We are currently in the progress of developing a sandbox which uses several Vespolina libraries.
 A demo is available on http://try.vespolina.org with several deployed use cases.
 
-Some of the bundles are already been used in production.  Information about basic functionality can be found on the
+Some of the libraries are already been used in production.  Information about basic functionality can be found on the
 [wiki][vespolina_wiki] .  We love to hear your comments on our current understanding of different ecommerce scenarios.  You can find more information on the wiki such as use cases and process flow diagrams.
 
 [vespolina_wiki]: https://github.com/vespolina/vespolina-sandbox/wiki
@@ -20,13 +20,13 @@ Some of the bundles are already been used in production.  Information about basi
 
 Contact
 -------
-* [Google Groups Mailinglist](http://groups.google.com/group/vespolina-dev)
 * IRC on irc.freenode.org channel #vespolina
+* [Google Groups Mailinglist](http://groups.google.com/group/vespolina-dev)
 
 Requirements
 ------------
 
-Symfony is only supported on PHP 5.3.2 and up. To check the compatibility of
+Symfony is only supported on PHP 5.3.4 and up. To check the compatibility of
 your environment with Symfony, you can run the `web/check.php` script, bundled
 with this sandbox. Also, you will need the mongodb driver for php, provided by
 the mongo php extension.

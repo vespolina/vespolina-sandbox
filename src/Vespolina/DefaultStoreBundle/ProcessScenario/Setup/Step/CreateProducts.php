@@ -13,15 +13,19 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\Entity\Pricing\Element\TotalDoughValueElement;
 use Vespolina\Entity\Pricing\PricingSet;
 use Vespolina\Entity\Product\ProductInterface;
-use Vespolina\Pricing\Manager\PricingManager;
 use Vespolina\Entity\Product\Product;
-use Vespolina\Product\Gateway\ProductGatewayInterface;
+use Vespolina\Pricing\Manager\PricingManager;
 
 class CreateProducts extends AbstractSetupStep
 {
     protected $pricingManager;
+    protected $productManager;
 
     public function execute(&$context) {
+
+        $this->productManager = $this->getContainer()->get('vespolina.product_manager');
+        $this->pricingManager = $this->getContainer()->get('vespolina.pricing_manager');
+        $this->pricingManager->addConfiguration('default_product', 'Vespolina\Entity\Pricing\PricingSet', array());
 
         $defaultTaxRate = $context['taxSchema']['defaultTaxRate'];
         $productCount = 10;
@@ -29,8 +33,6 @@ class CreateProducts extends AbstractSetupStep
         /* @var $productTaxonomy Vespolina\Entity\Taxonomy\TaxonomyNodeInterface */
         $productTaxonomy = $context['productTaxonomy'];
         $productTaxonomyNodes = $productTaxonomy->getChildren();
-
-        $productManager = $this->getContainer()->get('vespolina.product_manager');
 
         for($i = 1; $i < $productCount; $i++) {
 
@@ -41,10 +43,13 @@ class CreateProducts extends AbstractSetupStep
             //Determine the product name from the taxonomy name (eg. category "beer" -> product name is "beer 1"
             $singularNodeName = substr($aRandomTaxonomyNode->getName(), 0, strlen($aRandomTaxonomyNode->getName())-1);
             $productName = ucfirst($singularNodeName) . ' ' . $i;
-            $aProduct = $productManager->createProduct();
+            $aProduct = $this->productManager->createProduct();
             $aProduct->setName($productName);
             $aProduct->setSlug($this->slugify($aProduct->getName()));   //Todo: move to manager
             $aProduct->setType(Product::PHYSICAL);
+
+            //Setup some product options
+            $this->buildProductOptions($aProduct);
 
             //Setup some product prices
             $this->buildProductPrices($aProduct, $defaultTaxRate);
@@ -54,7 +59,7 @@ class CreateProducts extends AbstractSetupStep
 
             $aProduct->addTaxonomy($aRandomTaxonomyNode);
 
-            $productManager->updateProduct($aProduct, true);
+            $this->productManager->updateProduct($aProduct, true);
         }
 
         $this->getLogger()->addInfo('Created ' . $productCount . ' sample products.' );
@@ -75,12 +80,12 @@ class CreateProducts extends AbstractSetupStep
         ;*/
 
         /**
-        $asset = $productManager->getAssetManager()->createAsset(
+        $asset = $this->productManager->getAssetManager()->createAsset(
         $aProduct,
         $imageBasePath . '.jpg',
         'main_detail'
         );
-        $asset = $productManager->getAssetManager()->createAsset(
+        $asset = $this->productManager->getAssetManager()->createAsset(
         $aProduct,
         $imageBasePath . '_thumb.jpg',
         'thumbnail'
@@ -88,13 +93,28 @@ class CreateProducts extends AbstractSetupStep
 
         for ($c = 1; $c<= rand(0,5); $c++)
         {
-        $asset = $productManager->getAssetManager()->createAsset(
+        $asset = $this->productManager->getAssetManager()->createAsset(
         $aProduct,
         $imageBasePath . '.jpg',
         'secondary_detail'
         );
         }
          */
+    }
+
+    protected function buildProductOptions(ProductInterface $product)
+    {
+        $config = array();
+        $config[] = array( 'type' => 'small',
+                            'name' => 'small bottle',
+                            'surcharge'  => 0);
+        $config[] = array( 'type' => 'large',
+                            'name' => 'large bottle',
+                            'surcharge'  => 5);
+
+        foreach ($config as $optionConfig) {
+            $option = $this->productManager->createOption($optionConfig['type'], $optionConfig['name']  );
+        }
     }
 
     protected function buildProductPrices(ProductInterface $product, $defaultTaxRate)
@@ -106,7 +126,6 @@ class CreateProducts extends AbstractSetupStep
          *  - unitPriceTotal: final price a customer pays ( net unit price + tax )
          *  - unitMSRPTotal: manufacturer suggested retail price with tax
          **/
-
 
         $pricingValues = array();
         $pricingValues['netValue'] = rand(2,80);
@@ -128,20 +147,8 @@ class CreateProducts extends AbstractSetupStep
             $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'];
         }
 
-        $pricingSet = $this->getPricingManager()->createPricingSet('default_product', $pricingValues);
+        $pricingSet = $this->pricingManager->createPricing('default_product');
         $product->setPricing($pricingSet);
-    }
-
-    protected function getPricingManager()
-    {
-        if (null == $this->pricingManager) {
-            $this->pricingManager = new PricingManager();
-
-            //Register the 'default_product' configuration
-            $this->pricingManager->addConfiguration('default_product', 'Vespolina\Entity\Pricing\PricingSet', array());
-        }
-
-        return $this->pricingManager;
     }
 
     protected function slugify($text)
