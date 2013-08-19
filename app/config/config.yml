@@ -156,7 +156,7 @@ fos_user:
     user_class: Application\UserBundle\Document\User
     group:
         group_class: Application\UserBundle\Document\Group
-        
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%

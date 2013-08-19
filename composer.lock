@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b416ab9a264325a545c145dda0bd4563",
+    "hash": "39278a35c23d2f7d204c5b1aec712534",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -218,12 +218,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "9c6b8615a988117dec83bdbb0fad80afef23eab8"
+                "reference": "f28a39065d455b6df1c989ea6590e971a1f0256d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/9c6b8615a988117dec83bdbb0fad80afef23eab8",
-                "reference": "9c6b8615a988117dec83bdbb0fad80afef23eab8",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/f28a39065d455b6df1c989ea6590e971a1f0256d",
+                "reference": "f28a39065d455b6df1c989ea6590e971a1f0256d",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +284,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-07-30 05:35:10"
+            "time": "2013-08-17 18:48:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -873,12 +873,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "605c32dbb384e25117625a7cb4db4e7319a16bae"
+                "reference": "cc83ac6ce8d11f0c6c421cd4afd3503c8a69c35f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/605c32dbb384e25117625a7cb4db4e7319a16bae",
-                "reference": "605c32dbb384e25117625a7cb4db4e7319a16bae",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/cc83ac6ce8d11f0c6c421cd4afd3503c8a69c35f",
+                "reference": "cc83ac6ce8d11f0c6c421cd4afd3503c8a69c35f",
                 "shasum": ""
             },
             "require": {
@@ -916,7 +916,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/"
                 },
@@ -940,7 +940,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-08-16 04:36:22"
+            "time": "2013-08-19 04:33:45"
         },
         {
             "name": "friendsofsymfony/rest",
@@ -1143,12 +1143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "e96cbd02225541821cebd0f4a3fc8e1fe9e1c71e"
+                "reference": "709c1fc4614e3738e2ca08ec5236af2cd36dcc42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/e96cbd02225541821cebd0f4a3fc8e1fe9e1c71e",
-                "reference": "e96cbd02225541821cebd0f4a3fc8e1fe9e1c71e",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/709c1fc4614e3738e2ca08ec5236af2cd36dcc42",
+                "reference": "709c1fc4614e3738e2ca08ec5236af2cd36dcc42",
                 "shasum": ""
             },
             "require": {
@@ -1215,7 +1215,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2013-08-14 20:38:51"
+            "time": "2013-08-19 15:37:45"
         },
         {
             "name": "imagine/imagine",
@@ -1645,12 +1645,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "9e0fcd00a374e9ad484687628c6c25ab1083ea5a"
+                "reference": "89a43cbe84e079bcd81d82889b03ded9abda2f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/9e0fcd00a374e9ad484687628c6c25ab1083ea5a",
-                "reference": "9e0fcd00a374e9ad484687628c6c25ab1083ea5a",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/89a43cbe84e079bcd81d82889b03ded9abda2f47",
+                "reference": "89a43cbe84e079bcd81d82889b03ded9abda2f47",
                 "shasum": ""
             },
             "require": {
@@ -1675,7 +1675,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.13-dev"
+                    "dev-master": "0.14-dev"
                 }
             },
             "autoload": {
@@ -1704,7 +1704,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-07-29 13:39:49"
+            "time": "2013-08-17 18:17:07"
         },
         {
             "name": "jms/serializer-bundle",
@@ -1713,12 +1713,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSerializerBundle.git",
-                "reference": "5531198a73c4adee669a8a2d1452999349822771"
+                "reference": "07b6b6a2ba6566fd25d3db3177ef7e82255a2757"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/5531198a73c4adee669a8a2d1452999349822771",
-                "reference": "5531198a73c4adee669a8a2d1452999349822771",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/07b6b6a2ba6566fd25d3db3177ef7e82255a2757",
+                "reference": "07b6b6a2ba6566fd25d3db3177ef7e82255a2757",
                 "shasum": ""
             },
             "require": {
@@ -1745,7 +1745,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.12-dev"
+                    "dev-master": "0.13-dev"
                 }
             },
             "autoload": {
@@ -1774,7 +1774,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-07-29 12:36:36"
+            "time": "2013-08-17 18:18:35"
         },
         {
             "name": "knplabs/knp-menu",
@@ -2850,16 +2850,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "dev-master",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "7f0b487477bc63bef488dff14a0c28ea2106286b"
+                "reference": "v2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/7f0b487477bc63bef488dff14a0c28ea2106286b",
-                "reference": "7f0b487477bc63bef488dff14a0c28ea2106286b",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/v2.3.2",
+                "reference": "v2.3.2",
                 "shasum": ""
             },
             "type": "library",
@@ -2873,7 +2873,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2013-07-31 19:36:59"
+            "time": "2013-07-27 06:36:38"
         },
         {
             "name": "twig/extensions",
@@ -3028,12 +3028,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/commerce.git",
-                "reference": "244b1540b52ec59b31e011b58929b1a6764f1759"
+                "reference": "bf0cc37d24ca0c3371599600122edec2642ab5e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/commerce/zipball/244b1540b52ec59b31e011b58929b1a6764f1759",
-                "reference": "244b1540b52ec59b31e011b58929b1a6764f1759",
+                "url": "https://api.github.com/repos/vespolina/commerce/zipball/bf0cc37d24ca0c3371599600122edec2642ab5e9",
+                "reference": "bf0cc37d24ca0c3371599600122edec2642ab5e9",
                 "shasum": ""
             },
             "require": {
@@ -3075,7 +3075,7 @@
                 "product",
                 "vespolina"
             ],
-            "time": "2013-08-12 09:28:17"
+            "time": "2013-08-18 16:02:24"
         },
         {
             "name": "vespolina/commerce-bundle",
@@ -3084,12 +3084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCommerceBundle.git",
-                "reference": "5de4fb29e99d412d97dc97c291c6865c7244696a"
+                "reference": "1949e550b28a5708d4beff80d7fce92e431c6635"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/5de4fb29e99d412d97dc97c291c6865c7244696a",
-                "reference": "5de4fb29e99d412d97dc97c291c6865c7244696a",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/1949e550b28a5708d4beff80d7fce92e431c6635",
+                "reference": "1949e550b28a5708d4beff80d7fce92e431c6635",
                 "shasum": ""
             },
             "require": {
@@ -3132,7 +3132,7 @@
                 "store",
                 "vespolina"
             ],
-            "time": "2013-08-17 06:14:30"
+            "time": "2013-08-18 14:26:30"
         },
         {
             "name": "vespolina/core",
@@ -3140,12 +3140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vespolina/VespolinaCore.git",
-                "reference": "f6f0ad8fe38270888e799f3c3078cb2eec846875"
+                "reference": "3c58a6477a9ac973e4a8919801d16946ed74fe22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/f6f0ad8fe38270888e799f3c3078cb2eec846875",
-                "reference": "f6f0ad8fe38270888e799f3c3078cb2eec846875",
+                "url": "https://api.github.com/repos/vespolina/VespolinaCore/zipball/3c58a6477a9ac973e4a8919801d16946ed74fe22",
+                "reference": "3c58a6477a9ac973e4a8919801d16946ed74fe22",
                 "shasum": ""
             },
             "require": {
@@ -3179,7 +3179,7 @@
                 "ecommerce",
                 "shop"
             ],
-            "time": "2013-08-10 09:07:09"
+            "time": "2013-08-18 17:15:45"
         },
         {
             "name": "vespolina/molino",
@@ -3500,7 +3500,6 @@
         "jms/serializer-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "twig/extensions": 20,
-        "twbs/bootstrap": 20,
         "vespolina/commerce-bundle": 20,
         "white-october/pagerfanta-bundle": 20
     },
