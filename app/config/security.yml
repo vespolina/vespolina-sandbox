@@ -23,10 +23,3 @@ security:
     access_control:
         - { path: "/admin/*", role: IS_AUTHENTICATED_FULLY }
         - { path: "/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
-
-fos_user:
-    db_driver: mongodb
-    firewall_name: main
-    user_class: Application\UserBundle\Document\User
-    group:
-        group_class: Application\UserBundle\Document\Group
