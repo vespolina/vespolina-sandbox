@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "2ccd40c7d6a60b22226e6182e2e02d7c",
+    "hash": "0b65121f0c1b068942a8b206cf8624dc",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3329,12 +3329,12 @@
             "target-dir": "Vespolina/StoreBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaStoreBundle.git",
+                "url": "https://github.com/jcroll/VespolinaStoreBundle.git",
                 "reference": "fc0621eb2689029c2703fc9203d5e16ae9a6f79f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaStoreBundle/zipball/fc0621eb2689029c2703fc9203d5e16ae9a6f79f",
+                "url": "https://api.github.com/repos/jcroll/VespolinaStoreBundle/zipball/fc0621eb2689029c2703fc9203d5e16ae9a6f79f",
                 "reference": "fc0621eb2689029c2703fc9203d5e16ae9a6f79f",
                 "shasum": ""
             },
@@ -3355,7 +3355,6 @@
                     "Vespolina\\StoreBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3373,6 +3372,9 @@
                 "store",
                 "vespolina"
             ],
+            "support": {
+                "source": "https://github.com/jcroll/VespolinaStoreBundle/tree/master"
+            },
             "time": "2013-08-31 15:36:22"
         },
         {
@@ -3593,6 +3595,7 @@
         "kriswallsmith/assetic": 20,
         "twig/extensions": 20,
         "vespolina/commerce-bundle": 20,
+        "vespolina/store-bundle": 20,
         "white-october/pagerfanta-bundle": 20
     },
     "platform": {
