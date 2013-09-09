@@ -3,9 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ store ? store.name : "Undefined store" }}{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="stylesheet" href="{{ asset('assetic/main.css') }}" type="text/css" media="screen">
-        <script src="{{ asset('assetic/common.js') }}" type="text/javascript"></script>
+        {% stylesheets filter='?yui_css'
+            '@VespolinaStoreBundle/Resources/public/less/styles.less'
+        %}
+            <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+        {% endstylesheets %}
+        {#<script src="{{ asset('assetic/common.js') }}" type="text/javascript"></script>#}
 
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
