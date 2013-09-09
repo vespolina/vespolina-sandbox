@@ -13,7 +13,10 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    templating:
+        engines: ['twig']
+        assets_version: 1
+        assets_version_format: "%%s?v=%%s"
     default_locale:  %locale%
     session:
         lifetime:       3600
@@ -33,7 +36,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [VespolinaStoreBundle, VespolinaAdminBundle]
+    #bundles:        [VespolinaStoreBundle, VespolinaAdminBundle]
     java:           %java_path%
     filters:
         cssrewrite: ~
