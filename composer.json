@@ -36,7 +36,7 @@
         "symfony/swiftmailer-bundle": "2.1.*",
         "symfony/symfony": "2.1.*",
         "twig/extensions": "1.0.*@dev",
-        "twbs/bootstrap": "*",
+        "twbs/bootstrap": "~3.0",
 
         "vespolina/admin-bundle": "*",
         "vespolina/commerce-bundle": "dev-master",

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9621fa3e8effd9be2cb378e61946c3e3",
+    "hash": "2ccd40c7d6a60b22226e6182e2e02d7c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2845,16 +2845,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "dev-master",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "fff5e540f5fb29ea3c2de713c0d6b10642c90e75"
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/fff5e540f5fb29ea3c2de713c0d6b10642c90e75",
-                "reference": "fff5e540f5fb29ea3c2de713c0d6b10642c90e75",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
                 "shasum": ""
             },
             "type": "library",
@@ -2878,7 +2878,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2013-09-09 03:03:52"
+            "time": "2013-08-19 21:18:20"
         },
         {
             "name": "twig/extensions",
