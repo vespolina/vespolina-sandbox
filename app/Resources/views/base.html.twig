@@ -8,12 +8,17 @@
         %}
             <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
         {% endstylesheets %}
-        {#<script src="{{ asset('assetic/common.js') }}" type="text/javascript"></script>#}
-
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}{% endblock body %}
+        {% block javascripts %}
+            {% javascripts filter='?yui_js'
+                'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js'
+                '../vendor/twbs/bootstrap/dist/js/bootstrap.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock javascripts %}
     </body>
 </html>
