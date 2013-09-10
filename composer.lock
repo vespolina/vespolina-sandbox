@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c1d61adade976f2fdad8d6dae5c09bee",
+    "hash": "489e602858803fbe0d2ca78e2ef093c7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3071,12 +3071,12 @@
             "target-dir": "Vespolina/AdminBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaAdminBundle.git",
+                "url": "https://github.com/jcroll/VespolinaAdminBundle.git",
                 "reference": "a526cda15a4d6e80c697db59de25dd61548c86cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaAdminBundle/zipball/a526cda15a4d6e80c697db59de25dd61548c86cf",
+                "url": "https://api.github.com/repos/jcroll/VespolinaAdminBundle/zipball/a526cda15a4d6e80c697db59de25dd61548c86cf",
                 "reference": "a526cda15a4d6e80c697db59de25dd61548c86cf",
                 "shasum": ""
             },
@@ -3096,7 +3096,6 @@
                     "Vespolina\\AdminBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3114,6 +3113,9 @@
                 "item",
                 "shop"
             ],
+            "support": {
+                "source": "https://github.com/jcroll/VespolinaAdminBundle/tree/master"
+            },
             "time": "2013-08-11 06:49:35"
         },
         {
