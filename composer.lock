@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "be0725fa777ae5f68d16a3563c738b7e",
+    "hash": "cd67b1bd155c4ed4d3f75854b13869b4",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1640,12 +1640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "02d9b280b1fee531e8aad04d1cb3a60a50add4da"
+                "reference": "95536761d3a908fe6a662e80f74d751a66c830e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/02d9b280b1fee531e8aad04d1cb3a60a50add4da",
-                "reference": "02d9b280b1fee531e8aad04d1cb3a60a50add4da",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/95536761d3a908fe6a662e80f74d751a66c830e9",
+                "reference": "95536761d3a908fe6a662e80f74d751a66c830e9",
                 "shasum": ""
             },
             "require": {
@@ -1686,7 +1686,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1699,7 +1699,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-09-06 11:00:58"
+            "time": "2013-09-10 06:06:30"
         },
         {
             "name": "jms/serializer-bundle",
@@ -2370,6 +2370,103 @@
                 "dependency injection"
             ],
             "time": "2013-08-29 06:29:11"
+        },
+        {
+            "name": "raulfraile/ladybug",
+            "version": "v0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug.git",
+                "reference": "ec7dbf6bcc6371b8f507e702623776967b3f1a16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug/zipball/ec7dbf6bcc6371b8f507e702623776967b3f1a16",
+                "reference": "ec7dbf6bcc6371b8f507e702623776967b3f1a16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/serializer": ">=2.0.4",
+                "symfony/yaml": ">=2.0.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ladybug": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfb.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple and Extensible PHP Dumper",
+            "homepage": "https://github.com/raulfraile/ladybug",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree"
+            ],
+            "time": "2013-08-07 21:05:16"
+        },
+        {
+            "name": "raulfraile/ladybug-bundle",
+            "version": "v0.7",
+            "target-dir": "RaulFraile/Bundle/LadybugBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/LadybugBundle.git",
+                "reference": "04606af1d7b14a507e4007df62ce6d973869cb7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/LadybugBundle/zipball/04606af1d7b14a507e4007df62ce6d973869cb7d",
+                "reference": "04606af1d7b14a507e4007df62ce6d973869cb7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "raulfraile/ladybug": "v0.7",
+                "symfony/framework-bundle": ">=2.0.0"
+            },
+            "replace": {
+                "raulfraile/ladybugbundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "RaulFraile\\Bundle\\LadybugBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
+            "homepage": "https://github.com/raulfraile/LadybugBundle",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree",
+                "twig"
+            ],
+            "time": "2013-08-07 21:33:23"
         },
         {
             "name": "sensio/distribution-bundle",
