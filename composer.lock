@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "489e602858803fbe0d2ca78e2ef093c7",
+    "hash": "be0725fa777ae5f68d16a3563c738b7e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3179,12 +3179,12 @@
             "target-dir": "Vespolina/CommerceBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vespolina/VespolinaCommerceBundle.git",
+                "url": "https://github.com/jcroll/VespolinaCommerceBundle.git",
                 "reference": "89a3e4a6fc4d40e5aeb36190b555cc1d0d659a1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vespolina/VespolinaCommerceBundle/zipball/89a3e4a6fc4d40e5aeb36190b555cc1d0d659a1c",
+                "url": "https://api.github.com/repos/jcroll/VespolinaCommerceBundle/zipball/89a3e4a6fc4d40e5aeb36190b555cc1d0d659a1c",
                 "reference": "89a3e4a6fc4d40e5aeb36190b555cc1d0d659a1c",
                 "shasum": ""
             },
@@ -3210,7 +3210,6 @@
                     "Vespolina\\CommerceBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3229,6 +3228,9 @@
                 "store",
                 "vespolina"
             ],
+            "support": {
+                "source": "https://github.com/jcroll/VespolinaCommerceBundle/tree/master"
+            },
             "time": "2013-08-31 19:29:08"
         },
         {

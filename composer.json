@@ -22,6 +22,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:jcroll/VespolinaAdminBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:jcroll/VespolinaCommerceBundle.git"
         }
     ],
     "require": {
