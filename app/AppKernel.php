@@ -29,7 +29,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Application\UserBundle\UserBundle(),
-            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
 
             //Basic bundles for an ecommerce store
             new Vespolina\CommerceBundle\VespolinaCommerceBundle(),
