@@ -1,22 +1,22 @@
 parameters:
-  database_driver:   pdo_mysql
-  database_host:     localhost
-  database_port:     ~
-  database_name:     symfony
-  database_user:     root
-  database_password: ~
+  database_driver:          pdo_mysql
+  database_host:            localhost
+  database_port:            ~
+  database_name:            symfony
+  database_user:            root
+  database_password:        ~
 
-  mailer_transport:  smtp
-  mailer_host:       localhost
-  mailer_user:       ~
-  mailer_password:   ~
+  mailer_transport:         smtp
+  mailer_host:              localhost
+  mailer_user:              ~
+  mailer_password:          ~
 
-  locale:            en
-  secret:            ThisTokenIsNotSoSecretChangeIt
+  locale:                   en
+  secret:                   ThisTokenIsNotSoSecretChangeIt
 
-  java_path:         "/usr/bin/java"
-  yui_compressor_jar: "/usr/share/yui-compressor/yui-compressor.jar"
+  java_path:                "/usr/bin/java"
+  yui_compressor_jar:       "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
 
-  nodepath:          "/home/user/bin/node"
-  nodemodulearray:   "/home/user/bin/node_modules"
-  mongodb_database_name: vespolina
+  nodepath:                 "/home/user/bin/node"
+  nodemodulearray:          "/home/user/bin/node_modules"
+  mongodb_database_name:    vespolina
