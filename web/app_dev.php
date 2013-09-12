@@ -7,6 +7,7 @@
 // feel free to remove this, extend it, or make something more sophisticated.
 if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
     '127.0.0.1',
+    '192.168.56.1',
     '::1',
 ))) {
     header('HTTP/1.0 403 Forbidden');
