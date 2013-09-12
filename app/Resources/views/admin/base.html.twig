@@ -4,10 +4,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ store ? store.name : "Undefined store" }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        {% stylesheets filter='cssrewrite,?yui_css' output='css/all.css'
-           'bootstrap/css/bootstrap-cerulean.css'
-           '@VespolinaAdminBundle/Resources/public/css/store.css'
-        %}
+        {#{% stylesheets filter='cssrewrite,?yui_css' output='css/all.css'#}
+           {#'bootstrap/css/bootstrap-cerulean.css'#}
+           {#'@VespolinaAdminBundle/Resources/public/css/store.css'#}
+        {#%}#}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
         {#{% stylesheets output='css/main.css' filter='cssrewrite,?yui_css' debug=true combine=true

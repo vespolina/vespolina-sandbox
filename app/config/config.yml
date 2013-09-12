@@ -13,7 +13,10 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    templating:
+        engines: ['twig']
+        assets_version: 1
+        assets_version_format: "%%s?v=%%s"
     default_locale:  %locale%
     session:
         lifetime:       3600
@@ -37,23 +40,17 @@ assetic:
     java:           %java_path%
     filters:
         cssrewrite: ~
-        less:
-            node: %nodepath%
-            node_paths: [%nodemodulearray%]
+#        less:
+#            node: %nodepath%
+#            node_paths: [%nodemodulearray%]
+#            apply_to: "\.less$"
+        lessphp:
+            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+            apply_to: "\.less$"
         yui_css:
              jar: %yui_compressor_jar%
         yui_js:
              jar: %yui_compressor_jar%
-    assets:
-        main:
-           inputs:
-               - %kernel.root_dir%/../web/bootstrap/css/bootstrap-cerulean.css
-               - %kernel.root_dir%/../web/bundles/vespolinastore/css/store.css
-        common:
-           inputs:
-               - %kernel.root_dir%/../web/bootstrap/js/bootstrap.min.js
-               - http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
-               - http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js
 
 # Doctrine Configuration
 doctrine:
