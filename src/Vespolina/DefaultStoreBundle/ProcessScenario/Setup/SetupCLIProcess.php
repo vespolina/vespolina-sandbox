@@ -38,6 +38,8 @@ class SetupCLIProcess extends AbstractProcess
                                     'Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step\CreateProductTaxonomy');
         $definition->addProcessStep('create_products',
                                     'Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step\CreateProducts');
+        $definition->addProcessStep('create_actions',
+                                    'Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step\CreateActionDefinitions');
         $definition->addProcessStep('create_store',
                                     'Vespolina\StoreBundle\ProcessScenario\Setup\Step\CreateStore');
 

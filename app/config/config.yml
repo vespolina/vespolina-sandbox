@@ -93,6 +93,13 @@ doctrine_mongodb:
                 FOSUserBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
+                VespolinaAction:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/action/lib/Vespolina/Action/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Action
+                    is_bundle:            false
                 VespolinaProduct:
                     mapping:              true
                     type:                 xml
