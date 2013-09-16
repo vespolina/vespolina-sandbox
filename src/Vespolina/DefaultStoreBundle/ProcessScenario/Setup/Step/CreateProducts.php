@@ -48,6 +48,9 @@ class CreateProducts extends AbstractSetupStep
             $aProduct->setSlug($this->slugify($aProduct->getName()));   //Todo: move to manager
             $aProduct->setType(Product::PHYSICAL);
 
+            //Setup various product descriptions
+            $this->buildProductDescriptions($aProduct);
+
             //Setup some product options
             $this->buildProductOptions($aProduct);
 
@@ -102,6 +105,13 @@ class CreateProducts extends AbstractSetupStep
          */
     }
 
+    protected function buildProductDescriptions(ProductInterface $product)
+    {
+        $product->setDescription('Brief description of ' . $product->getName(), 'brief');
+        $product->setDescription('Extended description of ' . $product->getName(), 'extended');
+        $product->setDescription('Big and detailed description of ' . $product->getName(), 'detail');
+    }
+
     protected function buildProductOptions(ProductInterface $product)
     {
         $config = array();
@@ -147,7 +157,7 @@ class CreateProducts extends AbstractSetupStep
             $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'];
         }
 
-        $pricingSet = $this->pricingManager->createPricing('default_product');
+        $pricingSet = $this->pricingManager->createPricing($pricingValues, 'default_product');
         $product->setPricing($pricingSet);
     }
 
