@@ -200,6 +200,10 @@ swiftmailer:
 sensio_framework_extra:
     view:
         annotations: false
+
+vespolina_commerce:
+    payment_gateway:
+
 services:
  # Doctrine Extension listeners to handle behaviors
     gedmo.listener.tree:
