@@ -210,7 +210,7 @@ vespolina_commerce:
         PayPal_Pro:
             username:   %paypal_username%
             password:   %paypal_password%
-#            signature:  %paypal_signature%
+            signature:  %paypal_signature%
 
 services:
  # Doctrine Extension listeners to handle behaviors
