@@ -203,6 +203,14 @@ sensio_framework_extra:
 
 vespolina_commerce:
     payment_gateway:
+        PayPal_Express:
+            username:   %paypal_username%
+            password:   %paypal_password%
+            signature:  %paypal_signature%
+        PayPal_Pro:
+            username:   %paypal_username%
+            password:   %paypal_password%
+            signature:  %paypal_signature%
 
 services:
  # Doctrine Extension listeners to handle behaviors
