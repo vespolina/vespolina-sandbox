@@ -207,10 +207,12 @@ vespolina_commerce:
             username:   %paypal_username%
             password:   %paypal_password%
             signature:  %paypal_signature%
+            testMode:   true
         PayPal_Pro:
             username:   %paypal_username%
             password:   %paypal_password%
             signature:  %paypal_signature%
+            testMode:   true
 
 services:
  # Doctrine Extension listeners to handle behaviors
