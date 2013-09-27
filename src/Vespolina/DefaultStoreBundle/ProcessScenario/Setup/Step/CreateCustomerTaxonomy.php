@@ -27,14 +27,12 @@ class CreateCustomerTaxonomy extends AbstractSetupStep
         $termFixtures[] = array('path' => 'silver', 'name' => 'Silver');
         $termFixtures[] = array('path' => 'gold', 'name' => 'Gold');
 
-        foreach($termFixtures as $termFixture) {
-
+        foreach ($termFixtures as $termFixture) {
             $node = $this->taxonomyManager->createTaxonomyNode($termFixture['name']);
             $node->setParent($customerTaxonomyNode);
-
         }
         $this->taxonomyManager->updateTaxonomyNode($customerTaxonomyNode, true);
-        $this->getLogger()->addInfo('Customer taxonomy has been setup with ' . count($termFixtures) . ' terms.' );
+        $this->getLogger()->addInfo('Customer taxonomy has been setup with ' . count($termFixtures) . ' terms.');
 
         $context['customerTaxonomy'] = $customerTaxonomyNode;
     }
