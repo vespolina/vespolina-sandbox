@@ -9,36 +9,36 @@
 
 namespace Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\Entity\Action\ActionDefinition;
 use Vespolina\Entity\Partner\Partner;
 
 class CreateActionDefinitions extends AbstractSetupStep
 {
-    public function execute(&$context) {
-
+    public function execute(&$context)
+    {
         $actionManager = $this->getContainer()->get('vespolina.action_manager');
         $actionDefinitions = array();
         $actionDefinitionFixtures = array(
-            array('name' => 'notify_customer',
+            array(
+                'name' => 'notify_customer',
                 'topic'  => 'order',
-                'eventName' => 'v.action.order.notification_customer'));
+                'eventName' => 'v.action.order.notification_customer'
+            )
+        );
 
         foreach($actionDefinitionFixtures as $fixture) {
-
             $actionDefinition = new ActionDefinition($fixture['name'], $fixture['topic']);
             $actionDefinition->setEventName($fixture['eventName']);
             $actionManager->addActionDefinition($actionDefinition);
             $actionManager->updateActionDefinition($actionDefinition);
-
 
             $actionDefinitions[] = $actionDefinition;
         }
         $this->getLogger()->addInfo('Setup ' . count($actionDefinitions) . ' action(s).' );
     }
 
-    public function getName() {
-
+    public function getName()
+    {
         return 'create_action_definitions';
     }
 }

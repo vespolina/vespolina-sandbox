@@ -9,7 +9,6 @@
 
 namespace Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\Entity\Pricing\Element\TotalDoughValueElement;
 use Vespolina\Entity\Pricing\PricingSet;
 use Vespolina\Entity\Product\ProductInterface;
@@ -21,8 +20,8 @@ class CreateProducts extends AbstractSetupStep
     protected $pricingManager;
     protected $productManager;
 
-    public function execute(&$context) {
-
+    public function execute(&$context)
+    {
         $this->productManager = $this->getContainer()->get('vespolina.product_manager');
         $this->pricingManager = $this->getContainer()->get('vespolina.pricing_manager');
         $this->pricingManager->addConfiguration('default_product', 'Vespolina\Entity\Pricing\PricingSet', array());
@@ -36,11 +35,11 @@ class CreateProducts extends AbstractSetupStep
 
         for($i = 1; $i < $productCount; $i++) {
 
-            //Pick a random taxonomy node (= product category) to which we'll be attaching this product
+            // Pick a random taxonomy node (= product category) to which we'll be attaching this product
             $index = rand(0, $productTaxonomyNodes->count() - 1);
             $aRandomTaxonomyNode = $productTaxonomyNodes->get($index);
 
-            //Determine the product name from the taxonomy name (eg. category "beer" -> product name is "beer 1"
+            // Determine the product name from the taxonomy name (eg. category "beer" -> product name is "beer 1"
             $singularNodeName = substr($aRandomTaxonomyNode->getName(), 0, strlen($aRandomTaxonomyNode->getName())-1);
             $productName = ucfirst($singularNodeName) . ' ' . $i;
             $aProduct = $this->productManager->createProduct();
@@ -48,16 +47,16 @@ class CreateProducts extends AbstractSetupStep
             $aProduct->setSlug($this->slugify($aProduct->getName()));   //Todo: move to manager
             $aProduct->setType(Product::PHYSICAL);
 
-            //Setup various product descriptions
+            // Setup various product descriptions
             $this->buildProductDescriptions($aProduct);
 
-            //Setup some product options
+            // Setup some product options
             $this->buildProductOptions($aProduct);
 
-            //Setup some product prices
+            // Setup some product prices
             $this->buildProductPrices($aProduct, $defaultTaxRate);
 
-            //Setup some product media
+            // Setup some product media
             $this->buildProductAssets($aProduct);
 
             $aProduct->addTaxonomy($aRandomTaxonomyNode);
@@ -68,8 +67,8 @@ class CreateProducts extends AbstractSetupStep
         $this->getLogger()->addInfo('Created ' . $productCount . ' sample products.' );
     }
 
-    public function getName() {
-
+    public function getName()
+    {
         return 'create_products';
     }
 
@@ -140,7 +139,7 @@ class CreateProducts extends AbstractSetupStep
         $pricingValues = array();
         $pricingValues['netValue'] = rand(2,80);
 
-        //Set Manufacturer Suggested Retail Price to +(random) % of the net unit price
+        // Set Manufacturer Suggested Retail Price to +(random) % of the net unit price
         $pricingValues['MSRPDiscountRate'] = rand(10,35);
         $pricingValues['unitPriceMSRP'] = $pricingValues['netValue'] * ( 1 + $pricingValues['MSRPDiscountRate'] / 100);
 

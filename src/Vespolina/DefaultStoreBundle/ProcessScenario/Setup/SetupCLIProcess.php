@@ -21,8 +21,8 @@ class SetupCLIProcess extends AbstractProcess
 {
     protected $currentStepIndex;
 
-    public function build() {
-
+    public function build()
+    {
         $definition = new ProcessDefinition();
         $definition->addProcessStep('create_customer_taxonomy',
                                     'Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step\CreateCustomerTaxonomy');

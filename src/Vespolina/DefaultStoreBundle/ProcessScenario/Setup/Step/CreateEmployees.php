@@ -9,13 +9,12 @@
 
 namespace Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\Entity\Partner\Partner;
 
 class CreateEmployees extends AbstractSetupStep
 {
-    public function execute(&$context) {
-
+    public function execute(&$context)
+    {
         $partnerManager = $this->getContainer()->get('vespolina.partner_manager');
         $partnerManipulator = $this->getContainer()->get('vespolina.partner_manipulator');
         $userManager = $this->getContainer()->get('fos_user.user_manager');
@@ -33,8 +32,7 @@ class CreateEmployees extends AbstractSetupStep
                 'email' => 'simple_assistant@example.org' ));
 
         foreach($employeeFixtures as $employeeFixture) {
-
-            //Create and initialize a partner
+            // Create and initialize a partner
             $employee = $partnerManager->createPartner(Partner::ROLE_EMPLOYEE);
             $employee->setName($employeeFixture['name']);
 
@@ -43,7 +41,7 @@ class CreateEmployees extends AbstractSetupStep
 
             $partnerManager->updatePartner($employee);
 
-            //Link partner to the (FOS) user
+            // Link partner to the (FOS) user
             $user = $partnerManipulator->createUser($employee, $employeeFixture['username'], $employeeFixture['username']);
             $userManager->updateUser($user);
             $employees[] = $employee;
@@ -51,8 +49,8 @@ class CreateEmployees extends AbstractSetupStep
         $this->getLogger()->addInfo('Setup ' . count($employees) . ' employees.' );
     }
 
-    public function getName() {
-
+    public function getName()
+    {
         return 'create_employees';
     }
 }

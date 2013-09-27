@@ -42,7 +42,7 @@ class SetupCommand extends ContainerAwareCommand
 
         $processContext = array();
 
-        //Prepare the context before passing it on to the process steps
+        // Prepare the context before passing it on to the process steps
         foreach ($input->getOptions() as $key => $value) {
             $processContext[$key] = $value;
         }
