@@ -1,17 +1,18 @@
 <?php
+
 namespace Vespolina;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-
-class StartTest extends WebTestCase{
-
+class StartTest extends WebTestCase
+{
     public function testStartPage()
     {
         $client = $this->createClient(array('environment' => 'dev'));
-        $client->request('GET', '/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
+        $client->request('GET', '/');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
     public function testOrder()

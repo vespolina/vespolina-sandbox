@@ -1,52 +1,47 @@
 {% extends ":admin:base.html.twig" %}
 
 {% block body %}
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="{{ path('vespolina_admin_start') }}"><img src="{{ asset('bundles/vespolinastore/images/vespolina-logo-nav.png')}}" alt="Vespolina"/> Back Office</a>
-      <ul class="nav">
-        <li class="active"><a href="{{ path('homepage') }}">Admin</a></li>
-        <li><a href="{{ path('vespolina_product_admin') }}">Products</a></li>
-        <li><a href="{{ path('vespolina_admin_sales') }}">Sales</a></li>
-      </ul>
-      <ul class="nav secondary-nav pull-right">
-            {% block customer_info %}
-                {% render "VespolinaStoreBundle:Customer:navBar" %}
-            {% endblock %}
-            {% block cart_quick_inspection %}
-                {% render "VespolinaOrderBundle:Default:navBar" %}
-            {% endblock %}
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="container">
-    <div class="row-fluid">
-        <div class="span2">
-            {% block product_taxonomy %}
-
-            {% endblock %}
-        </div>
-        <div class="span10">
-            <div id="content" class="box">
-
-                {% block navigation %}
-                <ul class="breadcrumb">
-                    <li><a href="{{ path('homepage') }}">Home</a> <span class="divider">/</span></li>
-                    <li class="active">You are here</li>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="{{ path('vespolina_admin_start') }}"><img src="{{ asset('bundles/vespolinastore/images/vespolina-logo-nav.png')}}" alt="Vespolina"/> Back Office</a>
+                <ul class="nav">
+                    <li class="active"><a href="{{ path('homepage') }}">Admin</a></li>
+                    <li><a href="{{ path('vespolina_product_admin') }}">Products</a></li>
+                    <li><a href="{{ path('vespolina_admin_sales') }}">Sales</a></li>
                 </ul>
-                {% endblock %}
-
-                {% block content %}
-                No content.
-                {% endblock %}
+                <ul class="nav secondary-nav pull-right">
+                    {% block customer_info %}
+                        {% render "VespolinaStoreBundle:Customer:navBar" %}
+                    {% endblock %}
+                    {% block cart_quick_inspection %}
+                        {% render "VespolinaOrderBundle:Default:navBar" %}
+                    {% endblock %}
+                </ul>
             </div>
-       </div>
+        </div>
     </div>
-    <div id="footer" class="box v-footer">
-        <p class="f-right">Copyright &copy; 2011 - 2012 <span class="v-store-display-name">{{ store.displayName }}</span> , All rights preserved. - Powered by <a href="http://www.vespolina.org">Vespolina</a></p>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span2">
+                {% block product_taxonomy %}{% endblock %}
+            </div>
+            <div class="span10">
+                <div id="content" class="box">
+                    {% block navigation %}
+                        <ul class="breadcrumb">
+                            <li><a href="{{ path('homepage') }}">Home</a> <span class="divider">/</span></li>
+                            <li class="active">You are here</li>
+                        </ul>
+                    {% endblock %}
+                    {% block content %}
+                        No content.
+                    {% endblock %}
+                </div>
+           </div>
+        </div>
+        <div id="footer" class="box v-footer">
+            <p class="f-right">Copyright &copy; 2011 - 2012 <span class="v-store-display-name">{{ store.displayName }}</span> , All rights preserved. - Powered by <a href="http://www.vespolina.org">Vespolina</a></p>
+        </div>
     </div>
-</div>
 {% endblock %}
-
