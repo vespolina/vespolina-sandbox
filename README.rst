@@ -1,6 +1,8 @@
 Vespolina - Symfony2 ecommerce platform
 =======================================
 
+.. image:: https://travis-ci.org/vespolina/vespolina-sandbox.png?branch=master   :target: https://travis-ci.org/vespolina/vespolina-sandbox
+
 General Info
 ------------
 
