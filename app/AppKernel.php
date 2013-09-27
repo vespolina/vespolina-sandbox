@@ -38,6 +38,9 @@ class AppKernel extends Kernel
             new Vespolina\AdminBundle\VespolinaAdminBundle(),
             //The sandbox bundle
             new Vespolina\DefaultStoreBundle\VespolinaDefaultStoreBundle(),
+
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
