@@ -22,20 +22,24 @@ class CreateEmployees extends AbstractSetupStep
         $employees = array();
 
         $employeeFixtures = array(
-            array(  'name' => 'Big Boss',
+            array(
+                'name' => 'Big Boss',
                 'role' => Partner::ROLE_EMPLOYEE,
                 'username' => 'big_boss',
-                'email' => 'big_boss@example.org' ),
-            array(  'name' => 'Sales Clerk',
+                'email' => 'big_boss@example.org'
+            ),
+            array(
+                'name' => 'Sales Clerk',
                 'role' => Partner::ROLE_EMPLOYEE,
                 'username' => 'sales_clerk',
-                'email' => 'simple_assistant@example.org' ));
+                'email' => 'simple_assistant@example.org'
+            )
+        );
 
-        foreach($employeeFixtures as $employeeFixture) {
+        foreach ($employeeFixtures as $employeeFixture) {
             // Create and initialize a partner
             $employee = $partnerManager->createPartner(Partner::ROLE_EMPLOYEE);
             $employee->setName($employeeFixture['name']);
-
             $employee->setPrimaryContact($partnerManager->createPartnerContact());
             $employee->getPrimaryContact()->setEmail($employeeFixture['email']);
 
@@ -46,6 +50,7 @@ class CreateEmployees extends AbstractSetupStep
             $userManager->updateUser($user);
             $employees[] = $employee;
         }
+
         $this->getLogger()->addInfo('Setup ' . count($employees) . ' employees.' );
     }
 

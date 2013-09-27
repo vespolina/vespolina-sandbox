@@ -40,11 +40,11 @@ class CreateProducts extends AbstractSetupStep
             $aRandomTaxonomyNode = $productTaxonomyNodes->get($index);
 
             // Determine the product name from the taxonomy name (eg. category "beer" -> product name is "beer 1"
-            $singularNodeName = substr($aRandomTaxonomyNode->getName(), 0, strlen($aRandomTaxonomyNode->getName())-1);
+            $singularNodeName = substr($aRandomTaxonomyNode->getName(), 0, strlen($aRandomTaxonomyNode->getName()) - 1);
             $productName = ucfirst($singularNodeName) . ' ' . $i;
             $aProduct = $this->productManager->createProduct();
             $aProduct->setName($productName);
-            $aProduct->setSlug($this->slugify($aProduct->getName()));   //Todo: move to manager
+            $aProduct->setSlug($this->productManager->slugify($aProduct->getName()));
             $aProduct->setType(Product::PHYSICAL);
 
             // Setup various product descriptions
@@ -154,10 +154,5 @@ class CreateProducts extends AbstractSetupStep
 
         $pricingSet = $this->pricingManager->createPricing($pricingValues, 'default_product');
         $product->setPricing($pricingSet);
-    }
-
-    protected function slugify($text)
-    {
-        return preg_replace('/[^a-z0-9_\s-]/', '', preg_replace("/[\s_]/", "-", preg_replace('!\s+!', ' ', strtolower(trim($text)))));
     }
 }
