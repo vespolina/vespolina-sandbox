@@ -17,12 +17,14 @@ class StartTest extends WebTestCase
 
     public function testOrder()
     {
-       $client = $this->createClient(array('environment' => 'dev'));
+        $this->markTestIncomplete('todo');
 
-       $orderManager = $client->getContainer()->get('vespolina.order_manager');
-       $orders = $orderManager->findBy(array('state' => 'unprocessed'));
+        $client = $this->createClient(array('environment' => 'dev'));
+        
+        $orderManager = $client->getContainer()->get('vespolina.order_manager');
+        $orders = $orderManager->findBy(array('state' => 'unprocessed'));
 
-        foreach($orders as $order){
+        foreach ($orders as $order) {
             var_dump($order);die();
         }
     }
