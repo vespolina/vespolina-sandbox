@@ -24,6 +24,14 @@ echo "\n"
 
 cd ../../../
 
+cd commerce
+echo '>> commerce'
+git branch
+git status
+echo "\n"
+
+cd ..
+
 cd molino
 echo '>> molino'
 git branch
@@ -32,32 +40,16 @@ echo "\n"
 
 cd ..
 
-cd order
-echo '>> order'
+cd action
+echo '>> action'
 git branch
 git status
 echo "\n"
 
 cd ..
 
-cd partner
-echo '>> partner'
-git branch
-git status
-echo "\n"
-
-cd ..
-
-cd pricing
-echo '>> pricing'
-git branch
-git status
-echo "\n"
-
-cd ..
-
-cd product
-echo '>> product'
+cd media
+echo '>> media'
 git branch
 git status
 echo "\n"
