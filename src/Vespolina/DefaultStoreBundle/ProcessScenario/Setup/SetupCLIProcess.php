@@ -11,7 +11,6 @@ namespace Vespolina\DefaultStoreBundle\ProcessScenario\Setup;
 
 use Vespolina\CommerceBundle\Process\AbstractProcess;
 use Vespolina\CommerceBundle\Process\ProcessDefinition;
-use Vespolina\CommerceBundle\Process\ProcessDefinitionInterface;
 
 /**
  * This process models a setup of a V sandbox store using the command line
@@ -20,7 +19,6 @@ use Vespolina\CommerceBundle\Process\ProcessDefinitionInterface;
  */
 class SetupCLIProcess extends AbstractProcess
 {
-
     protected $currentStepIndex;
 
     public function build() {
@@ -49,7 +47,6 @@ class SetupCLIProcess extends AbstractProcess
     public function execute()
     {
         foreach ($this->definition->getSteps() as $stepDefinition) {
-
             $processStep = new $stepDefinition['class']($this);
             $processStep->init();
             $processStep->execute($this->context);
@@ -60,5 +57,4 @@ class SetupCLIProcess extends AbstractProcess
     {
         return 'setup_cli_process';
     }
-
 }
