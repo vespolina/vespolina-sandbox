@@ -33,7 +33,7 @@ class CreateProducts extends AbstractSetupStep
         $productTaxonomy = $context['productTaxonomy'];
         $productTaxonomyNodes = $productTaxonomy->getChildren();
 
-        for($i = 1; $i < $productCount; $i++) {
+        for ($i = 1; $i < $productCount; $i++) {
 
             // Pick a random taxonomy node (= product category) to which we'll be attaching this product
             $index = rand(0, $productTaxonomyNodes->count() - 1);
@@ -122,7 +122,7 @@ class CreateProducts extends AbstractSetupStep
                             'surcharge'  => 5);
 
         foreach ($config as $optionConfig) {
-            $option = $this->productManager->createOption($optionConfig['type'], $optionConfig['name']  );
+            $option = $this->productManager->createOption($optionConfig['type'], $optionConfig['name']);
         }
     }
 
@@ -143,15 +143,11 @@ class CreateProducts extends AbstractSetupStep
         $pricingValues['MSRPDiscountRate'] = rand(10,35);
         $pricingValues['unitPriceMSRP'] = $pricingValues['netValue'] * ( 1 + $pricingValues['MSRPDiscountRate'] / 100);
 
-
         if ($defaultTaxRate) {
-
             $pricingValues['unitPriceTax'] = $pricingValues['netValue'] / 100 * $defaultTaxRate;
             $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'] * (1 + $defaultTaxRate / 100);
             $pricingValues['unitPriceTotal'] = $pricingValues['netValue'] + $pricingValues['unitPriceTax'];
-
         } else {
-
             $pricingValues['unitPriceTotal'] = $pricingValues['netValue'];
             $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'];
         }

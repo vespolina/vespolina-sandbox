@@ -24,36 +24,26 @@ class CreateProductTaxonomy extends AbstractSetupStep
         $this->taxonomyManager->updateTaxonomyNode($productTaxonomyNode, true);
 
         $termFixtures = array();
-
-        switch($context['type']) {
-
+        switch ($context['type']) {
             case 'band':
-
                 $termFixtures = array();
                 $termFixtures[] = array('path' => 'clothing', 'name' => 'Clothing');
                 $termFixtures[] = array('path' => 'downloadable-tracks', 'name' => 'Downloadable tracks');
                 break;
-
             case 'beverages':
-
                 $termFixtures = array();
                 $termFixtures[] = array('path' => 'beers', 'name' => 'Beers');
                 $termFixtures[] = array('path' => 'wines',  'name' => 'Wines');
                 break;
-
             case 'fashion':
-
                 $termFixtures[] = array('path' => 'dresses', 'name' => 'Dresses');
                 $termFixtures[] = array('path' => 'pants', 'name' => 'Pants');
                 $termFixtures[] = array('path' => 'shoes', 'name' => 'Shoes');
-
                 break;
             default:
                 return;
-
         }
-        foreach($termFixtures as $termFixture) {
-
+        foreach ($termFixtures as $termFixture) {
             $node = $this->taxonomyManager->createTaxonomyNode($termFixture['name'], $productTaxonomyNode);
             $this->taxonomyManager->updateTaxonomyNode($node, true);
 
@@ -65,7 +55,6 @@ class CreateProductTaxonomy extends AbstractSetupStep
         $context['productTaxonomy'] = $productTaxonomyNode;
 
         $this->getLogger()->addInfo('Product taxonomy has been setup with ' . count($termFixtures) . ' terms.' );
-
     }
 
     public function getName()
