@@ -4,39 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ store ? store.name : "Undefined store" }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        {#{% stylesheets filter='cssrewrite,?yui_css' output='css/all.css'#}
-           {#'bootstrap/css/bootstrap-cerulean.css'#}
-           {#'@VespolinaAdminBundle/Resources/public/css/store.css'#}
-        {#%}#}
-        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
-        {% endstylesheets %}
-        {#{% stylesheets output='css/main.css' filter='cssrewrite,?yui_css' debug=true combine=true
-           'http://twitter.github.com/bootstrap/assetsbootstrap.css'
-           '@CompanyPersonalBundle/Resources/public/css/collateral.css'
-        %}
-        <link href="{{ asset_url }}" type="text/css" rel="stylesheet"
-           media="screen" />
-        {% endstylesheets %}#}
         {% javascripts output='js/main.js' filter='?yui_js' debug=true
             'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
             'http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js'
         %}
-
-        {#
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-alert.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js'
-            'http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js'
-            'http://twitter.github.com/bootstrap/assets/js/mopabootstrap-collection.js'
-        #}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+            <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>

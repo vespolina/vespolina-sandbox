@@ -1,0 +1,21 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+
+env: MONGO_VERSION=1.3.4
+services: mongodb
+
+before_script:
+    - wget http://pecl.php.net/get/mongo-1.4.3.tgz
+    - tar -xzf mongo-1.4.3.tgz
+    - sh -c "cd mongo-1.4.3 && phpize && ./configure && sudo make install"
+    - echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+    - composer self-update
+    - composer install --dev --prefer-source --no-interaction
+
+script: phpunit -c app
+
+notifications:
+  irc:   "irc.freenode.org#vespolina"

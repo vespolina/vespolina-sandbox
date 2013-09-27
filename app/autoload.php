@@ -1,39 +1,21 @@
 <?php
-if (!$loader = include __DIR__.'/../vendor/autoload.php') {
-    $nl = PHP_SAPI === 'cli' ? PHP_EOL : '<br />';
-    echo "$nl$nl";
-    if (is_writable(dirname(__DIR__))) {
-        file_put_contents(dirname(__DIR__).'/composer.phar', file_get_contents('http://getcomposer.org/composer.phar'));
-        die("You must set up the project dependencies.$nl".
-            "Composer has been downloaded.$nl".
-            "Run the following command in ".dirname(__DIR__).":$nl$nl".
-            "php composer.phar install$nl");
-    }
-    die("You must set up the project dependencies.$nl".
-        "Run the following commands in ".dirname(__DIR__).":$nl$nl".
-        "wget http://getcomposer.org/composer.phar$nl".
-        "php composer.phar install$nl");
-}
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
+use Composer\Autoload\ClassLoader;
 
-// intl
-if (!function_exists('intl_get_error_code')) {
-    require_once __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs/functions.php';
+/**
+ * @var ClassLoader $loader
+ */
+$loader = require __DIR__.'/../vendor/autoload.php';
 
-    $loader->add('IntlDateFormatter', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
-    $loader->add('Collator', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
-    $loader->add('Locale', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
-    $loader->add('NumberFormatter', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
-}
+AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
 
-AnnotationRegistry::registerLoader(function($class) use ($loader) {
-    $loader->loadClass($class);
-    return class_exists($class, false);
-});
 AnnotationRegistry::registerFile(
     __DIR__.'/../vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php'
 );
+
 AnnotationRegistry::registerFile(
     __DIR__.'/../vendor/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/DoctrineAnnotations.php'
 );
+
+return $loader;
