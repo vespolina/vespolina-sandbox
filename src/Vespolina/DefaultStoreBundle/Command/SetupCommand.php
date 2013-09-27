@@ -19,7 +19,6 @@ use Vespolina\DefaultStoreBundle\ProcessScenario\Setup\SetupCLIProcess;
 
 class SetupCommand extends ContainerAwareCommand
 {
-
     protected $input;
     protected $country;
     protected $output;
@@ -32,17 +31,16 @@ class SetupCommand extends ContainerAwareCommand
             ->setName('vespolina:store-setup')
             ->setDescription('Setup a Vespolina store')
             ->addOption('country', null, InputOption::VALUE_OPTIONAL, 'Country', 'US')
-            ->addOption('state', null, InputOption::VALUE_OPTIONAL, 'State', '')
+            ->addOption('state', null, InputOption::VALUE_OPTIONAL, 'State', 'SC')
             ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Store type', 'beverages')
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $processContext = array();
 
-        //Prepare the context before passing it on to the process steps
+        // Prepare the context before passing it on to the process steps
         foreach ($input->getOptions() as $key => $value) {
             $processContext[$key] = $value;
         }
