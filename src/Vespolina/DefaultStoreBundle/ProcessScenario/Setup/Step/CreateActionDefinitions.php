@@ -26,7 +26,7 @@ class CreateActionDefinitions extends AbstractSetupStep
             )
         );
 
-        foreach($actionDefinitionFixtures as $fixture) {
+        foreach ($actionDefinitionFixtures as $fixture) {
             $actionDefinition = new ActionDefinition($fixture['name'], $fixture['topic']);
             $actionDefinition->setEventName($fixture['eventName']);
             $actionManager->addActionDefinition($actionDefinition);
