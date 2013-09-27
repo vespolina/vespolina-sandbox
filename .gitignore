@@ -11,3 +11,4 @@ app/config/parameters.yml
 nbproject/
 composer.phar
 bin
+composer.lock
