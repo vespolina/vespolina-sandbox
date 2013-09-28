@@ -4,11 +4,11 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="{{ path('vespolina_admin_start') }}"><img src="{{ asset('bundles/vespolinastore/images/vespolina-logo-nav.png')}}" alt="Vespolina"/> Back Office</a>
+                <a class="brand" href="{{ path('v_admin_start') }}"><img src="{{ asset('bundles/vespolinastore/images/vespolina-logo-nav.png')}}" alt="Vespolina"/> Back Office</a>
                 <ul class="nav">
                     <li class="active"><a href="{{ path('homepage') }}">Admin</a></li>
                     <li><a href="{{ path('vespolina_product_admin') }}">Products</a></li>
-                    <li><a href="{{ path('vespolina_admin_sales') }}">Sales</a></li>
+                    <li><a href="{{ path('v_admin_sales') }}">Sales</a></li>
                 </ul>
                 <ul class="nav secondary-nav pull-right">
                     {% block customer_info %}
