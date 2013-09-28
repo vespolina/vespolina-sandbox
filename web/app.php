@@ -10,7 +10,6 @@ $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 $request = Request::createFromGlobals();
-Request::enableHttpMethodParameterOverride();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
