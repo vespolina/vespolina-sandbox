@@ -12,8 +12,21 @@ before_script:
     - tar -xzf mongo-1.4.3.tgz
     - sh -c "cd mongo-1.4.3 && phpize && ./configure && sudo make install"
     - echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+
+    - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+    - ulimit -n 10000
+    - sudo apt-get update
+    - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-mysql php5-curl wkhtmltopdf
+    - sudo sed -i -e "s,/var/www,$(pwd)/web,g" /etc/apache2/sites-available/default
+    - export MINK_EXTENSION_PARAMS='base_url=http://localhost:8000/app_test.php'
+    - sudo /etc/init.d/apache2 restart
     - composer self-update
     - composer install --dev --prefer-source --no-interaction
+    - app/console vespolina:store-setup
+    - app/console doctrine:schema:create --env=test > /dev/null
+    - chmod -R 777 app/cache app/logs
+    - app/console cache:warmup --env=test > /dev/null
+    - chmod -R 777 app/cache app/logs
 
 script: phpunit -c app
 

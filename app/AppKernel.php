@@ -28,6 +28,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Application\UserBundle\UserBundle(),
 
             //Basic bundles for an ecommerce store
@@ -38,9 +41,6 @@ class AppKernel extends Kernel
             new Vespolina\AdminBundle\VespolinaAdminBundle(),
             //The sandbox bundle
             new Vespolina\DefaultStoreBundle\VespolinaDefaultStoreBundle(),
-
-            new FOS\RestBundle\FOSRestBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

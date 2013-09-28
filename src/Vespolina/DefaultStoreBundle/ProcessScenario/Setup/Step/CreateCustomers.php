@@ -9,20 +9,18 @@
 
 namespace Vespolina\DefaultStoreBundle\ProcessScenario\Setup\Step;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Vespolina\Entity\Partner\Partner;
 
 class CreateCustomers extends AbstractSetupStep
 {
-    public function execute(&$context) {
-
+    public function execute(&$context)
+    {
         $customerCount = 10;
         $partnerManager = $this->getContainer()->get('vespolina_commerce.partner_manager');
         $partnerManipulator = $this->getContainer()->get('vespolina_commerce.partner_manipulator');
         $userManager = $this->getContainer()->get('fos_user.user_manager');
 
         for ($i = 0; $i < $customerCount; $i++) {
-
             $aCustomer = $partnerManager->createPartner(Partner::ROLE_CUSTOMER, Partner::INDIVIDUAL);
             $aCustomer->setName('customer ' . $i);
 
@@ -34,7 +32,7 @@ class CreateCustomers extends AbstractSetupStep
 
             $partnerManager->updatePartner($aCustomer, true);
 
-            //Link partner to an FOS user so the customer can login (username = 'customer_x', pass = 'customer_x')
+            // Link partner to an FOS user so the customer can login (username = 'customer_x', pass = 'customer_x')
             $username = 'customer' . $i;
             $user = $partnerManipulator->createUser($aCustomer, $username, $username);
             $userManager->updateUser($user);
@@ -42,8 +40,8 @@ class CreateCustomers extends AbstractSetupStep
         $this->getLogger()->addInfo('Created ' . $customerCount . ' customers.' );
     }
 
-    public function getName() {
-
+    public function getName()
+    {
         return 'create_customers';
     }
 }

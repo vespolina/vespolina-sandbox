@@ -16,8 +16,6 @@ class User extends BaseUser
 
     protected $partner;
 
-
-
     public function setPartner(PartnerInterface $partner)
     {
         $this->partner = $partner;
