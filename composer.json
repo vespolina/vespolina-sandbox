@@ -40,6 +40,7 @@
         "twbs/bootstrap": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "white-october/pagerfanta-bundle": "dev-master",
+        "raulfraile/ladybug-bundle": "0.7",
 
         "vespolina/admin-bundle": "*",
         "vespolina/commerce-bundle": "dev-master",
