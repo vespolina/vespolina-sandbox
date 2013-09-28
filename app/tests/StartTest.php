@@ -20,7 +20,7 @@ class StartTest extends WebTestCase
         $this->markTestIncomplete('todo');
 
         $client = $this->createClient(array('environment' => 'dev'));
-        
+
         $orderManager = $client->getContainer()->get('vespolina.order_manager');
         $orders = $orderManager->findBy(array('state' => 'unprocessed'));
 
