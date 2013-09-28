@@ -48,6 +48,15 @@
         "vespolina/taxation-bundle": "*",
         "vespolina/store-bundle": "dev-master"
     },
+    "require-dev": {
+        "behat/behat": "3.0.0beta5@dev",
+        "phpunit/phpunit": "3.7.*",
+        "doctrine/dbal": "~2.3",
+        "behat/mink": "~1.5",
+        "behat/mink-browserkit-driver": "~1.1",
+        "phpspec/phpspec": "2.0.*@dev",
+        "bossa/phpspec2-expect": "dev-master@dev"
+    },
     "minimum-stability": "dev",
     "scripts": {
         "post-install-cmd": [
