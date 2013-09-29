@@ -27,7 +27,10 @@ before_script:
     - app/console cache:warmup --env=test > /dev/null
     - chmod -R 777 app/cache app/logs
 
-script: phpunit -c app
+script:
+    - phpunit -c app
+    - php bin/phpspec
+    - php bin/behat
 
 notifications:
   irc:   "irc.freenode.org#vespolina"
