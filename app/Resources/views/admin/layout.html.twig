@@ -12,10 +12,10 @@
                 </ul>
                 <ul class="nav secondary-nav pull-right">
                     {% block customer_info %}
-                        {% render "VespolinaStoreBundle:Customer:navBar" %}
+                        {% render render(controller('VespolinaStoreBundle:Customer:navBar')) %}
                     {% endblock %}
                     {% block cart_quick_inspection %}
-                        {% render "VespolinaOrderBundle:Default:navBar" %}
+                        {% render(controller('VespolinaOrderBundle:Default:navBar')) %}
                     {% endblock %}
                 </ul>
             </div>

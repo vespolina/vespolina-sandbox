@@ -44,6 +44,8 @@ class Helper
 
     public function redirectsCustomerToThirdPartyForPayment()
     {
-        // TODO: write logic here
+
+
+        return RedirectResponse('https://sandbox.paypal.com');
     }
 }
