@@ -12,3 +12,4 @@ nbproject
 composer.phar
 bin
 composer.lock
+node_modules
