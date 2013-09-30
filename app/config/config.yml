@@ -19,7 +19,6 @@ framework:
         assets_version_format: "%%s?v=%%s"
     default_locale:  %locale%
     session:
-        lifetime:       3600
         name:           symfony
 
 # Twig Configuration
