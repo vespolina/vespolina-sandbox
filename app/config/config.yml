@@ -174,9 +174,6 @@ payum:
             Vespolina\DefaultStoreBundle\Entity\PayumSecurityToken:
                 doctrine:
                     driver: mongodb
-#                filesystem:
-#                    storage_dir: %kernel.root_dir%/Resources/payments
-#                    id_property: hash
 
 # Swiftmailer Configuration
 swiftmailer:
