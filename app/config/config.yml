@@ -90,6 +90,14 @@ doctrine_mongodb:
             auto_mapping: true
             mappings:
                 FOSUserBundle: ~
+                payum:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/payum/payum/src/Payum/Bridge/Doctrine/Resources/mapping"
+                    alias:                ~
+                    prefix:               Payum\Bridge\Doctrine\Entity
+                    is_bundle:            false
+                VespolinaDefaultStoreBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
                 VespolinaAction:
@@ -159,6 +167,13 @@ fos_user:
     user_class: Application\UserBundle\Document\User
     group:
         group_class: Application\UserBundle\Document\Group
+
+payum:
+    security:
+        token_storage:
+            Vespolina\DefaultStoreBundle\Entity\PayumSecurityToken:
+                doctrine:
+                    driver: odm
 
 # Swiftmailer Configuration
 swiftmailer:

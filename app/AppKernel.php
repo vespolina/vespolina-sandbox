@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Application\UserBundle\UserBundle(),
+//            new Payum\Bundle\PayumBundle\PayumBundle(),
 
             //Basic bundles for an ecommerce store
             new Vespolina\CommerceBundle\VespolinaCommerceBundle(),
