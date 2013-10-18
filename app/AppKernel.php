@@ -30,9 +30,9 @@ class AppKernel extends Kernel
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+//            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Application\UserBundle\UserBundle(),
-//            new Payum\Bundle\PayumBundle\PayumBundle(),
+            new Payum\Bundle\PayumBundle\PayumBundle(),
 
             //Basic bundles for an ecommerce store
             new Vespolina\CommerceBundle\VespolinaCommerceBundle(),

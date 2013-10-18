@@ -1,8 +1,8 @@
 fos_user_security:
     resource: @FOSUserBundle/Resources/config/routing/security.xml
 
-#payum_capture:
-#    resource: "@PayumBundle/Resources/config/routing/capture.xml"
+payum_capture:
+    resource: "@PayumBundle/Resources/config/routing/capture.xml"
 
 vespolina_admin:
     resource: @VespolinaAdminBundle/Resources/config/routing/admin.xml
