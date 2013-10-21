@@ -2,7 +2,7 @@
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
                   http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
-    <document name="Vespolina\DefaultStoreBundle\Entity\PaymentSecurityToken" collection="v_payment_security_token">
+    <document name="Vespolina\DefaultStoreBundle\Document\PaymentSecurityToken" collection="v_payment_security_token">
         <field name="hash" type="string" id="true" strategy="NONE" />
 
         <field name="afterUrl" type="string" />
