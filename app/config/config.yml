@@ -90,13 +90,6 @@ doctrine_mongodb:
             auto_mapping: true
             mappings:
                 FOSUserBundle: ~
-                payum:
-                    mapping:              true
-                    type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/payum/payum/src/Payum/Bridge/Doctrine/Resources/mapping"
-                    alias:                ~
-                    prefix:               Payum\Bridge\Doctrine\Entity
-                    is_bundle:            false
                 VespolinaDefaultStoreBundle: ~
                 VespolinaStoreBundle: ~
                 VespolinaTaxationBundle: ~
@@ -171,10 +164,33 @@ fos_user:
 payum:
     security:
         token_storage:
-            Vespolina\DefaultStoreBundle\Entity\PayumSecurityToken:
+            Vespolina\DefaultStoreBundle\Document\PayumSecurityToken:
                 doctrine:
                     driver: mongodb
-
+    contexts:
+        paypal_pro_checkout_via_nvp:
+            paypal_pro_checkout_nvp:
+                api:
+                    options:
+                        username: %paypal_username%
+                        password: %paypal_password%
+#                        partner:  'EDIT ME'
+#                        vendor:   'EDIT ME'
+                        sandbox: true
+        paypal_pro_checkout_via_ominpay:
+            omnipay:
+                type: PayPal_Pro
+                options:
+                    username:   %paypal_username%
+                    password:   %paypal_password%
+                    signature:  %paypal_signature%
+                    testMode:   true
+            storages:
+                Vespolina\DefaultStoreBundle\Model\PaypalProPaymentDetails:
+                    filesystem:
+                        storage_dir: %kernel.root_dir%/Resources/payments
+                        id_property: id
+                        payment_extension: true
 
 # Swiftmailer Configuration
 swiftmailer:

@@ -5,5 +5,14 @@
         http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <entity name="Vespolina\DefaultStoreBundle\Entity\PayumSecurityToken" table="v_payum_security_token">
+        <field name="hash" type="string" id="true" strategy="NONE" />
+
+        <field name="details" type="object" />
+
+        <field name="afterUrl" type="string" />
+
+        <field name="targetUrl" type="string" />
+
+        <field name="paymentName" type="string" />
     </entity>
 </doctrine-mapping>
