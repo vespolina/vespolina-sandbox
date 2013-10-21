@@ -175,6 +175,7 @@ payum:
                 doctrine:
                     driver: mongodb
 
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%

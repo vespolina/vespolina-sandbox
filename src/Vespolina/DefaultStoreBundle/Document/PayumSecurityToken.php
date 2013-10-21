@@ -1,8 +1,8 @@
 <?php
 
-namespace Vespolina\DefaultStoreBundle\Entity;
+namespace Vespolina\DefaultStoreBundle\Document;
 
-use Payum\Bridge\Doctrine\Entity\Token;
+use Payum\Bridge\Doctrine\Document\Token;
 
 class PayumSecurityToken extends Token
 {
