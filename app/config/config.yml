@@ -189,7 +189,7 @@ payum:
                 Vespolina\DefaultStoreBundle\Document\OmnipayPaymentDetails:
                     doctrine:
                         driver: mongodb
-                        id_property: id
+#                        id_property: id
                         payment_extension: true
 
 # Swiftmailer Configuration
