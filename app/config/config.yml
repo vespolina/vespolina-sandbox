@@ -168,7 +168,7 @@ payum:
                 doctrine:
                     driver: mongodb
     contexts:
-        paypal_pro_checkout_via_ominpay:
+        paypal_pro_checkout_via_omnipay:
             omnipay:
                 type: PayPal_Pro
                 options:
