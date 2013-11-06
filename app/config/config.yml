@@ -168,15 +168,6 @@ payum:
                 doctrine:
                     driver: mongodb
     contexts:
-#        paypal_pro_checkout_via_nvp:
-#            paypal_pro_checkout_nvp:
-#                api:
-#                    options:
-#                        username: %paypal_username%
-#                        password: %paypal_password%
-##                        partner:  'EDIT ME'
-##                        vendor:   'EDIT ME'
-#                        sandbox: true
         paypal_pro_checkout_via_ominpay:
             omnipay:
                 type: PayPal_Pro
@@ -232,6 +223,7 @@ sensio_framework_extra:
     view:
         annotations: false
 
+# todo: should be removed after payum integration is complete
 vespolina_commerce:
     payment_gateways:
         PayPal_Express:
