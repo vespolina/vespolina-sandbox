@@ -29,7 +29,7 @@
         "knplabs/knp-menu-bundle": "dev-master",
         "leafo/lessphp": "v0.4.0",
 
-        "omnipay/omnipay": "dev-master",
+        "omnipay/omnipay": "~1.1",
         "sensio/distribution-bundle": "2.3.*",
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
