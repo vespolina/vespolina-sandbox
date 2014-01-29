@@ -120,13 +120,6 @@ doctrine_mongodb:
                     alias:                ~
                     prefix:               Vespolina\Entity\Partner
                     is_bundle:            false
-                VespolinaPricing:
-                    mapping:              true
-                    type:                 xml
-                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Pricing/Mapping"
-                    alias:                ~
-                    prefix:               Vespolina\Entity\Pricing
-                    is_bundle:            false
                 VespolinaTaxonomy:
                     mapping:              true
                     type:                 xml
