@@ -39,13 +39,13 @@ assetic:
     java:           %java_path%
     filters:
         cssrewrite: ~
-#        less:
-#            node: %nodepath%
-#            node_paths: [%nodemodulearray%]
-#            apply_to: "\.less$"
-        lessphp:
-            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+        less:
+            node: %nodepath%
+            node_paths: [%nodemodulearray%]
             apply_to: "\.less$"
+#       lessphp:
+#            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+#            apply_to: "\.less$"
         yui_css:
              jar: %yui_compressor_jar%
         yui_js:
@@ -119,6 +119,13 @@ doctrine_mongodb:
                     dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Partner/Mapping"
                     alias:                ~
                     prefix:               Vespolina\Entity\Partner
+                    is_bundle:            false
+                VespolinaPayment:
+                    mapping:              true
+                    type:                 xml
+                    dir:                  "%kernel.root_dir%/../vendor/vespolina/commerce/lib/Vespolina/Payment/Mapping"
+                    alias:                ~
+                    prefix:               Vespolina\Entity\Payment
                     is_bundle:            false
                 VespolinaTaxonomy:
                     mapping:              true

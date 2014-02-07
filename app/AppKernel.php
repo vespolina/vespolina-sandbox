@@ -12,6 +12,14 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+
+    public function boot()
+    {
+        Doctrine\ODM\MongoDB\Types\Type::addType('object', 'Payum\Core\Bridge\Doctrine\Types\ObjectType');
+
+        parent::boot();
+    }
+
     public function registerBundles()
     {
         $bundles = array(

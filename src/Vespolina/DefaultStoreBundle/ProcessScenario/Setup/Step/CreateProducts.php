@@ -129,30 +129,31 @@ class CreateProducts extends AbstractSetupStep
     protected function buildProductPrices(ProductInterface $product, $defaultTaxRate)
     {
         /** Set up for each product following pricing elements
-         *  - netValue : unit price without tax
-         *  - unitPriceMSRP: manufacturer suggested retail price without tax
-         *  - unitPriceTax : tax over the net unit price (based on the default tax rate)
-         *  - unitPriceTotal: final price a customer pays ( net unit price + tax )
+         *  - unit : unit price without tax
+         *  - unitMSRP: manufacturer suggested retail price without tax
+         *  - unitTax : tax over the net unit price (based on the default tax rate)
+         *  - unitTotal: final price a customer pays ( net unit price + tax )
          *  - unitMSRPTotal: manufacturer suggested retail price with tax
          **/
 
         $pricingValues = array();
-        $pricingValues['netValue'] = rand(2,80);
+        $pricingValues['unit'] = rand(2,80);
 
         // Set Manufacturer Suggested Retail Price to +(random) % of the net unit price
         $pricingValues['MSRPDiscountRate'] = rand(10,35);
-        $pricingValues['unitPriceMSRP'] = $pricingValues['netValue'] * ( 1 + $pricingValues['MSRPDiscountRate'] / 100);
+        $pricingValues['unitMSRP'] = $pricingValues['unit'] * ( 1 + $pricingValues['MSRPDiscountRate'] / 100);
 
         if ($defaultTaxRate) {
-            $pricingValues['unitPriceTax'] = $pricingValues['netValue'] / 100 * $defaultTaxRate;
-            $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'] * (1 + $defaultTaxRate / 100);
-            $pricingValues['unitPriceTotal'] = $pricingValues['netValue'] + $pricingValues['unitPriceTax'];
+            $pricingValues['unitTax'] = $pricingValues['unit'] / 100 * $defaultTaxRate;
+            $pricingValues['unitMSRPTotal'] = $pricingValues['unitMSRP'] * (1 + $defaultTaxRate / 100);
+            $pricingValues['unitTotal'] = $pricingValues['unit'] + $pricingValues['unitTax'];
         } else {
-            $pricingValues['unitPriceTotal'] = $pricingValues['netValue'];
-            $pricingValues['unitPriceMSRPTotal'] = $pricingValues['unitPriceMSRP'];
+            $pricingValues['unitTotal'] = $pricingValues['unit'];
+            $pricingValues['unitMSRPTotal'] = $pricingValues['unitMSRP'];
         }
 
-        $pricingSet = $this->pricingManager->createPricing($pricingValues, 'default_product');
-        $product->setPricing($pricingSet);
+        foreach ($pricingValues as $type => $value) {
+            $product->setPrice($value, $type);
+        }
     }
 }

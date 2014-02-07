@@ -4,6 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ store ? store.name : "Undefined store" }}{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
         {% stylesheets filter='?yui_css'
             '@VespolinaStoreBundle/Resources/public/less/styles.less'
         %}
@@ -16,7 +19,6 @@
         {% block javascripts %}
             {% javascripts filter='?yui_js'
                 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js'
-                '../vendor/twbs/bootstrap/dist/js/bootstrap.js'
                 '@VespolinaStoreBundle/Resources/public/js/main.js'
             %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>
