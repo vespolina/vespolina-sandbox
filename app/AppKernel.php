@@ -14,9 +14,13 @@ class AppKernel extends Kernel
 {
 
     public function boot()
-    {
-        Doctrine\ODM\MongoDB\Types\Type::addType('object', 'Payum\Core\Bridge\Doctrine\Types\ObjectType');
 
+    {
+        if(!Doctrine\ODM\MongoDB\Types\Type::hasType('object'))
+        {
+            Doctrine\ODM\MongoDB\Types\Type::addType('object', 'Payum\Core\Bridge\Doctrine\Types\ObjectType');
+
+        }
         parent::boot();
     }
 
