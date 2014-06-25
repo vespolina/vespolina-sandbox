@@ -47,7 +47,8 @@
         "vespolina/commerce-bundle": "dev-master",
         "vespolina/taxation-bundle": "*",
         "vespolina/store-bundle": "dev-master",
-        "vespolina/media": "*"
+        "vespolina/media": "*",
+        "pimple/pimple": "~2.1"
     },
     "require-dev": {
         "doctrine/dbal": "~2.3"
